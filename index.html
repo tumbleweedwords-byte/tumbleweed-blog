@@ -3,168 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tumbleweed Words — Writing on Craft, Fiction &amp; the Nomadic Life</title>
-<meta name="description" content="Essays on minimalist fiction, flash fiction craft, nomadic writing life, and literary publishing. By David — internationally published, Pushcart-nominated.">
-<meta name="keywords" content="minimalist fiction, flash fiction, nomadic writing, literary magazines, writing craft">
-<meta name="author" content="David">
-<link rel="canonical" href="https://tumbleweedwords.com/">
+<title>Tumbleweed Words — Flash Fiction, Craft Essays &amp; Free Writing Tools</title>
+<meta name="description" content="Flash fiction craft essays, free writing tools, literary magazine finder, and minimalist prose guides. By David — internationally published, Pushcart-nominated. Free newsletter on Substack.">
+<meta name="keywords" content="flash fiction, minimalist fiction, writing tools, literary newsletter, flash fiction prompts, literary magazine finder">
+<meta name="author" content="David — Tumbleweed Words">
+<link rel="canonical" href="https://tumbleweedwords-byte.github.io/tumbleweed-blog/index.html">
+<meta property="og:title" content="Tumbleweed Words — Flash Fiction, Craft Essays &amp; Free Writing Tools">
+<meta property="og:description" content="Flash fiction craft essays, free writing tools, and minimalist prose guides. By David — Pushcart-nominated.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tumbleweed Words — Writing on Craft, Fiction &amp; the Nomadic Life">
-<meta property="og:description" content="Essays on minimalist fiction, flash fiction craft, nomadic writing life, and literary publishing.">
-<meta property="og:url" content="https://tumbleweedwords.com/">
-<meta property="og:site_name" content="Tumbleweed Words">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@tumbleweedwords">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Tumbleweed Words","url":"https://tumbleweedwords.com","description":"Essays on minimalist fiction, flash fiction craft, nomadic writing life, and literary publishing. By David — internationally published, Pushcart-nominated.","author":{"@type":"Person","name":"David","url":"https://tumbleweedwords.com/about.html","sameAs":["https://tumbleweedwords.substack.com"],"jobTitle":"Writer"}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Tumbleweed Words","url":"https://tumbleweedwords-byte.github.io/tumbleweed-blog","description":"Flash fiction craft essays, free writing tools, and minimalist prose guides.","author":{"@type":"Person","name":"David","sameAs":["https://tumbleweedwords.substack.com"]}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--txt:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#fff;--bg2:#faf9fd;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
 html{font-size:18px;scroll-behavior:smooth}
 body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:var(--p);text-decoration:none;transition:color .2s}a:hover{color:var(--p2)}
-img{max-width:100%;display:block}
 .wrap{min-height:100vh;display:flex;flex-direction:column}
 main{flex:1}
+
+/* NAV */
 .nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
 .nlogo{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:var(--p);letter-spacing:-.01em}
-.nlogo:hover{color:var(--p2)}
-.nlinks{display:flex;gap:1.8rem;align-items:center}
-.nlink{font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);border-bottom:2px solid transparent;padding:.2rem 0;transition:color .15s,border-color .15s}
-.nlink:hover,.nlink.active{color:var(--p);border-bottom-color:var(--p)}
-.ncta{background:var(--p)!important;color:#fff!important;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm)!important;font-size:.66rem!important;letter-spacing:.1em!important;text-transform:uppercase!important;border-bottom:none!important}
+.nlinks{display:flex;gap:1.5rem;align-items:center}
+.nlink{font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);transition:color .15s}
+.nlink:hover{color:var(--p)}
+.ncta{background:var(--p);color:#fff!important;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
 .ncta:hover{background:var(--p2)!important}
-.btn{display:inline-block;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.4rem;border-radius:3px;border:1.5px solid;cursor:pointer;transition:all .15s}
+
+/* HERO */
+.hero{padding:4rem 2rem 3rem;border-bottom:1px solid var(--br);max-width:1000px;margin:0 auto}
+.h-eye{font-family:var(--fm);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--p);margin-bottom:1rem}
+.h-title{font-family:var(--fd);font-size:clamp(2.6rem,5vw,4rem);font-weight:700;color:var(--txt);line-height:1.06;letter-spacing:-.02em;margin-bottom:1.2rem;max-width:16ch}
+.h-title em{color:var(--p);font-style:italic}
+.h-sub{font-size:1rem;color:var(--mu);max-width:50ch;line-height:1.72;margin-bottom:2rem}
+.h-acts{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.4rem;border-radius:3px;border:1.5px solid;transition:all .15s}
 .btn-p{background:var(--p);border-color:var(--p);color:#fff}.btn-p:hover{background:var(--p2);border-color:var(--p2);color:#fff}
 .btn-g{background:transparent;border-color:var(--p);color:var(--p)}.btn-g:hover{background:var(--pl)}
-.hero{padding:4.5rem 2rem 3.5rem;border-bottom:1px solid var(--br);max-width:960px;margin:0 auto}
-.h-eye{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--p);margin-bottom:1.1rem}
-.h-title{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,4.2rem);font-weight:700;color:var(--txt);line-height:1.06;letter-spacing:-.02em;margin-bottom:1.3rem;max-width:14ch}
-.h-title em{color:var(--p);font-style:italic}
-.h-sub{font-size:1rem;color:var(--mu);max-width:50ch;line-height:1.72;margin-bottom:2.2rem}
-.h-acts{display:flex;gap:.8rem;flex-wrap:wrap}
-.psec{padding:3rem 2rem;max-width:960px;margin:0 auto}
-.slbl{font-family:var(--fm);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fa);border-bottom:1px solid var(--br);padding-bottom:.7rem;margin-bottom:2rem}
+
+/* SECTION WRAPPER */
+.section{max-width:1000px;margin:0 auto;padding:2.5rem 2rem}
+.slbl{font-family:var(--fm);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fa);border-bottom:1px solid var(--br);padding-bottom:.7rem;margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center}
+.slbl a{font-size:.56rem;letter-spacing:.12em;color:var(--p)}
+
+/* TOOLS GRID */
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-bottom:.5rem}
+@media(max-width:580px){.tools-grid{grid-template-columns:1fr}}
+.tool-card{background:var(--pl);border:1.5px solid var(--p);border-radius:6px;padding:1.4rem 1.6rem;display:flex;flex-direction:column;gap:.5rem;transition:background .15s}
+.tool-card:hover{background:#e0dcfd}
+.tc-label{font-family:var(--fm);font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p)}
+.tc-name{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--txt);letter-spacing:-.01em;line-height:1.2}
+.tc-desc{font-size:.85rem;color:var(--mu);line-height:1.6}
+.tc-cta{font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-top:.2rem}
+
+/* POSTS GRID */
 .pgrid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--br);border-radius:6px;overflow:hidden}
-@media(max-width:600px){.pgrid{grid-template-columns:1fr}.hide-m{display:none}}
-.pcard{padding:1.8rem;border-right:1px solid var(--br);border-bottom:1px solid var(--br);transition:background .15s;display:flex;flex-direction:column;gap:.55rem}
-.pcard:hover{background:var(--bg2)}.pcard:nth-child(even){border-right:none}.pcard:nth-last-child(-n+2){border-bottom:none}
-.pc-tag{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p)}
-.pc-title{font-family:var(--fd);font-size:1.28rem;font-weight:600;color:var(--txt);line-height:1.2;letter-spacing:-.01em}
+@media(max-width:580px){.pgrid{grid-template-columns:1fr}}
+.pcard{padding:1.5rem;border-right:1px solid var(--br);border-bottom:1px solid var(--br);transition:background .15s;display:flex;flex-direction:column;gap:.4rem}
+.pcard:hover{background:var(--bg2)}
+.pcard:nth-child(even){border-right:none}
+.pcard:nth-last-child(-n+2){border-bottom:none}
+.pc-tag{font-family:var(--fm);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p)}
+.pc-title{font-family:var(--fd);font-size:1.05rem;font-weight:600;color:var(--txt);line-height:1.2;letter-spacing:-.01em}
 .pc-title a{color:inherit}.pc-title a:hover{color:var(--p)}
-.pc-exc{font-size:.87rem;color:var(--mu);line-height:1.65;flex:1}
-.pc-meta{font-family:var(--fm);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa);display:flex;gap:.8rem;align-items:center}
-.pc-read{color:var(--p);margin-left:auto}
-.cband{background:var(--pl);border-top:2px solid var(--p);border-bottom:2px solid var(--p);padding:3.5rem 2rem;text-align:center}
-.cb-lbl{font-family:var(--fm);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--p);margin-bottom:.9rem}
-.cb-title{font-family:var(--fd);font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:700;color:var(--txt);letter-spacing:-.02em;margin-bottom:.7rem;line-height:1.2}
-.cb-body{font-size:.93rem;color:var(--mu);max-width:44ch;margin:0 auto 1.8rem;line-height:1.65}
-.cb-sub{display:block;margin-top:.9rem;font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+.pc-exc{font-size:.83rem;color:var(--mu);line-height:1.6;flex:1}
+.pc-read{font-family:var(--fm);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:var(--p);margin-top:.2rem}
+
+/* CTA BAND */
+.cband{background:var(--pl);border-top:2px solid var(--p);border-bottom:2px solid var(--p);padding:3rem 2rem;text-align:center}
+.cb-lbl{font-family:var(--fm);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem}
+.cb-title{font-family:var(--fd);font-size:clamp(1.5rem,3.5vw,2rem);font-weight:700;color:var(--txt);letter-spacing:-.02em;margin-bottom:.7rem;line-height:1.2}
+.cb-body{font-size:.92rem;color:var(--mu);max-width:44ch;margin:0 auto 1.6rem;line-height:1.65}
+.cb-sub{display:block;margin-top:.8rem;font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+
+/* FOOTER */
 .ft{border-top:1px solid var(--br);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
 .ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
-.ft-l{display:flex;gap:1.2rem}
-.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
-.ph{padding:3.5rem 2rem 2.5rem;border-bottom:1px solid var(--br);max-width:760px;margin:0 auto}
-.pb-back{font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1.8rem}
-.pb-back::before{content:"\2190"}.pb-back:hover{color:var(--p)}
-.pb-tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem}
-.pb-title{font-family:var(--fd);font-size:clamp(1.9rem,4.5vw,3rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
-.pb-desc{font-size:1rem;color:var(--mu);max-width:50ch;line-height:1.7;margin-bottom:1.2rem}
-.pb-meta{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);display:flex;gap:1rem;flex-wrap:wrap}
-.pbody{max-width:680px;margin:0 auto;padding:2.5rem 2rem 3.5rem}
-.pbody h2{font-family:var(--fd);font-size:1.5rem;font-weight:600;color:var(--txt);margin:2.5rem 0 .8rem;letter-spacing:-.01em;line-height:1.2}
-.pbody p{color:var(--txt2);margin-bottom:1.35rem;line-height:1.82}
-.pbody p:first-of-type::first-letter{font-family:var(--fd);font-size:3.4rem;font-weight:700;float:left;line-height:.85;margin:.1rem .12rem 0 0;color:var(--p)}
-.pbody strong{color:var(--txt);font-weight:500}.pbody em{font-style:italic}
-.pbody ul{margin:0 0 1.35rem 1.4rem;color:var(--txt2)}.pbody li{margin-bottom:.4rem;line-height:1.7}
-.pbody blockquote{border-left:3px solid var(--p);padding:.8rem 1.4rem;margin:2rem 0;background:var(--pl);border-radius:0 4px 4px 0}
-.pbody blockquote p{font-family:var(--fd);font-size:1.1rem;font-style:italic;color:var(--txt);margin:0}
-.pbody a{color:var(--p);border-bottom:1px solid var(--pl2)}.pbody a:hover{border-color:var(--p)}
-.icta{background:var(--pl);border-left:3px solid var(--p);padding:1.4rem 1.6rem;margin:2.2rem 0;border-radius:0 6px 6px 0}
-.icta-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.5rem}
-.icta-t{font-size:.9rem;color:var(--mu);margin-bottom:.8rem;line-height:1.65}
-.icta-a{font-family:var(--fm);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p)}
-.rel{background:var(--bg2);border:1px solid var(--br);padding:1.5rem;margin:2.2rem 0;border-radius:6px}
-.rel-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.9rem}
-.rel-ul{list-style:none}
-.rel-ul li{border-bottom:1px solid var(--br);padding:.5rem 0;display:flex;gap:.5rem;align-items:baseline}
-.rel-ul li:last-child{border-bottom:none;padding-bottom:0}
-.rel-ul li::before{content:"\2192";color:var(--p);font-size:.8rem;flex-shrink:0}
-.rel-ul a{color:var(--txt2);font-size:.9rem;border-bottom:none}.rel-ul a:hover{color:var(--p)}
-.abox{display:flex;gap:1.3rem;padding:1.8rem;background:var(--bg2);border:1px solid var(--br);border-radius:6px;margin-top:2.8rem;align-items:flex-start}
-.abox-img{width:72px;height:72px;border-radius:50%;flex-shrink:0;overflow:hidden;border:2.5px solid var(--p)}
-.abox-img img{width:100%;height:100%;object-fit:cover}
-.abox-name{font-family:var(--fd);font-size:1rem;font-weight:600;color:var(--txt);margin-bottom:.3rem}
-.abox-bio{font-size:.85rem;color:var(--mu);line-height:1.65;margin-bottom:.6rem}
-.abox-a{font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p)}
-.aho{padding:3.5rem 2rem 2.5rem;border-bottom:1px solid var(--br);max-width:760px;margin:0 auto}
-.aho-t{font-family:var(--fd);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:700;color:var(--txt);letter-spacing:-.02em}
-.abody{max-width:680px;margin:0 auto;padding:2.5rem 2rem 3.5rem}
-.abody h2{font-family:var(--fd);font-size:1.4rem;font-weight:600;color:var(--txt);margin:2.2rem 0 .8rem;letter-spacing:-.01em}
-.abody p{color:var(--txt2);margin-bottom:1.35rem;line-height:1.82}
-.abody a{color:var(--p);border-bottom:1px solid var(--pl2)}.abody a:hover{border-color:var(--p)}
-.aprof{display:flex;gap:2rem;align-items:flex-start;margin:2rem 0;padding:2rem;background:var(--pl);border-radius:8px;border:1px solid var(--pl2)}
-.aprof-img{width:120px;height:120px;border-radius:50%;flex-shrink:0;overflow:hidden;border:3px solid var(--p)}
-.aprof-img img{width:100%;height:100%;object-fit:cover}
-@media(max-width:600px){.aprof{flex-direction:column;align-items:center;text-align:center}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
 </style>
 </head>
 <body>
 <div class="wrap">
+
 <nav class="nav">
   <a href="index.html" class="nlogo">Tumbleweed Words</a>
   <div class="nlinks">
-    <a href="index.html" class="nlink hide-m active">Writing</a>
-    <a href="about.html" class="nlink hide-m">About</a>
+    <a href="all-writing.html" class="nlink">All writing</a>
+    <a href="about.html" class="nlink">About</a>
     <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe &rarr;</a>
   </div>
 </nav>
+
 <main>
+
   <section class="hero">
-    <div class="h-eye">Tumbleweed Words &middot; Writing Blog</div>
-    <h1 class="h-title">On writing,<br><em>craft</em>, and the<br>nomadic life</h1>
-    <p class="h-sub">Essays on minimalist fiction, flash fiction technique, literary publishing, and what it means to write from the road. By David &mdash; internationally published, Pushcart-nominated.</p>
+    <div class="h-eye">Tumbleweed Words &middot; Writing Blog &amp; Tools</div>
+    <h1 class="h-title">Flash fiction, <em>craft</em>, and free writing tools</h1>
+    <p class="h-sub">Essays on minimalist fiction, literary craft, and nomadic writing — plus free interactive tools for writers. By David &mdash; internationally published, Pushcart-nominated.</p>
     <div class="h-acts">
-      <a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Read the newsletter</a>
-      <a href="#posts" class="btn btn-g">Browse essays</a>
+      <a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Subscribe to the newsletter</a>
+      <a href="all-writing.html" class="btn btn-g">Browse everything &rarr;</a>
     </div>
   </section>
-  <section class="psec" id="posts">
-    <div class="slbl">All essays</div>
-    <div class="pgrid"><article class="pcard">
-  <div class="pc-tag">Craft</div>
-  <h2 class="pc-title"><a href="post-flash-fiction.html">How to Write Flash Fiction: A Minimalist's Guide</a></h2>
-  <p class="pc-exc">Flash fiction under 1,000 words demands different thinking. Here's how to write flash fiction that lands using restraint, compression, and one devastating final line.</p>
-  <div class="pc-meta"><span>January 15, 2024</span><span>&middot;</span><span>8 min</span><span class="pc-read"><a href="post-flash-fiction.html">Read &rarr;</a></span></div>
-</article><article class="pcard">
-  <div class="pc-tag">Writing Life</div>
-  <h2 class="pc-title"><a href="post-writing-nomadic.html">Writing While Travelling: Maintaining a Creative Practice on the Road</a></h2>
-  <p class="pc-exc">Five years of writing from trains and borrowed desks across Europe and South America. What actually works for a nomadic writing practice.</p>
-  <div class="pc-meta"><span>February 1, 2024</span><span>&middot;</span><span>8 min</span><span class="pc-read"><a href="post-writing-nomadic.html">Read &rarr;</a></span></div>
-</article><article class="pcard">
-  <div class="pc-tag">Craft</div>
-  <h2 class="pc-title"><a href="post-minimalist-fiction.html">Minimalist Fiction: The Techniques That Actually Work</a></h2>
-  <p class="pc-exc">Minimalist fiction is not about removing words — it's about trusting the reader. The specific techniques that make spare prose feel full.</p>
-  <div class="pc-meta"><span>March 1, 2024</span><span>&middot;</span><span>8 min</span><span class="pc-read"><a href="post-minimalist-fiction.html">Read &rarr;</a></span></div>
-</article><article class="pcard">
-  <div class="pc-tag">Publishing</div>
-  <h2 class="pc-title"><a href="post-literary-magazines.html">The Best Literary Magazines for Flash Fiction Submissions</a></h2>
-  <p class="pc-exc">A curated guide to the literary journals worth submitting flash fiction to, ranked by prestige and commitment to the form.</p>
-  <div class="pc-meta"><span>April 1, 2024</span><span>&middot;</span><span>8 min</span><span class="pc-read"><a href="post-literary-magazines.html">Read &rarr;</a></span></div>
-</article></div>
+
+  <!-- TOOLS -->
+  <section class="section">
+    <div class="slbl">
+      <span>Free writing tools</span>
+      <a href="all-writing.html#tools">See all &rarr;</a>
+    </div>
+    <div class="tools-grid">
+      <a href="literary-style-quiz.html" class="tool-card">
+        <span class="tc-label">Quiz &middot; 10 questions &middot; No signup</span>
+        <div class="tc-name">Which writer do you write like?</div>
+        <div class="tc-desc">Carver, Hemingway, Hempel, Chekhov, Paley, Beckett, or Kafka — find your literary match.</div>
+        <span class="tc-cta">Take the quiz &rarr;</span>
+      </a>
+      <a href="flash-fiction-prompts.html" class="tool-card">
+        <span class="tc-label">Generator &middot; Hundreds of prompts</span>
+        <div class="tc-name">Flash fiction prompt generator</div>
+        <div class="tc-desc">City, theme, opening line, and formal constraint. Four styles. Shareable.</div>
+        <span class="tc-cta">Generate a prompt &rarr;</span>
+      </a>
+      <a href="literary-magazine-finder.html" class="tool-card">
+        <span class="tc-label">Database &middot; 32 journals</span>
+        <div class="tc-name">Literary magazine finder</div>
+        <div class="tc-desc">Filter by pay rate, response time, and form. Direct submit links for every journal.</div>
+        <span class="tc-cta">Find a magazine &rarr;</span>
+      </a>
+      <a href="flash-fiction-workshop.html" class="tool-card">
+        <span class="tc-label">Workshop &middot; AI craft analysis</span>
+        <div class="tc-name">Flash fiction workshop</div>
+        <div class="tc-desc">Paste your piece. Get compression score, style influences, ending analysis, and a craft verdict.</div>
+        <span class="tc-cta">Workshop your piece &rarr;</span>
+      </a>
+    </div>
   </section>
-  <section class="cband" aria-label="Newsletter">
+
+  <!-- CORE ESSAYS -->
+  <section class="section" style="padding-top:0">
+    <div class="slbl">
+      <span>Craft essays</span>
+      <a href="all-writing.html">See all writing &rarr;</a>
+    </div>
+    <div class="pgrid">
+      <div class="pcard">
+        <span class="pc-tag">Craft</span>
+        <div class="pc-title"><a href="post-flash-fiction.html">How to Write Flash Fiction: A Minimalist's Guide</a></div>
+        <p class="pc-exc">Flash fiction under 1,000 words demands different thinking. The techniques that make compressed stories land.</p>
+        <span class="pc-read"><a href="post-flash-fiction.html">Read &rarr;</a></span>
+      </div>
+      <div class="pcard">
+        <span class="pc-tag">Craft</span>
+        <div class="pc-title"><a href="what-is-dirty-realism.html">What Is Dirty Realism? The American Short Story at Its Most Honest</a></div>
+        <p class="pc-exc">The movement that changed American short fiction — Carver, Ford, Hempel, and what they actually taught.</p>
+        <span class="pc-read"><a href="what-is-dirty-realism.html">Read &rarr;</a></span>
+      </div>
+      <div class="pcard">
+        <span class="pc-tag">Craft</span>
+        <div class="pc-title"><a href="hemingway-vs-carver-difference.html">Hemingway vs Carver: What Actually Separates Them</a></div>
+        <p class="pc-exc">The two names most associated with literary minimalism — but they are not the same tradition.</p>
+        <span class="pc-read"><a href="hemingway-vs-carver-difference.html">Read &rarr;</a></span>
+      </div>
+      <div class="pcard">
+        <span class="pc-tag">Writing Life</span>
+        <div class="pc-title"><a href="post-writing-nomadic.html">Writing While Travelling: Maintaining a Creative Practice on the Road</a></div>
+        <p class="pc-exc">Five years writing from trains and borrowed rooms. What actually works for a nomadic writing practice.</p>
+        <span class="pc-read"><a href="post-writing-nomadic.html">Read &rarr;</a></span>
+      </div>
+      <div class="pcard">
+        <span class="pc-tag">Review</span>
+        <div class="pc-title"><a href="george-saunders-vigil-review.html">George Saunders' Vigil — What It Teaches About Compressed Prose</a></div>
+        <p class="pc-exc">A craft-focused review of the 2026 novel — not what it's about, but what it teaches writers.</p>
+        <span class="pc-read"><a href="george-saunders-vigil-review.html">Read &rarr;</a></span>
+      </div>
+      <div class="pcard">
+        <span class="pc-tag">Publishing</span>
+        <div class="pc-title"><a href="post-literary-magazines.html">The Best Literary Magazines for Flash Fiction Submissions</a></div>
+        <p class="pc-exc">Where to submit flash fiction — ranked by prestige, response time, and commitment to the form.</p>
+        <span class="pc-read"><a href="post-literary-magazines.html">Read &rarr;</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cband">
     <div class="cb-lbl">Tumbleweed Words &middot; Substack Newsletter</div>
     <h2 class="cb-title">Fiction written on trains.<br>Delivered to your inbox.</h2>
     <p class="cb-body">Gritty, minimalist stories and poems from wherever I happen to be. Over a thousand readers. Free, always.</p>
     <a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Subscribe on Substack</a>
     <a href="https://tumbleweedwords.substack.com" class="cb-sub" target="_blank" rel="noopener">Or browse the archive first &rarr;</a>
   </section>
+
 </main>
-<footer class="ft" role="contentinfo">
-  <span class="ft-c">&copy; 2024 David &middot; Tumbleweed Words</span>
-  <nav class="ft-l"><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a><a href="about.html">About</a></nav>
+
+<footer class="ft">
+  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
+  <nav class="ft-l">
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="all-writing.html">All writing</a>
+    <a href="about.html">About</a>
+  </nav>
 </footer>
 </div>
 </body>
