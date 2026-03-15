@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flash Fiction Workshop — Free AI Craft Analysis | Tumbleweed Words</title>
+<meta name="description" content="Free AI-powered flash fiction workshop. Paste your story and get instant craft analysis — compression score, style influences from Carver to Hempel, ending assessment, and one actionable note. By Tumbleweed Words.">
+<meta name="keywords" content="flash fiction workshop, flash fiction feedback, free flash fiction critique, AI writing tool, flash fiction craft analysis, minimalist fiction feedback">
+<meta name="author" content="David — Tumbleweed Words">
+<link rel="canonical" href="https://tumbleweedwords-byte.github.io/tumbleweed-blog/flash-fiction-workshop.html">
+<meta property="og:title" content="Flash Fiction Workshop — Free AI Craft Analysis">
+<meta property="og:description" content="Paste your flash fiction. Get instant craft analysis — compression score, style influences, ending assessment. Free. By Tumbleweed Words.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--txt:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#fff;--bg2:#faf9fd;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+html{font-size:18px;scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--p);text-decoration:none}a:hover{color:var(--p2)}
+.wrap{min-height:100vh;display:flex;flex-direction:column}
+.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em}
+.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2);color:#fff}
+main{flex:1;max-width:760px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
+.tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.9rem;display:block}
+h1{font-family:var(--fd);font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}
+.standfirst{font-size:1rem;color:var(--mu);max-width:52ch;line-height:1.72;margin-bottom:2rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
+.api-box{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.3rem 1.5rem;margin-bottom:1.8rem}
+.api-box-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.6rem}
+.api-box p{font-size:.85rem;color:var(--mu);margin-bottom:.8rem;line-height:1.65}
+.api-box a{color:var(--p);border-bottom:1px solid var(--pl2)}
+.api-input{width:100%;padding:.6rem .8rem;font-family:var(--fm);font-size:.8rem;border:1px solid var(--br);border-radius:4px;background:var(--bg);color:var(--txt);margin-bottom:.5rem}
+.api-input:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px rgba(85,51,232,.08)}
+.api-saved{font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--p);display:none}
+textarea{width:100%;min-height:200px;padding:1rem;font-family:var(--fb);font-size:.95rem;line-height:1.75;border:1px solid var(--br);border-radius:6px;background:var(--bg);color:var(--txt);resize:vertical;margin-bottom:.8rem}
+textarea:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px rgba(85,51,232,.08)}
+.controls{display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;flex-wrap:wrap}
+.btn-main{background:var(--p);color:#fff;border:none;padding:.65rem 1.5rem;border-radius:3px;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .15s}
+.btn-main:hover{background:var(--p2)}
+.btn-main:disabled{opacity:.45;cursor:not-allowed}
+.wc{font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.err{background:#FEF2F2;border:1px solid #FCA5A5;border-radius:4px;padding:.8rem 1rem;font-size:.85rem;color:#B91C1C;margin-bottom:1.2rem}
+.loading{text-align:center;padding:3rem 0}
+.spin{width:32px;height:32px;border:3px solid var(--pl);border-top-color:var(--p);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto .8rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-t{font-family:var(--fm);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+.results{display:none}
+.results.show{display:block}
+.score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.2rem}
+.metric{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1rem;text-align:center}
+.metric-l{font-family:var(--fm);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fa);margin-bottom:.4rem}
+.metric-v{font-family:var(--fd);font-size:1.5rem;font-weight:600;color:var(--txt)}
+.metric-v.purple{color:var(--p)}
+.r-card{background:var(--bg);border:1px solid var(--br);border-radius:6px;padding:1.1rem 1.3rem;margin-bottom:.75rem}
+.r-card-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.7rem}
+.r-card p{font-size:.9rem;color:var(--txt2);line-height:1.75;margin-bottom:.5rem}
+.r-card p:last-child{margin-bottom:0}
+.r-card strong{color:var(--txt);font-weight:500}
+.inf-list{list-style:none}
+.inf-list li{font-size:.9rem;color:var(--txt2);line-height:1.7;padding:.4rem 0;border-bottom:1px solid var(--br);display:flex;gap:.5rem}
+.inf-list li:last-child{border-bottom:none}
+.inf-list li::before{content:"\2014";color:var(--p);flex-shrink:0}
+.inf-name{color:var(--txt);font-weight:500}
+.bar-wrap{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar{flex:1;height:5px;background:var(--pl);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;background:var(--p);border-radius:3px;transition:width .8s ease}
+.bar-n{font-family:var(--fd);font-size:1rem;font-weight:600;color:var(--p);min-width:2rem;text-align:right}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+.verdict-card{background:var(--pl);border-left:3px solid var(--p);border-radius:0 6px 6px 0;padding:1.2rem 1.5rem;margin-bottom:1.2rem}
+.verdict-card .r-card-l{margin-bottom:.6rem}
+.verdict-card p{font-family:var(--fd);font-size:1rem;font-style:italic;color:var(--txt);line-height:1.75;margin:0}
+.cta-band{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.4rem 1.6rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.cta-t{font-size:.88rem;color:var(--mu);line-height:1.6;max-width:44ch}
+.cta-t strong{color:var(--txt);font-weight:500;display:block;margin-bottom:.2rem}
+.cta-btn{background:var(--p);color:#fff;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.cta-btn:hover{background:var(--p2);color:#fff}
+.btn-reset{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.45rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.btn-reset:hover{background:var(--bg2)}
+.how{background:var(--bg2);border-radius:6px;padding:1.3rem 1.5rem;margin-bottom:2rem}
+.how-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.how-item{font-size:.85rem;color:var(--mu);line-height:1.6}
+.how-item strong{color:var(--txt);display:block;margin-bottom:.2rem;font-weight:500}
+.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+@media(max-width:600px){.score-row{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr}.how-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav">
+  <a href="index.html" class="nlogo">Tumbleweed Words</a>
+  <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe &rarr;</a>
+</nav>
+<main>
+  <span class="tag">Free Tool &middot; Flash Fiction Workshop</span>
+  <h1>Get your flash fiction analysed</h1>
+  <p class="standfirst">Paste your piece and get instant craft feedback grounded in the minimalist tradition &mdash; compression score, style influences, ending assessment, and one thing to work on. Free to use.</p>
+
+  <div class="how">
+    <div class="how-l">How it works</div>
+    <div class="how-grid">
+      <div class="how-item"><strong>1. Get your free API key</strong>Visit console.anthropic.com &mdash; free account, takes two minutes. Paste the key below once.</div>
+      <div class="how-item"><strong>2. Paste your piece</strong>Flash fiction, sudden fiction, prose poetry &mdash; anything from 50 to 1,500 words.</div>
+      <div class="how-item"><strong>3. Get craft feedback</strong>Compression score, style influences from Carver to Hempel, ending analysis, one actionable note.</div>
+    </div>
+  </div>
+
+  <div class="api-box">
+    <div class="api-box-l">Anthropic API key</div>
+    <p>This tool uses Claude AI to analyse your writing. You need a free API key from <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a> &mdash; the free tier is more than enough. Your key stays in your browser only.</p>
+    <input type="password" class="api-input" id="api-key" placeholder="sk-ant-..." autocomplete="off">
+    <span class="api-saved" id="key-saved">Key saved in this session &mdash; ready to analyse</span>
+  </div>
+
+  <textarea id="txt" placeholder="Paste your flash fiction here..."></textarea>
+
+  <div class="controls">
+    <button class="btn-main" id="btn" onclick="analyse()">Analyse my piece &rarr;</button>
+    <span class="wc" id="wc">0 words</span>
+  </div>
+
+  <div class="err" id="err" style="display:none"></div>
+
+  <div class="loading" id="loading" style="display:none">
+    <div class="spin"></div>
+    <div class="loading-t" id="loading-t">Reading your piece&hellip;</div>
+  </div>
+
+  <div class="results" id="results">
+    <div class="score-row">
+      <div class="metric"><div class="metric-l">Words</div><div class="metric-v" id="r-wc">&mdash;</div></div>
+      <div class="metric"><div class="metric-l">Compression</div><div class="metric-v purple" id="r-score">&mdash;</div></div>
+      <div class="metric"><div class="metric-l">Form</div><div class="metric-v" id="r-form" style="font-size:1rem;padding-top:4px">&mdash;</div></div>
+    </div>
+
+    <div class="r-card">
+      <div class="r-card-l">Style influences</div>
+      <ul class="inf-list" id="r-inf"></ul>
+    </div>
+
+    <div class="r-card">
+      <div class="r-card-l">Compression analysis</div>
+      <div class="bar-wrap">
+        <div class="bar"><div class="bar-fill" id="r-bar" style="width:0%"></div></div>
+        <div class="bar-n" id="r-bar-n">&mdash;</div>
+      </div>
+      <p id="r-comp"></p>
+    </div>
+
+    <div class="two-col">
+      <div class="r-card"><div class="r-card-l">Ending</div><p id="r-end"></p></div>
+      <div class="r-card"><div class="r-card-l">Strongest element</div><p id="r-strong"></p></div>
+    </div>
+
+    <div class="r-card">
+      <div class="r-card-l">One thing to work on</div>
+      <p id="r-work"></p>
+    </div>
+
+    <div class="verdict-card">
+      <div class="r-card-l">Craft verdict</div>
+      <p id="r-verdict"></p>
+    </div>
+
+    <div class="cta-band">
+      <div class="cta-t">
+        <strong>Tumbleweed Words &mdash; Substack Newsletter</strong>
+        Flash fiction and prose poetry written on trains. Five years, over a thousand readers. Free.
+      </div>
+      <a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a>
+    </div>
+
+    <button class="btn-reset" onclick="resetTool()">Analyse another piece</button>
+  </div>
+</main>
+<footer class="ft">
+  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
+  <nav class="ft-l">
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="about.html">About</a>
+    <a href="index.html">Writing</a>
+  </nav>
+</footer>
+</div>
+
+<script>
+const txtEl = document.getElementById('txt');
+const wcEl = document.getElementById('wc');
+const keyEl = document.getElementById('api-key');
+
+txtEl.addEventListener('input', () => {
+  const w = txtEl.value.trim().split(/\s+/).filter(Boolean).length;
+  wcEl.textContent = w + ' word' + (w !== 1 ? 's' : '');
+});
+
+keyEl.addEventListener('input', () => {
+  const saved = document.getElementById('key-saved');
+  saved.style.display = keyEl.value.startsWith('sk-ant-') ? 'inline' : 'none';
+});
+
+const MSGS = ['Reading your piece…','Measuring compression…','Checking the ending…','Consulting the tradition…','Almost there…'];
+let mIdx = 0, mTimer;
+
+function showLoad(on) {
+  document.getElementById('loading').style.display = on ? 'block' : 'none';
+  if (on) {
+    mIdx = 0;
+    document.getElementById('loading-t').textContent = MSGS[0];
+    mTimer = setInterval(() => { mIdx = Math.min(mIdx+1, MSGS.length-1); document.getElementById('loading-t').textContent = MSGS[mIdx]; }, 1800);
+  } else { clearInterval(mTimer); }
+}
+
+function showErr(m) { const e = document.getElementById('err'); e.textContent = m; e.style.display = 'block'; }
+
+const SYSTEM = `You are a craft editor specialising in minimalist flash fiction, trained in the tradition of Carver, Hemingway, Hempel, Chekhov, and the dirty realism movement. Analyse the flash fiction piece provided and return ONLY a valid JSON object with exactly this structure, no preamble, no markdown fences:
+{"wordCount":number,"formAssessment":"one short phrase","influences":[{"writer":"name","reason":"one specific sentence"},{"writer":"name","reason":"one specific sentence"}],"compressionScore":number_1_to_10,"compressionNotes":"2-3 specific sentences on compression","endingAnalysis":"2-3 sentences on the ending specifically","strongestElement":"one sentence on the strongest craft element","workOn":"one specific actionable sentence referring to something in the actual piece","verdict":"2-3 sentences honest craft verdict"}`;
+
+async function analyse() {
+  const piece = txtEl.value.trim();
+  const key = keyEl.value.trim();
+  document.getElementById('err').style.display = 'none';
+  if (!key || !key.startsWith('sk-ant-')) { showErr('Please enter your Anthropic API key above. Get a free key at console.anthropic.com'); return; }
+  if (!piece || piece.split(/\s+/).length < 30) { showErr('Please paste a piece of at least 30 words.'); return; }
+  document.getElementById('btn').disabled = true;
+  showLoad(true);
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01'},
+      body: JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:SYSTEM,messages:[{role:'user',content:'Analyse this piece:\n\n'+piece}]})
+    });
+    const data = await res.json();
+    showLoad(false);
+    document.getElementById('btn').disabled = false;
+    if (data.error) throw new Error(data.error.message);
+    let raw = (data.content||[]).map(b=>b.text||'').join('').replace(/\`\`\`json|\`\`\`/g,'').trim();
+    render(JSON.parse(raw), piece);
+  } catch(e) {
+    showLoad(false);
+    document.getElementById('btn').disabled = false;
+    showErr('Analysis failed: ' + (e.message || 'Please check your API key and try again.'));
+  }
+}
+
+function render(d, piece) {
+  document.getElementById('r-wc').textContent = d.wordCount || piece.trim().split(/\s+/).length;
+  document.getElementById('r-score').textContent = (d.compressionScore||'&mdash;') + '/10';
+  document.getElementById('r-form').textContent = d.formAssessment || '&mdash;';
+  document.getElementById('r-inf').innerHTML = (d.influences||[]).map(i=>`<li><span class="inf-name">${i.writer}</span> &mdash; ${i.reason}</li>`).join('');
+  const s = d.compressionScore || 0;
+  document.getElementById('r-bar').style.width = (s*10)+'%';
+  document.getElementById('r-bar-n').textContent = s+'/10';
+  document.getElementById('r-comp').textContent = d.compressionNotes || '';
+  document.getElementById('r-end').textContent = d.endingAnalysis || '';
+  document.getElementById('r-strong').textContent = d.strongestElement || '';
+  document.getElementById('r-work').innerHTML = '<strong>Work on:</strong> ' + (d.workOn||'');
+  document.getElementById('r-verdict').textContent = d.verdict || '';
+  document.getElementById('results').classList.add('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function resetTool() {
+  document.getElementById('results').classList.remove('show');
+  txtEl.value = '';
+  wcEl.textContent = '0 words';
+}
+</script>
+</body>
+</html>
