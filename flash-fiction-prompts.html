@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flash Fiction Prompt Generator — Free Daily Prompts | Tumbleweed Words</title>
+<meta name="description" content="Free flash fiction prompt generator — hundreds of prompts in the minimalist tradition. One click, instant prompt. City, theme, constraint, and opening line. By Tumbleweed Words.">
+<meta name="keywords" content="flash fiction prompts, flash fiction prompt generator, daily writing prompts, minimalist fiction prompts, short story prompts, creative writing prompts flash fiction">
+<meta name="author" content="David — Tumbleweed Words">
+<link rel="canonical" href="https://tumbleweedwords-byte.github.io/tumbleweed-blog/flash-fiction-prompts.html">
+<meta property="og:title" content="Flash Fiction Prompt Generator — Free Daily Prompts">
+<meta property="og:description" content="Hundreds of flash fiction prompts in the minimalist tradition. One click, instant prompt. Free.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--txt:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#fff;--bg2:#faf9fd;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+html{font-size:18px;scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--p);text-decoration:none}a:hover{color:var(--p2)}
+.wrap{min-height:100vh;display:flex;flex-direction:column}
+.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em}
+.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2);color:#fff}
+main{flex:1;max-width:720px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
+.tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem;display:block}
+h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}
+.standfirst{font-size:1rem;color:var(--mu);max-width:52ch;line-height:1.72;margin-bottom:2rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
+.prompt-card{background:var(--bg);border:1.5px solid var(--p);border-radius:8px;padding:2rem 2rem 1.6rem;margin-bottom:1.5rem;min-height:280px;display:flex;flex-direction:column;gap:1.2rem;transition:opacity .2s}
+.prompt-card.loading{opacity:.4}
+.prompt-section{display:flex;flex-direction:column;gap:.3rem}
+.ps-label{font-family:var(--fm);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p)}
+.ps-value{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--txt);line-height:1.3;letter-spacing:-.01em}
+.ps-value.opening{font-style:italic;font-weight:400;font-size:1.05rem;color:var(--txt2)}
+.divider{height:1px;background:var(--br);margin:.2rem 0}
+.constraint-badge{display:inline-block;background:var(--pl);color:var(--p);font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;border-radius:3px;margin-top:.2rem}
+.controls{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem;align-items:center}
+.btn-generate{background:var(--p);color:#fff;border:none;padding:.7rem 1.8rem;border-radius:3px;font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .15s}
+.btn-generate:hover{background:var(--p2)}
+.btn-secondary{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.65rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .15s}
+.btn-secondary:hover{border-color:var(--p);color:var(--p);background:var(--pl)}
+.filter-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filter-btn{background:var(--bg2);border:1px solid var(--br);color:var(--mu);padding:.3rem .8rem;border-radius:3px;font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .15s}
+.filter-btn.active{background:var(--pl);border-color:var(--p);color:var(--p)}
+.filter-btn:hover{border-color:var(--p);color:var(--p)}
+.filter-label{font-family:var(--fm);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fa);align-self:center;margin-right:.2rem}
+.counter{font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa);margin-left:auto}
+.tips{background:var(--bg2);border-radius:6px;padding:1.3rem 1.5rem;margin-bottom:2rem}
+.tips-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem}
+.tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.tip{font-size:.85rem;color:var(--mu);line-height:1.65;padding-left:1rem;position:relative}
+.tip::before{content:"\2014";position:absolute;left:0;color:var(--p)}
+.cta-band{background:var(--pl);border-left:3px solid var(--p);padding:1.4rem 1.6rem;border-radius:0 6px 6px 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.cta-t{font-size:.9rem;color:var(--mu);line-height:1.6;max-width:44ch}
+.cta-t strong{color:var(--txt);font-weight:500;display:block;margin-bottom:.2rem}
+.cta-btn{background:var(--p);color:#fff;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.cta-btn:hover{background:var(--p2);color:#fff}
+.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
+.ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+@media(max-width:560px){.tips-grid{grid-template-columns:1fr}.controls{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav">
+  <a href="index.html" class="nlogo">Tumbleweed Words</a>
+  <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe &rarr;</a>
+</nav>
+<main>
+  <span class="tag">Free Tool &middot; Tumbleweed Words</span>
+  <h1>Flash fiction prompt generator</h1>
+  <p class="standfirst">Hundreds of prompts grounded in the minimalist tradition. Each prompt gives you a city, a theme, a formal constraint, and an opening line. One click, instant prompt. Free, always.</p>
+
+  <div class="filter-row">
+    <span class="filter-label">Style:</span>
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" data-filter="carver" onclick="setFilter('carver',this)">Carver-style</button>
+    <button class="filter-btn" data-filter="hemingway" onclick="setFilter('hemingway',this)">Hemingway</button>
+    <button class="filter-btn" data-filter="lyric" onclick="setFilter('lyric',this)">Lyric/poetic</button>
+    <button class="filter-btn" data-filter="kafka" onclick="setFilter('kafka',this)">Strange/dark</button>
+  </div>
+
+  <div class="prompt-card" id="prompt-card">
+    <div class="prompt-section">
+      <span class="ps-label">City &amp; setting</span>
+      <span class="ps-value" id="p-city">Click generate to get your first prompt</span>
+    </div>
+    <div class="divider"></div>
+    <div class="prompt-section">
+      <span class="ps-label">Theme</span>
+      <span class="ps-value" id="p-theme">&mdash;</span>
+    </div>
+    <div class="divider"></div>
+    <div class="prompt-section">
+      <span class="ps-label">Opening line</span>
+      <span class="ps-value opening" id="p-opening">&mdash;</span>
+    </div>
+    <div class="divider"></div>
+    <div class="prompt-section">
+      <span class="ps-label">Formal constraint</span>
+      <span class="constraint-badge" id="p-constraint">&mdash;</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-generate" onclick="generate()">New prompt &rarr;</button>
+    <button class="btn-secondary" onclick="copyPrompt()">Copy prompt</button>
+    <button class="btn-secondary" onclick="sharePrompt()">Share on X</button>
+    <span class="counter" id="counter">&mdash;</span>
+  </div>
+
+  <div class="tips">
+    <div class="tips-l">How to use this prompt</div>
+    <div class="tips-grid">
+      <div class="tip">Use the opening line as your actual first line — don't paraphrase it, write from it</div>
+      <div class="tip">The constraint is not optional — it's where the story lives</div>
+      <div class="tip">Write to the word limit first, then cut by 20%</div>
+      <div class="tip">Don't explain the theme — let it arrive through one specific detail</div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="cta-t">
+      <strong>Tumbleweed Words &mdash; Substack Newsletter</strong>
+      Flash fiction written on trains across Europe and South America. Five years, over a thousand readers. Free.
+    </div>
+    <a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a>
+  </div>
+</main>
+<footer class="ft">
+  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
+  <nav class="ft-l">
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="about.html">About</a>
+    <a href="index.html">Writing</a>
+    <a href="literary-style-quiz.html">Style quiz</a>
+  </nav>
+</footer>
+</div>
+
+<script>
+const DATA = {
+  all: {
+    cities: [
+      "Lisbon, Portugal — a hillside tram at 6am, the city not yet awake",
+      "Berlin, Germany — a U-Bahn station at midnight, the last train delayed",
+      "Buenos Aires, Argentina — a bookshop on Corrientes that never closes",
+      "Edinburgh, Scotland — the Royal Mile in January haar, no tourists",
+      "Porto, Portugal — the Douro river at flood, the bridges vibrating",
+      "Vienna, Austria — a coffee house where someone has been sitting for four hours",
+      "Prague, Czech Republic — a courtyard that doesn't appear on any map",
+      "Istanbul, Turkey — the Bosphorus ferry at dawn, commuters asleep standing",
+      "Oaxaca, Mexico — a Day of the Dead altar in someone's kitchen",
+      "Warsaw, Poland — a rebuilt city that knows it was rebuilt",
+      "Tbilisi, Georgia — wine drunk from clay pots in a basement",
+      "Belgrade, Serbia — a floating bar on the Sava, 4am, still full",
+      "Sarajevo, Bosnia — a street where four religions share the same block",
+      "Tangier, Morocco — the medina at dusk, the smell of salt and cumin",
+      "Havana, Cuba — a 1957 Chevrolet used as a taxi, the driver's cassette player",
+      "Marseille, France — the Vieux-Port fish market at five in the morning",
+      "Naples, Italy — a family argument conducted entirely through a window",
+      "Reykjavik, Iceland — light at midnight, the sky refusing to go dark",
+      "Thessaloniki, Greece — the waterfront promenade, every era of history visible at once",
+      "Glasgow, Scotland — a rain-soaked Saturday, the chip shop the only light on",
+      "Barcelona, Spain — the Gothic Quarter, noon, every stone older than most countries",
+      "Amsterdam, Netherlands — a canal at dawn, a bicycle underwater, someone's life",
+      "Budapest, Hungary — the thermal baths at closing time, steam hiding everything",
+      "Kraków, Poland — the old Jewish quarter, a door that should not still be there",
+      "Valletta, Malta — the smallest capital in Europe, every wall a different century",
+    ],
+    themes: [
+      "The last conversation before everything changed",
+      "An object left behind that was not meant to be left",
+      "The difference between leaving and being left",
+      "What it costs to keep a secret from someone who loves you",
+      "A stranger who knows something about you that you don't know yourself",
+      "The moment just before a decision that cannot be undone",
+      "Two people who want the same thing and cannot say so",
+      "Something ordinary that is revealed to be extraordinary",
+      "The gap between what was promised and what arrived",
+      "A kindness that cannot be acknowledged",
+      "The thing that is said when the real thing cannot be said",
+      "An ending that has been coming for years",
+      "What remains after everything else has been taken",
+      "The first hour of something that will last a lifetime",
+      "A return to a place that has changed beyond recognition",
+      "Something lost that was never really had",
+      "The moment when a lie becomes impossible to maintain",
+      "Two strangers who will never meet again",
+      "An inheritance nobody wanted",
+      "The cost of being seen clearly",
+    ],
+    openings: [
+      "The morning after the funeral, she moved all the furniture.",
+      "He had not spoken to his father in eleven years, and now here was his father's handwriting on an envelope.",
+      "The train was four hours late and nobody on the platform was surprised.",
+      "She kept the letter but never opened it, and after a while she forgot which drawer she'd put it in.",
+      "What he remembered later was not the argument but the smell of coffee burning.",
+      "They had been in the same room for six hours without speaking, which was not unusual.",
+      "The apartment was exactly as she'd left it, which was the first sign that something was wrong.",
+      "He knew she was lying but he had decided weeks ago to let her.",
+      "The last time they were happy together, they were stuck in traffic in a city neither of them lived in anymore.",
+      "She had driven three hours to say something and now she couldn't remember what it was.",
+      "The dog understood more than the children did, and the children understood plenty.",
+      "It was the kind of hotel room that made you think about the people who'd been there before you.",
+      "Nobody mentioned the money, which meant everyone was thinking about it.",
+      "He had promised himself he would not drink at the wedding, and he had kept that promise until the reception.",
+      "She found the photographs in a shoebox under the bed, and the photographs were of strangers.",
+      "The thing about grief is that it finds you at the wrong times.",
+      "They were the last people at the party, and neither of them had wanted to stay.",
+      "The key still worked, which meant she had not changed the locks, which meant something.",
+      "He could tell by the way she set down her glass that the conversation was over.",
+      "There was a word for what she was feeling and she was trying not to think of it.",
+      "The address on the postcard was thirty years old and the postcard had arrived today.",
+      "What nobody told you about airports was how long you could wait without anyone noticing.",
+      "She had said yes because no had stopped being an option.",
+      "The inheritance was not what any of them expected, which was appropriate.",
+      "He had been sober for nine years and the bar smelled exactly the same.",
+    ],
+    constraints: [
+      "Under 500 words",
+      "No dialogue",
+      "One character only",
+      "Told entirely in the past tense — nothing happens in the present",
+      "The last line must be a question",
+      "No adjectives in the first paragraph",
+      "Told from the point of view of a minor character who doesn't understand what they're witnessing",
+      "The protagonist never speaks",
+      "Begin at the ending and work backwards",
+      "Under 300 words",
+      "No character names — only pronouns",
+      "Three sections: before, during, after — each exactly one paragraph",
+      "The inciting event happens offstage",
+      "No interiority — only action and dialogue",
+      "The last word must be the same as the first word",
+      "Set entirely in one room",
+      "Told in second person",
+      "Under 750 words, exactly",
+      "No adverbs anywhere",
+      "The central object must appear in every paragraph",
+      "Two timelines: now and ten years ago, alternating",
+      "The story must be told in reverse chronological order",
+      "No more than three sentences per paragraph",
+      "The protagonist makes exactly one decision — show only the consequences",
+      "Everything happens in real time — no jumps forward or backward",
+    ],
+    style: "all"
+  }
+};
+
+const CARVER = {
+  cities: ["A kitchen table at 9pm, dishes not yet washed","A parking lot outside a bar, the bar closing","A motel room off the interstate, the TV on","A trailer park in the Pacific Northwest, August","A hospital waiting room, plastic chairs","A garage with the door half-open","A supermarket checkout at midnight","A backyard with a rusted barbecue","A rented house, boxes not yet unpacked","A diner on a highway, two people at separate tables"],
+  themes: ["A marriage in the process of failing","What two people do not say during an argument","The moment before sobriety ends","What ordinary objects carry of a life","What it looks like when someone gives up","The specific quality of silence between two people","What drinking takes and what it leaves","A kindness offered too late","The weight of a decision already made","What a man does when he has no options left"],
+  openings: ["He put his coat on even though it wasn't cold.","She told him she'd been thinking about it, and he said he had too, and that was the end of that.","The bottles were in the garage and he knew exactly where.","They ate dinner without talking, which had become normal.","She asked him where he'd been and he said nowhere and she nodded.","His hands were shaking but not enough for her to notice.","The kids were asleep and they had the house to themselves, which used to mean something.","He said her name and she didn't answer and he said it again.","What he remembered about that night was how quiet everything got.","She'd packed a bag. He saw it by the door but neither of them mentioned it."],
+  constraints: ["No adverbs","Under 600 words","End on a single image, no explanation","Dialogue only in the last quarter","No interiority — only surface action"],
+  style: "carver"
+};
+
+const HEMINGWAY = {
+  cities: ["A café terrace in Paris, 1925, the waiter knowing your order","A trout stream in northern Michigan, 4am","A café in Madrid during the bullfight season","A hotel bar in Pamplona, the fiesta ending","A fishing boat off the coast of Cuba, dawn","A ski lodge in the Austrian Alps, December","A hospital in Milan during the First World War","A train compartment crossing the Spanish plateau","A cantina in a small Mexican town, nobody you know","An African plain at dusk, the camp fire small"],
+  themes: ["What courage looks like when nobody is watching","The code a man lives by and what it costs him","Grace under pressure — or the absence of it","What men do not say to each other and why","The difference between bravery and recklessness","What it means to lose something you cannot name","How men and women talk around what they mean","The quality of a place at a specific hour","What a man does after a defeat","The last drink before something ends"],
+  openings: ["It was a good café and he sat there a long time.","In the morning the river was cold and clear.","They did not talk about it but they both knew.","He had not slept and it showed in the way he held his coffee.","The country was flat and brown and there were no trees.","She looked at him and he looked away.","He ordered a second drink and this time drank it slowly.","There was a war on and nobody much discussed it anymore.","He had been in the town three days and knew it well enough.","The old man knew the sea better than he knew anything else."],
+  constraints: ["No adjective to modify an emotion — only physical description","Short declarative sentences only — no subordinate clauses","Under 400 words","The iceberg rule: write what happened on the surface only","No dialogue tags except 'said'"],
+  style: "hemingway"
+};
+
+const LYRIC = {
+  cities: ["The space between two cities, on a night train, countryside dark","A window in a foreign city, 3am, the street below","A beach in winter, no other people","A mountain pass, the car stopped, engine off","A library that is about to close","The moment before rain, in a garden","A lighthouse in fog","An empty theatre, the lights still up","A botanical garden after closing time","A train station between services, completely silent"],
+  themes: ["The grammar of light in a specific place at a specific hour","What a body remembers that the mind has forgotten","The architecture of absence","How a smell carries an entire year back to you","What is lost in translation — not language, but feeling","The specific texture of waiting","What water knows about time","The voice of someone no longer here","The way a place changes you without your noticing","What a photograph cannot hold"],
+  openings: ["There is a word in Portuguese that means the presence of someone who is absent.","Light came through the window at an angle that existed only for four minutes every year.","She had been carrying the sound of her mother's voice inside her for thirty years.","The city at this hour belonged to no one.","He had forgotten everything except the quality of the light.","There is a particular kind of silence that is not the absence of sound.","She noticed later that she had been happy without knowing it.","The language she dreamed in was not her mother tongue.","What the body keeps, long after the mind has released it.","In this city, the dead walk among the living and nobody is surprised."],
+  constraints: ["No plot — only a sustained moment of perception","Under 400 words","The piece must end on a question or an unanswered image","No dialogue at all","Begin in the middle of a sensory experience"],
+  style: "lyric"
+};
+
+const KAFKA = {
+  cities: ["An office building that has added a new floor nobody remembers building","A courtroom in a city that may not exist","A castle visible from the village but unreachable","A bureaucratic office, the forms endless","A corridor that is longer than the building that contains it","A town where everyone knows a law that has never been written down","A factory that produces something no one has seen","An apartment block where the residents have stopped using the stairs","A government building where all the offices process the same form","A checkpoint between two countries, neither of which will claim you"],
+  themes: ["The logic of a punishment no one can explain","What happens when the rules change without announcement","A guilt that cannot be located or named","The machinery of authority applied to something ordinary","An accusation that cannot be refuted because it cannot be understood","What it costs to follow a process to its conclusion","The impossibility of appealing to reason in an unreasonable system","What a man does when his existence requires justification","The gap between the law as stated and the law as applied","A transformation that is and is not metaphorical"],
+  openings: ["The letter informing him of his guilt arrived on the morning of his birthday.","Someone must have slandered Josef K., because one morning, without having done anything wrong, he was arrested.","The form required him to certify something he could not verify.","She had been waiting for the decision for so long she had forgotten what she was waiting for.","The office was on the ninth floor but the building only had eight.","He had been told to report to the committee, but no one could tell him where the committee met.","The law, as far as anyone could determine, had always existed.","There was a door at the end of the corridor that he had been told not to open.","The trial had been ongoing for so long that no one remembered what the charge was.","He woke one morning to find that his identification documents described someone he had never been."],
+  constraints: ["The impossible must be stated as fact — no explanation","Under 600 words","The protagonist must attempt to follow the rules exactly","No resolution — only escalation","The surreal element must be treated as routine by all characters"],
+  style: "kafka"
+};
+
+const POOLS = { all: DATA.all, carver: CARVER, hemingway: HEMINGWAY, lyric: LYRIC, kafka: KAFKA };
+let currentFilter = 'all';
+let genCount = 0;
+let currentPrompt = {};
+
+function rnd(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  generate();
+}
+
+function generate() {
+  const pool = POOLS[currentFilter] || POOLS.all;
+  const card = document.getElementById('prompt-card');
+  card.classList.add('loading');
+  setTimeout(() => {
+    const city = rnd(pool.cities);
+    const theme = rnd(pool.themes);
+    const opening = rnd(pool.openings);
+    const constraint = rnd(pool.constraints);
+    document.getElementById('p-city').textContent = city;
+    document.getElementById('p-theme').textContent = theme;
+    document.getElementById('p-opening').textContent = '"' + opening + '"';
+    document.getElementById('p-constraint').textContent = constraint;
+    genCount++;
+    document.getElementById('counter').textContent = genCount + ' prompt' + (genCount!==1?'s':'') + ' generated';
+    currentPrompt = { city, theme, opening, constraint };
+    card.classList.remove('loading');
+  }, 150);
+}
+
+function copyPrompt() {
+  const text = `Flash fiction prompt from Tumbleweed Words:\n\nSetting: ${currentPrompt.city}\nTheme: ${currentPrompt.theme}\nOpening line: "${currentPrompt.opening}"\nConstraint: ${currentPrompt.constraint}\n\nGet more prompts: https://tumbleweedwords-byte.github.io/tumbleweed-blog/flash-fiction-prompts.html`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = orig, 2000);
+  });
+}
+
+function sharePrompt() {
+  const text = `Flash fiction prompt from @tumbleweedwords:\n\n📍 ${currentPrompt.city}\n💡 Theme: ${currentPrompt.theme}\n✍️ "${currentPrompt.opening}"\n⚡ Constraint: ${currentPrompt.constraint}\n\nGet free prompts: https://tumbleweedwords-byte.github.io/tumbleweed-blog/flash-fiction-prompts.html`;
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text), '_blank');
+}
+
+generate();
+</script>
+</body>
+</html>

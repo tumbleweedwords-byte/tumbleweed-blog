@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Literary Magazine Finder — Where to Submit Flash Fiction | Tumbleweed Words</title>
+<meta name="description" content="Find the right literary magazine for your flash fiction. Filter by pay rate, response time, genre, and prestige. Free database of the best flash fiction and short story journals.">
+<meta name="keywords" content="literary magazine finder, where to submit flash fiction, flash fiction journals database, literary magazine submissions, best literary magazines flash fiction, paying literary magazines">
+<meta name="author" content="David — Tumbleweed Words">
+<link rel="canonical" href="https://tumbleweedwords-byte.github.io/tumbleweed-blog/literary-magazine-finder.html">
+<meta property="og:title" content="Literary Magazine Finder — Where to Submit Flash Fiction">
+<meta property="og:description" content="Filter 30+ literary magazines by pay rate, response time, and genre. Find where to submit your flash fiction. Free.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--txt:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#fff;--bg2:#faf9fd;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+html{font-size:18px}
+body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--p);text-decoration:none}a:hover{color:var(--p2)}
+.wrap{min-height:100vh;display:flex;flex-direction:column}
+.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em}
+.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2);color:#fff}
+main{flex:1;max-width:900px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
+.tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem;display:block}
+h1{font-family:var(--fd);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}
+.standfirst{font-size:1rem;color:var(--mu);max-width:52ch;line-height:1.72;margin-bottom:2rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
+.filters{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.2rem 1.4rem;margin-bottom:1.5rem}
+.filter-group{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.6rem}
+.filter-group:last-child{margin-bottom:0}
+.fg-label{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fa);min-width:90px}
+.fb{background:var(--bg);border:1px solid var(--br);color:var(--mu);padding:.25rem .7rem;border-radius:3px;font-family:var(--fm);font-size:.58rem;letter-spacing:.06em;cursor:pointer;transition:all .15s}
+.fb.active{background:var(--pl);border-color:var(--p);color:var(--p)}
+.fb:hover{border-color:var(--p);color:var(--p)}
+.results-meta{font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa);margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media(max-width:620px){.grid{grid-template-columns:1fr}}
+.mag-card{background:var(--bg);border:1px solid var(--br);border-radius:6px;padding:1.1rem 1.3rem;display:flex;flex-direction:column;gap:.5rem;transition:border-color .15s}
+.mag-card:hover{border-color:var(--p)}
+.mag-card.hidden{display:none}
+.mag-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem}
+.mag-name{font-family:var(--fd);font-size:1rem;font-weight:600;color:var(--txt);line-height:1.2;letter-spacing:-.01em}
+.mag-pay{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.15rem .5rem;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.pay-pro{background:#dcfce7;color:#166534}
+.pay-semi{background:#fef9c3;color:#854d0e}
+.pay-token{background:#f3f4f6;color:#6B7280}
+.pay-none{background:#fff7ed;color:#9a3412}
+.mag-desc{font-size:.85rem;color:var(--mu);line-height:1.65}
+.mag-meta{display:flex;gap:.75rem;flex-wrap:wrap}
+.mag-tag{font-family:var(--fm);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);background:var(--bg2);padding:.15rem .45rem;border-radius:2px}
+.mag-link{font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-top:.2rem;display:inline-block}
+.mag-link:hover{color:var(--p2)}
+.cta-band{background:var(--pl);border-left:3px solid var(--p);padding:1.4rem 1.6rem;border-radius:0 6px 6px 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.cta-t{font-size:.9rem;color:var(--mu);line-height:1.6;max-width:44ch}
+.cta-t strong{color:var(--txt);font-weight:500;display:block;margin-bottom:.2rem}
+.cta-btn{background:var(--p);color:#fff;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
+.cta-btn:hover{background:var(--p2);color:#fff}
+.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
+.ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav">
+  <a href="index.html" class="nlogo">Tumbleweed Words</a>
+  <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe &rarr;</a>
+</nav>
+<main>
+  <span class="tag">Free Tool &middot; Tumbleweed Words</span>
+  <h1>Literary magazine finder</h1>
+  <p class="standfirst">Filter 30+ literary magazines by pay rate, response time, and what they publish. Find the right home for your flash fiction or short story.</p>
+
+  <div class="filters">
+    <div class="filter-group">
+      <span class="fg-label">Pay rate</span>
+      <button class="fb active" data-pay="all" onclick="filter('pay','all',this)">All</button>
+      <button class="fb" data-pay="pro" onclick="filter('pay','pro',this)">Pro rates ($0.06+/word)</button>
+      <button class="fb" data-pay="semi" onclick="filter('pay','semi',this)">Pays ($10–$50)</button>
+      <button class="fb" data-pay="token" onclick="filter('pay','token',this)">Token payment</button>
+      <button class="fb" data-pay="none" onclick="filter('pay','none',this)">Non-paying (prestige)</button>
+    </div>
+    <div class="filter-group">
+      <span class="fg-label">Response time</span>
+      <button class="fb active" data-rt="all" onclick="filter('rt','all',this)">All</button>
+      <button class="fb" data-rt="fast" onclick="filter('rt','fast',this)">Under 60 days</button>
+      <button class="fb" data-rt="medium" onclick="filter('rt','medium',this)">60–120 days</button>
+      <button class="fb" data-rt="slow" onclick="filter('rt','slow',this)">120+ days</button>
+    </div>
+    <div class="filter-group">
+      <span class="fg-label">Form</span>
+      <button class="fb active" data-form="all" onclick="filter('form','all',this)">All</button>
+      <button class="fb" data-form="flash" onclick="filter('form','flash',this)">Flash fiction</button>
+      <button class="fb" data-form="short" onclick="filter('form','short',this)">Short stories</button>
+      <button class="fb" data-form="poetry" onclick="filter('form','poetry',this)">Poetry</button>
+      <button class="fb" data-form="essay" onclick="filter('form','essay',this)">Essays/CNF</button>
+    </div>
+  </div>
+
+  <div class="results-meta" id="results-meta">Showing all 32 magazines</div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="cta-band">
+    <div class="cta-t">
+      <strong>Tumbleweed Words &mdash; Substack Newsletter</strong>
+      Flash fiction and prose poetry in the minimalist tradition. Five years, over a thousand readers. Free.
+    </div>
+    <a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a>
+  </div>
+</main>
+<footer class="ft">
+  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
+  <nav class="ft-l">
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="post-literary-magazines.html">Magazine guide</a>
+    <a href="index.html">Writing</a>
+  </nav>
+</footer>
+</div>
+<script>
+const MAGS = [
+  {name:"Smokelong Quarterly",pay:"none",rt:"medium",form:["flash"],desc:"The gold standard for flash fiction under 1,000 words. Publishes with author interviews. Pushcart nominator.",payLabel:"Prestige (non-paying)",url:"https://www.smokelong.com/submissions/",tags:["Flash only","Pushcart nominator","Author interviews"]},
+  {name:"The Sun Magazine",pay:"semi",rt:"slow",form:["flash","short","essay"],desc:"Pays $100–$2,000. Literary, humanist, personal. Enormous readership. No simultaneous submissions.",payLabel:"Pays $100–$2,000",url:"https://www.thesunmagazine.org/submit",tags:["Pays well","No sim subs","High prestige"]},
+  {name:"Wigleaf",pay:"none",rt:"medium",form:["flash"],desc:"Essential online journal for very short fiction. Annual Top 50 list is the form's canon.",payLabel:"Prestige (non-paying)",url:"https://wigleaf.com/submit.htm",tags:["Flash only","Top 50 list","High prestige"]},
+  {name:"Ploughshares",pay:"pro",rt:"slow",form:["flash","short","essay"],desc:"One of the most prestigious US literary journals. Pays pro rates. Flash through Solos imprint.",payLabel:"Pro rates",url:"https://pshares.org/submit",tags:["Pro rates","High prestige","Pushcart nominator"]},
+  {name:"Tin House",pay:"pro",rt:"slow",form:["flash","short","essay","poetry"],desc:"Top-tier literary journal. Open reading periods only. Pays well. Publishes major writers.",payLabel:"Pro rates",url:"https://tinhouse.com/submissions/",tags:["Pro rates","Open periods only","Very high prestige"]},
+  {name:"PANK Magazine",pay:"token",rt:"medium",form:["flash","short","poetry"],desc:"Innovative flash fiction since 2006. Formal risk-taking. Pushcart nominator.",payLabel:"Token payment",url:"https://pankmagazine.com/submit/",tags:["Flash fiction","Experimental","Pushcart nominator"]},
+  {name:"Litro Magazine",pay:"token",rt:"fast",form:["flash","short","essay"],desc:"UK-based, international voices. Flash and short fiction. Edinburgh-relevant for UK writers.",payLabel:"Token payment",url:"https://www.litro.co.uk/submissions/",tags:["UK-based","International","Flash & short"]},
+  {name:"3:AM Magazine",pay:"none",rt:"fast",form:["flash","short","essay","poetry"],desc:"Paris/London. Experimental, European sensibility. Philosophy and fiction crossover.",payLabel:"Prestige (non-paying)",url:"https://www.3ammagazine.com/3am/submissions/",tags:["Experimental","European","Philosophy/fiction"]},
+  {name:"Electric Literature",pay:"pro",rt:"medium",form:["short","essay"],desc:"Major online literary journal. Pays pro rates. Very high prestige. Hard to crack.",payLabel:"Pro rates",url:"https://electricliterature.com/submissions/",tags:["Pro rates","High prestige","Essays & fiction"]},
+  {name:"The Rumpus",pay:"semi",rt:"medium",form:["flash","short","essay","poetry"],desc:"Pays for essays and fiction. Literary with cultural commentary. Interview series highly regarded.",payLabel:"Pays (varies)",url:"https://therumpus.net/submit/",tags:["Pays","Essays & fiction","Cultural commentary"]},
+  {name:"Narrative Magazine",pay:"pro",rt:"medium",form:["flash","short","poetry","essay"],desc:"Pays very well including for flash (Story of the Week). Annual prize. High prestige.",payLabel:"Pro rates",url:"https://www.narrativemagazine.com/submit",tags:["Pro rates","Pays for flash","Annual prize"]},
+  {name:"One Story",pay:"pro",rt:"slow",form:["short"],desc:"Publishes one story per issue. Prestigious. Pays $500. Long response times but worth it.",payLabel:"Pays $500",url:"https://www.one-story.com/about/submissions/",tags:["One story/issue","Pays $500","High prestige"]},
+  {name:"Copper Nickel",pay:"semi",rt:"medium",form:["short","poetry","essay"],desc:"University of Colorado Denver journal. Pays $30/page. Nationally distributed. Excellent reputation.",payLabel:"Pays $30/page",url:"https://copper-nickel.org/submission-guidelines/",tags:["Pays per page","Nationally distributed","Craft-focused"]},
+  {name:"Glimmer Train",pay:"semi",rt:"medium",form:["short"],desc:"Legendary short story journal. Closed and reopened. Pays well. Short story focus.",payLabel:"Pays $700+",url:"https://glimmertrain.com/bulletins/submit/",tags:["Short stories only","Pays well","Legendary"]},
+  {name:"New Flash Fiction Review",pay:"none",rt:"fast",form:["flash"],desc:"Flash fiction under 1,000 words. Fast response. UK/US. Pushcart nominator.",payLabel:"Prestige (non-paying)",url:"https://newflashfictionreview.com/submit/",tags:["Flash only","Fast response","Pushcart nominator"]},
+  {name:"Flash Fiction Online",pay:"semi",rt:"fast",form:["flash"],desc:"Pays $60 for flash. Fast response. Genre-friendly but literary work welcome.",payLabel:"Pays $60",url:"https://flashfictiononline.com/main/submissions/",tags:["Pays $60","Fast response","Flash only"]},
+  {name:"Monkeybicycle",pay:"none",rt:"medium",form:["flash","short","poetry"],desc:"Experimental short fiction and prose poetry. Literary with formal range.",payLabel:"Prestige (non-paying)",url:"https://monkeybicycle.net/submit/",tags:["Experimental","Flash & poetry","Literary"]},
+  {name:"Jellyfish Review",pay:"none",rt:"fast",form:["flash"],desc:"Flash fiction only. Fast response. High quality. Known for emotional precision.",payLabel:"Prestige (non-paying)",url:"https://www.jellyfishreview.com/submit",tags:["Flash only","Fast response","Emotional precision"]},
+  {name:"Atticus Review",pay:"none",rt:"medium",form:["flash","short","poetry"],desc:"Literary journal with strong flash fiction section. Thoughtful editing.",payLabel:"Prestige (non-paying)",url:"https://atticusreview.org/submissions/",tags:["Flash & short","Literary","Thoughtful editing"]},
+  {name:"Split Lip Magazine",pay:"token",rt:"medium",form:["flash","short","poetry"],desc:"Literary with edge. Flash, short fiction, poetry. Token payment.",payLabel:"Token payment",url:"https://splitlipmagazine.com/submit/",tags:["Flash & poetry","Literary edge","Token pay"]},
+  {name:"Longleaf Review",pay:"none",rt:"fast",form:["flash"],desc:"Flash fiction only. Fast turnaround. High quality. Strong visual aesthetic.",payLabel:"Prestige (non-paying)",url:"https://longleafreview.com/submissions/",tags:["Flash only","Fast response","Visual aesthetic"]},
+  {name:"Cheap Pop",pay:"none",rt:"fast",form:["flash"],desc:"Flash fiction with a pop culture sensibility. Fun, literary, fast response.",payLabel:"Prestige (non-paying)",url:"https://cheappoplit.wordpress.com/submit/",tags:["Flash only","Fast response","Pop culture angle"]},
+  {name:"Passages North",pay:"semi",rt:"medium",form:["short","essay","poetry"],desc:"University of Northern Michigan. Pays $10 per page. Annual Waasmode Prize for flash.",payLabel:"Pays $10/page",url:"https://passagesnorth.com/submissions/",tags:["Pays per page","Flash prize","University journal"]},
+  {name:"The Masters Review",pay:"semi",rt:"medium",form:["short","essay"],desc:"For emerging writers. Pays $200–$300. Annual anthology. Flash competition.",payLabel:"Pays $200–$300",url:"https://mastersreview.com/submit/",tags:["Emerging writers","Pays","Flash competition"]},
+  {name:"Intrepid Times",pay:"semi",rt:"fast",form:["essay","short"],desc:"Literary travel writing. Pays writers. Free subscription required to submit.",payLabel:"Pays writers",url:"https://intrepidtimes.com/get-published",tags:["Travel writing","Pays","Literary"]},
+  {name:"Nowhere Magazine",pay:"none",rt:"medium",form:["essay","short"],desc:"Literary travel essays and fiction. High quality. Strong international focus.",payLabel:"Prestige (non-paying)",url:"https://www.nowheremag.com/submissions/",tags:["Travel/nomadic","International","Literary essays"]},
+  {name:"Brevity",pay:"none",rt:"medium",form:["essay"],desc:"Flash creative nonfiction under 750 words. The definitive flash CNF journal.",payLabel:"Prestige (non-paying)",url:"https://brevitymag.com/submit/",tags:["CNF only","750 words max","Definitive in form"]},
+  {name:"The Louisville Review",pay:"semi",rt:"medium",form:["short","poetry","essay"],desc:"University of Louisville. Pays modest rates. Children's Corner section too.",payLabel:"Pays (modest)",url:"https://louisvillereview.org/submissions/",tags:["Pays","University journal","Poetry & fiction"]},
+  {name:"Kenyon Review",pay:"pro",rt:"slow",form:["short","poetry","essay"],desc:"One of America's most prestigious literary journals. Pays pro rates. Very competitive.",payLabel:"Pro rates",url:"https://kenyonreview.org/submissions/",tags:["Very high prestige","Pro rates","Very competitive"]},
+  {name:"Virginia Quarterly Review",pay:"pro",rt:"slow",form:["short","poetry","essay"],desc:"University of Virginia. National Magazine Award winner. Pro rates. Very competitive.",payLabel:"Pro rates",url:"https://www.vqronline.org/about/submissions",tags:["Very high prestige","Pro rates","National award winner"]},
+  {name:"Boulevard",pay:"semi",rt:"medium",form:["short","poetry","essay"],desc:"Pays $0.03/word up to $200. Flash fiction welcome. Good mid-tier prestige journal.",payLabel:"Pays $0.03/word",url:"https://boulevardmagazine.org/submit/",tags:["Pays","Flash welcome","Mid-prestige"]},
+  {name:"Necessary Fiction",pay:"none",rt:"fast",form:["flash","short"],desc:"Online literary journal. Flash and short fiction. Thoughtful editing. Fast response.",payLabel:"Prestige (non-paying)",url:"https://necessaryfiction.com/submissions",tags:["Flash & short","Fast response","Online"]}
+];
+
+const PAY_LABELS = {pro:"Pro rates",semi:"Pays",token:"Token pay",none:"Non-paying"};
+const PAY_CLASSES = {pro:"pay-pro",semi:"pay-semi",token:"pay-token",none:"pay-none"};
+let activeFilters = {pay:"all",rt:"medium",form:"all"};
+activeFilters = {pay:"all",rt:"all",form:"all"};
+
+const RT_MAP = {fast:60,medium:120,slow:999};
+
+function filter(type, val, btn) {
+  activeFilters[type] = val;
+  document.querySelectorAll(`[data-${type}]`).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+}
+
+function render() {
+  const grid = document.getElementById('grid');
+  let visible = 0;
+  MAGS.forEach((m, i) => {
+    const card = document.getElementById('mag-'+i);
+    let show = true;
+    if (activeFilters.pay !== 'all' && m.pay !== activeFilters.pay) show = false;
+    if (activeFilters.form !== 'all' && !m.form.includes(activeFilters.form)) show = false;
+    if (activeFilters.rt !== 'all') {
+      const rtLimits = {fast:[0,60],medium:[61,120],slow:[121,999]};
+      const [lo,hi] = rtLimits[activeFilters.rt];
+    }
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  document.getElementById('results-meta').textContent = `Showing ${visible} of ${MAGS.length} magazines`;
+}
+
+function buildGrid() {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = MAGS.map((m,i) => `
+    <div class="mag-card" id="mag-${i}">
+      <div class="mag-top">
+        <div class="mag-name">${m.name}</div>
+        <span class="mag-pay ${PAY_CLASSES[m.pay]}">${PAY_LABELS[m.pay]}</span>
+      </div>
+      <div class="mag-desc">${m.desc}</div>
+      <div class="mag-meta">${m.tags.map(t=>`<span class="mag-tag">${t}</span>`).join('')}</div>
+      <a href="${m.url}" class="mag-link" target="_blank" rel="noopener">Submit &rarr;</a>
+    </div>
+  `).join('');
+}
+
+buildGrid();
+render();
+</script>
+</body>
+</html>
