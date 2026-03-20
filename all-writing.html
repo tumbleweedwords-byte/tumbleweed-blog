@@ -3,82 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>All Writing — Tumbleweed Words</title>
-<meta name="description" content="All flash fiction essays, craft guides, book reviews, tools, and literary writing by David — Tumbleweed Words. 78 pages organised by theme, city, literary influence, and craft topic.">
-<link rel="canonical" href="https://tumbleweedwords-byte.github.io/tumbleweed-blog/all-writing.html">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<title>All Writing, Essays &amp; Free Tools — Tumbleweed Words</title>
+<meta name="description" content="Browse all flash fiction essays, craft guides, book reviews, free writing tools, and literary writing by David — Tumbleweed Words. 78 pages organised by theme, city, literary influence, and craft topic.">
+<link rel="canonical" href="https://tumbleweedwords.com/all-writing.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--txt:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#fff;--bg2:#faf9fd;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+:root{
+  --p:#5533E8;--p2:#6644F5;--p3:#4422D6;
+  --pl:#EEEDFE;--pl2:#d4d0fc;
+  --txt:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;
+  --bg:#F6F4EE;--bg2:#EDEBE3;--bg3:#E4E1D7;
+  --br:#D4D0C4;--br2:#C4C0B0;
+  --fd:"Fraunces",Georgia,serif;
+  --fb:"Source Serif 4",Georgia,serif;
+  --fm:ui-monospace,"SF Mono",monospace;
+}
 html{font-size:18px;scroll-behavior:smooth}
 body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:var(--p);text-decoration:none;transition:color .2s}a:hover{color:var(--p2)}
 .wrap{min-height:100vh;display:flex;flex-direction:column}
-main{flex:1;max-width:960px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
-.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em}
-.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
-.ncta:hover{background:var(--p2);color:#fff}
-h1{font-family:var(--fd);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:.8rem}
-.standfirst{font-size:1rem;color:var(--mu);max-width:52ch;line-height:1.7;margin-bottom:2.5rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
-.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-bottom:2.5rem}
+main{flex:1;max-width:960px;margin:0 auto;padding:5rem 2rem 4rem;width:100%}
+.nav{background:rgba(246,244,238,.97);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.nlogo{font-family:var(--fd);font-size:1.15rem;font-weight:700;color:var(--p3);letter-spacing:-.01em}
+.nlogo:hover{color:var(--p)}
+.nlinks{display:flex;gap:2rem;align-items:center}
+.nlink{font-family:var(--fb);font-size:.88rem;color:var(--txt);transition:color .15s}
+.nlink:hover{color:var(--p)}
+.ncta{background:var(--p);color:#fff!important;padding:.3rem .9rem;border-radius:3px;font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2)!important}
+@media(max-width:600px){.hide-m{display:none}}
+.page-eyebrow{font-family:var(--fm);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--p);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
+.page-eyebrow::before{content:"";width:24px;height:1px;background:var(--p)}
+h1{font-family:var(--fd);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:.7rem}
+.standfirst{font-size:.93rem;color:var(--mu);max-width:52ch;line-height:1.72;margin-bottom:2.5rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
+
+/* TOOLS */
+.tools-label{font-family:var(--fm);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--p);border-bottom:1px solid var(--br);padding-bottom:.65rem;margin-bottom:1.5rem}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-bottom:3rem}
 @media(max-width:560px){.tools-grid{grid-template-columns:1fr}}
-.tool-card{background:var(--pl);border:1.5px solid var(--p);border-radius:6px;padding:1.3rem 1.5rem;display:flex;flex-direction:column;gap:.4rem}
-.tool-card:hover{background:#e0dcfd}
-.tool-label{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p)}
-.tool-name{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--txt);letter-spacing:-.01em}
-.tool-desc{font-size:.85rem;color:var(--mu);line-height:1.6}
-.section-label{font-family:var(--fm);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fa);border-bottom:1px solid var(--br);padding-bottom:.7rem;margin:2rem 0 1.2rem}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--br);border-radius:6px;overflow:hidden;margin-bottom:1.5rem}
+.tool-card{background:var(--bg2);border:1px solid var(--br);border-top:2px solid var(--p);border-radius:0 0 4px 4px;padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:.4rem;transition:background .15s}
+.tool-card:hover{background:var(--pl)}
+.tool-label{font-family:var(--fm);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p)}
+.tool-name{font-family:var(--fd);font-size:1.05rem;font-weight:600;color:var(--txt);letter-spacing:-.01em}
+.tool-desc{font-size:.84rem;color:var(--mu);line-height:1.6}
+.tool-cta{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-top:.2rem}
+
+/* CONTENT GRID */
+.section-label{font-family:var(--fm);font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fa);border-bottom:1px solid var(--br);padding-bottom:.65rem;margin:2rem 0 1.2rem}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--br);border-radius:4px;overflow:hidden;margin-bottom:1.5rem}
 @media(max-width:560px){.pgrid{grid-template-columns:1fr}}
-.pitem{padding:1rem 1.2rem;border-right:1px solid var(--br);border-bottom:1px solid var(--br);transition:background .15s}
+.pitem{padding:.95rem 1.1rem;border-right:1px solid var(--br);border-bottom:1px solid var(--br);transition:background .15s}
 .pitem:hover{background:var(--bg2)}
 .pitem:nth-child(even){border-right:none}
 .pitem:nth-last-child(-n+2){border-bottom:none}
-.pi-tag{font-family:var(--fm);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p);margin-bottom:.3rem;display:block}
-.pi-title a{font-size:.9rem;color:var(--txt2);line-height:1.5;display:block}
-.pi-title a:hover{color:var(--p)}
-.cta-band{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.5rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1rem}
-.cta-t{font-size:.9rem;color:var(--mu);line-height:1.6;max-width:44ch}
-.cta-t strong{color:var(--txt);font-weight:500;display:block;margin-bottom:.2rem}
-.cta-btn{background:var(--p);color:#fff;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-.cta-btn:hover{background:var(--p2);color:#fff}
-.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
-.ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
-.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+.pi-tag{font-family:var(--fm);font-size:.52rem;letter-spacing:.13em;text-transform:uppercase;color:var(--p);margin-bottom:.25rem;display:block}
+.pi-title a{font-size:.88rem;color:var(--txt2);line-height:1.5;display:block;border-bottom:1px solid transparent;transition:all .15s}
+.pi-title a:hover{color:var(--p);border-color:var(--pl2)}
+
+/* CTA */
+.cta-band{background:var(--p);border-radius:6px;padding:1.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.cta-t{font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.6;max-width:46ch}
+.cta-t strong{color:#fff;font-weight:500;display:block;margin-bottom:.2rem}
+.cta-btn{display:inline-flex;align-items:center;background:#fff;color:var(--p);font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.68rem 1.4rem;border-radius:3px;white-space:nowrap;flex-shrink:0;border:1.5px solid #fff;transition:all .15s}
+.cta-btn:hover{background:var(--pl);color:var(--p)}
+
+/* CONTACT */
+.contact-band{background:var(--bg2);border:1px solid var(--br);border-radius:4px;padding:1.5rem 2rem;margin-top:2rem;text-align:center}
+.contact-band h2{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--txt);margin-bottom:.5rem;letter-spacing:-.01em}
+.contact-band h2 em{color:var(--p);font-style:italic}
+.contact-band p{font-size:.88rem;color:var(--mu);margin-bottom:1.2rem}
+.contact-btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;background:var(--bg3);border:1.5px solid var(--br);color:var(--txt);padding:.68rem 1.4rem;border-radius:3px;transition:all .15s}
+.contact-btn:hover{background:var(--pl);border-color:var(--p);color:var(--p)}
+.contact-note{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);margin-top:.7rem;display:block}
+
+/* FOOTER */
+.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto;background:var(--bg3)}
+.ft-c{font-family:var(--fm);font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.4rem}.ft-l a{font-family:var(--fm);font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
 </style>
 </head>
 <body>
 <div class="wrap">
 <nav class="nav">
-  <a href="index.html" class="nlogo">Tumbleweed Words</a>
-  <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe &rarr;</a>
+  <a href="https://tumbleweedwords.com" class="nlogo">Tumbleweed Words</a>
+  <div class="nlinks">
+    <a href="https://tumbleweedwords.com" class="nlink hide-m">Home</a>
+    <a href="https://tumbleweedwords.substack.com" class="nlink hide-m">Newsletter</a>
+    <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe</a>
+  </div>
 </nav>
 <main>
-  <h1>All writing &amp; tools</h1>
-  <p class="standfirst">78 pages — essays, craft guides, book reviews, and free interactive tools. Flash fiction, minimalist prose, nomadic writing, and literary craft. All free.</p>
+  <div class="page-eyebrow">Tumbleweed Words &middot; All Writing &amp; Tools</div>
+  <h1>Everything.<br>Free to read.</h1>
+  <p class="standfirst">78 pages — essays, craft guides, book reviews, free tools. Flash fiction, minimalist prose, nomadic writing, literary craft. Start anywhere.</p>
 
-  <div class="section-label">Free Interactive Tools</div>
+  <div class="tools-label">Free interactive tools &mdash; use them now, no signup</div>
   <div class="tools-grid">
     <a href="literary-style-quiz.html" class="tool-card">
-      <span class="tool-label">Quiz &middot; No signup needed</span>
-      <div class="tool-name">Which writer do you write like?</div>
-      <div class="tool-desc">10 questions, 7 possible results — Carver, Hemingway, Hempel, Chekhov, Paley, Beckett, Kafka.</div>
+      <span class="tool-label">Quiz &middot; 10 questions &middot; Instant result</span>
+      <div class="tool-name">Find your literary match</div>
+      <div class="tool-desc">Discover which minimalist writer you write like — Carver, Hemingway, Hempel, Chekhov, Paley, Beckett, or Kafka. Take it now and share your result.</div>
+      <span class="tool-cta">Take the quiz &rarr;</span>
     </a>
     <a href="flash-fiction-prompts.html" class="tool-card">
       <span class="tool-label">Generator &middot; Hundreds of prompts</span>
-      <div class="tool-name">Flash fiction prompt generator</div>
-      <div class="tool-desc">City, theme, opening line, and formal constraint. Four styles. Shareable.</div>
+      <div class="tool-name">Generate your next story</div>
+      <div class="tool-desc">City, theme, opening line, formal constraint. Four styles. One click. Start writing tonight with a prompt built for flash fiction.</div>
+      <span class="tool-cta">Generate a prompt &rarr;</span>
     </a>
     <a href="literary-magazine-finder.html" class="tool-card">
       <span class="tool-label">Database &middot; 32 journals</span>
-      <div class="tool-name">Literary magazine finder</div>
-      <div class="tool-desc">Filter by pay rate, response time, and form. Direct submit links for every journal.</div>
+      <div class="tool-name">Submit your work</div>
+      <div class="tool-desc">Filter 32 literary journals by pay rate, response time, and form. Find where your work belongs and go directly to the submission page.</div>
+      <span class="tool-cta">Find a magazine &rarr;</span>
     </a>
     <a href="flash-fiction-workshop.html" class="tool-card">
-      <span class="tool-label">Workshop &middot; AI-powered</span>
-      <div class="tool-name">Flash fiction workshop</div>
-      <div class="tool-desc">Paste your piece. Get compression score, style influences, ending analysis, and a craft verdict.</div>
+      <span class="tool-label">Workshop &middot; AI craft analysis</span>
+      <div class="tool-name">Workshop your piece</div>
+      <div class="tool-desc">Paste your flash fiction. Get a compression score, style analysis, ending critique, and a craft verdict. Sharpen the work before you send it.</div>
+      <span class="tool-cta">Workshop your piece &rarr;</span>
     </a>
   </div>
 
@@ -88,23 +132,32 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4vw,2.8rem);font-weight:700;color:
 <div class="section-label">Culture & Publishing</div><div class="pgrid"><div class="pitem"><span class="pi-tag">Culture</span><div class="pi-title"><a href="literary-fiction-2026-trends.html">Literary Fiction in 2026: What the Best New Books Are Actually Doing</a></div></div><div class="pitem"><span class="pi-tag">Culture</span><div class="pi-title"><a href="is-poetry-dying-2026.html">Is Poetry Dying? What the Evidence Actually Says in 2026</a></div></div><div class="pitem"><span class="pi-tag">Culture</span><div class="pi-title"><a href="what-makes-a-good-literary-newsletter.html">What Makes a Good Literary Newsletter?</a></div></div><div class="pitem"><span class="pi-tag">Culture</span><div class="pi-title"><a href="can-you-make-money-writing-flash-fiction.html">Can You Make Money Writing Flash Fiction? An Honest Answer</a></div></div><div class="pitem"><span class="pi-tag">Culture</span><div class="pi-title"><a href="how-to-start-a-literary-newsletter.html">How to Start a Literary Newsletter in 2026</a></div></div><div class="pitem"><span class="pi-tag">Culture</span><div class="pi-title"><a href="substack-vs-mailchimp-for-writers.html">Substack vs Mailchimp for Writers — An Honest Comparison</a></div></div><div class="pitem"><span class="pi-tag">Culture</span><div class="pi-title"><a href="pushcart-prize-what-is-it.html">What Is the Pushcart Prize and How Do You Get Nominated?</a></div></div></div>
 <div class="section-label">Literary Influences</div><div class="pgrid"><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-raymond-carver.html">Writing Influenced by Raymond Carver</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-ernest-hemingway.html">Writing Influenced by Ernest Hemingway</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-anton-chekhov.html">Writing Influenced by Anton Chekhov</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-amy-hempel.html">Writing Influenced by Amy Hempel</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-franz-kafka.html">Writing Influenced by Franz Kafka</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-jorge-luis-borges.html">Writing Influenced by Jorge Luis Borges</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-w-g-sebald.html">Writing Influenced by W.G. Sebald</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-virginia-woolf.html">Writing Influenced by Virginia Woolf</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-samuel-beckett.html">Writing Influenced by Samuel Beckett</a></div></div><div class="pitem"><span class="pi-tag">Influence</span><div class="pi-title"><a href="influenced-by-grace-paley.html">Writing Influenced by Grace Paley</a></div></div></div>
 <div class="section-label">Flash Fiction by Theme</div><div class="pgrid"><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-trains.html">Flash Fiction About Trains</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-departure.html">Flash Fiction About Departure</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-grief.html">Flash Fiction About Grief</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-exile.html">Flash Fiction About Exile</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-memory.html">Flash Fiction About Memory</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-solitude.html">Flash Fiction About Solitude</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-strangers.html">Flash Fiction About Strangers</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-borders.html">Flash Fiction About Borders</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-hotels.html">Flash Fiction About Hotels</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-letters.html">Flash Fiction About Letters</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-insomnia.html">Flash Fiction About Insomnia</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-return.html">Flash Fiction About Return</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-language-barriers.html">Flash Fiction About Language Barriers</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-fog.html">Flash Fiction About Fog</a></div></div><div class="pitem"><span class="pi-tag">Theme</span><div class="pi-title"><a href="flash-fiction-about-last-things.html">Flash Fiction About Last Things</a></div></div></div>
-<div class="section-label">Flash Fiction by City</div><div class="pgrid"><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-lisbon.html">Flash Fiction Set in Lisbon</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-berlin.html">Flash Fiction Set in Berlin</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-buenos-aires.html">Flash Fiction Set in Buenos Aires</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-edinburgh.html">Flash Fiction Set in Edinburgh</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-porto.html">Flash Fiction Set in Porto</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-vienna.html">Flash Fiction Set in Vienna</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-prague.html">Flash Fiction Set in Prague</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-barcelona.html">Flash Fiction Set in Barcelona</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-istanbul.html">Flash Fiction Set in Istanbul</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-oaxaca.html">Flash Fiction Set in Oaxaca</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-warsaw.html">Flash Fiction Set in Warsaw</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-tbilisi.html">Flash Fiction Set in Tbilisi</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-belgrade.html">Flash Fiction Set in Belgrade</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-sarajevo.html">Flash Fiction Set in Sarajevo</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-tangier.html">Flash Fiction Set in Tangier</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-havana.html">Flash Fiction Set in Havana</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-marseille.html">Flash Fiction Set in Marseille</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-naples.html">Flash Fiction Set in Naples</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-reykjavik.html">Flash Fiction Set in Reykjavik</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-thessaloniki.html">Flash Fiction Set in Thessaloniki</a></div></div></div>
+<div class="section-label">Flash Fiction by City</div><div class="pgrid"><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-lisbon.html">Lisbon</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-berlin.html">Berlin</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-buenos-aires.html">Buenos Aires</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-edinburgh.html">Edinburgh</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-porto.html">Porto</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-vienna.html">Vienna</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-prague.html">Prague</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-barcelona.html">Barcelona</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-istanbul.html">Istanbul</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-oaxaca.html">Oaxaca</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-warsaw.html">Warsaw</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-tbilisi.html">Tbilisi</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-belgrade.html">Belgrade</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-sarajevo.html">Sarajevo</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-tangier.html">Tangier</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-havana.html">Havana</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-marseille.html">Marseille</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-naples.html">Naples</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-reykjavik.html">Reykjavik</a></div></div><div class="pitem"><span class="pi-tag">City</span><div class="pi-title"><a href="flash-fiction-thessaloniki.html">Thessaloniki</a></div></div></div>
 
 
   <div class="cta-band">
     <div class="cta-t">
-      <strong>Tumbleweed Words &middot; Substack Newsletter</strong>
-      The fiction and poetry lives on the newsletter — written on trains and borrowed rooms. Over a thousand readers. Free.
+      <strong>Subscribe to Tumbleweed Words</strong>
+      Poetry and flash fiction written on trains and in city streets. Over a thousand readers. Free, always.
     </div>
     <a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a>
   </div>
+
+  <div class="contact-band">
+    <h2>Let's <em>connect.</em></h2>
+    <p>For commissions, collaborations, readings, or anything else — get in touch directly.</p>
+    <a href="mailto:tumbleweedwords@gmail.com" class="contact-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      Get in touch
+    </a>
+    <span class="contact-note">tumbleweedwords@gmail.com</span>
+  </div>
 </main>
 <footer class="ft">
-  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
+  <span class="ft-c">&copy; 2026 <a href="https://tumbleweedwords.com" style="color:inherit">Tumbleweed Words</a> &middot; David &middot; Edinburgh</span>
   <nav class="ft-l">
     <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
-    <a href="about.html">About</a>
-    <a href="index.html">Home</a>
+    <a href="https://tumbleweedwords.com">Home</a>
   </nav>
 </footer>
 </div>
