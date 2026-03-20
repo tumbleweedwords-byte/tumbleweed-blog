@@ -1,0 +1,254 @@
+/*
+  TUMBLEWEED WORDS — GLOBAL TYPOGRAPHY & BRAND CSS
+  ===================================================
+  Option D: paste this into your main stylesheet, or add a <style> block
+  in the <head> of every page (or in your site-wide template header).
+
+  What this does:
+  ─ Sets purple (#5500D6) on all h1–h4 headers sitewide
+  ─ Makes hyperlinks distinctive: purple + underline-on-hover
+  ─ Locks the Libre Baskerville / Inter font pairing across all pages
+  ─ Adds the cream background to body
+  ─ Styles the footer copyright line
+  ─ Keeps everything minimal and consistent
+*/
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+/* ── Brand tokens ── */
+:root {
+  --tw-purple:       #5500D6;
+  --tw-purple-mid:   #6B1FE8;
+  --tw-purple-light: #8B50F0;
+  --tw-purple-pale:  #EDE5FF;
+  --tw-cream:        #F0EBE1;
+  --tw-cream-dark:   #E8E0D0;
+  --tw-ink:          #1A1A1A;
+  --tw-body-text:    #2E2A26;
+  --tw-muted:        #6B6560;
+  --tw-border:       #D0C9BD;
+}
+
+/* ── Base ── */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--tw-cream);
+  color: var(--tw-body-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ── Headers: all purple, all serif ── */
+h1, h2, h3, h4 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  color: var(--tw-purple);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(28px, 5vw, 48px); margin-bottom: 0.5em; }
+h2 { font-size: clamp(22px, 3.5vw, 34px); margin-bottom: 0.5em; }
+h3 { font-size: clamp(18px, 2.5vw, 24px); margin-bottom: 0.4em; }
+h4 { font-size: 16px; margin-bottom: 0.4em; }
+
+/* Italic variant for pull quotes and hero taglines */
+h1 em, h2 em, h3 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--tw-purple-light);
+}
+
+/* ── Subheadings / section labels ── */
+.section-label,
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tw-muted);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Body text ── */
+p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--tw-body-text);
+  margin-bottom: 1em;
+}
+
+/* ── Hyperlinks — distinct, purple, no default blue ── */
+a {
+  color: var(--tw-purple);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+a:hover {
+  border-bottom-color: var(--tw-purple);
+  color: var(--tw-purple-mid);
+}
+
+a:visited {
+  color: var(--tw-purple);
+}
+
+/* Nav links — no underline, spaced, uppercase small */
+nav a,
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tw-ink);
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.15s;
+}
+nav a:hover,
+.nav-link:hover {
+  color: var(--tw-purple);
+  border-bottom: none;
+}
+
+/* ── Pull quotes / block quotes ── */
+blockquote {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(17px, 2.5vw, 22px);
+  font-style: italic;
+  color: var(--tw-ink);
+  border-left: 3px solid var(--tw-purple);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 1.5rem 0;
+  line-height: 1.65;
+  opacity: 0.88;
+}
+
+/* ── Tags / category badges ── */
+.tag, .badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tw-purple);
+  background: var(--tw-purple-pale);
+  border: 1px solid rgba(85, 0, 214, 0.15);
+  padding: 3px 9px;
+  line-height: 1;
+}
+
+/* ── Horizontal rules ── */
+hr {
+  border: none;
+  border-top: 1px solid var(--tw-border);
+  margin: 2rem 0;
+}
+
+/* ── Primary CTA button (reusable sitewide) ── */
+.btn-primary {
+  display: inline-block;
+  background: var(--tw-purple);
+  color: #fff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  text-decoration: none;
+  border: 2px solid var(--tw-purple);
+  border-bottom: 2px solid var(--tw-purple) !important;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: var(--tw-purple-mid);
+  border-color: var(--tw-purple-mid);
+  color: #fff !important;
+}
+
+/* Ghost button */
+.btn-ghost {
+  display: inline-block;
+  background: transparent;
+  color: var(--tw-purple) !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 0;
+  text-decoration: none;
+  border-bottom: 1px solid var(--tw-purple) !important;
+  transition: opacity 0.15s;
+}
+.btn-ghost:hover { opacity: 0.65; }
+
+/* ── Footer / copyright ── */
+footer,
+.site-footer {
+  background: var(--tw-cream);
+  border-top: 1px solid var(--tw-border);
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--tw-muted);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+footer a,
+.site-footer a {
+  color: var(--tw-muted);
+  border-bottom: 1px solid transparent;
+}
+footer a:hover,
+.site-footer a:hover {
+  color: var(--tw-purple);
+  border-bottom-color: var(--tw-purple);
+}
+
+/* ── Copyright line (add to footer HTML like: <p class="copyright">...</p>) ── */
+.copyright::after {
+  content: none; /* text is in HTML, not generated */
+}
+
+/* ── Responsive nav border (matches your existing purple underline) ── */
+.site-nav,
+nav.main-nav {
+  background: var(--tw-cream);
+  border-bottom: 2px solid var(--tw-purple);
+}
+
+/*
+  ─────────────────────────────────────────
+  ALL-WRITING PAGE HEADING — replace existing h1 with:
+
+  <p class="eyebrow">78 pieces · essays · craft · fiction · tools</p>
+  <h1>Access everything<br>for free.</h1>
+
+  ─────────────────────────────────────────
+  COPYRIGHT FOOTER HTML — paste into every page footer:
+
+  <footer class="site-footer">
+    <p>&copy; March 2026 Tumbleweed Words &middot;
+      <a href="/about.html">About</a> &middot;
+      <a href="https://tumbleweedwords.substack.com">Subscribe</a>
+    </p>
+  </footer>
+
+  ─────────────────────────────────────────
+*/

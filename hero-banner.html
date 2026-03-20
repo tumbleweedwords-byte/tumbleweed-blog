@@ -1,0 +1,142 @@
+<!--
+  TUMBLEWEED WORDS — HERO BANNER
+  ================================
+  Paste at the very top of your <body>, above your existing nav.
+  Swap src="tumbleweed-words-logo.png" for your actual logo filename.
+  Keep the logo file in the same folder as your HTML pages.
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  :root {
+    --tw-purple:      #5500D6;
+    --tw-purple-mid:  #6B1FE8;
+    --tw-cream:       #F0EBE1;
+    --tw-ink:         #1A1A1A;
+    --tw-muted:       #6B6560;
+    --tw-border:      #D0C9BD;
+  }
+
+  .tw-hero {
+    background: var(--tw-cream);
+    border-bottom: 2px solid var(--tw-purple);
+    padding: 3.5rem 1.5rem 3rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tw-hero__logo {
+    display: block;
+    margin: 0 auto 0.6rem;
+    max-width: 380px;
+    width: 80%;
+    height: auto;
+  }
+
+  .tw-hero__eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--tw-muted);
+    margin-bottom: 1.6rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tw-hero__quote {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: clamp(16px, 2.2vw, 20px);
+    font-style: italic;
+    color: var(--tw-ink);
+    line-height: 1.65;
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    opacity: 0.85;
+  }
+
+  .tw-hero__cta {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .tw-btn-primary {
+    display: inline-block;
+    background: var(--tw-purple);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 11px 26px;
+    text-decoration: none;
+    border: 2px solid var(--tw-purple);
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  .tw-btn-primary:hover { background: #6B1FE8; border-color: #6B1FE8; }
+
+  .tw-btn-ghost {
+    display: inline-block;
+    background: transparent;
+    color: var(--tw-purple);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 11px 0;
+    text-decoration: none;
+    border-bottom: 1px solid var(--tw-purple);
+    transition: opacity 0.2s;
+  }
+  .tw-btn-ghost:hover { opacity: 0.65; }
+
+  .tw-hero__trust {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tw-muted);
+    font-family: 'Inter', sans-serif;
+  }
+  .tw-hero__trust span { padding: 0 10px; }
+  .tw-hero__trust span + span { border-left: 1px solid var(--tw-border); }
+</style>
+
+<section class="tw-hero">
+
+  <!-- SWAP: replace tumbleweed-words-logo.png with your actual logo filename -->
+  <img
+    class="tw-hero__logo"
+    src="tumbleweed-words-logo.png"
+    alt="Tumbleweed Words"
+  />
+
+  <p class="tw-hero__eyebrow">Flash fiction written from the road &middot; Est. 2021 &middot; Edinburgh</p>
+
+  <p class="tw-hero__quote">
+    &ldquo;I wait for a train that circles the city like bats.
+    At night in Berlin you can imagine anything you want.&rdquo;
+  </p>
+
+  <div class="tw-hero__cta">
+    <a class="tw-btn-primary" href="https://tumbleweedwords.substack.com">Subscribe free</a>
+    <a class="tw-btn-ghost" href="https://tumbleweedwords.substack.com">Read the archive &rarr;</a>
+  </div>
+
+  <div class="tw-hero__trust">
+    <span>Free</span>
+    <span>Weekly</span>
+    <span>No ads</span>
+    <span>1,000+ readers</span>
+    <span>Pushcart nominated</span>
+  </div>
+
+</section>

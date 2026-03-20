@@ -1,0 +1,221 @@
+<!--
+  TUMBLEWEED WORDS — NEWSLETTER POPUP v2
+  ========================================
+  Paste this entire block just before your closing </body> tag on every page.
+  Photo is embedded — no separate image file needed.
+  Fires after 8 seconds OR on exit intent (cursor leaves top of page).
+  Stays dismissed for 14 days once closed.
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  #tw-popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 10, 40, 0.55);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+  #tw-popup-overlay.tw-active { display: flex; }
+
+  #tw-popup {
+    background: #F0EBE1;
+    border-top: 4px solid #5500D6;
+    max-width: 420px;
+    width: 100%;
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    animation: tw-popIn 0.3s ease;
+  }
+  @keyframes tw-popIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #tw-popup-close {
+    position: absolute;
+    top: 14px; right: 16px;
+    background: none; border: none;
+    font-size: 22px; color: #9A9490;
+    cursor: pointer; line-height: 1; padding: 0;
+    transition: color 0.15s;
+  }
+  #tw-popup-close:hover { color: #1A1A1A; }
+
+  .tw-popup__photo {
+    display: block;
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 2px solid #5500D6;
+    object-fit: cover;
+    margin: 0 auto 0.75rem;
+  }
+
+  .tw-popup__wordmark {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 12px; font-style: italic;
+    color: #5500D6; text-align: center;
+    margin-bottom: 1rem; letter-spacing: 0.04em;
+  }
+
+  .tw-popup__headline {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 22px; font-weight: 700;
+    color: #1A1A1A; text-align: center;
+    line-height: 1.25; margin-bottom: 0.6rem;
+  }
+
+  .tw-popup__sub {
+    font-size: 12px; color: #6B6560;
+    text-align: center; line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .tw-popup__input {
+    display: block; width: 100%;
+    background: #fff;
+    border: 1px solid #C5BDB0;
+    color: #1A1A1A;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; padding: 11px 14px;
+    margin-bottom: 10px; outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+  .tw-popup__input:focus { border-color: #5500D6; }
+  .tw-popup__input::placeholder { color: #B0A89E; }
+
+  .tw-popup__btn {
+    display: block; width: 100%;
+    background: #5500D6; color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 13px; border: none; cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.2s;
+  }
+  .tw-popup__btn:hover { background: #6B1FE8; }
+
+  .tw-popup__disclaimer {
+    font-size: 10px; color: #A89E94;
+    letter-spacing: 0.04em; text-align: center;
+    line-height: 1.6; margin-bottom: 0.75rem;
+  }
+
+  .tw-popup__dismiss {
+    display: block; text-align: center;
+    font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #A89E94;
+    cursor: pointer; background: none;
+    border: none; padding: 0; width: 100%;
+    transition: color 0.15s;
+  }
+  .tw-popup__dismiss:hover { color: #5500D6; }
+</style>
+
+<div id="tw-popup-overlay" role="dialog" aria-modal="true" aria-label="Subscribe to Tumbleweed Words">
+  <div id="tw-popup">
+
+    <button id="tw-popup-close" aria-label="Close">&times;</button>
+
+    <img
+      class="tw-popup__photo"
+      src="data:image/webp;base64,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"
+      alt="David — Tumbleweed Words"
+    />
+
+    <p class="tw-popup__wordmark">Tumbleweed Words</p>
+
+    <h2 class="tw-popup__headline">
+      Stories from the streets,<br>sent to your inbox.
+    </h2>
+
+    <p class="tw-popup__sub">
+      Flash fiction written in hostels, on trains,<br>
+      and in streets that don't know your name.<br>
+      Free. Weekly. No ads.
+    </p>
+
+    <input
+      class="tw-popup__input"
+      type="email"
+      id="tw-popup-email"
+      placeholder="Your email address"
+      autocomplete="email"
+    />
+
+    <button class="tw-popup__btn" id="tw-popup-submit">
+      Start reading free &rarr;
+    </button>
+
+    <p class="tw-popup__disclaimer">
+      Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time
+    </p>
+
+    <button class="tw-popup__dismiss" id="tw-popup-not-now">
+      Not now
+    </button>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'tw_popup_dismissed';
+  var DISMISS_DAYS = 14;
+  var overlay    = document.getElementById('tw-popup-overlay');
+  var closeBtn   = document.getElementById('tw-popup-close');
+  var notNow     = document.getElementById('tw-popup-not-now');
+  var submitBtn  = document.getElementById('tw-popup-submit');
+  var emailInput = document.getElementById('tw-popup-email');
+
+  function isDismissed() {
+    var ts = localStorage.getItem(STORAGE_KEY);
+    if (!ts) return false;
+    return Date.now() - parseInt(ts, 10) < DISMISS_DAYS * 86400000;
+  }
+
+  function showPopup() {
+    if (isDismissed()) return;
+    overlay.classList.add('tw-active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hidePopup() {
+    overlay.classList.remove('tw-active');
+    document.body.style.overflow = '';
+    localStorage.setItem(STORAGE_KEY, Date.now().toString());
+  }
+
+  var delayTimer = setTimeout(showPopup, 8000);
+
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10) { clearTimeout(delayTimer); showPopup(); }
+  });
+
+  closeBtn.addEventListener('click', hidePopup);
+  notNow.addEventListener('click', hidePopup);
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) hidePopup(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') hidePopup(); });
+
+  submitBtn.addEventListener('click', function() {
+    var email = emailInput.value.trim();
+    var url = 'https://tumbleweedwords.substack.com/subscribe';
+    window.open(email ? url + '?email=' + encodeURIComponent(email) : url, '_blank');
+    hidePopup();
+  });
+
+  emailInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') submitBtn.click();
+  });
+}());
+</script>
