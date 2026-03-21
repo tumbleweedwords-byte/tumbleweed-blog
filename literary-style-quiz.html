@@ -7,7 +7,7 @@
 <meta name="description" content="Take the free literary style quiz — 10 questions about your writing instincts, find out which minimalist writer you write like. Carver, Hemingway, Hempel, Chekhov, Paley, Beckett or Kafka.">
 <meta name="keywords" content="which writer do you write like quiz, literary style quiz, minimalist fiction quiz, writing style quiz, Carver Hemingway Hempel quiz, flash fiction quiz">
 <meta name="author" content="David — Tumbleweed Words">
-<link rel="canonical" href="https://tumbleweedwords-byte.github.io/tumbleweed-blog/literary-style-quiz.html">
+<link rel="canonical" href="https://tumbleweedwords.com/literary-style-quiz.html">
 <meta property="og:title" content="Which Minimalist Writer Do You Write Like?">
 <meta property="og:description" content="10 questions. Find out if you write like Carver, Hemingway, Hempel, Chekhov, Paley, Beckett or Kafka. Free quiz by Tumbleweed Words.">
 <meta property="og:type" content="website">
@@ -16,23 +16,30 @@
 <meta name="twitter:description" content="10 questions. Find out if you write like Carver, Hemingway, Hempel, Chekhov, Paley, Beckett or Kafka.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--txt:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#fff;--bg2:#faf9fd;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--ink:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#F6F4EE;--bg2:#EDEBE3;--br:#D4D0C4;--br2:#C4C0B0;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
 html{font-size:18px;scroll-behavior:smooth}
-body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:var(--p);text-decoration:none}a:hover{color:var(--p2)}
 .wrap{min-height:100vh;display:flex;flex-direction:column}
-.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em}
-.nlogo:hover{color:var(--p2)}
-.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
-.ncta:hover{background:var(--p2);color:#fff}
-main{flex:1;max-width:680px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(246,244,238,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--p);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--fd);font-size:.82rem;font-weight:700;color:var(--ink)}
+.nlinks{display:flex;gap:1.5rem;align-items:center}
+.nlink{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);transition:color .15s}
+.nlink:hover{color:var(--p)}
+.ncta{background:var(--p);color:#fff!important;padding:.3rem .9rem;border-radius:3px;font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2)!important}
+@media(max-width:600px){.hide-m{display:none}}
+
+main{flex:1;max-width:680px;margin:0 auto;padding:4.5rem 2rem 4rem;width:100%}
 .screen{display:none}.screen.on{display:block}
-.tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem;display:block}
-h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+.tag{font-family:var(--fm);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem;display:block;border-bottom:1.5px solid var(--p);padding-bottom:.5rem;display:inline-block}
+h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:700;color:var(--ink);line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+h1 em{color:var(--p);font-style:italic}
 .standfirst{font-size:1rem;color:var(--mu);max-width:50ch;line-height:1.72;margin-bottom:1.5rem}
 .intro-list{list-style:none;margin-bottom:2rem;display:flex;flex-direction:column;gap:.5rem;padding:.8rem 1rem;background:var(--bg2);border-radius:6px;border:1px solid var(--br)}
 .intro-list li{font-size:.9rem;color:var(--mu);padding-left:1.2rem;position:relative;line-height:1.65}
@@ -45,16 +52,16 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:700;colo
 .q-meta{display:flex;justify-content:space-between;align-items:center}
 .q-num{font-family:var(--fm);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p)}
 .q-count{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
-.q-text{font-family:var(--fd);font-size:1.4rem;font-weight:600;color:var(--txt);line-height:1.2;letter-spacing:-.01em;margin:1rem 0 1.3rem}
+.q-text{font-family:var(--fd);font-size:1.4rem;font-weight:600;color:var(--ink);line-height:1.2;letter-spacing:-.01em;margin:1rem 0 1.3rem}
 .opts{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.8rem}
 .opt{padding:.9rem 1.1rem;border:1px solid var(--br);border-radius:6px;font-family:var(--fb);font-size:.9rem;color:var(--mu);cursor:pointer;transition:all .15s;background:var(--bg);text-align:left;line-height:1.6;font-weight:300}
-.opt:hover{border-color:var(--p);color:var(--txt);background:var(--pl)}
-.opt.selected{border-color:var(--p);background:var(--pl);color:var(--txt);font-weight:400}
+.opt:hover{border-color:var(--p);color:var(--ink);background:var(--pl)}
+.opt.selected{border-color:var(--p);background:var(--pl);color:var(--ink);font-weight:400}
 .btn-next{background:var(--p);color:#fff;border:none;padding:.65rem 1.5rem;border-radius:3px;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;opacity:.35;transition:opacity .2s,background .15s;pointer-events:none}
 .btn-next.active{opacity:1;pointer-events:auto}
 .btn-next.active:hover{background:var(--p2)}
-.result-eyebrow{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.6rem;display:block}
-.result-name{font-family:var(--fd);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--txt);letter-spacing:-.02em;margin-bottom:1rem;line-height:1.1}
+.result-eyebrow{font-family:var(--fm);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.6rem;display:block;border-bottom:1.5px solid var(--p);padding-bottom:.5rem;display:inline-block}
+.result-name{font-family:var(--fd);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--ink);letter-spacing:-.02em;margin-bottom:1rem;line-height:1.1;margin-top:.8rem}
 .result-desc{font-size:.95rem;color:var(--txt2);line-height:1.82;margin-bottom:1.5rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
 .traits-head{font-family:var(--fm);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem}
 .traits{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
@@ -69,34 +76,40 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:700;colo
 .also-tag{font-family:var(--fm);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mu);background:var(--bg);border:1px solid var(--br);padding:.25rem .7rem;border-radius:3px}
 .read-box{border-left:3px solid var(--p);padding:.9rem 1.2rem;margin-bottom:1.5rem;background:var(--pl);border-radius:0 6px 6px 0}
 .read-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.5rem}
-.read-text{font-family:var(--fd);font-size:.95rem;font-style:italic;color:var(--txt);line-height:1.72}
+.read-text{font-family:var(--fd);font-size:.95rem;font-style:italic;color:var(--ink);line-height:1.72}
 .cta-band{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.3rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
 .cta-t{font-size:.88rem;color:var(--mu);line-height:1.6;max-width:42ch}
-.cta-t strong{color:var(--txt);font-weight:500;display:block;margin-bottom:.2rem}
-.cta-btn{background:var(--p);color:#fff;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-.cta-btn:hover{background:var(--p2);color:#fff}
+.cta-t strong{color:var(--ink);font-weight:500;display:block;margin-bottom:.2rem}
+.cta-btn{background:var(--p);color:#fff!important;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.cta-btn:hover{background:var(--p2)!important}
 .share-row{display:flex;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
 .share-btn{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.4rem .9rem;border-radius:3px;font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .15s}
 .share-btn:hover{border-color:var(--p);color:var(--p);background:var(--pl)}
 .btn-retry{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.45rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 .btn-retry:hover{background:var(--bg2)}
-.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
-.ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
-.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+
+/* FOOTER */
+.ft{background:var(--bg2);border-top:2px solid var(--p);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
+.ft-c{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.4rem}.ft-l a{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+
+/* POPUP */
+#tw-popup-overlay{display:none;position:fixed;inset:0;background:rgba(20,10,40,.55);z-index:9999;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(2px)}#tw-popup-overlay.tw-active{display:flex}#tw-popup{background:var(--bg);border-top:4px solid var(--p);max-width:400px;width:100%;padding:2.5rem 2rem 2rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.2);animation:tw-popIn .3s ease}@keyframes tw-popIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}#tw-popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;color:var(--fa);cursor:pointer;line-height:1}#tw-popup-close:hover{color:var(--ink)}.tw-popup__photo{display:block;width:64px;height:64px;border-radius:50%;border:2px solid var(--p);object-fit:cover;margin:0 auto .6rem}.tw-popup__wordmark{font-family:var(--fd);font-size:.62rem;font-style:italic;color:var(--p);text-align:center;margin-bottom:.8rem}.tw-popup__headline{font-family:var(--fd);font-size:1.12rem;font-weight:700;color:var(--ink);text-align:center;line-height:1.25;margin-bottom:.5rem}.tw-popup__sub{font-family:var(--fb);font-size:.66rem;color:var(--mu);text-align:center;line-height:1.65;margin-bottom:1.3rem;font-style:italic}.tw-popup__input{display:block;width:100%;background:#fff;border:1px solid var(--br);color:var(--ink);font-family:var(--fb);font-size:.7rem;padding:10px 14px;margin-bottom:8px;outline:none;transition:border-color .2s}.tw-popup__input:focus{border-color:var(--p)}.tw-popup__input::placeholder{color:var(--br2)}.tw-popup__btn{display:block;width:100%;background:var(--p);color:#fff;font-family:var(--fm);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;padding:12px;border:none;cursor:pointer;margin-bottom:.8rem;transition:background .2s}.tw-popup__btn:hover{background:var(--p2)}.tw-popup__disclaimer{font-family:var(--fm);font-size:.44rem;color:var(--fa);text-align:center;line-height:1.6;margin-bottom:.6rem}.tw-popup__dismiss{display:block;text-align:center;font-family:var(--fm);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);cursor:pointer;background:none;border:none;width:100%}.tw-popup__dismiss:hover{color:var(--p)}
+
 @media(max-width:500px){.trait-l{min-width:90px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav class="nav">
-  <a href="index.html" class="nlogo">Tumbleweed Words</a>
-  <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe &rarr;</a>
-</nav>
+
+<!-- NAV -->
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Stories &amp; Craft</a><a href="/literary-interviews.html" class="nlink hide-m">Interviews</a><a href="/literary-style-quiz.html" class="nlink hide-m">Find Your Voice</a><a href="/about.html" class="nlink hide-m">About</a><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Read Now</a></div></nav>
+
 <main>
 
   <div class="screen on" id="s-intro">
     <span class="tag">Free Quiz &middot; Tumbleweed Words</span>
-    <h1>Which minimalist writer do you write like?</h1>
+    <h1>Which minimalist writer do you <em>write like?</em></h1>
     <p class="standfirst">10 questions about your instincts, habits, and obsessions as a writer. Find out which writer from the minimalist tradition your prose most resembles.</p>
     <ul class="intro-list">
       <li>Seven possible results &mdash; Carver, Hemingway, Hempel, Chekhov, Paley, Beckett, Kafka</li>
@@ -149,15 +162,13 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:700;colo
   </div>
 
 </main>
-<footer class="ft">
-  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
-  <nav class="ft-l">
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
-    <a href="about.html">About</a>
-    <a href="index.html">Writing</a>
-  </nav>
-</footer>
+
+<!-- FOOTER -->
+<footer class="ft"><span class="ft-c">&copy; 2026 <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" style="color:inherit">Tumbleweed Words</a> &middot; Edinburgh</span><nav class="ft-l"><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a><a href="/all-writing.html">Stories &amp; Craft</a><a href="/about.html">About</a><a href="/sitemap.xml">Sitemap</a></nav></footer>
 </div>
+
+<!-- POPUP -->
+<div id="tw-popup-overlay" role="dialog" aria-modal="true" aria-label="Subscribe"><div id="tw-popup"><button id="tw-popup-close" aria-label="Close">&times;</button><img class="tw-popup__photo" src="david.jpg" alt="David"><p class="tw-popup__wordmark">Tumbleweed Words</p><h2 class="tw-popup__headline">Fiction from the streets,<br>sent to your inbox.</h2><p class="tw-popup__sub">&ldquo;Everyone wears black so hard you don&rsquo;t notice<br>there are differing shades.&rdquo;</p><input class="tw-popup__input" type="email" id="tw-popup-email" placeholder="Your email address" autocomplete="email"><button class="tw-popup__btn" id="tw-popup-submit">Start reading free &rarr;</button><p class="tw-popup__disclaimer">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p><button class="tw-popup__dismiss" id="tw-popup-not-now">Not now</button></div></div>
 
 <script>
 const Qs=[{q:"When you finish a story, the ending usually:",opts:[{t:"Lands on a specific image or object that carries all the weight",scores:{carver:2,hempel:1,chekhov:1}},{t:"Cuts off mid-thought — the story stops before it resolves",scores:{beckett:3,kafka:1}},{t:"Delivers a small action that quietly changes everything",scores:{hempel:2,paley:1,chekhov:1}},{t:"Closes with a line of dialogue that says something else entirely",scores:{carver:1,hemingway:2,paley:1}}]},{q:"Your sentences are usually:",opts:[{t:"Short, declarative, stripped of adverbs",scores:{hemingway:3,carver:1}},{t:"Compressed to the edge of incompleteness",scores:{hempel:3,beckett:1}},{t:"Conversational, slightly off-kilter, like someone talking around the point",scores:{carver:2,paley:2}},{t:"Long, looping, circling back on themselves",scores:{kafka:2,chekhov:1,beckett:1}}]},{q:"The thing you most want readers to feel when they finish your work:",opts:[{t:"That something shifted — they're not sure what",scores:{chekhov:3,hempel:1}},{t:"That they need to read the first line again",scores:{hempel:2,carver:2}},{t:"That the world is stranger and more threatening than they thought",scores:{kafka:3}},{t:"That they were briefly, completely, somewhere else",scores:{hemingway:2,chekhov:1,paley:1}}]},{q:"Your characters tend to:",opts:[{t:"Say the wrong thing when they mean something else entirely",scores:{carver:3,paley:1}},{t:"Observe the world with intense precision and do very little",scores:{chekhov:3,hemingway:1}},{t:"Exist in situations that follow a logic no one can explain",scores:{kafka:3,beckett:1}},{t:"Be defined by a single sentence rather than a history",scores:{hempel:3,beckett:1}}]},{q:"When you write about place, you:",opts:[{t:"Use one specific sensory detail and trust it to do everything",scores:{hemingway:2,hempel:2}},{t:"Let the place be as ordinary as possible — the strangeness comes from within",scores:{carver:3,chekhov:1}},{t:"Make the place feel slightly wrong, familiar but distorted",scores:{kafka:3}},{t:"Write from the feeling of a place rather than its surfaces",scores:{chekhov:2,paley:1,beckett:1}}]},{q:"Your relationship to backstory:",opts:[{t:"I know everything and show almost none of it",scores:{hemingway:3,hempel:1}},{t:"I reveal it sideways — through objects, gestures, what isn't said",scores:{carver:2,chekhov:2}},{t:"Backstory is usually irrelevant — only this moment matters",scores:{hempel:2,beckett:2}},{t:"The backstory is the story — it all happened before the piece begins",scores:{kafka:2,chekhov:1,paley:1}}]},{q:"The writer you re-read most when your prose goes flat:",opts:[{t:"Hemingway — to remember what a declarative sentence can hold",scores:{hemingway:3}},{t:"Carver — to remember what dialogue is actually for",scores:{carver:3}},{t:"Chekhov — to remember how to observe without judgment",scores:{chekhov:3}},{t:"Hempel or Paley — to remember that the strange is also the true",scores:{hempel:2,paley:1}}]},{q:"How much do you trust your reader?",opts:[{t:"Completely — I leave more out than I put in",scores:{hemingway:2,hempel:2}},{t:"Mostly — I trust them to feel what I don't name",scores:{carver:2,chekhov:2}},{t:"I'm not sure the reader can be trusted — the world defies explanation",scores:{kafka:3,beckett:1}},{t:"I trust them to bring their own life to the gaps",scores:{paley:2,chekhov:1,hempel:1}}]},{q:"Your instinct when a scene gets too emotional:",opts:[{t:"Cut the emotion — put an object in its place",scores:{hemingway:2,hempel:2}},{t:"Flatten the affect — describe what happens, not what it means",scores:{carver:3}},{t:"Let it curdle into something stranger and more ambiguous",scores:{kafka:2,beckett:2}},{t:"Step back and let a minor character observe",scores:{chekhov:3}}]},{q:"What you believe fiction is ultimately for:",opts:[{t:"To render a moment of experience so precisely it becomes universal",scores:{hemingway:2,chekhov:2}},{t:"To say the thing language can barely hold",scores:{beckett:3,hempel:1}},{t:"To show ordinary lives with the dignity they are rarely given",scores:{carver:2,paley:2}},{t:"To make the reader feel that reality is more unstable than they assumed",scores:{kafka:3,chekhov:1}}]}];
@@ -221,13 +232,13 @@ function showResult(){
 
 function shareTwitter(){
   const w=W[topResult];
-  const text=`I write like ${w.name} — found out from this free literary style quiz by Tumbleweed Words. tumbleweedwords-byte.github.io/tumbleweed-blog/literary-style-quiz.html`;
+  const text=`I write like ${w.name} — found out from this free literary style quiz by Tumbleweed Words. tumbleweedwords.com/literary-style-quiz.html`;
   window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank');
 }
 
 function copyResult(){
   const w=W[topResult];
-  const text=`I write like ${w.name}.\n\nFind out which minimalist writer you write like: tumbleweedwords-byte.github.io/tumbleweed-blog/literary-style-quiz.html\n\nFree quiz by Tumbleweed Words.`;
+  const text=`I write like ${w.name}.\n\nFind out which minimalist writer you write like: tumbleweedwords.com/literary-style-quiz.html\n\nFree quiz by Tumbleweed Words.`;
   navigator.clipboard.writeText(text).then(()=>{
     const btn=event.target;
     btn.textContent='Copied!';
@@ -242,6 +253,9 @@ function restart(){
   document.getElementById('s-intro').classList.add('on');
   window.scrollTo({top:0,behavior:'smooth'});
 }
+
+// POPUP
+(function(){var KEY='tw_popup_dismissed',DAYS=14,overlay=document.getElementById('tw-popup-overlay'),close=document.getElementById('tw-popup-close'),notNow=document.getElementById('tw-popup-not-now'),submit=document.getElementById('tw-popup-submit'),email=document.getElementById('tw-popup-email');function dismissed(){var t=localStorage.getItem(KEY);return t&&Date.now()-parseInt(t)<DAYS*86400000}function show(){if(dismissed())return;overlay.classList.add('tw-active');document.body.style.overflow='hidden'}function hide(){overlay.classList.remove('tw-active');document.body.style.overflow='';localStorage.setItem(KEY,Date.now().toString())}var timer=setTimeout(show,10000);document.addEventListener('mouseleave',function(e){if(e.clientY<10){clearTimeout(timer);show()}});close.addEventListener('click',hide);notNow.addEventListener('click',hide);overlay.addEventListener('click',function(e){if(e.target===overlay)hide()});document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});submit.addEventListener('click',function(){var v=email.value.trim(),u='https://tumbleweedwords.substack.com/subscribe';window.open(v?u+'?email='+encodeURIComponent(v):u,'_blank');hide()});email.addEventListener('keydown',function(e){if(e.key==='Enter')submit.click()});}());
 </script>
 </body>
 </html>
