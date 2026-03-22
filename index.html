@@ -19,8 +19,9 @@
 .nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(246,244,238,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--p);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between}.nav-logo{font-family:var(--fd);font-size:.82rem;font-weight:700;color:var(--ink)}.nlinks{display:flex;gap:1.5rem;align-items:center}.nlink{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);transition:color .15s}.nlink:hover{color:var(--p)}.ncta{background:var(--p);color:#fff!important;padding:.3rem .9rem;border-radius:3px;font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase}.ncta:hover{background:var(--p2)!important}@media(max-width:600px){.hide-m{display:none}}
 .btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.72rem 1.6rem;border-radius:3px;border:1.5px solid;transition:all .15s;white-space:nowrap;line-height:1}.btn-p{background:var(--p);border-color:var(--p);color:#fff!important}.btn-p:hover{background:var(--p2);border-color:var(--p2)}.btn-g{background:transparent;border-color:var(--p);color:var(--p)}.btn-g:hover{background:var(--pl)}
 .sec-label{font-family:var(--fm);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);border-bottom:1.5px solid var(--br);padding-bottom:.7rem;margin-bottom:2.2rem}.sec-eye{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:1.5rem;display:flex;align-items:center;gap:.7rem}.sec-eye::before{content:"";width:22px;height:1px;background:var(--p)}
-.hero{background:#fff;padding:6.5rem 2rem 3.5rem;text-align:center}.hero-logo{display:block;width:min(640px,88vw);height:auto;margin:0 auto 1.8rem;mix-blend-mode:multiply}.hero-line{font-family:var(--fd);font-size:clamp(1rem,2.2vw,1.3rem);font-style:italic;color:var(--ink);line-height:1.65;max-width:520px;margin:0 auto 2.5rem;opacity:.82}.hero-meta{font-family:var(--fm);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);display:flex;justify-content:center;flex-wrap:wrap}.hero-meta span{padding:0 10px}.hero-meta span+span{border-left:1px solid var(--br)}
-.site-tagline{font-family:var(--fb);font-size:1.05rem;letter-spacing:.01em;color:#999;margin:0 auto 1.8rem;text-align:center;max-width:520px;line-height:1.5}
+.hero{padding-top:56px}.hero-logo-bar{background:#fff;padding:1.6rem 2rem .8rem;text-align:center}.hero-logo{display:block;width:min(640px,88vw);height:auto;margin:0 auto;mix-blend-mode:multiply}
+.hero-carousel{position:relative;width:100%;height:clamp(340px,50vw,520px);overflow:hidden}.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}.hero-slide.active{opacity:1;z-index:2}.hero-slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.4) saturate(.8)}.hero-slide-content{position:relative;z-index:3;max-width:680px}.hero-slide-label{font-family:var(--fm);font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1.2rem;display:inline-block;border:1px solid rgba(255,255,255,.25);padding:.35rem .9rem}.hero-slide-quote{font-family:var(--fd);font-size:clamp(1.3rem,3.4vw,2.2rem);font-weight:700;color:#fff;line-height:1.28;letter-spacing:-.01em;margin-bottom:1rem;text-shadow:0 2px 20px rgba(0,0,0,.3)}.hero-slide-sub{font-family:var(--fb);font-size:.82rem;font-style:italic;color:rgba(255,255,255,.7);line-height:1.55}.hero-dots{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:.6rem}.hero-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);border:1.5px solid rgba(255,255,255,.5);cursor:pointer;transition:all .25s;padding:0}.hero-dot.active{background:#fff;border-color:#fff}
+.hero-tagline{background:#fff;padding:1.8rem 2rem 1rem;text-align:center}.site-tagline{font-family:var(--fb);font-size:1.08rem;color:var(--ink);margin:0 auto;text-align:center;max-width:540px;line-height:1.55;font-weight:400}.hero-ctas{background:#fff;padding:0 2rem 1.2rem;text-align:center}.hero-meta-bar{background:#fff;padding:0 2rem 2rem;text-align:center}.hero-meta{font-family:var(--fm);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);display:flex;justify-content:center;flex-wrap:wrap}.hero-meta span{padding:0 10px}.hero-meta span+span{border-left:1px solid var(--br)}
 .opts-bar{background:var(--bg);border-bottom:1px solid var(--br);padding:1rem 2rem;display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}.opts-bar a{font-family:var(--fm);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding:.4rem .8rem;border:1px solid var(--br);border-radius:3px;transition:all .15s}.opts-bar a:hover{color:var(--p);border-color:var(--p);background:var(--pl)}
 .proof-bar{background:var(--p);padding:1.2rem 2rem}.proof-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:center;gap:3.5rem;flex-wrap:wrap}.proof-n{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:#fff;line-height:1}.proof-l{font-family:var(--fm);font-size:.46rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.2rem}.proof-item{text-align:center}
 .pub-bar{background:var(--bg2);border-bottom:1px solid var(--br);padding:1rem 2rem}.pub-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:.6rem}.pub-label{font-family:var(--fm);font-size:.46rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p)}.pub-list{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center;justify-content:center}.pub-item{font-family:var(--fd);font-size:.82rem;font-style:italic;color:var(--ink)}.pub-dot{color:var(--br2);font-style:normal}
@@ -30,7 +31,6 @@
 .writer-sec{background:var(--bg);padding:5rem 2rem;border-bottom:1px solid var(--br)}.writer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:4rem;align-items:start}@media(max-width:800px){.writer-inner{grid-template-columns:1fr}}.writer-side{text-align:center}.writer-img{width:165px;height:165px;border-radius:50%;object-fit:cover;border:3px solid var(--p);display:inline-block;margin-bottom:1rem;filter:grayscale(15%)}.writer-name{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--ink)}.writer-sub{font-family:var(--fm);font-size:.48rem;letter-spacing:.13em;text-transform:uppercase;color:var(--fa)}.creds{margin-top:1rem;display:flex;flex-direction:column;gap:.3rem}.cred{font-family:var(--fm);font-size:.5rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mu);padding:.25rem 0;border-top:1px solid var(--br);display:flex;align-items:center;gap:.4rem;text-align:left}.cred::before{content:"\2713";color:var(--p);font-size:.65rem}.pull-quote{background:var(--bg2);border-left:3px solid var(--p);padding:.9rem 1.2rem;margin:1.3rem 0;border-radius:0 4px 4px 0}.pq{font-family:var(--fd);font-size:.9rem;font-style:italic;color:var(--ink);line-height:1.62}
 .photos-sec{background:var(--bg);padding:5rem 2rem;border-bottom:1px solid var(--br)}.photos-inner{max-width:1100px;margin:0 auto;position:relative}.photo-reel{display:flex;gap:.6rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:1rem;cursor:grab;scroll-behavior:smooth}.photo-reel:active{cursor:grabbing}.photo-reel::-webkit-scrollbar{height:6px}.photo-reel::-webkit-scrollbar-track{background:var(--bg2);border-radius:3px}.photo-reel::-webkit-scrollbar-thumb{background:var(--br2);border-radius:3px}.photo-reel::-webkit-scrollbar-thumb:hover{background:var(--p)}.reel-item{flex:0 0 300px;scroll-snap-align:start;position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/3}.reel-item img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);transition:filter .4s,transform .4s}.reel-item:hover img{filter:grayscale(0%);transform:scale(1.04)}.reel-cap{position:absolute;bottom:0;left:0;right:0;padding:.5rem .7rem;background:linear-gradient(transparent,rgba(0,0,0,.55));font-family:var(--fm);font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);opacity:0;transition:opacity .3s}.reel-item:hover .reel-cap{opacity:1}.reel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.9);border:1px solid var(--br);color:var(--ink);font-size:1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all .15s;box-shadow:0 2px 8px rgba(0,0,0,.1)}.reel-arrow:hover{background:var(--p);color:#fff;border-color:var(--p)}.reel-arrow-l{left:-12px}.reel-arrow-r{right:-12px}@media(max-width:600px){.reel-arrow{display:none}}
 .scarcity{background:var(--p);padding:4.5rem 2rem}.scarcity-inner{max-width:760px;margin:0 auto}.sc-h{font-family:var(--fd);font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;color:#fff;line-height:1.15;letter-spacing:-.02em;margin-bottom:1.2rem}.sc-h em{color:rgba(255,255,255,.7);font-style:italic}.sc-p{font-size:.9rem;color:rgba(255,255,255,.78);line-height:1.82;margin-bottom:1.5rem;font-family:var(--fd);font-style:italic;font-weight:300}.sc-acts{display:flex;gap:.75rem;flex-wrap:wrap}.btn-inv{background:#fff;border:1.5px solid #fff;color:var(--p);font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.68rem 1.5rem;border-radius:3px;display:inline-block;transition:all .15s}.btn-inv:hover{background:var(--pl)}.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:rgba(255,255,255,.8);font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.68rem 1.5rem;border-radius:3px;display:inline-block;transition:all .15s}.btn-ghost:hover{border-color:#fff;color:#fff}
-.tools-sec{background:var(--bg);padding:5rem 2rem;border-bottom:1px solid var(--br)}.tools-inner{max-width:1100px;margin:0 auto}.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:1.5rem}@media(max-width:600px){.tools-grid{grid-template-columns:1fr}}.tool-card{background:var(--bg2);border:1px solid var(--br);border-top:2px solid var(--p);padding:1.3rem;display:flex;flex-direction:column;gap:.4rem;transition:background .15s}.tool-card:hover{background:var(--pl)}.tc-tag{font-family:var(--fm);font-size:.46rem;letter-spacing:.13em;text-transform:uppercase;color:var(--p)}.tc-name{font-family:var(--fd);font-size:.94rem;font-weight:600;color:var(--ink)}.tc-desc{font-size:.78rem;color:var(--mu);line-height:1.6}.tc-link{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-top:.2rem}
 .paid-sec{background:var(--bg2);padding:5rem 2rem;border-bottom:1px solid var(--br)}.paid-inner{max-width:760px;margin:0 auto}.paid-list{list-style:none;margin:1.2rem 0 2rem;display:flex;flex-direction:column;gap:.5rem}.paid-list li{font-size:.84rem;color:var(--txt2);padding-left:1.3rem;position:relative;line-height:1.65}.paid-list li::before{content:"\2192";position:absolute;left:0;color:var(--p)}.paid-acts{display:flex;gap:.75rem;flex-wrap:wrap}
 .final-sec{background:var(--bg);padding:5rem 2rem}.final-inner{max-width:660px;margin:0 auto;text-align:center}.final-img{width:86px;height:86px;border-radius:50%;object-fit:cover;border:2.5px solid var(--p);display:inline-block;margin-bottom:1.8rem;filter:grayscale(15%)}.final-h{font-family:var(--fd);font-size:clamp(1.7rem,3.8vw,2.5rem);font-weight:700;color:var(--ink);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}.final-h em{color:var(--p);font-style:italic}.final-p{font-size:.86rem;color:var(--mu);line-height:1.75;max-width:42ch;margin:0 auto 2rem}.final-btn{display:block;text-align:center;background:var(--p);color:#fff!important;font-family:var(--fm);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:.82rem 2rem;border-radius:3px;max-width:340px;margin:0 auto;transition:background .15s}.final-btn:hover{background:var(--p2)}.final-note{font-family:var(--fm);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);margin-top:.8rem}.final-links{display:flex;gap:1.4rem;margin-top:2.5rem;flex-wrap:wrap;justify-content:center}.final-links a{font-family:var(--fm);font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.final-links a:hover{color:var(--p)}
 .ft{background:var(--bg2);border-top:2px solid var(--p);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}.ft-c{font-family:var(--fm);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}.ft-l{display:flex;gap:1.4rem}.ft-l a{font-family:var(--fm);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
@@ -39,196 +39,140 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Craft &amp; Culture</a><a href="/literary-interviews.html" class="nlink hide-m">Interviews</a><a href="/famous-readings.html" class="nlink hide-m">Famous Readings</a><a href="/literary-style-quiz.html" class="nlink hide-m">Literary Insights</a><a href="/about.html" class="nlink hide-m">About Tumbleweed Words</a><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Read Now</a></div></nav>
 
 <!-- HERO -->
 <section class="hero">
+
+<!-- Logo -->
+<div class="hero-logo-bar">
 <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener"><img src="tumbleweed-logo.png" alt="Tumbleweed Words" class="hero-logo"></a>
-<p class="hero-line">&ldquo;I wait for a train that circles the city like bats.<br>At night in Berlin you can imagine anything you want.&rdquo;</p>
+</div>
+
+<!-- Carousel — 5 slides -->
+<div class="hero-carousel" id="heroCarousel">
+
+<div class="hero-slide active" data-slide="0">
+<div class="hero-slide-bg" style="background-image:url('hero-1.jpg')"></div>
+<div class="hero-slide-content">
+<span class="hero-slide-label">Featured</span>
+<p class="hero-slide-quote">&ldquo;I wait for a train that circles the city like bats. At night in Berlin you can imagine anything you want.&rdquo;</p>
+<p class="hero-slide-sub">train in vain &middot; Berlin</p>
+</div>
+</div>
+
+<div class="hero-slide" data-slide="1">
+<div class="hero-slide-bg" style="background-image:url('hero-2.jpg')"></div>
+<div class="hero-slide-content">
+<span class="hero-slide-label">Featured</span>
+<p class="hero-slide-quote">&ldquo;Everyone wears black so hard you don&rsquo;t notice after a while that there are differing shades.&rdquo;</p>
+<p class="hero-slide-sub">train in vain &middot; fiction</p>
+</div>
+</div>
+
+<div class="hero-slide" data-slide="2">
+<div class="hero-slide-bg" style="background-image:url('hero-3.jpg')"></div>
+<div class="hero-slide-content">
+<span class="hero-slide-label">Featured</span>
+<p class="hero-slide-quote">&ldquo;You&rsquo;re not a serious person anymore, Gabriel. Was I ever? Before the drink, yes.&rdquo;</p>
+<p class="hero-slide-sub">two city dwelling lovers &middot; fiction</p>
+</div>
+</div>
+
+<div class="hero-slide" data-slide="3">
+<div class="hero-slide-bg" style="background-image:url('hero-4.jpg')"></div>
+<div class="hero-slide-content">
+<span class="hero-slide-label">Featured</span>
+<p class="hero-slide-quote">&ldquo;Written on a plane while flying away from love and loss. The city below until it wasn&rsquo;t.&rdquo;</p>
+<p class="hero-slide-sub">nomadic &middot; poetry</p>
+</div>
+</div>
+
+<div class="hero-slide" data-slide="4">
+<div class="hero-slide-bg" style="background-image:url('hero-5.jpg')"></div>
+<div class="hero-slide-content">
+<span class="hero-slide-label">Featured</span>
+<p class="hero-slide-quote">&ldquo;I shape a heart from a headphone lead, toast a cup of warm water to no one, to anyone who feels this particular.&rdquo;</p>
+<p class="hero-slide-sub">red eye &middot; poetry</p>
+</div>
+</div>
+
+<div class="hero-dots" id="heroDots">
+<button class="hero-dot active" data-dot="0" aria-label="Slide 1"></button>
+<button class="hero-dot" data-dot="1" aria-label="Slide 2"></button>
+<button class="hero-dot" data-dot="2" aria-label="Slide 3"></button>
+<button class="hero-dot" data-dot="3" aria-label="Slide 4"></button>
+<button class="hero-dot" data-dot="4" aria-label="Slide 5"></button>
+</div>
+</div>
+
+<!-- Tagline — static, darker -->
+<div class="hero-tagline-wrap">
 <p class="site-tagline">A weekly literary newsletter of flash fiction and poetry, written from the road &mdash; free to read.</p>
-<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0 0 1.8rem">
+</div>
+
+<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:0 2rem 1.5rem">
 <a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Read the latest piece &rarr;</a>
 <a href="/all-writing.html" class="btn btn-g">Browse the archive</a>
 </div>
 <div class="hero-meta"><span>Free</span><span>Weekly</span><span>No ads</span><span>1,000+ readers</span><span>Pushcart nominated</span></div>
 </section>
 
-<!-- OPTIONS BAR -->
-<div class="opts-bar">
-<a href="/all-writing.html#bestof">Best Of</a>
-<a href="/literary-style-quiz.html">Literary Insights</a>
-<a href="/literary-interviews.html">Literary Interviews</a>
-<a href="/all-writing.html#world">Literary World</a>
-<a href="/all-writing.html#craft">Craft &amp; Theory</a>
-<a href="/all-writing.html#news">News &amp; Culture</a>
-<a href="/all-writing.html#reviews">Book Reviews</a>
-<a href="/all-writing.html#influences">Influences</a>
-<a href="/famous-readings.html">Famous Readings</a>
-<a href="/all-writing.html#themes">By Theme</a>
-<a href="/all-writing.html#cities">By City</a>
-</div>
+<div class="opts-bar"><a href="/all-writing.html#bestof">Best Of</a><a href="/literary-style-quiz.html">Literary Insights</a><a href="/literary-interviews.html">Literary Interviews</a><a href="/all-writing.html#world">Literary World</a><a href="/all-writing.html#craft">Craft &amp; Theory</a><a href="/all-writing.html#news">News &amp; Culture</a><a href="/all-writing.html#reviews">Book Reviews</a><a href="/all-writing.html#influences">Influences</a><a href="/famous-readings.html">Famous Readings</a><a href="/all-writing.html#themes">By Theme</a><a href="/all-writing.html#cities">By City</a></div>
 
-<!-- PROOF -->
-<div class="proof-bar"><div class="proof-inner">
-<div class="proof-item"><div class="proof-n">1,000+</div><div class="proof-l">Readers</div></div>
-<div class="proof-item"><div class="proof-n">5</div><div class="proof-l">Years on the road</div></div>
-<div class="proof-item"><div class="proof-n">4</div><div class="proof-l">Continents</div></div>
-<div class="proof-item"><div class="proof-n">30</div><div class="proof-l">Countries</div></div>
-</div></div>
+<div class="proof-bar"><div class="proof-inner"><div class="proof-item"><div class="proof-n">1,000+</div><div class="proof-l">Readers</div></div><div class="proof-item"><div class="proof-n">5</div><div class="proof-l">Years on the road</div></div><div class="proof-item"><div class="proof-n">4</div><div class="proof-l">Continents</div></div><div class="proof-item"><div class="proof-n">30</div><div class="proof-l">Countries</div></div></div></div>
 
-<!-- PUBLISHED IN -->
 <div class="pub-bar"><div class="pub-inner"><span class="pub-label">Published in</span><div class="pub-list"><span class="pub-item">Adelaide Magazine</span><span class="pub-dot">&middot;</span><span class="pub-item">Litro Magazine</span><span class="pub-dot">&middot;</span><span class="pub-item"><a href="https://www.cleavermagazine.com/street-song-by-david-moran/" target="_blank" rel="noopener" style="color:inherit">Cleaver Magazine</a></span><span class="pub-dot">&middot;</span><span class="pub-item">The Dundee Anthology</span><span class="pub-dot">&middot;</span><span class="pub-item">Argentina Independent</span><span class="pub-dot">&middot;</span><span class="pub-item">The View From Here</span><span class="pub-dot">&middot;</span><span class="pub-item">Pushcart Prize nominated</span></div></div></div>
 
-<!-- FIRST LINES -->
-<section class="pieces-sec"><div class="pieces-inner">
-<div class="sec-label">Open anywhere, start reading</div>
-<div class="pieces-grid">
-<a href="https://tumbleweedwords.substack.com/p/street-legal-fiction" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">Berlin &mdash; U-Bahn, winter</span><p class="pc-line">&ldquo;Everyone wears black so hard you don&rsquo;t notice after a while that there are differing shades.&rdquo;</p><span class="pc-meta">train in vain &middot; fiction</span></a>
-<a href="https://tumbleweedwords.substack.com/p/a-conversation-between-two-city-dwelling" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">London &mdash; Whitechapel, summer</span><p class="pc-line">&ldquo;You&rsquo;re not a serious person anymore, Gabriel. Was I ever? Before the drink, yes.&rdquo;</p><span class="pc-meta">two city dwelling lovers &middot; fiction</span></a>
-<a href="https://tumbleweedwords.substack.com/p/growing-pains-fiction" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">A council estate, England</span><p class="pc-line">&ldquo;Because our dads liked to get pissed up at the pub and smash things when home, there wasn&rsquo;t much money left to go round.&rdquo;</p><span class="pc-meta">growing pains &middot; published internationally</span></a>
-<a href="https://tumbleweedwords.substack.com/p/three-nomadic-poems" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">Buenos Aires &mdash; leaving</span><p class="pc-line">&ldquo;Written on a plane while flying away from love and loss. The city below until it wasn&rsquo;t.&rdquo;</p><span class="pc-meta">nomadic &middot; poetry</span></a>
-</div>
-<div style="text-align:center;margin-top:2rem"><a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Read the full pieces &rarr;</a></div>
-</div></section>
+<section class="pieces-sec"><div class="pieces-inner"><div class="sec-label">Open anywhere, start reading</div><div class="pieces-grid"><a href="https://tumbleweedwords.substack.com/p/street-legal-fiction" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">Berlin &mdash; U-Bahn, winter</span><p class="pc-line">&ldquo;Everyone wears black so hard you don&rsquo;t notice after a while that there are differing shades.&rdquo;</p><span class="pc-meta">train in vain &middot; fiction</span></a><a href="https://tumbleweedwords.substack.com/p/a-conversation-between-two-city-dwelling" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">London &mdash; Whitechapel, summer</span><p class="pc-line">&ldquo;You&rsquo;re not a serious person anymore, Gabriel. Was I ever? Before the drink, yes.&rdquo;</p><span class="pc-meta">two city dwelling lovers &middot; fiction</span></a><a href="https://tumbleweedwords.substack.com/p/growing-pains-fiction" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">A council estate, England</span><p class="pc-line">&ldquo;Because our dads liked to get pissed up at the pub and smash things when home, there wasn&rsquo;t much money left to go round.&rdquo;</p><span class="pc-meta">growing pains &middot; published internationally</span></a><a href="https://tumbleweedwords.substack.com/p/three-nomadic-poems" class="piece-card" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="pc-city">Buenos Aires &mdash; leaving</span><p class="pc-line">&ldquo;Written on a plane while flying away from love and loss. The city below until it wasn&rsquo;t.&rdquo;</p><span class="pc-meta">nomadic &middot; poetry</span></a></div><div style="text-align:center;margin-top:2rem"><a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Read the full pieces &rarr;</a></div></div></section>
 
-<!-- EXCERPT -->
-<section class="excerpt-sec"><div class="excerpt-inner">
-<div class="sec-eye">From the archive &middot; Berlin, winter</div>
-<h2>What arrives in <em>your inbox</em></h2>
-<div style="height:.8rem"></div>
-<blockquote class="excerpt-block"><a href="https://tumbleweedwords.substack.com/p/street-legal-fiction" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">&ldquo;The carriages are full of inviting people I never talk to. Everyone wears black so hard you don&rsquo;t notice after a while that there are differing shades. A punk appears on the platform, chewing gum that matches the colour of her hair.&rdquo;</a></blockquote>
-<div class="attr-row"><img src="david.jpg" alt="David" class="attr-img"><span class="attr-text">David &mdash; &lsquo;train in vain&rsquo; &mdash; <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Tumbleweed Words</a></span></div>
-<div style="height:1.5rem"></div>
-<p class="body-p">A Berlin U-Bahn in winter, there&rsquo;s a punk woman on the platform chewing gum the colour of her hair. A toothless man watches her move. The Clash plays in a young man&rsquo;s ears because some sounds were born to travel. <strong>This is what lands in your inbox every week. Not a newsletter about writing, but stories found on the road.</strong></p>
-<div style="margin-top:1.8rem;display:flex;gap:.75rem;flex-wrap:wrap">
-<a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Open the archive &rarr;</a>
-<a href="/all-writing.html" class="btn btn-g">Discover the craft essays</a>
-</div>
-</div></section>
+<section class="excerpt-sec"><div class="excerpt-inner"><div class="sec-eye">From the archive &middot; Berlin, winter</div><h2>What arrives in <em>your inbox</em></h2><div style="height:.8rem"></div><blockquote class="excerpt-block"><a href="https://tumbleweedwords.substack.com/p/street-legal-fiction" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">&ldquo;The carriages are full of inviting people I never talk to. Everyone wears black so hard you don&rsquo;t notice after a while that there are differing shades. A punk appears on the platform, chewing gum that matches the colour of her hair.&rdquo;</a></blockquote><div class="attr-row"><img src="david.jpg" alt="David" class="attr-img"><span class="attr-text">David &mdash; &lsquo;train in vain&rsquo; &mdash; <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Tumbleweed Words</a></span></div><div style="height:1.5rem"></div><p class="body-p">A Berlin U-Bahn in winter, there&rsquo;s a punk woman on the platform chewing gum the colour of her hair. A toothless man watches her move. The Clash plays in a young man&rsquo;s ears because some sounds were born to travel. <strong>This is what lands in your inbox every week. Not a newsletter about writing, but stories found on the road.</strong></p><div style="margin-top:1.8rem;display:flex;gap:.75rem;flex-wrap:wrap"><a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Open the archive &rarr;</a><a href="/all-writing.html" class="btn btn-g">Discover the craft essays</a></div></div></section>
 
-<!-- WHAT ARRIVES -->
-<section class="what-sec"><div class="what-inner">
-<div class="sec-label">What lands in your inbox</div>
-<div class="what-grid">
-<div class="what-card"><div class="wc-num">01</div><h3>On the writing</h3><p class="wc-p">Flash fiction and prose poetry delivered in bitesize portions to your inbox every week. The stories contain cities as characters, working class voices ripped from the asphalt, love affairs from overseas.</p></div>
-<div class="what-card"><div class="wc-num">02</div><h3>Where nomadic words are found</h3><p class="wc-p">Somewhere out there, lost in Seoul. On a night train between Warsaw and Berlin. Sat on a park bench in Buenos Aires at four in the morning. Stories are found on the road, written in the moment, sent from anywhere, out there.</p></div>
-<div class="what-card"><div class="wc-num">03</div><h3>A literary background</h3><p class="wc-p">A published writer of fiction and poetry in: <em>Adelaide Magazine</em>, <em>Litro</em>, <em>The View From Here</em>, <em>Cleaver Magazine</em>, <em>The Dundee Anthology</em>, <em>Argentina Independent</em>, <em>White Wall Review</em> and more. Pushcart-shortlist nominee for fiction. Five years publishing on Substack. 1,200+ dedicated subscribers.</p></div>
-</div>
-</div></section>
+<section class="what-sec"><div class="what-inner"><div class="sec-label">What lands in your inbox</div><div class="what-grid"><div class="what-card"><div class="wc-num">01</div><h3>On the writing</h3><p class="wc-p">Flash fiction and prose poetry delivered in bitesize portions to your inbox every week. The stories contain cities as characters, working class voices ripped from the asphalt, love affairs from overseas.</p></div><div class="what-card"><div class="wc-num">02</div><h3>Where nomadic words are found</h3><p class="wc-p">Somewhere out there, lost in Seoul. On a night train between Warsaw and Berlin. Sat on a park bench in Buenos Aires at four in the morning. Stories are found on the road, written in the moment, sent from anywhere, out there.</p></div><div class="what-card"><div class="wc-num">03</div><h3>A literary background</h3><p class="wc-p">A published writer of fiction and poetry in: <em>Adelaide Magazine</em>, <em>Litro</em>, <em>The View From Here</em>, <em>Cleaver Magazine</em>, <em>The Dundee Anthology</em>, <em>Argentina Independent</em>, <em>White Wall Review</em> and more. Pushcart-shortlist nominee for fiction. Five years publishing on Substack. 1,200+ dedicated subscribers.</p></div></div></div></section>
 
-<!-- WRITER -->
-<section class="writer-sec"><div class="writer-inner">
-<div class="writer-side">
-<img src="david.jpg" alt="David" class="writer-img">
-<div class="writer-name">David</div>
-<div class="writer-sub">Writer &middot; Edinburgh &amp; Elsewhere</div>
-<div class="creds">
-<div class="cred">Pushcart Prize nominated</div>
-<div class="cred"><a href="https://adelaidemagazine.org/easy-to-believe" target="_blank" rel="noopener" style="color:inherit">Adelaide Magazine</a></div>
-<div class="cred"><a href="https://www.litromagazine.com/usa/2023/10/expat-in-paris/" target="_blank" rel="noopener" style="color:inherit">Litro Magazine</a></div>
-<div class="cred"><a href="https://www.cleavermagazine.com/street-song-by-david-moran/" target="_blank" rel="noopener" style="color:inherit">Cleaver Magazine</a></div>
-<div class="cred">The Dundee Anthology</div>
-<div class="cred">Argentina Independent</div>
-<div class="cred">The View From Here</div>
-<div class="cred">MA Creative Writing</div>
-<div class="cred">5 years on Substack</div>
-</div></div>
-<div class="writer-body">
-<h2>A story that explores brotherhood and the <em>human condition</em></h2>
-<p class="body-p">In <em><a href="https://tumbleweedwords.substack.com/p/growing-pains-fiction" target="_blank" rel="noopener">growing pains</a></em>, two boys sit cross-legged on worn carpet eating Chicken Kiev off steaming plates while their dads drink away their wages at the pub. Controls the shape of samosas. Chewing gum that matches the colour of her hair. That level of specific.</p>
-<div class="pull-quote"><p class="pq">&ldquo;You&rsquo;re not a serious person anymore, Gabriel. Was I ever? Before the drink, yes. Well, sort of.&rdquo;</p></div>
-<p class="body-p">A box room in Whitechapel. <em>Love Is A Dog From Hell</em> on the floor. A flip phone and a rolled cigarette. He pours himself another measure, attempts to call her back. Everything and nothing happening all at once, people moving through the world at good speed.</p>
-<div style="margin-top:1.8rem;display:flex;gap:.75rem;flex-wrap:wrap">
-<a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Subscribe now &rarr;</a>
-<a href="/about.html" class="btn btn-g">Meet the writer</a>
-</div>
-</div></div></section>
+<section class="writer-sec"><div class="writer-inner"><div class="writer-side"><img src="david.jpg" alt="David" class="writer-img"><div class="writer-name">David</div><div class="writer-sub">Writer &middot; Edinburgh &amp; Elsewhere</div><div class="creds"><div class="cred">Pushcart Prize nominated</div><div class="cred"><a href="https://adelaidemagazine.org/easy-to-believe" target="_blank" rel="noopener" style="color:inherit">Adelaide Magazine</a></div><div class="cred"><a href="https://www.litromagazine.com/usa/2023/10/expat-in-paris/" target="_blank" rel="noopener" style="color:inherit">Litro Magazine</a></div><div class="cred"><a href="https://www.cleavermagazine.com/street-song-by-david-moran/" target="_blank" rel="noopener" style="color:inherit">Cleaver Magazine</a></div><div class="cred">The Dundee Anthology</div><div class="cred">Argentina Independent</div><div class="cred">The View From Here</div><div class="cred">MA Creative Writing</div><div class="cred">5 years on Substack</div></div></div><div class="writer-body"><h2>A story that explores brotherhood and the <em>human condition</em></h2><p class="body-p">In <em><a href="https://tumbleweedwords.substack.com/p/growing-pains-fiction" target="_blank" rel="noopener">growing pains</a></em>, two boys sit cross-legged on worn carpet eating Chicken Kiev off steaming plates while their dads drink away their wages at the pub. Controls the shape of samosas. Chewing gum that matches the colour of her hair. That level of specific.</p><div class="pull-quote"><p class="pq">&ldquo;You&rsquo;re not a serious person anymore, Gabriel. Was I ever? Before the drink, yes. Well, sort of.&rdquo;</p></div><p class="body-p">A box room in Whitechapel. <em>Love Is A Dog From Hell</em> on the floor. A flip phone and a rolled cigarette. He pours himself another measure, attempts to call her back. Everything and nothing happening all at once, people moving through the world at good speed.</p><div style="margin-top:1.8rem;display:flex;gap:.75rem;flex-wrap:wrap"><a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Subscribe now &rarr;</a><a href="/about.html" class="btn btn-g">Meet the writer</a></div></div></div></section>
 
-<!-- PHOTOS REEL -->
-<section class="photos-sec"><div class="photos-inner">
-<div class="sec-label">Postcards from nowhere</div>
-<button class="reel-arrow reel-arrow-l" onclick="document.getElementById('reel').scrollBy({left:-620,behavior:'smooth'})" aria-label="Scroll left">&#8592;</button>
-<button class="reel-arrow reel-arrow-r" onclick="document.getElementById('reel').scrollBy({left:620,behavior:'smooth'})" aria-label="Scroll right">&#8594;</button>
-<div class="photo-reel" id="reel">
-<div class="reel-item"><img src="dazed_image.jpg" alt="Writing on a typewriter" loading="lazy"><div class="reel-cap">London &mdash; typewriter</div></div>
-<div class="reel-item"><img src="istanbul-mosque.jpg" alt="Istanbul mosque" loading="lazy"><div class="reel-cap">Istanbul &mdash; mosque</div></div>
-<div class="reel-item"><img src="spiral-staircase.webp" alt="Hostel staircase" loading="lazy"><div class="reel-cap">Europe &mdash; hostel stairs</div></div>
-<div class="reel-item"><img src="seoul-cherry.jpg" alt="Cherry blossoms Seoul" loading="lazy"><div class="reel-cap">Seoul &mdash; cherry blossoms</div></div>
-<div class="reel-item"><img src="berlin-river.jpg" alt="Berlin by the Spree" loading="lazy"><div class="reel-cap">Berlin &mdash; by the Spree</div></div>
-<div class="reel-item"><img src="travel-1.jpg" alt="Penguin bookshop window" loading="lazy"><div class="reel-cap">London &mdash; Penguin classics</div></div>
-<div class="reel-item"><img src="IMG_20150321_163816.jpg" alt="Our red carpet is the street" loading="lazy"><div class="reel-cap">Our red carpet is the street</div></div>
-<div class="reel-item"><img src="korea-go.jpg" alt="Go players in Korea" loading="lazy"><div class="reel-cap">South Korea &mdash; street Go</div></div>
-<div class="reel-item"><img src="travel-3.jpg" alt="Waterfront cabin" loading="lazy"><div class="reel-cap">Canada &mdash; on the water</div></div>
-<div class="reel-item"><img src="P1020204.JPG" alt="Seoul palace" loading="lazy"><div class="reel-cap">Seoul &mdash; palace grounds</div></div>
-<div class="reel-item"><img src="lake-bled.jpg" alt="Lake Bled Slovenia" loading="lazy"><div class="reel-cap">Lake Bled &mdash; Slovenia</div></div>
-<div class="reel-item"><img src="paris-bookshop.jpg" alt="Paris bookshop" loading="lazy"><div class="reel-cap">Paris &mdash; Shakespeare &amp; Co</div></div>
-<div class="reel-item"><img src="P1010970.JPG" alt="Busan waterfront" loading="lazy"><div class="reel-cap">Busan &mdash; waterfront</div></div>
-<div class="reel-item"><img src="beach-sunset.jpg" alt="Beach at sunset" loading="lazy"><div class="reel-cap">Somewhere &mdash; low tide</div></div>
-<div class="reel-item"><img src="ba-boca.jpg" alt="La Boca Buenos Aires" loading="lazy"><div class="reel-cap">Buenos Aires &mdash; La Boca</div></div>
-<div class="reel-item"><img src="hostel-fan.jpg" alt="Hostel ceiling fan" loading="lazy"><div class="reel-cap">Somewhere &mdash; hostel ceiling</div></div>
-<div class="reel-item"><img src="berlin-sculpture.jpg" alt="Berlin sculpture" loading="lazy"><div class="reel-cap">Berlin &mdash; Mauerpark</div></div>
-<div class="reel-item"><img src="scotland-coast.jpg" alt="Scottish coastline" loading="lazy"><div class="reel-cap">Scotland &mdash; coast</div></div>
-<div class="reel-item"><img src="paris-street.jpg" alt="Paris street" loading="lazy"><div class="reel-cap">Paris &mdash; on foot</div></div>
-<div class="reel-item"><img src="poetry_performance.jpg" alt="Live reading" loading="lazy"><div class="reel-cap">Live performance</div></div>
-<div class="reel-item"><img src="boat-wheel.jpg" alt="At the wheel" loading="lazy"><div class="reel-cap">At sea &mdash; the wheel</div></div>
-<div class="reel-item"><img src="ba-bodega.jpg" alt="Buenos Aires bodega" loading="lazy"><div class="reel-cap">Buenos Aires &mdash; bodega</div></div>
-<div class="reel-item"><img src="ba-cemetery.jpg" alt="Recoleta Cemetery" loading="lazy"><div class="reel-cap">Buenos Aires &mdash; Recoleta</div></div>
-<div class="reel-item"><img src="travel-2.jpg" alt="Travel" loading="lazy"><div class="reel-cap">Somewhere &mdash; passing through</div></div>
-<div class="reel-item"><img src="berlin-bw.jpg" alt="David in Berlin" loading="lazy"><div class="reel-cap">Berlin &mdash; portrait</div></div>
-<div class="reel-item"><img src="vietnam-food.jpg" alt="Street food Vietnam" loading="lazy"><div class="reel-cap">Vietnam &mdash; dinner</div></div>
-<div class="reel-item"><img src="howl.jpg" alt="Howl" loading="lazy"><div class="reel-cap">The road &mdash; always</div></div>
-<div class="reel-item"><img src="diary-desk.jpg" alt="Diary on a desk" loading="lazy"><div class="reel-cap">Somewhere &mdash; the diary</div></div>
-</div>
-</div></section>
+<section class="photos-sec"><div class="photos-inner"><div class="sec-label">Postcards from nowhere</div><button class="reel-arrow reel-arrow-l" onclick="document.getElementById('reel').scrollBy({left:-620,behavior:'smooth'})" aria-label="Scroll left">&#8592;</button><button class="reel-arrow reel-arrow-r" onclick="document.getElementById('reel').scrollBy({left:620,behavior:'smooth'})" aria-label="Scroll right">&#8594;</button><div class="photo-reel" id="reel"><div class="reel-item"><img src="dazed_image.jpg" alt="Writing on a typewriter" loading="lazy"><div class="reel-cap">London &mdash; typewriter</div></div><div class="reel-item"><img src="istanbul-mosque.jpg" alt="Istanbul mosque" loading="lazy"><div class="reel-cap">Istanbul &mdash; mosque</div></div><div class="reel-item"><img src="spiral-staircase.webp" alt="Hostel staircase" loading="lazy"><div class="reel-cap">Europe &mdash; hostel stairs</div></div><div class="reel-item"><img src="seoul-cherry.jpg" alt="Cherry blossoms Seoul" loading="lazy"><div class="reel-cap">Seoul &mdash; cherry blossoms</div></div><div class="reel-item"><img src="berlin-river.jpg" alt="Berlin by the Spree" loading="lazy"><div class="reel-cap">Berlin &mdash; by the Spree</div></div><div class="reel-item"><img src="travel-1.jpg" alt="Penguin bookshop window" loading="lazy"><div class="reel-cap">London &mdash; Penguin classics</div></div><div class="reel-item"><img src="IMG_20150321_163816.jpg" alt="Our red carpet is the street" loading="lazy"><div class="reel-cap">Our red carpet is the street</div></div><div class="reel-item"><img src="korea-go.jpg" alt="Go players in Korea" loading="lazy"><div class="reel-cap">South Korea &mdash; street Go</div></div><div class="reel-item"><img src="travel-3.jpg" alt="Waterfront cabin" loading="lazy"><div class="reel-cap">Canada &mdash; on the water</div></div><div class="reel-item"><img src="P1020204.JPG" alt="Seoul palace" loading="lazy"><div class="reel-cap">Seoul &mdash; palace grounds</div></div><div class="reel-item"><img src="lake-bled.jpg" alt="Lake Bled Slovenia" loading="lazy"><div class="reel-cap">Lake Bled &mdash; Slovenia</div></div><div class="reel-item"><img src="paris-bookshop.jpg" alt="Paris bookshop" loading="lazy"><div class="reel-cap">Paris &mdash; Shakespeare &amp; Co</div></div><div class="reel-item"><img src="P1010970.JPG" alt="Busan waterfront" loading="lazy"><div class="reel-cap">Busan &mdash; waterfront</div></div><div class="reel-item"><img src="beach-sunset.jpg" alt="Beach at sunset" loading="lazy"><div class="reel-cap">Somewhere &mdash; low tide</div></div><div class="reel-item"><img src="ba-boca.jpg" alt="La Boca Buenos Aires" loading="lazy"><div class="reel-cap">Buenos Aires &mdash; La Boca</div></div><div class="reel-item"><img src="hostel-fan.jpg" alt="Hostel ceiling fan" loading="lazy"><div class="reel-cap">Somewhere &mdash; hostel ceiling</div></div><div class="reel-item"><img src="berlin-sculpture.jpg" alt="Berlin sculpture" loading="lazy"><div class="reel-cap">Berlin &mdash; Mauerpark</div></div><div class="reel-item"><img src="scotland-coast.jpg" alt="Scottish coastline" loading="lazy"><div class="reel-cap">Scotland &mdash; coast</div></div><div class="reel-item"><img src="paris-street.jpg" alt="Paris street" loading="lazy"><div class="reel-cap">Paris &mdash; on foot</div></div><div class="reel-item"><img src="poetry_performance.jpg" alt="Live reading" loading="lazy"><div class="reel-cap">Live performance</div></div><div class="reel-item"><img src="boat-wheel.jpg" alt="At the wheel" loading="lazy"><div class="reel-cap">At sea &mdash; the wheel</div></div><div class="reel-item"><img src="ba-bodega.jpg" alt="Buenos Aires bodega" loading="lazy"><div class="reel-cap">Buenos Aires &mdash; bodega</div></div><div class="reel-item"><img src="ba-cemetery.jpg" alt="Recoleta Cemetery" loading="lazy"><div class="reel-cap">Buenos Aires &mdash; Recoleta</div></div><div class="reel-item"><img src="travel-2.jpg" alt="Travel" loading="lazy"><div class="reel-cap">Somewhere &mdash; passing through</div></div><div class="reel-item"><img src="berlin-bw.jpg" alt="David in Berlin" loading="lazy"><div class="reel-cap">Berlin &mdash; portrait</div></div><div class="reel-item"><img src="vietnam-food.jpg" alt="Street food Vietnam" loading="lazy"><div class="reel-cap">Vietnam &mdash; dinner</div></div><div class="reel-item"><img src="howl.jpg" alt="Howl" loading="lazy"><div class="reel-cap">The road &mdash; always</div></div><div class="reel-item"><img src="diary-desk.jpg" alt="Diary on a desk" loading="lazy"><div class="reel-cap">Somewhere &mdash; the diary</div></div></div></div></section>
 
-<section class="scarcity"><div class="scarcity-inner">
-<h2 class="sc-h">Somewhere out there, the next story<br>is being <em>written</em></h2>
-<p class="sc-p">On a lamplit platform. At a bar in a city not yet understood. Among crowds moving through after-midnight streets. It gets written there and sent to you before the city moves in a new direction.</p>
-<div class="sc-acts">
-<a href="https://tumbleweedwords.substack.com" class="btn-inv" target="_blank" rel="noopener">Subscribe now &rarr;</a>
-<a href="https://tumbleweedwords.substack.com/subscribe" class="btn-ghost" target="_blank" rel="noopener">Support the work</a>
-</div>
-</div></section>
+<section class="scarcity"><div class="scarcity-inner"><h2 class="sc-h">Somewhere out there, the next story<br>is being <em>written</em></h2><p class="sc-p">On a lamplit platform. At a bar in a city not yet understood. Among crowds moving through after-midnight streets. It gets written there and sent to you before the city moves in a new direction.</p><div class="sc-acts"><a href="https://tumbleweedwords.substack.com" class="btn-inv" target="_blank" rel="noopener">Subscribe now &rarr;</a><a href="https://tumbleweedwords.substack.com/subscribe" class="btn-ghost" target="_blank" rel="noopener">Support the work</a></div></div></section>
 
-<!-- PAID -->
-<section class="paid-sec"><div class="paid-inner">
-<div class="sec-label">Go deeper</div>
-<h2>The newsletter is free<br>Paid readers get <em>full access</em></h2>
-<p class="body-p">Tumbleweed Words is free to read and always will be. A paid subscription unlocks the full archive, gives early access and delivers five years of independent literary publishing from the road, for less than the price of a coffee.</p>
-<ul class="paid-list">
-<li>Every post. The complete archive.</li>
-<li>Behind-the-piece notes &mdash; the craft, the city, what the story became.</li>
-<li>Reply to any email. It gets read.</li>
-<li>Keep independent literary publishing on the road.</li>
-</ul>
-<div class="paid-acts">
-<a href="https://tumbleweedwords.substack.com/subscribe" class="btn btn-p" target="_blank" rel="noopener">Go paid &rarr;</a>
-<a href="https://tumbleweedwords.substack.com" class="btn btn-g" target="_blank" rel="noopener">Read Now</a>
-</div>
-</div></section>
+<section class="paid-sec"><div class="paid-inner"><div class="sec-label">Go deeper</div><h2>The newsletter is free<br>Paid readers get <em>full access</em></h2><p class="body-p">Tumbleweed Words is free to read and always will be. A paid subscription unlocks the full archive, gives early access and delivers five years of independent literary publishing from the road, for less than the price of a coffee.</p><ul class="paid-list"><li>Every post. The complete archive.</li><li>Behind-the-piece notes &mdash; the craft, the city, what the story became.</li><li>Reply to any email. It gets read.</li><li>Keep independent literary publishing on the road.</li></ul><div class="paid-acts"><a href="https://tumbleweedwords.substack.com/subscribe" class="btn btn-p" target="_blank" rel="noopener">Go paid &rarr;</a><a href="https://tumbleweedwords.substack.com" class="btn btn-g" target="_blank" rel="noopener">Read Now</a></div></div></section>
 
-<!-- FINAL -->
-<section class="final-sec"><div class="final-inner">
-<img src="david.jpg" alt="David" class="final-img">
-<h2 class="final-h">One piece a week, written from wherever<br><em>Sent to you</em></h2>
-<p class="final-p">Fiction and poetry for people who still believe in sentences. Free. No conditions. Just the work.</p>
-<a href="https://tumbleweedwords.substack.com" class="final-btn" target="_blank" rel="noopener">Subscribe now &rarr;</a>
-<p class="final-note">Free &middot; Weekly &middot; No spam &middot; Unsubscribe whenever</p>
-<div class="final-links">
-<a href="/all-writing.html">Craft &amp; Culture</a>
-<a href="/literary-style-quiz.html">Literary Insights</a>
-<a href="/flash-fiction-prompts.html">Prompts</a>
-<a href="/about.html">About David</a>
-<a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
-</div>
-</div></section>
+<section class="final-sec"><div class="final-inner"><img src="david.jpg" alt="David" class="final-img"><h2 class="final-h">One piece a week, written from wherever<br><em>Sent to you</em></h2><p class="final-p">Fiction and poetry for people who still believe in sentences. Free. No conditions. Just the work.</p><a href="https://tumbleweedwords.substack.com" class="final-btn" target="_blank" rel="noopener">Subscribe now &rarr;</a><p class="final-note">Free &middot; Weekly &middot; No spam &middot; Unsubscribe whenever</p><div class="final-links"><a href="/all-writing.html">Craft &amp; Culture</a><a href="/literary-style-quiz.html">Literary Insights</a><a href="/flash-fiction-prompts.html">Prompts</a><a href="/about.html">About David</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a></div></div></section>
 
-<!-- FOOTER -->
 <footer class="ft"><span class="ft-c">&copy; 2026 <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" style="color:inherit">Tumbleweed Words</a> &middot; Edinburgh</span><nav class="ft-l"><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a><a href="/all-writing.html">Craft &amp; Culture</a><a href="/about.html">About Tumbleweed Words</a><a href="/sitemap.xml">Sitemap</a></nav></footer>
 
-<!-- POPUP (unchanged as requested) -->
+<script>
+(function(){
+  var slides=document.querySelectorAll('.hero-slide'),
+      dots=document.querySelectorAll('.hero-dot'),
+      current=0,total=slides.length,interval=5500,timer;
+  function go(n){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current=(n+total)%total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function auto(){timer=setInterval(function(){go(current+1)},interval)}
+  function reset(){clearInterval(timer);auto()}
+  dots.forEach(function(d){
+    d.addEventListener('click',function(){go(parseInt(this.getAttribute('data-dot')));reset()});
+  });
+  var carousel=document.getElementById('heroCarousel'),sx=0;
+  carousel.addEventListener('mouseenter',function(){clearInterval(timer)});
+  carousel.addEventListener('mouseleave',auto);
+  carousel.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  carousel.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>40){go(dx<0?current+1:current-1);reset()}
+  });
+  auto();
+}());
+</script>
+
 <div id="tw-popup-overlay" role="dialog" aria-modal="true" aria-label="Subscribe"><div id="tw-popup"><button id="tw-popup-close" aria-label="Close">&times;</button><img class="tw-popup__photo" src="david.jpg" alt="David"><p class="tw-popup__wordmark">Tumbleweed Words</p><h2 class="tw-popup__headline">Fiction from the streets,<br>sent to your inbox.</h2><p class="tw-popup__sub">&ldquo;Everyone wears black so hard you don&rsquo;t notice<br>there are differing shades.&rdquo;</p><input class="tw-popup__input" type="email" id="tw-popup-email" placeholder="Your email address" autocomplete="email"><button class="tw-popup__btn" id="tw-popup-submit">Read Now &rarr;</button><p class="tw-popup__disclaimer">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p><button class="tw-popup__dismiss" id="tw-popup-not-now">Not now</button></div></div>
+
 
 <script>(function(){var KEY='tw_popup_dismissed',DAYS=14,overlay=document.getElementById('tw-popup-overlay'),close=document.getElementById('tw-popup-close'),notNow=document.getElementById('tw-popup-not-now'),submit=document.getElementById('tw-popup-submit'),email=document.getElementById('tw-popup-email');function dismissed(){var t=localStorage.getItem(KEY);return t&&Date.now()-parseInt(t)<DAYS*86400000}function show(){if(dismissed())return;overlay.classList.add('tw-active');document.body.style.overflow='hidden'}function hide(){overlay.classList.remove('tw-active');document.body.style.overflow='';localStorage.setItem(KEY,Date.now().toString())}var timer=setTimeout(show,8000);document.addEventListener('mouseleave',function(e){if(e.clientY<10){clearTimeout(timer);show()}});close.addEventListener('click',hide);notNow.addEventListener('click',hide);overlay.addEventListener('click',function(e){if(e.target===overlay)hide()});document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});submit.addEventListener('click',function(){var v=email.value.trim(),u='https://tumbleweedwords.substack.com/subscribe';window.open(v?u+'?email='+encodeURIComponent(v):u,'_blank');hide()});email.addEventListener('keydown',function(e){if(e.key==='Enter')submit.click()});}());</script>
 </body>
