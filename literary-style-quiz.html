@@ -21,20 +21,17 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--ink:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#F6F4EE;--bg2:#EDEBE3;--br:#D4D0C4;--br2:#C4C0B0;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
 html{font-size:18px;scroll-behavior:smooth}
-body{font-family:var(--fb);background:var(--bg);color:var(--ink);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+body{font-family:var(--fb);background:#fff;color:var(--ink);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:var(--p);text-decoration:none}a:hover{color:var(--p2)}
 .wrap{min-height:100vh;display:flex;flex-direction:column}
-
-/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(246,244,238,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--p);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:var(--fd);font-size:.82rem;font-weight:700;color:var(--ink)}
+.nav-logo{font-family:var(--fd);font-size:.88rem;font-weight:700;color:var(--ink)}
 .nlinks{display:flex;gap:1.5rem;align-items:center}
-.nlink{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);transition:color .15s}
+.nlink{font-family:var(--fm);font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);transition:color .15s}
 .nlink:hover{color:var(--p)}
-.ncta{background:var(--p);color:#fff!important;padding:.3rem .9rem;border-radius:3px;font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta{background:var(--p);color:#fff!important;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.6rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
 .ncta:hover{background:var(--p2)!important}
 @media(max-width:600px){.hide-m{display:none}}
-
 main{flex:1;max-width:680px;margin:0 auto;padding:4.5rem 2rem 4rem;width:100%}
 .screen{display:none}.screen.on{display:block}
 .tag{font-family:var(--fm);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem;display:block;border-bottom:1.5px solid var(--p);padding-bottom:.5rem;display:inline-block}
@@ -87,83 +84,48 @@ h1 em{color:var(--p);font-style:italic}
 .share-btn:hover{border-color:var(--p);color:var(--p);background:var(--pl)}
 .btn-retry{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.45rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 .btn-retry:hover{background:var(--bg2)}
-
-/* FOOTER */
 .ft{background:var(--bg2);border-top:2px solid var(--p);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
 .ft-c{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
 .ft-l{display:flex;gap:1.4rem}.ft-l a{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
-
-/* POPUP */
 #tw-popup-overlay{display:none;position:fixed;inset:0;background:rgba(20,10,40,.55);z-index:9999;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(2px)}#tw-popup-overlay.tw-active{display:flex}#tw-popup{background:var(--bg);border-top:4px solid var(--p);max-width:400px;width:100%;padding:2.5rem 2rem 2rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.2);animation:tw-popIn .3s ease}@keyframes tw-popIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}#tw-popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;color:var(--fa);cursor:pointer;line-height:1}#tw-popup-close:hover{color:var(--ink)}.tw-popup__photo{display:block;width:64px;height:64px;border-radius:50%;border:2px solid var(--p);object-fit:cover;margin:0 auto .6rem}.tw-popup__wordmark{font-family:var(--fd);font-size:.62rem;font-style:italic;color:var(--p);text-align:center;margin-bottom:.8rem}.tw-popup__headline{font-family:var(--fd);font-size:1.12rem;font-weight:700;color:var(--ink);text-align:center;line-height:1.25;margin-bottom:.5rem}.tw-popup__sub{font-family:var(--fb);font-size:.66rem;color:var(--mu);text-align:center;line-height:1.65;margin-bottom:1.3rem;font-style:italic}.tw-popup__input{display:block;width:100%;background:#fff;border:1px solid var(--br);color:var(--ink);font-family:var(--fb);font-size:.7rem;padding:10px 14px;margin-bottom:8px;outline:none;transition:border-color .2s}.tw-popup__input:focus{border-color:var(--p)}.tw-popup__input::placeholder{color:var(--br2)}.tw-popup__btn{display:block;width:100%;background:var(--p);color:#fff;font-family:var(--fm);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;padding:12px;border:none;cursor:pointer;margin-bottom:.8rem;transition:background .2s}.tw-popup__btn:hover{background:var(--p2)}.tw-popup__disclaimer{font-family:var(--fm);font-size:.44rem;color:var(--fa);text-align:center;line-height:1.6;margin-bottom:.6rem}.tw-popup__dismiss{display:block;text-align:center;font-family:var(--fm);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);cursor:pointer;background:none;border:none;width:100%}.tw-popup__dismiss:hover{color:var(--p)}
-
 @media(max-width:500px){.trait-l{min-width:90px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-<!-- NAV -->
-<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Craft &amp; Culture</a><a href="/literary-interviews.html" class="nlink hide-m">Interviews</a><a href="/famous-readings.html" class="nlink hide-m">Famous Readings</a><a href="/literary-style-quiz.html" class="nlink hide-m">Literary Insights</a><a href="/about.html" class="nlink hide-m">About Tumbleweed Words</a><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Read Now</a></div></nav>
-
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/literary-interviews.html" class="nlink hide-m">Interviews</a><a href="/famous-readings.html" class="nlink hide-m">Famous Readings</a><a href="/podcasts.html" class="nlink hide-m">Podcasts</a><a href="/literary-style-quiz.html" class="nlink hide-m">Literary Insights</a><a href="/about.html" class="nlink hide-m">About</a><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Read Now</a></div></nav>
 <main>
-
-  <div class="screen on" id="s-intro">
-    <span class="tag">Free Quiz &middot; Tumbleweed Words</span>
-    <h1>Which minimalist writer do you <em>write like?</em></h1>
-    <p class="standfirst">10 questions about your instincts, habits, and obsessions as a writer. Find out which writer from the minimalist tradition your prose most resembles.</p>
-    <ul class="intro-list">
-      <li>Seven possible results &mdash; Carver, Hemingway, Hempel, Chekhov, Paley, Beckett, Kafka</li>
-      <li>Craft breakdown with trait scores specific to your result</li>
-      <li>A specific piece of their work to read next</li>
-      <li>Takes about two minutes</li>
-    </ul>
-    <button class="btn-start" onclick="startQuiz()">Start the quiz &rarr;</button>
-  </div>
-
-  <div class="screen" id="s-quiz">
-    <div class="progress-wrap">
-      <div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
-      <div class="q-meta">
-        <span class="q-num" id="q-num">Question 1</span>
-        <span class="q-count" id="q-count">1 of 10</span>
-      </div>
-    </div>
-    <div class="q-text" id="q-text"></div>
-    <div class="opts" id="opts"></div>
-    <button class="btn-next" id="btn-next" onclick="nextQ()">Next &rarr;</button>
-  </div>
-
-  <div class="screen" id="s-result">
-    <span class="result-eyebrow">Your literary style match</span>
-    <div class="result-name" id="r-name"></div>
-    <p class="result-desc" id="r-desc"></p>
-    <div class="traits-head">Your craft traits</div>
-    <div class="traits" id="r-traits"></div>
-    <div class="also-box">
-      <div class="also-l">Also in your writing</div>
-      <div class="also-tags" id="r-also"></div>
-    </div>
-    <div class="read-box">
-      <div class="read-l">Read this next</div>
-      <div class="read-text" id="r-read"></div>
-    </div>
-    <div class="share-row">
-      <button class="share-btn" onclick="shareTwitter()">Share on X &rarr;</button>
-      <button class="share-btn" onclick="copyResult()">Copy result</button>
-    </div>
-    <div class="cta-band">
-      <div class="cta-t">
-        <strong>Tumbleweed Words &mdash; Substack Newsletter</strong>
-        Flash fiction in the tradition you just discovered. Five years, over a thousand readers. Free.
-      </div>
-      <a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a>
-    </div>
-    <button class="btn-retry" onclick="restart()">Take the quiz again</button>
-  </div>
-
+<div class="screen on" id="s-intro">
+<span class="tag">Free Quiz &middot; Tumbleweed Words</span>
+<h1>Which minimalist writer do you <em>write like?</em></h1>
+<p class="standfirst">10 questions about your instincts, habits, and obsessions as a writer. Find out which writer from the minimalist tradition your prose most resembles.</p>
+<ul class="intro-list">
+<li>Seven possible results &mdash; Carver, Hemingway, Hempel, Chekhov, Paley, Beckett, Kafka</li>
+<li>Craft breakdown with trait scores specific to your result</li>
+<li>A specific piece of their work to read next</li>
+<li>Takes about two minutes</li>
+</ul>
+<button class="btn-start" onclick="startQuiz()">Start the quiz &rarr;</button>
+</div>
+<div class="screen" id="s-quiz">
+<div class="progress-wrap"><div class="progress-bar"><div class="progress-fill" id="prog"></div></div><div class="q-meta"><span class="q-num" id="q-num">Question 1</span><span class="q-count" id="q-count">1 of 10</span></div></div>
+<div class="q-text" id="q-text"></div>
+<div class="opts" id="opts"></div>
+<button class="btn-next" id="btn-next" onclick="nextQ()">Next &rarr;</button>
+</div>
+<div class="screen" id="s-result">
+<span class="result-eyebrow">Your literary style match</span>
+<div class="result-name" id="r-name"></div>
+<p class="result-desc" id="r-desc"></p>
+<div class="traits-head">Your craft traits</div>
+<div class="traits" id="r-traits"></div>
+<div class="also-box"><div class="also-l">Also in your writing</div><div class="also-tags" id="r-also"></div></div>
+<div class="read-box"><div class="read-l">Read this next</div><div class="read-text" id="r-read"></div></div>
+<div class="share-row"><button class="share-btn" onclick="shareTwitter()">Share on X &rarr;</button><button class="share-btn" onclick="copyResult()">Copy result</button></div>
+<div class="cta-band"><div class="cta-t"><strong>Tumbleweed Words &mdash; Substack Newsletter</strong>Flash fiction in the tradition you just discovered. Five years, over a thousand readers. Free.</div><a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a></div>
+<button class="btn-retry" onclick="restart()">Take the quiz again</button>
+</div>
 </main>
-
-<!-- CRAFT TOOLS -->
 <section style="background:var(--bg2);padding:3.5rem 2rem;border-top:1px solid var(--br);border-bottom:1px solid var(--br)">
 <div style="max-width:680px;margin:0 auto">
 <div style="font-family:var(--fm);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);border-bottom:1.5px solid var(--br);padding-bottom:.7rem;margin-bottom:2rem">Sharpen Your Craft</div>
@@ -175,99 +137,21 @@ h1 em{color:var(--p);font-style:italic}
 </div>
 </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="ft"><span class="ft-c">&copy; 2026 <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" style="color:inherit">Tumbleweed Words</a> &middot; Edinburgh</span><nav class="ft-l"><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a><a href="/all-writing.html">Craft &amp; Culture</a><a href="/about.html">About Tumbleweed Words</a><a href="/sitemap.xml">Sitemap</a></nav></footer>
+<footer class="ft"><span class="ft-c">&copy; 2026 <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" style="color:inherit">Tumbleweed Words</a> &middot; Edinburgh</span><nav class="ft-l"><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/podcasts.html">Podcasts</a><a href="/about.html">About</a><a href="/sitemap.xml">Sitemap</a></nav></footer>
 </div>
-
-<!-- POPUP -->
 <div id="tw-popup-overlay" role="dialog" aria-modal="true" aria-label="Subscribe"><div id="tw-popup"><button id="tw-popup-close" aria-label="Close">&times;</button><img class="tw-popup__photo" src="david.jpg" alt="David"><p class="tw-popup__wordmark">Tumbleweed Words</p><h2 class="tw-popup__headline">Fiction from the streets,<br>sent to your inbox.</h2><p class="tw-popup__sub">&ldquo;Everyone wears black so hard you don&rsquo;t notice<br>there are differing shades.&rdquo;</p><input class="tw-popup__input" type="email" id="tw-popup-email" placeholder="Your email address" autocomplete="email"><button class="tw-popup__btn" id="tw-popup-submit">Read Now &rarr;</button><p class="tw-popup__disclaimer">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p><button class="tw-popup__dismiss" id="tw-popup-not-now">Not now</button></div></div>
-
 <script>
 const Qs=[{q:"When you finish a story, the ending usually:",opts:[{t:"Lands on a specific image or object that carries all the weight",scores:{carver:2,hempel:1,chekhov:1}},{t:"Cuts off mid-thought — the story stops before it resolves",scores:{beckett:3,kafka:1}},{t:"Delivers a small action that quietly changes everything",scores:{hempel:2,paley:1,chekhov:1}},{t:"Closes with a line of dialogue that says something else entirely",scores:{carver:1,hemingway:2,paley:1}}]},{q:"Your sentences are usually:",opts:[{t:"Short, declarative, stripped of adverbs",scores:{hemingway:3,carver:1}},{t:"Compressed to the edge of incompleteness",scores:{hempel:3,beckett:1}},{t:"Conversational, slightly off-kilter, like someone talking around the point",scores:{carver:2,paley:2}},{t:"Long, looping, circling back on themselves",scores:{kafka:2,chekhov:1,beckett:1}}]},{q:"The thing you most want readers to feel when they finish your work:",opts:[{t:"That something shifted — they're not sure what",scores:{chekhov:3,hempel:1}},{t:"That they need to read the first line again",scores:{hempel:2,carver:2}},{t:"That the world is stranger and more threatening than they thought",scores:{kafka:3}},{t:"That they were briefly, completely, somewhere else",scores:{hemingway:2,chekhov:1,paley:1}}]},{q:"Your characters tend to:",opts:[{t:"Say the wrong thing when they mean something else entirely",scores:{carver:3,paley:1}},{t:"Observe the world with intense precision and do very little",scores:{chekhov:3,hemingway:1}},{t:"Exist in situations that follow a logic no one can explain",scores:{kafka:3,beckett:1}},{t:"Be defined by a single sentence rather than a history",scores:{hempel:3,beckett:1}}]},{q:"When you write about place, you:",opts:[{t:"Use one specific sensory detail and trust it to do everything",scores:{hemingway:2,hempel:2}},{t:"Let the place be as ordinary as possible — the strangeness comes from within",scores:{carver:3,chekhov:1}},{t:"Make the place feel slightly wrong, familiar but distorted",scores:{kafka:3}},{t:"Write from the feeling of a place rather than its surfaces",scores:{chekhov:2,paley:1,beckett:1}}]},{q:"Your relationship to backstory:",opts:[{t:"I know everything and show almost none of it",scores:{hemingway:3,hempel:1}},{t:"I reveal it sideways — through objects, gestures, what isn't said",scores:{carver:2,chekhov:2}},{t:"Backstory is usually irrelevant — only this moment matters",scores:{hempel:2,beckett:2}},{t:"The backstory is the story — it all happened before the piece begins",scores:{kafka:2,chekhov:1,paley:1}}]},{q:"The writer you re-read most when your prose goes flat:",opts:[{t:"Hemingway — to remember what a declarative sentence can hold",scores:{hemingway:3}},{t:"Carver — to remember what dialogue is actually for",scores:{carver:3}},{t:"Chekhov — to remember how to observe without judgment",scores:{chekhov:3}},{t:"Hempel or Paley — to remember that the strange is also the true",scores:{hempel:2,paley:1}}]},{q:"How much do you trust your reader?",opts:[{t:"Completely — I leave more out than I put in",scores:{hemingway:2,hempel:2}},{t:"Mostly — I trust them to feel what I don't name",scores:{carver:2,chekhov:2}},{t:"I'm not sure the reader can be trusted — the world defies explanation",scores:{kafka:3,beckett:1}},{t:"I trust them to bring their own life to the gaps",scores:{paley:2,chekhov:1,hempel:1}}]},{q:"Your instinct when a scene gets too emotional:",opts:[{t:"Cut the emotion — put an object in its place",scores:{hemingway:2,hempel:2}},{t:"Flatten the affect — describe what happens, not what it means",scores:{carver:3}},{t:"Let it curdle into something stranger and more ambiguous",scores:{kafka:2,beckett:2}},{t:"Step back and let a minor character observe",scores:{chekhov:3}}]},{q:"What you believe fiction is ultimately for:",opts:[{t:"To render a moment of experience so precisely it becomes universal",scores:{hemingway:2,chekhov:2}},{t:"To say the thing language can barely hold",scores:{beckett:3,hempel:1}},{t:"To show ordinary lives with the dignity they are rarely given",scores:{carver:2,paley:2}},{t:"To make the reader feel that reality is more unstable than they assumed",scores:{kafka:3,chekhov:1}}]}];
-
 const W={hemingway:{name:"Ernest Hemingway",desc:"Your prose is sculptural — you carve until the right shape appears. You believe in the iceberg: seven-eighths below the surface, one-eighth showing. Your sentences are short, your trust in the reader absolute, and your instinct when things get emotional is to place an object and step back. You are working in the oldest and most demanding branch of the minimalist tradition.",traits:[{l:"Compression",v:95},{l:"Sentence economy",v:98},{l:"Emotional restraint",v:90},{l:"Narrative trust",v:85}],also:["Carver","Hempel","Ford"],read:"Start with the Nick Adams stories in 'In Our Time' — specifically 'Big Two-Hearted River'. Notice how a man fishing is also a man not thinking about the war, and how Hemingway never names that. That is your tradition."},carver:{name:"Raymond Carver",desc:"You write from inside difficulty without explaining it. Your dialogue circles around what is actually being said. Your characters are defined by what they cannot express, and your endings refuse to resolve — they simply stop at the moment of maximum pressure, which is also the moment of maximum truth.",traits:[{l:"Emotional compression",v:92},{l:"Dialogue precision",v:95},{l:"Working-class clarity",v:88},{l:"Refusal to resolve",v:90}],also:["Hemingway","Wolff","Ford"],read:"Read 'Cathedral' — the title story. Watch how Carver builds an entire marriage, an entire failing, and then a moment of grace in the space of a few pages. The ending is everything he believed fiction could do."},hempel:{name:"Amy Hempel",desc:"Your sentences compress to the point of fracture. You understand that the non-sequitur is never non-sequential — that the unexpected turn is always the truest turn. Your endings detonate quietly, long after the reading is finished. You are the most technically demanding writer in the minimalist tradition.",traits:[{l:"Compression",v:99},{l:"Sentence invention",v:95},{l:"Structural surprise",v:92},{l:"Emotional indirection",v:97}],also:["Carver","Paley","Beckett"],read:"Read 'In the Cemetery Where Al Jolson Is Buried' — one of the most technically precise stories in American short fiction. Read it twice. The second time, look at what she puts in the place of every emotion she removes."},chekhov:{name:"Anton Chekhov",desc:"You observe without judgment. Your characters are rendered with a compassion that refuses sentimentality — you understand them completely and explain them not at all. Your endings are inconclusive in the way that life is inconclusive, which is the deepest form of honesty available to fiction.",traits:[{l:"Observation precision",v:97},{l:"Compassion without sentiment",v:95},{l:"Structural patience",v:90},{l:"Tonal control",v:93}],also:["Carver","Woolf","Paley"],read:"Read 'The Lady with the Dog' — the most important short story ever written about the beginning of love and the impossibility of resolution. Notice that Chekhov does not tell you what to feel at any point. He just shows you what happens."},paley:{name:"Grace Paley",desc:"Your prose has the rhythm of speech — but controlled speech, every word chosen while appearing unconsidered. You write about ordinary lives with a political intelligence that never becomes polemic. Your voice is singular, your compassion political, your formal invention constant.",traits:[{l:"Voice singularity",v:96},{l:"Political intelligence",v:90},{l:"Formal invention",v:88},{l:"Compassion",v:95}],also:["Carver","Chekhov","Hempel"],read:"Read 'A Conversation with my Father' — a story about storytelling, about fathers and daughters, about what fiction owes to reality. One of the best short pieces of metafiction ever written, disguised as a domestic argument."},kafka:{name:"Franz Kafka",desc:"You write the logic of nightmares with the grammar of bureaucratic fact. Your fiction states the impossible as given and then follows the consequences precisely. You understand that the deepest alienations are also the most ordinary, and that the most ordinary situations contain the most impenetrable dread.",traits:[{l:"Logical strangeness",v:97},{l:"Bureaucratic precision",v:92},{l:"Existential compression",v:95},{l:"Dream grammar",v:98}],also:["Beckett","Borges","Woolf"],read:"Read 'In the Penal Colony' — not The Metamorphosis, which everyone has read. The Penal Colony is the fully realised Kafka: a machine designed to inscribe the law on the body of the condemned, rendered in the flat language of a travel report."},beckett:{name:"Samuel Beckett",desc:"You are interested in what language does when it is under maximum pressure. You strip prose until almost nothing remains, then examine what that nothing contains. Your work is funnier than people expect — the comedy is structural, born from the gap between what is said and what can be said.",traits:[{l:"Radical compression",v:99},{l:"Language pressure",v:97},{l:"Comic despair",v:92},{l:"Formal invention",v:96}],also:["Kafka","Hempel","Woolf"],read:"Read 'First Love' — one of Beckett's novellas, short enough to read in an afternoon. It is the most accessible entry point to his prose: the flat affect, the accidental comedy, the language always on the verge of collapse."}};
-
-let scores={hemingway:0,carver:0,hempel:0,chekhov:0,paley:0,kafka:0,beckett:0};
-let qIdx=0,chosen=null,topResult='';
-
-function startQuiz(){
-  document.getElementById('s-intro').classList.remove('on');
-  document.getElementById('s-quiz').classList.add('on');
-  renderQ();
-}
-
-function renderQ(){
-  const q=Qs[qIdx];
-  document.getElementById('prog').style.width=((qIdx/Qs.length)*100)+'%';
-  document.getElementById('q-num').textContent='Question '+(qIdx+1);
-  document.getElementById('q-count').textContent=(qIdx+1)+' of '+Qs.length;
-  document.getElementById('q-text').textContent=q.q;
-  const btn=document.getElementById('btn-next');
-  btn.textContent=qIdx===Qs.length-1?'See my result \u2192':'Next \u2192';
-  btn.classList.remove('active');
-  chosen=null;
-  document.getElementById('opts').innerHTML=q.opts.map((o,i)=>
-    `<button class="opt" onclick="pick(${i})">${o.t}</button>`
-  ).join('');
-}
-
-function pick(i){
-  chosen=i;
-  document.querySelectorAll('.opt').forEach((el,idx)=>el.classList.toggle('selected',idx===i));
-  document.getElementById('btn-next').classList.add('active');
-}
-
-function nextQ(){
-  if(chosen===null)return;
-  const s=Qs[qIdx].opts[chosen].scores;
-  Object.keys(s).forEach(k=>scores[k]+=s[k]);
-  qIdx++;
-  if(qIdx>=Qs.length){showResult();return;}
-  renderQ();
-}
-
-function showResult(){
-  document.getElementById('prog').style.width='100%';
-  topResult=Object.entries(scores).sort((a,b)=>b[1]-a[1])[0][0];
-  const w=W[topResult];
-  document.getElementById('r-name').textContent=w.name;
-  document.getElementById('r-desc').textContent=w.desc;
-  document.getElementById('r-traits').innerHTML=w.traits.map(t=>
-    `<div class="trait"><div class="trait-l">${t.l}</div><div class="trait-bar"><div class="trait-fill" style="width:${t.v}%"></div></div><div class="trait-n">${t.v}</div></div>`
-  ).join('');
-  document.getElementById('r-also').innerHTML=w.also.map(a=>`<span class="also-tag">${a}</span>`).join('');
-  document.getElementById('r-read').textContent=w.read;
-  document.getElementById('s-quiz').classList.remove('on');
-  document.getElementById('s-result').classList.add('on');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function shareTwitter(){
-  const w=W[topResult];
-  const text=`I write like ${w.name} — found out from this free literary style quiz by Tumbleweed Words. tumbleweedwords.com/literary-style-quiz.html`;
-  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank');
-}
-
-function copyResult(){
-  const w=W[topResult];
-  const text=`I write like ${w.name}.\n\nFind out which minimalist writer you write like: tumbleweedwords.com/literary-style-quiz.html\n\nFree quiz by Tumbleweed Words.`;
-  navigator.clipboard.writeText(text).then(()=>{
-    const btn=event.target;
-    btn.textContent='Copied!';
-    setTimeout(()=>btn.textContent='Copy result',2000);
-  });
-}
-
-function restart(){
-  scores={hemingway:0,carver:0,hempel:0,chekhov:0,paley:0,kafka:0,beckett:0};
-  qIdx=0;chosen=null;topResult='';
-  document.getElementById('s-result').classList.remove('on');
-  document.getElementById('s-intro').classList.add('on');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-// POPUP
+let scores={hemingway:0,carver:0,hempel:0,chekhov:0,paley:0,kafka:0,beckett:0};let qIdx=0,chosen=null,topResult='';
+function startQuiz(){document.getElementById('s-intro').classList.remove('on');document.getElementById('s-quiz').classList.add('on');renderQ();}
+function renderQ(){const q=Qs[qIdx];document.getElementById('prog').style.width=((qIdx/Qs.length)*100)+'%';document.getElementById('q-num').textContent='Question '+(qIdx+1);document.getElementById('q-count').textContent=(qIdx+1)+' of '+Qs.length;document.getElementById('q-text').textContent=q.q;const btn=document.getElementById('btn-next');btn.textContent=qIdx===Qs.length-1?'See my result \u2192':'Next \u2192';btn.classList.remove('active');chosen=null;document.getElementById('opts').innerHTML=q.opts.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.t}</button>`).join('');}
+function pick(i){chosen=i;document.querySelectorAll('.opt').forEach((el,idx)=>el.classList.toggle('selected',idx===i));document.getElementById('btn-next').classList.add('active');}
+function nextQ(){if(chosen===null)return;const s=Qs[qIdx].opts[chosen].scores;Object.keys(s).forEach(k=>scores[k]+=s[k]);qIdx++;if(qIdx>=Qs.length){showResult();return;}renderQ();}
+function showResult(){document.getElementById('prog').style.width='100%';topResult=Object.entries(scores).sort((a,b)=>b[1]-a[1])[0][0];const w=W[topResult];document.getElementById('r-name').textContent=w.name;document.getElementById('r-desc').textContent=w.desc;document.getElementById('r-traits').innerHTML=w.traits.map(t=>`<div class="trait"><div class="trait-l">${t.l}</div><div class="trait-bar"><div class="trait-fill" style="width:${t.v}%"></div></div><div class="trait-n">${t.v}</div></div>`).join('');document.getElementById('r-also').innerHTML=w.also.map(a=>`<span class="also-tag">${a}</span>`).join('');document.getElementById('r-read').textContent=w.read;document.getElementById('s-quiz').classList.remove('on');document.getElementById('s-result').classList.add('on');window.scrollTo({top:0,behavior:'smooth'});}
+function shareTwitter(){const w=W[topResult];const text=`I write like ${w.name} — found out from this free literary style quiz by Tumbleweed Words. tumbleweedwords.com/literary-style-quiz.html`;window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank');}
+function copyResult(){const w=W[topResult];const text=`I write like ${w.name}.\n\nFind out which minimalist writer you write like: tumbleweedwords.com/literary-style-quiz.html\n\nFree quiz by Tumbleweed Words.`;navigator.clipboard.writeText(text).then(()=>{const btn=event.target;btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy result',2000);});}
+function restart(){scores={hemingway:0,carver:0,hempel:0,chekhov:0,paley:0,kafka:0,beckett:0};qIdx=0;chosen=null;topResult='';document.getElementById('s-result').classList.remove('on');document.getElementById('s-intro').classList.add('on');window.scrollTo({top:0,behavior:'smooth'});}
 (function(){var KEY='tw_popup_dismissed',DAYS=14,overlay=document.getElementById('tw-popup-overlay'),close=document.getElementById('tw-popup-close'),notNow=document.getElementById('tw-popup-not-now'),submit=document.getElementById('tw-popup-submit'),email=document.getElementById('tw-popup-email');function dismissed(){var t=localStorage.getItem(KEY);return t&&Date.now()-parseInt(t)<DAYS*86400000}function show(){if(dismissed())return;overlay.classList.add('tw-active');document.body.style.overflow='hidden'}function hide(){overlay.classList.remove('tw-active');document.body.style.overflow='';localStorage.setItem(KEY,Date.now().toString())}var timer=setTimeout(show,10000);document.addEventListener('mouseleave',function(e){if(e.clientY<10){clearTimeout(timer);show()}});close.addEventListener('click',hide);notNow.addEventListener('click',hide);overlay.addEventListener('click',function(e){if(e.target===overlay)hide()});document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});submit.addEventListener('click',function(){var v=email.value.trim(),u='https://tumbleweedwords.substack.com/subscribe';window.open(v?u+'?email='+encodeURIComponent(v):u,'_blank');hide()});email.addEventListener('keydown',function(e){if(e.key==='Enter')submit.click()});}());
 </script>
 </body>
