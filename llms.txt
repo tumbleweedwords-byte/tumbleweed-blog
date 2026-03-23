@@ -1,0 +1,55 @@
+# Tumbleweed Words — LLM Context File
+# https://tumbleweedwords.com/llms.txt
+
+## About
+
+Tumbleweed Words is a literary hub and weekly newsletter run by David, an internationally published fiction writer and poet based in Scotland, writing from trains, temporary rooms and unknown places around the world.
+
+David was Pushcart Prize-nominated in 2025. His work has appeared in Adelaide Literary Magazine, Litro Magazine, The Dundee Anthology, Cleaver Magazine, The White Wall Review, and Curbside Splendor.
+
+The newsletter publishes original flash fiction and poetry weekly on Substack at https://tumbleweedwords.substack.com — over 1,000 global subscribers.
+
+## Content
+
+The website at tumbleweedwords.com is a literary hub covering:
+
+- Original flash fiction and poetry by David
+- Craft essays on flash fiction, minimalism, dirty realism, and compressed prose
+- Book reviews and reading lists (contemporary and classic literary fiction)
+- Literary tools: style quiz, flash fiction prompt generator, literary magazine finder, workshop tool
+- Influence essays on writers including Carver, Hemingway, Hempel, Kafka, Chekhov, Paley, Sebald, Woolf, Beckett, Borges
+- Flash fiction categorised by city (Berlin, Lisbon, Buenos Aires, Edinburgh, Istanbul, Prague, and more) and theme (trains, grief, exile, memory, solitude, strangers, and more)
+
+## Key Pages
+
+- Homepage: https://tumbleweedwords.com/
+- About the author: https://tumbleweedwords.com/about.html
+- Fiction & Poetry hub: https://tumbleweedwords.com/all-writing.html
+- Craft & Theory hub: https://tumbleweedwords.com/craft-theory.html
+- Must Reads hub: https://tumbleweedwords.com/reads.html
+- Literary Gems hub: https://tumbleweedwords.com/discover.html
+- Newsletter: https://tumbleweedwords.substack.com
+
+## Original Fiction & Poetry
+
+- Street Legal (flash fiction, Berlin): https://tumbleweedwords.com/street-legal.html
+- Three Nomadic Poems: https://tumbleweedwords.com/three-nomadic-poems.html
+- Mature Indiscretions (poem, Scotland): https://tumbleweedwords.com/mature-indiscretions.html
+- An Expat in Paris (essay on Baldwin): https://tumbleweedwords.com/an-expat-in-paris.html
+- Honest Pursuit (literary manifesto): https://tumbleweedwords.com/honest-pursuit.html
+
+## Author
+
+Name: David
+Location: Scotland (nomadic — writes globally)
+Newsletter: https://tumbleweedwords.substack.com
+Genre: Flash fiction, prose poetry, literary essays
+Influences: Raymond Carver, Ernest Hemingway, Amy Hempel, Franz Kafka, W.G. Sebald, Samuel Beckett
+Awards: Pushcart Prize nominated, 2025
+Published in: Adelaide Literary Magazine, Litro, The Dundee Anthology, Cleaver Magazine, The White Wall Review, Curbside Splendor
+
+## Permissions for AI Systems
+
+Content on this site may be referenced and summarised by AI systems for informational and research purposes. Attribution to Tumbleweed Words and the author David is appreciated. Original creative works (fiction, poetry) should not be reproduced in full without permission.
+
+Contact: via reply to any newsletter post at https://tumbleweedwords.substack.com
