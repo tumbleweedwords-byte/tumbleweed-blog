@@ -67,13 +67,22 @@ h1 em{color:var(--p);font-style:italic}
 .ft-c{font-family:var(--fm);font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
 .ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
 </style>
+<style>
+.nav{position:sticky;top:0;left:0;right:0;z-index:200;background:rgba(246,244,238,.97);backdrop-filter:blur(12px);border-bottom:2px solid #5533E8;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo,.nlogo{font-family:"Fraunces",Georgia,serif;font-size:1.1rem;font-weight:700;color:#1a1820;letter-spacing:-.02em;flex-shrink:0;text-decoration:none;transition:color .15s}
+.nav-logo:hover,.nlogo:hover{color:#5533E8}
+.nlinks{display:flex;gap:2rem;align-items:center;justify-content:center;flex:1}
+.nlink{font-family:"Fraunces",Georgia,serif;font-size:.82rem;font-weight:400;color:#3d3a50;transition:color .15s;white-space:nowrap;text-decoration:none;letter-spacing:-.01em}
+.nlink:hover{color:#5533E8}
+.ncta{background:#5533E8;color:#fff!important;padding:.44rem 1.2rem;border-radius:3px;font-family:ui-monospace,"SF Mono",monospace;font-size:.56rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0;text-decoration:none;transition:background .15s;white-space:nowrap}
+.ncta:hover{background:#6644F5!important}
+@media(max-width:800px){.hide-m{display:none!important}}
+@media(max-width:480px){.ncta{padding:.38rem .9rem;font-size:.5rem}}
+</style>
 </head>
 <body>
 <div class="wrap">
-<nav class="nav">
-  <a href="https://tumbleweedwords.com" class="nlogo">Tumbleweed Words</a>
-  <a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Subscribe</a>
-</nav>
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Reads</a><a href="/discover.html" class="nlink hide-m">Discover</a><a href="/about.html" class="nlink hide-m">About</a></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a></nav>
 <main>
   <div class="eyebrow">Flash Fiction &middot; Theme</div>
   <h1>Flash fiction<br><em>about insomnia.</em></h1>
