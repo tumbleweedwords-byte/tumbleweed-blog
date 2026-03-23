@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search — Tumbleweed Words</title>
+<meta name="description" content="Search Tumbleweed Words — find flash fiction, poetry, craft essays, book recommendations and more.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://tumbleweedwords.com/search.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--ink:#1a1820;--txt2:#3d3a50;--mu:#6B6880;--fa:#9896a8;--bg:#F6F4EE;--bg2:#EDEBE3;--br:#D4D0C4;--br2:#C4C0B0;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}html{font-size:18px;scroll-behavior:smooth}body{font-family:var(--fb);background:var(--bg);color:var(--ink);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}a{color:var(--p);text-decoration:none;transition:color .2s}a:hover{color:var(--p2)}h1,h2,h3{font-family:var(--fd);color:var(--ink);letter-spacing:-.02em}
+.nav{position:sticky;top:0;left:0;right:0;z-index:200;background:rgba(246,244,238,.97);backdrop-filter:blur(12px);border-bottom:2px solid #5533E8;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{font-family:"Fraunces",Georgia,serif;font-size:1.1rem;font-weight:700;color:#1a1820;letter-spacing:-.02em;flex-shrink:0;text-decoration:none;transition:color .15s}
+.nav-logo:hover{color:#5533E8}
+.nlinks{display:flex;gap:2rem;align-items:center;justify-content:center;flex:1}
+.nlink{font-family:"Fraunces",Georgia,serif;font-size:.82rem;font-weight:400;color:#3d3a50;transition:color .15s;white-space:nowrap;text-decoration:none;letter-spacing:-.01em}
+.nlink:hover{color:#5533E8}
+.ncta{background:#5533E8;color:#fff!important;padding:.44rem 1.2rem;border-radius:3px;font-family:ui-monospace,"SF Mono",monospace;font-size:.56rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0;text-decoration:none;transition:background .15s;white-space:nowrap}
+.ncta:hover{background:#6644F5!important}
+@media(max-width:800px){.hide-m{display:none!important}}
+.nsearch{position:relative;display:flex;align-items:center;flex-shrink:0;margin-right:.5rem}
+.nsearch-btn{background:none;border:none;cursor:pointer;color:#1a1820;padding:.38rem;display:flex;align-items:center;border-radius:3px;transition:color .15s}
+.nsearch-btn:hover,.nsearch-btn.active{color:#5533E8}
+.nsearch-wrap{display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1.5px solid #5533E8;border-radius:3px;overflow:hidden;width:230px;z-index:500;box-shadow:0 4px 16px rgba(85,51,232,.15)}
+.nsearch-wrap.open{display:flex}
+.nsearch-input{flex:1;border:none;padding:.5rem .85rem;font-family:"Source Serif 4",Georgia,serif;font-size:.8rem;color:#1a1820;outline:none;background:transparent;min-width:0}
+.nsearch-go{background:#5533E8;border:none;cursor:pointer;padding:.5rem .7rem;color:#fff;display:flex;align-items:center;transition:background .15s;flex-shrink:0}
+.nsearch-go:hover{background:#6644F5}
+</style>
+<style>
+.breadcrumb{font-family:ui-monospace,"SF Mono",monospace;font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:#9896a8;padding:.55rem 2.5rem;background:#F6F4EE;border-bottom:1px solid #D4D0C4;display:flex;align-items:center}.breadcrumb a{color:#6B6880;text-decoration:none}.breadcrumb a:hover{color:#5533E8}.bc-sep{margin:0 .4rem;color:#D4D0C4}
+.search-hero{background:#fff;border-bottom:2px solid var(--p);padding:3.5rem 2rem 3rem}
+.search-hero-inner{max-width:700px;margin:0 auto}
+.search-hero h1{font-family:var(--fd);font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700;color:var(--ink);margin-bottom:1.6rem;letter-spacing:-.02em}
+.search-form-lg{display:flex;border:2px solid var(--p);border-radius:4px;overflow:hidden;max-width:560px}
+.search-form-lg input{flex:1;border:none;padding:.85rem 1.2rem;font-family:var(--fb);font-size:.95rem;color:var(--ink);outline:none;background:transparent}
+.search-form-lg input::placeholder{color:var(--br2)}
+.search-form-lg button{background:var(--p);border:none;cursor:pointer;padding:.85rem 1.5rem;color:#fff;font-family:var(--fm);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background .15s}
+.search-form-lg button:hover{background:var(--p2)}
+.search-hint{font-family:var(--fm);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa);margin-top:.9rem;line-height:1.8}
+.search-hint a{color:var(--mu);text-decoration:none}.search-hint a:hover{color:var(--p)}
+.results-section{background:var(--bg);padding:3rem 2rem;min-height:40vh}
+.results-inner{max-width:700px;margin:0 auto}
+.results-count{font-family:var(--fm);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:1.8rem;padding-bottom:1rem;border-bottom:1px solid var(--br)}
+.result-card{display:block;padding:1.5rem 0;border-bottom:1px solid var(--br);text-decoration:none;transition:all .15s}
+.result-card:first-child{padding-top:0}
+.result-card:hover .result-title{color:var(--p)}
+.result-meta{margin-bottom:.45rem}
+.result-type{font-family:var(--fm);font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:.2rem .55rem;border-radius:2px;display:inline-block}
+.type-fiction,.type-poetry{background:#5533E8}
+.type-craft,.type-essay{background:#3d3a50}
+.type-books{background:#2d6a4f}
+.type-hub,.type-resource{background:#6B6880}
+.result-title{font-family:var(--fd);font-size:1.05rem;font-weight:600;color:var(--ink);margin:.4rem 0 .3rem;line-height:1.3;transition:color .15s}
+.result-desc{font-size:.78rem;color:var(--mu);line-height:1.65}
+.no-results{text-align:center;padding:5rem 0}
+.no-results h3{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:.7rem}
+.no-results p{font-size:.82rem;color:var(--mu);margin-bottom:1.5rem}
+.initial-state{padding:3rem 0}
+.initial-state p{font-size:.84rem;color:var(--mu);margin-bottom:1.4rem}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag-link{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);padding:.35rem .85rem;border:1px solid var(--br);border-radius:3px;text-decoration:none;transition:all .15s}
+.tag-link:hover{color:var(--p);border-color:var(--p);background:var(--pl)}
+.ft{background:var(--bg2);border-top:2px solid var(--p);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.ft-c{font-family:var(--fm);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.4rem}
+.ft-l a{font-family:var(--fm);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+</style>
+</head>
+<body>
+
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Must Reads</a><a href="/discover.html" class="nlink hide-m">Literary Gems</a><a href="/about.html" class="nlink hide-m">About</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a></nav>
+
+<div class="breadcrumb"><a href="/">Home</a><span class="bc-sep">/</span>Search</div>
+
+<section class="search-hero">
+<div class="search-hero-inner">
+<h1>Search</h1>
+<form class="search-form-lg" id="searchFormLg">
+<input type="search" id="searchQuery" placeholder="fiction, poetry, carver, berlin, top 10 books&#8230;" autocomplete="off">
+<button type="submit">Search</button>
+</form>
+<p class="search-hint">Try:&nbsp;
+<a href="/search.html?q=fiction">fiction</a> &middot;
+<a href="/search.html?q=poetry">poetry</a> &middot;
+<a href="/search.html?q=carver">carver</a> &middot;
+<a href="/search.html?q=berlin">berlin</a> &middot;
+<a href="/search.html?q=top+10">top 10</a> &middot;
+<a href="/search.html?q=prompts">prompts</a> &middot;
+<a href="/search.html?q=minimalism">minimalism</a> &middot;
+<a href="/search.html?q=nomadic">nomadic</a>
+</p>
+</div>
+</section>
+
+<section class="results-section">
+<div class="results-inner">
+<p class="results-count" id="resultsCount" style="display:none"></p>
+<div id="resultsList"></div>
+<div id="noResults" style="display:none">
+<div class="no-results">
+<h3>No results found</h3>
+<p>Nothing matched &ldquo;<span id="noResultsQuery"></span>&rdquo;</p>
+<p>Try a different term — fiction, poetry, carver, berlin, prompts, minimalism&hellip;</p>
+</div>
+</div>
+<div id="initialState">
+<div class="initial-state">
+<p>Browse by topic:</p>
+<div class="tag-cloud">
+<a href="/search.html?q=fiction" class="tag-link">Fiction</a>
+<a href="/search.html?q=poetry" class="tag-link">Poetry</a>
+<a href="/search.html?q=flash+fiction" class="tag-link">Flash Fiction</a>
+<a href="/search.html?q=craft" class="tag-link">Craft &amp; Theory</a>
+<a href="/search.html?q=books" class="tag-link">Books</a>
+<a href="/search.html?q=carver" class="tag-link">Carver</a>
+<a href="/search.html?q=minimalism" class="tag-link">Minimalism</a>
+<a href="/search.html?q=nomadic" class="tag-link">Nomadic</a>
+<a href="/search.html?q=berlin" class="tag-link">Berlin</a>
+<a href="/search.html?q=paris" class="tag-link">Paris</a>
+<a href="/search.html?q=prompts" class="tag-link">Prompts</a>
+<a href="/search.html?q=influences" class="tag-link">Influences</a>
+<a href="/search.html?q=grief" class="tag-link">Grief</a>
+<a href="/search.html?q=exile" class="tag-link">Exile</a>
+<a href="/search.html?q=memory" class="tag-link">Memory</a>
+<a href="/search.html?q=hemingway" class="tag-link">Hemingway</a>
+<a href="/search.html?q=dirty+realism" class="tag-link">Dirty Realism</a>
+<a href="/search.html?q=top+10" class="tag-link">Top 10</a>
+<a href="/search.html?q=interviews" class="tag-link">Interviews</a>
+<a href="/search.html?q=newsletter" class="tag-link">Newsletter</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="ft"><span class="ft-c">&copy; 2025 Tumbleweed Words</span><div class="ft-l"><a href="/about.html">About</a><a href="/all-writing.html">Writing</a><a href="/reads.html">Reads</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a></div></footer>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+(function(){
+var typeLabels={fiction:'Fiction',poetry:'Poetry',craft:'Craft & Theory',essay:'Essay',books:'Books',hub:'Hub Page',resource:'Resource'};
+var typeClass={fiction:'type-fiction',poetry:'type-poetry',craft:'type-craft',essay:'type-essay',books:'type-books',hub:'type-hub',resource:'type-resource'};
+
+function getQ(){return new URLSearchParams(window.location.search).get('q')||'';}
+
+var q=getQ();
+var qEl=document.getElementById('searchQuery');
+if(qEl&&q)qEl.value=q;
+
+document.getElementById('searchFormLg').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=document.getElementById('searchQuery').value.trim();
+  if(v)window.location.href='/search.html?q='+encodeURIComponent(v);
+});
+
+if(!q)return;
+
+document.getElementById('initialState').style.display='none';
+
+fetch('/search-index.json').then(function(r){return r.json();}).then(function(data){
+  var idx=lunr(function(){
+    this.ref('id');
+    this.field('title',{boost:10});
+    this.field('tags',{boost:8});
+    this.field('description',{boost:5});
+    this.field('body',{boost:2});
+    var self=this;
+    data.forEach(function(d){
+      var doc={id:d.id,title:d.title,description:d.description,tags:d.tags.join(' '),body:d.body||''};
+      self.add(doc);
+    });
+  });
+
+  var docMap={};
+  data.forEach(function(d){docMap[d.id]=d;});
+
+  var results=[];
+  try{results=idx.search(q);}catch(e){
+    try{results=idx.search(q.split(/\s+/).map(function(w){return w+'*';}).join(' '));}catch(e2){results=[];}
+  }
+
+  var countEl=document.getElementById('resultsCount');
+  countEl.style.display='block';
+
+  if(results.length===0){
+    countEl.textContent='0 results for \u201c'+q+'\u201d';
+    document.getElementById('noResults').style.display='block';
+    document.getElementById('noResultsQuery').textContent=q;
+    return;
+  }
+
+  countEl.textContent=results.length+' result'+(results.length!==1?'s':'')+' for \u201c'+q+'\u201d';
+
+  var html=results.map(function(r){
+    var d=docMap[r.ref];
+    if(!d)return'';
+    var label=typeLabels[d.type]||d.type;
+    var cls=typeClass[d.type]||'type-hub';
+    return'<a href="'+d.url+'" class="result-card"><div class="result-meta"><span class="result-type '+cls+'">'+label+'</span></div><h3 class="result-title">'+d.title+'</h3><p class="result-desc">'+d.description+'</p></a>';
+  }).join('');
+
+  document.getElementById('resultsList').innerHTML=html;
+}).catch(function(){
+  document.getElementById('resultsCount').textContent='Search unavailable — try browsing by topic below.';
+  document.getElementById('resultsCount').style.display='block';
+  document.getElementById('initialState').style.display='block';
+});
+})();
+</script>
+<script>(function(){var t=document.getElementById('searchToggle');var w=document.getElementById('nsearchWrap');var i=document.getElementById('nsearchInput');var g=document.getElementById('nsearchGo');if(!t)return;function ds(){var q=i.value.trim();if(q)window.location.href='/search.html?q='+encodeURIComponent(q);}t.addEventListener('click',function(e){e.stopPropagation();w.classList.toggle('open');t.classList.toggle('active');if(w.classList.contains('open'))i.focus();});g.addEventListener('click',ds);i.addEventListener('keydown',function(e){if(e.key==='Enter')ds();});document.addEventListener('click',function(e){if(!e.target.closest('#navSearch')){w.classList.remove('open');t.classList.remove('active');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){w.classList.remove('open');t.classList.remove('active');}});})();</script>
+</body>
+</html>
