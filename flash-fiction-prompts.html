@@ -16,7 +16,7 @@
 <meta name="description" content="Free flash fiction prompt generator — hundreds of minimalist prompts. One click: city, theme, constraint, and opening line. By Tumbleweed Words.">
 <meta name="keywords" content="flash fiction prompts, flash fiction prompt generator, daily writing prompts, minimalist fiction prompts, short story prompts, creative writing prompts flash fiction">
 <meta name="author" content="David — Tumbleweed Words">
-<link rel="canonical" href="https://tumbleweedwords-byte.github.io/tumbleweed-blog/flash-fiction-prompts.html">
+<link rel="canonical" href="https://tumbleweedwords.com/flash-fiction-prompts.html">
 <meta property="og:title" content="Flash Fiction Prompt Generator — Free Daily Prompts">
 <meta property="og:description" content="Hundreds of flash fiction prompts in the minimalist tradition. One click, instant prompt. Free.">
 <meta property="og:type" content="website">
@@ -349,7 +349,7 @@ function generate() {
 }
 
 function copyPrompt() {
-  const text = `Flash fiction prompt from Tumbleweed Words:\n\nSetting: ${currentPrompt.city}\nTheme: ${currentPrompt.theme}\nOpening line: "${currentPrompt.opening}"\nConstraint: ${currentPrompt.constraint}\n\nGet more prompts: https://tumbleweedwords-byte.github.io/tumbleweed-blog/flash-fiction-prompts.html`;
+  const text = `Flash fiction prompt from Tumbleweed Words:\n\nSetting: ${currentPrompt.city}\nTheme: ${currentPrompt.theme}\nOpening line: "${currentPrompt.opening}"\nConstraint: ${currentPrompt.constraint}\n\nGet more prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
   navigator.clipboard.writeText(text).then(() => {
     const btn = event.target;
     const orig = btn.textContent;
@@ -359,7 +359,7 @@ function copyPrompt() {
 }
 
 function sharePrompt() {
-  const text = `Flash fiction prompt from @tumbleweedwords:\n\n📍 ${currentPrompt.city}\n💡 Theme: ${currentPrompt.theme}\n✍️ "${currentPrompt.opening}"\n⚡ Constraint: ${currentPrompt.constraint}\n\nGet free prompts: https://tumbleweedwords-byte.github.io/tumbleweed-blog/flash-fiction-prompts.html`;
+  const text = `Flash fiction prompt from @tumbleweedwords:\n\n📍 ${currentPrompt.city}\n💡 Theme: ${currentPrompt.theme}\n✍️ "${currentPrompt.opening}"\n⚡ Constraint: ${currentPrompt.constraint}\n\nGet free prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
   window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text), '_blank');
 }
 
