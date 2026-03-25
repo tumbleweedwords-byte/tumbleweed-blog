@@ -126,7 +126,7 @@ h1 em,h2 em{font-style:normal}
 <!-- FEATURED REVIEW -->
 <section class="sec" id="reviews">
 <div class="sec-inner">
-<div class="sec-label">Literary Reviews</div>
+<a class="sec-label" href="#reviews" style="color:inherit;text-decoration:none">Literary Reviews</a>
 <div class="featured">
 <a href="/george-saunders-vigil-review.html" style="color:inherit;text-decoration:none"><img src="GeorgeSaunders_2_c_Chloe_Aftel.png" alt="George Saunders" class="featured-img"></a>
 <div>
@@ -161,16 +161,16 @@ h1 em,h2 em{font-style:normal}
 .rev-card-tag{font-family:ui-monospace,"SF Mono",monospace;font-size:.42rem;letter-spacing:.12em;text-transform:uppercase;color:#5533E8}
 .rev-card-title{font-family:"Fraunces",Georgia,serif;font-size:.8rem;font-weight:600;color:#1a1820;line-height:1.3}
 .rev-card-link{font-family:ui-monospace,"SF Mono",monospace;font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:#5533E8;margin-top:auto;padding-top:.4rem}
-.rev-toggle-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:ui-monospace,"SF Mono",monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:#5533E8;background:none;border:1.5px solid #5533E8;padding:.5rem 1.1rem;cursor:pointer;border-radius:3px;transition:all .15s;margin-top:0}
-.rev-toggle-btn:hover{background:#5533E8;color:#fff}
-.rev-toggle-btn .rev-arrow{transition:transform .25s}
+.rev-toggle-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:"Fraunces",Georgia,serif;font-size:.95rem;font-weight:700;font-style:italic;letter-spacing:-.01em;color:#5533E8;background:none;border:none;padding:0;cursor:pointer;transition:color .15s;margin-top:0}
+.rev-toggle-btn:hover{color:#6644F5}
+.rev-toggle-btn .rev-arrow{transition:transform .25s;font-style:normal}
 .rev-toggle-btn.open .rev-arrow{transform:rotate(180deg)}
 #revAllWrap{display:none}
 #revAllWrap.open{display:block}
 </style>
-<section class="sec sec-alt">
+<section class="sec sec-alt" id="latest-reviews">
 <div class="sec-inner">
-<div class="sec-label">Latest Book Reviews</div>
+<a class="sec-label" href="#latest-reviews" style="color:inherit;text-decoration:none">Latest Book Reviews</a>
 <p class="body-p">Modern and classic literature reviewed for all you book lovers. Vuong, Hofmann, Menon, Young, Riley, Hemingway, Lessing, Bukowski, Baldwin, Baudelaire, Camus.</p>
 
 <!-- Featured review -->
@@ -185,7 +185,7 @@ h1 em,h2 em{font-style:normal}
 </div>
 
 <!-- Toggle -->
-<button class="rev-toggle-btn" id="revToggleBtn" onclick="(function(){var w=document.getElementById('revAllWrap');var b=document.getElementById('revToggleBtn');var open=w.classList.toggle('open');b.classList.toggle('open',open);b.innerHTML=(open?'Hide reviews':'Browse all 10 reviews')+' <span class=\'rev-arrow\'>&#8964;</span>';})()">Browse all 10 reviews <span class="rev-arrow">&#8964;</span></button>
+<button class="rev-toggle-btn" id="revToggleBtn" onclick="(function(){var w=document.getElementById('revAllWrap');var b=document.getElementById('revToggleBtn');var open=w.classList.toggle('open');b.classList.toggle('open',open);b.innerHTML=(open?'Hide reviews':'Read the review')+' <span class=\'rev-arrow\'>&#8964;</span>';})()">Read the review <span class="rev-arrow">&#8964;</span></button>
 
 <div id="revAllWrap">
 <div class="rev-all-grid" style="margin-top:1.5rem">
@@ -208,7 +208,7 @@ h1 em,h2 em{font-style:normal}
 <!-- NEW ESSAYS -->
 <section class="sec" id="new-essays">
 <div class="sec-inner">
-<div class="sec-label">New &middot; Flash Fiction &amp; Short Fiction</div>
+<a class="sec-label" href="#new-essays" style="color:inherit;text-decoration:none">New &middot; Flash Fiction &amp; Short Fiction</a>
 <p class="body-p">Three new pieces on the form — what flash fiction is, who writes it best, and the short fiction that proves what the form can do.</p>
 <div class="card-grid">
 <a href="/how-to-write-flash-fiction.html" class="card" style="color:inherit;text-decoration:none;background:url('pale white.png') center/cover"><span class="card-tag">Craft &middot; Practical Guide</span><div class="card-title">How to Write Flash Fiction</div><div class="card-desc">The specific techniques that make compressed short fiction work. Not rules &mdash; tools. One image, one object, one thing. The ending that lands instead of resolves.</div><span class="card-link">Read &rarr;</span></a>
@@ -221,7 +221,7 @@ h1 em,h2 em{font-style:normal}
 <!-- READING LISTS -->
 <section class="sec sec-alt" id="lists">
 <div class="sec-inner">
-<div class="sec-label">Reading Lists &middot; Where to start and what to read next</div>
+<a class="sec-label" href="#lists" style="color:inherit;text-decoration:none">Reading Lists &middot; Where to start and what to read next</a>
 <p class="body-p">Curated lists built around taste, not algorithms. Flash fiction collections, recommendations by influence, and the year&rsquo;s best.</p>
 <div class="card-grid card-grid-2">
 <a href="/what-i-am-reading.html" class="card-img" style="color:inherit;text-decoration:none"><img src="P1040132.JPG" alt="What I'm reading" loading="lazy"><div class="card-img-body"><span class="card-tag">Reading Column &middot; March 2026</span><div class="card-title">What I&rsquo;m Reading — Bukowski, Baldwin, Rooney, Lynch, Everett</div><div class="card-desc">Five writers keeping me company right now. No theme. Just what I reached for.</div><span class="card-link">See the list &rarr;</span></div></a>
@@ -240,7 +240,7 @@ h1 em,h2 em{font-style:normal}
 <!-- LITERARY CULTURE -->
 <section class="sec" id="culture">
 <div class="sec-inner">
-<div class="sec-label">Culture &middot; What&rsquo;s happening in the literary world</div>
+<a class="sec-label" href="#culture" style="color:inherit;text-decoration:none">Culture &middot; What&rsquo;s happening in the literary world</a>
 <p class="body-p">Essays on the state of contemporary literature, poetry, and publishing. Opinionated, specific, and grounded in the form.</p>
 <div class="card-grid card-grid-2">
 <a href="/literary-fiction-2026-trends.html" class="card" style="color:inherit;text-decoration:none"><span class="card-tag">Culture &middot; 2026</span><div class="card-title">Literary Fiction in 2026: What the Best New Books Are Actually Doing</div><div class="card-desc">The trends worth paying attention to, the ones worth ignoring, and what the most interesting new fiction is doing with form.</div><span class="card-link">Read &rarr;</span></a>
@@ -254,7 +254,7 @@ h1 em,h2 em{font-style:normal}
 <!-- INTERVIEWS -->
 <section class="sec sec-alt" id="interviews">
 <div class="sec-inner">
-<div class="sec-label">Interviews &middot; Writers with their craft</div>
+<a class="sec-label" href="#interviews" style="color:inherit;text-decoration:none">Interviews &middot; Writers with their craft</a>
 <p class="body-p">Essential literary interviews curated from <em>The Paris Review</em>, <em>The New Yorker</em> and beyond. The greatest writers on process, the sentence, and the life behind the work.</p>
 <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
 <a href="/literary-interviews.html" class="btn btn-p">Browse all interviews &rarr;</a>
