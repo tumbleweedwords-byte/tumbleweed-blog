@@ -141,18 +141,67 @@ h1 em,h2 em{font-style:normal}
 </div>
 </section>
 
-<!-- NEW REVIEWS -->
+<!-- LATEST REVIEWS -->
+<style>
+.rev-badge{font-family:ui-monospace,"SF Mono",monospace;font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:#6B6880;border:1px solid #D4D0C4;padding:.16rem .5rem;border-radius:2px;margin-left:.5rem;vertical-align:middle;white-space:nowrap}
+.rev-featured{display:grid;grid-template-columns:200px 1fr;gap:2.5rem;align-items:start;margin-bottom:2.5rem}
+@media(max-width:600px){.rev-featured{grid-template-columns:1fr}}
+.rev-featured-img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:3px;box-shadow:0 4px 20px rgba(26,24,32,.18);display:block}
+.rev-featured-tag{font-family:ui-monospace,"SF Mono",monospace;font-size:.48rem;letter-spacing:.13em;text-transform:uppercase;color:#5533E8;margin-bottom:.6rem}
+.rev-featured-title{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:#1a1820;line-height:1.2;margin-bottom:.7rem}
+.rev-featured-desc{font-size:.84rem;color:#3d3a50;line-height:1.72;margin-bottom:1.2rem}
+.rev-all-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
+@media(max-width:900px){.rev-all-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.rev-all-grid{grid-template-columns:repeat(2,1fr)}}
+.rev-card{border:1px solid #D4D0C4;background:#fff;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .18s,transform .18s,box-shadow .18s;overflow:hidden}
+.rev-card:hover{border-color:#5533E8;transform:translateY(-2px);box-shadow:0 6px 20px rgba(85,51,232,.1)}
+.rev-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;filter:grayscale(8%);transition:filter .3s}
+.rev-card:hover img{filter:grayscale(0%)}
+.rev-card-body{padding:.9rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.rev-card-tag{font-family:ui-monospace,"SF Mono",monospace;font-size:.42rem;letter-spacing:.12em;text-transform:uppercase;color:#5533E8}
+.rev-card-title{font-family:"Fraunces",Georgia,serif;font-size:.8rem;font-weight:600;color:#1a1820;line-height:1.3}
+.rev-card-link{font-family:ui-monospace,"SF Mono",monospace;font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:#5533E8;margin-top:auto;padding-top:.4rem}
+.rev-toggle-btn{display:inline-flex;align-items:center;gap:.5rem;font-family:ui-monospace,"SF Mono",monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:#5533E8;background:none;border:1.5px solid #5533E8;padding:.5rem 1.1rem;cursor:pointer;border-radius:3px;transition:all .15s;margin-top:0}
+.rev-toggle-btn:hover{background:#5533E8;color:#fff}
+.rev-toggle-btn .rev-arrow{transition:transform .25s}
+.rev-toggle-btn.open .rev-arrow{transform:rotate(180deg)}
+#revAllWrap{display:none}
+#revAllWrap.open{display:block}
+</style>
 <section class="sec sec-alt">
 <div class="sec-inner">
 <div class="sec-label">Latest Book Reviews</div>
-<p class="body-p">Recent novels and poetry collections reviewed for serious readers. Vuong, Hofmann, Menon, Young, Riley.</p>
-<div class="card-grid">
-<a href="/ocean-vuong-emperor-of-gladness-review.html" class="card-img" style="color:inherit;text-decoration:none"><img src="VUONG.jpg" alt="The Emperor of Gladness by Ocean Vuong" loading="lazy" style="width:100%;aspect-ratio:2/3;object-fit:cover;filter:grayscale(10%);transition:filter .3s"><div class="card-img-body"><span class="card-tag">Review &middot; Novel</span><div class="card-title">Ocean Vuong &mdash; <em>The Emperor of Gladness</em></div><div class="card-desc">The most tender exploration of American working-class life published in a decade. Vuong&rsquo;s finest prose work.</div><span class="card-link">Read the review &rarr;</span></div></a>
-<a href="/richie-hofmann-bronze-arms-review.html" class="card-img" style="color:inherit;text-decoration:none"><img src="hoffman.jpg" alt="The Bronze Arms by Richie Hofmann" loading="lazy" style="width:100%;aspect-ratio:2/3;object-fit:cover;filter:grayscale(10%);transition:filter .3s"><div class="card-img-body"><span class="card-tag">Review &middot; Poetry</span><div class="card-title">Richie Hofmann &mdash; <em>The Bronze Arms</em></div><div class="card-desc">A collection of stark erotic lyric poems in which desire is always attended by loss. Precise and unsettling.</div><span class="card-link">Read the review &rarr;</span></div></a>
-<a href="/tara-menon-under-water-review.html" class="card-img" style="color:inherit;text-decoration:none"><img src="under water.jpg" alt="Under Water by Tara Menon" loading="lazy" style="width:100%;aspect-ratio:2/3;object-fit:cover;filter:grayscale(10%);transition:filter .3s"><div class="card-img-body"><span class="card-tag">Review &middot; Novel</span><div class="card-title">Tara Menon &mdash; <em>Under Water</em></div><div class="card-desc">A debut that announces a major new voice. Three women, a flooded city, and the silences between what is said and what is meant.</div><span class="card-link">Read the review &rarr;</span></div></a>
-<a href="/kevin-young-night-watch-review.html" class="card-img" style="color:inherit;text-decoration:none"><img src="night watch.jpg" alt="Night Watch by Kevin Young" loading="lazy" style="width:100%;aspect-ratio:2/3;object-fit:cover;filter:grayscale(10%);transition:filter .3s"><div class="card-img-body"><span class="card-tag">Review &middot; Poetry</span><div class="card-title">Kevin Young &mdash; <em>Night Watch</em></div><div class="card-desc">Young&rsquo;s most ambitious collection yet. Jazz, elegy, fatherhood and the long blues of Black American life.</div><span class="card-link">Read the review &rarr;</span></div></a>
-<a href="/kate-riley-ruth-review.html" class="card-img" style="color:inherit;text-decoration:none"><img src="kate riley.jpg" alt="Ruth by Kate Riley" loading="lazy" style="width:100%;aspect-ratio:2/3;object-fit:cover;filter:grayscale(10%);transition:filter .3s"><div class="card-img-body"><span class="card-tag">Review &middot; Novel</span><div class="card-title">Kate Riley &mdash; <em>Ruth</em></div><div class="card-desc">A quiet, devastating novel about a woman returning to a place she once left. Riley writes grief the way Carver wrote hunger &mdash; sideways.</div><span class="card-link">Read the review &rarr;</span></div></a>
+<p class="body-p">Modern and classic literature reviewed for all you book lovers. Vuong, Hofmann, Menon, Young, Riley, Hemingway, Lessing, Bukowski, Baldwin, Baudelaire, Camus.</p>
+
+<!-- Featured review -->
+<div class="rev-featured">
+<a href="/hemingway-old-man-sea-review.html" style="text-decoration:none"><img src="old-man-and-the-sea.jpg" alt="The Old Man and the Sea by Ernest Hemingway" class="rev-featured-img" loading="lazy"></a>
+<div>
+<div class="rev-featured-tag">Book Review <span class="rev-badge">Classic &middot; Novel</span></div>
+<div class="rev-featured-title"><a href="/hemingway-old-man-sea-review.html" style="color:inherit">Ernest Hemingway &mdash; <em>The Old Man and the Sea</em></a></div>
+<p class="rev-featured-desc">The novel that won Hemingway the Nobel Prize. Santiago, an ageing Cuban fisherman, rows out alone and hooks the greatest marlin of his life. 127 pages that contain everything he believed about how to live and how to lose.</p>
+<a href="/hemingway-old-man-sea-review.html" class="btn btn-p">Read the review &rarr;</a>
 </div>
+</div>
+
+<!-- Toggle -->
+<button class="rev-toggle-btn" id="revToggleBtn" onclick="(function(){var w=document.getElementById('revAllWrap');var b=document.getElementById('revToggleBtn');var open=w.classList.toggle('open');b.classList.toggle('open',open);b.innerHTML=(open?'Hide reviews':'Browse all 10 reviews')+' <span class=\'rev-arrow\'>&#8964;</span>';})()">Browse all 10 reviews <span class="rev-arrow">&#8964;</span></button>
+
+<div id="revAllWrap">
+<div class="rev-all-grid" style="margin-top:1.5rem">
+<a href="/ocean-vuong-emperor-of-gladness-review.html" class="rev-card"><img src="VUONG.jpg" alt="The Emperor of Gladness by Ocean Vuong" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Modern &middot; Novel</span><div class="rev-card-title">Ocean Vuong &mdash; <em>The Emperor of Gladness</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/richie-hofmann-bronze-arms-review.html" class="rev-card"><img src="hoffman.jpg" alt="The Bronze Arms by Richie Hofmann" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Modern &middot; Poetry</span><div class="rev-card-title">Richie Hofmann &mdash; <em>The Bronze Arms</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/tara-menon-under-water-review.html" class="rev-card"><img src="under water.jpg" alt="Under Water by Tara Menon" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Modern &middot; Novel</span><div class="rev-card-title">Tara Menon &mdash; <em>Under Water</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/kevin-young-night-watch-review.html" class="rev-card"><img src="night watch.jpg" alt="Night Watch by Kevin Young" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Modern &middot; Poetry</span><div class="rev-card-title">Kevin Young &mdash; <em>Night Watch</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/kate-riley-ruth-review.html" class="rev-card"><img src="kate riley.jpg" alt="Ruth by Kate Riley" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Modern &middot; Novel</span><div class="rev-card-title">Kate Riley &mdash; <em>Ruth</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/doris-lessing-fifth-child-review.html" class="rev-card"><img src="doris lessing.jpg" alt="The Fifth Child by Doris Lessing" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Classic &middot; Novel</span><div class="rev-card-title">Doris Lessing &mdash; <em>The Fifth Child</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/bukowski-love-dog-hell-review.html" class="rev-card"><img src="love-is-a-dog-from-hell.jpg" alt="Love is a Dog from Hell by Bukowski" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Classic &middot; Poetry</span><div class="rev-card-title">Bukowski &mdash; <em>Love is a Dog from Hell</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/james-baldwin-another-country-review.html" class="rev-card"><img src="james baldwin.jpeg" alt="Another Country by James Baldwin" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Classic &middot; Novel</span><div class="rev-card-title">James Baldwin &mdash; <em>Another Country</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/baudelaire-flowers-evil-review.html" class="rev-card"><img src="flowers of evil.jpg" alt="The Flowers of Evil by Baudelaire" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Classic &middot; Poetry</span><div class="rev-card-title">Baudelaire &mdash; <em>The Flowers of Evil</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+<a href="/camus-outsider-review.html" class="rev-card"><img src="camus.jpg" alt="The Outsider by Albert Camus" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Classic &middot; Novel</span><div class="rev-card-title">Camus &mdash; <em>The Outsider</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+</div>
+</div>
+
 </div>
 </section>
 
