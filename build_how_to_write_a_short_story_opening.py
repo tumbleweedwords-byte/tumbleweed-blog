@@ -1,0 +1,201 @@
+html = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8B7DYTLXQC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if(document.cookie.split(';').some(function(c){return c.trim().startsWith('tw_consent=accept');})){gtag('config','G-8B7DYTLXQC');}
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Write a Short Story Opening That Hooks the Reader | Tumbleweed Words</title>
+<meta name="description" content="How to write a short story opening that pulls the reader in from the first sentence. Practical techniques with examples from Carver, Chekhov, Kincaid, and more.">
+<meta name="keywords" content="how to write a short story opening, short story first line, how to start a short story, opening line of a story, beginning a short story">
+<meta name="author" content="David &mdash; Tumbleweed Words">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://tumbleweedwords.com/how-to-write-a-short-story-opening.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Write a Short Story Opening That Hooks the Reader | Tumbleweed Words">
+<meta property="og:description" content="How to write a short story opening that pulls the reader in from the first sentence. Practical techniques with examples from Carver, Chekhov, Kincaid, and more.">
+<meta property="og:url" content="https://tumbleweedwords.com/how-to-write-a-short-story-opening.html">
+<meta property="og:site_name" content="Tumbleweed Words">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@tumbleweedwords">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Write a Short Story Opening: The First Line and Everything After","description":"How to write a short story opening that pulls the reader in from the first sentence. Practical techniques with examples from Carver, Chekhov, Kincaid, and more.","author":{"@type":"Person","name":"David Moran","url":"https://tumbleweedwords.com/about.html","sameAs":["https://tumbleweedwords.substack.com"]},"datePublished":"2026-03-27","publisher":{"@type":"Organization","name":"Tumbleweed Words","url":"https://tumbleweedwords.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tumbleweedwords.com/how-to-write-a-short-story-opening.html"},"keywords":"how to write a short story opening, short story first line, how to start a short story, opening line of a story, beginning a short story","image":"https://tumbleweedwords.com/hero-1.jpg","dateModified":"2026-03-27"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" onload="this.onload=null;this.rel=\'stylesheet\'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&amp;display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&amp;display=swap"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--txt:#1a1820;--txt2:#3d3a50;--mu:#615f75;--fa:#5e5c72;--bg:#F9F8F4;--bg2:#F3F1EB;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+html{font-size:18px;scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--p);text-decoration:none;transition:color .2s}a:hover{color:var(--p2)}
+img{max-width:100%;display:block}
+.wrap{min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;max-width:760px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
+.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em;text-transform:none}
+.nlogo:hover{color:var(--p2)}
+.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2);color:#fff}
+.tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.9rem;display:block}
+h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.9rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:1.1rem}
+.standfirst{font-size:1.05rem;color:var(--mu);max-width:52ch;line-height:1.72;margin-bottom:2rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
+.body h2{font-family:var(--fd);font-size:1.4rem;font-weight:600;color:var(--txt);margin:2.2rem 0 .8rem;letter-spacing:-.01em;text-transform:none}
+.body p{color:var(--txt2);margin-bottom:1.3rem;line-height:1.82}
+.body p:first-of-type::first-letter{font-family:var(--fd);font-size:3.2rem;font-weight:700;float:left;line-height:.85;margin:.1rem .12rem 0 0;color:var(--p)}
+.body blockquote{border-left:3px solid var(--p);padding:.7rem 1.3rem;margin:1.8rem 0;background:var(--pl);border-radius:0 4px 4px 0}
+.body blockquote p{font-family:var(--fd);font-size:1.05rem;font-style:italic;color:var(--txt);margin:0}
+.body a{color:var(--p);border-bottom:1px solid var(--pl2)}.body a:hover{border-color:var(--p)}
+.body ul{margin:0 0 1.3rem 1.3rem;color:var(--txt2)}.body li{margin-bottom:.4rem;line-height:1.75}
+.body strong{color:var(--txt);font-weight:500}
+.cta-box{background:var(--pl);border-left:3px solid var(--p);padding:1.6rem 1.8rem;margin:2.5rem 0;border-radius:0 6px 6px 0}
+.cta-box .lbl{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.5rem}
+.cta-box p{color:var(--mu);font-size:.92rem;margin-bottom:.9rem}
+.cta-box a{font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p);border-bottom:none}.cta-box a:hover{color:var(--p2)}
+.related{background:var(--bg2);border:1px solid var(--br);padding:1.5rem 1.8rem;margin:2.5rem 0;border-radius:6px}
+.related .lbl{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.9rem;display:block}
+.related ul{list-style:none;margin:0;padding:0}
+.related li{border-bottom:1px solid var(--br);padding:.5rem 0;display:flex;gap:.5rem;align-items:baseline}
+.related li:last-child{border-bottom:none;padding-bottom:0}
+.related li::before{content:"\\2192";color:var(--p);font-size:.8rem;flex-shrink:0}
+.related a{color:var(--txt2);font-size:.9rem;border-bottom:none}.related a:hover{color:var(--p)}
+.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
+.ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.2rem}
+.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+@media(max-width:600px){main{padding:2rem 1rem 3rem}}
+.byline{font-family:ui-monospace,"SF Mono",monospace;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:#9896a8;margin:.5rem 0 1.5rem;display:block}</style>
+<style>
+.nav{position:sticky;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:2px solid #5533E8;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo,.nlogo{font-family:"Fraunces",Georgia,serif;font-size:1.1rem;font-weight:700;color:#1a1820;letter-spacing:-.02em;flex-shrink:0;text-decoration:none;transition:color .15s}
+.nav-logo:hover,.nlogo:hover{color:#5533E8}
+.nlinks{display:flex;gap:2rem;align-items:center;justify-content:center;flex:1}
+.nlink{font-family:"Fraunces",Georgia,serif;font-size:.82rem;font-weight:400;color:#3d3a50;transition:color .15s;white-space:nowrap;text-decoration:none;letter-spacing:-.01em;text-transform:none}
+.nlink:hover{color:#5533E8}
+.ncta{background:#5533E8;color:#fff!important;padding:.44rem 1.2rem;border-radius:3px;font-family:ui-monospace,"SF Mono",monospace;font-size:.56rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0;text-decoration:none;transition:background .15s;white-space:nowrap}
+.ncta:hover{background:#6644F5!important}
+h1 em,h2 em{font-style:normal}
+.sec-label{font-size:.75rem!important;display:inline-block!important;border:1.5px solid #5533E8!important;padding:.26rem .9rem!important;padding-bottom:.26rem!important;margin-bottom:2.4rem!important}.sec-eye{border:1.5px solid #5533E8!important;padding:.26rem .85rem!important;display:inline-flex!important;gap:.6rem!important}
+.card-desc,.inf-sub,.pod-desc,.tc-desc{color:#3d3a50!important}
+@media(max-width:800px){.hide-m{display:none!important}}
+@media(max-width:480px){.ncta{padding:.38rem .9rem;font-size:.5rem}.nav{padding:0 1rem}.ft{padding:1rem;flex-wrap:wrap}}
+</style>
+<style>.breadcrumb{font-family:ui-monospace,"SF Mono",monospace;font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:#9896a8;padding:.55rem 2.5rem;background:#F6F4EE;border-bottom:1px solid #D4D0C4;display:flex;align-items:center}.breadcrumb a{color:#6B6880;text-decoration:none}.breadcrumb a:hover{color:#5533E8}.bc-sep{margin:0 .4rem;color:#D4D0C4}</style>
+<meta property="og:image" content="https://tumbleweedwords.com/hero-1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style id="nsearch-css">.nsearch{position:relative;display:flex;align-items:center;flex-shrink:0;margin-right:.5rem}.nsearch-btn{background:#fff;border:1px solid #D4D0C4;cursor:pointer;color:#1a1820;padding:.38rem;display:flex;align-items:center;border-radius:3px;transition:color .15s}.nsearch-btn:hover,.nsearch-btn.active{color:#5533E8}.nsearch-wrap{display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1.5px solid #5533E8;border-radius:3px;overflow:hidden;width:230px;z-index:500;box-shadow:0 4px 16px rgba(85,51,232,.15)}.nsearch-wrap.open{display:flex}.nsearch-input{flex:1;border:none;padding:.5rem .85rem;font-family:"Source Serif 4",Georgia,serif;font-size:.8rem;color:#1a1820;outline:none;background:transparent;min-width:0}.nsearch-go{background:#5533E8;border:none;cursor:pointer;padding:.5rem .7rem;color:#fff;display:flex;align-items:center;transition:background .15s;flex-shrink:0}.nsearch-go:hover{background:#6644F5}@media(max-width:600px){.nsearch-wrap.open{width:min(200px,calc(100vw - 2rem));right:0}}</style><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*.html"},{"not":{"selector_matches":"a[rel~=\'nofollow\']"}}]},"eagerness":"conservative"}]}
+</script>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Must Reads</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/discover.html" class="nlink hide-m">Literary Gems</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a></nav>
+<div class="breadcrumb"><a href="/">Home</a><span class="bc-sep">/</span><a href="/craft-theory.html">Craft &amp; Theory</a><span class="bc-sep">/</span>How to Write a Short Story Opening</div>
+<main>
+  <span class="tag">Craft &amp; Theory</span>
+  <h1>How to Write a Short Story Opening: The First Line and Everything After</h1>
+  <p class="standfirst">The opening of a short story is not an introduction. It is a contract. In one sentence you tell the reader what kind of story this is, what voice they are in the hands of, and whether or not to keep reading. Here is how to get it right.</p>
+  <div class="body">
+
+<h2>Why openings matter more in short fiction</h2>
+<p>In a novel, a weak opening can be forgiven. The reader has committed to 300 pages. In a short story, and especially in flash fiction, there is no such patience. A reader gives you one sentence. If that sentence does not create a question, a tension, a need to know what comes next, they stop.</p>
+<p>An editor gives you even less. Slush pile readers at literary magazines process hundreds of submissions per issue. They read the first line. If it is generic, passive, or trying too hard, they move on. This is not cruelty. It is mathematics.</p>
+<p>I have had work published in literary magazines on four continents. The pieces that were accepted all had one thing in common: the opening earned the next sentence. The pieces that were rejected often had one thing in common too: the opening asked the reader to wait for the story to get going. In short fiction, you cannot ask the reader to wait.</p>
+
+<h2>Start in the middle</h2>
+<p>The most common mistake in short story openings is starting at the beginning. You write the setup: who the character is, where they live, what the weather is like. By the time the actual story begins, you have burned 200 words on context the reader did not ask for.</p>
+<p>Start in the middle. Drop the reader into a situation that is already in motion. A decision has already been made. A conversation is already happening. The backstory, if it matters at all, can be woven in later through implication.</p>
+<p>This does not mean every story should open with action or drama. It means every story should open with something happening, even if that something is small. A woman packing a suitcase. A man ordering a drink he does not want. A child watching a stranger through a window.</p>
+
+<h2>Create a question in the first sentence</h2>
+<p>The best openings make the reader ask a question they need answered. Not a grand question. A small, specific one. Why is she packing? Who is the stranger? Why that drink?</p>
+<blockquote><p>She wore his coat to the funeral because hers was still at his flat.</p></blockquote>
+<p>One sentence. Multiple questions. Whose funeral? Why are her things at his flat? Are they separated? Did he die? The reader does not know, and that not-knowing pulls them forward.</p>
+<p>Now compare: &ldquo;It was a Tuesday in November and Sarah was feeling anxious about her upcoming trip.&rdquo; No question. No tension. No reason to read the next sentence. The difference is not talent. It is technique. The first withholds information strategically. The second provides information that nobody asked for.</p>
+
+<h2>Ground the reader in the physical</h2>
+<p>Abstract openings kill stories. &ldquo;Love is a complicated thing.&rdquo; &ldquo;There is something about the sea that makes people contemplative.&rdquo; These sentences might be true, but they are not story. They do not put the reader anywhere specific.</p>
+<p>The strongest openings are physically grounded. They put the reader in a body, in a room, in a landscape. A single detail can do it. &ldquo;The coffee was cold and she drank it anyway.&rdquo; That is a room, a mood, a character, and a state of mind in ten words.</p>
+
+<h2>Establish voice immediately</h2>
+<p>Voice is the single most important element of a short story opening. Not plot. Not setting. Not character. Voice. Because voice is the thing that makes the reader trust the narrator, and trust is what carries them through the story.</p>
+<p>A distinctive voice in the first sentence tells the reader: you are in capable hands. Voice is not about vocabulary or stylistic tricks. It is about the way a narrator sees the world. A narrator who says &ldquo;the dog was big&rdquo; sees differently from one who says &ldquo;the dog took up the whole pavement and did not apologise for it.&rdquo; Both are simple. Both are clear. But the second has a point of view. That is voice.</p>
+<p>If your opening sentence could have been written by any competent writer, it is not doing enough. If it could only have been written by you, it is working.</p>
+
+<h2>What to avoid</h2>
+<p>Do not open with weather. &ldquo;It was a dark and stormy night&rdquo; is a clich&eacute; for a reason. Weather openings delay the story. If the weather matters, show it through a character&rsquo;s experience of it.</p>
+<p>Do not open with waking up. &ldquo;She woke to the sound of&hellip;&rdquo; is the most common opening in unpublished fiction. It signals that the writer has not found the story yet.</p>
+<p>Do not open with a character looking in a mirror. A cheat for physical description and every editor recognises it.</p>
+<p>Do not open with decontextualised dialogue. &ldquo;I can&rsquo;t believe you did that!&rdquo; means nothing to a reader who does not know who is speaking or about what. Dialogue openings can work, but only if the dialogue itself is specific enough to generate questions.</p>
+<p>Do not open with a philosophical statement. &ldquo;They say that time heals all wounds, but&hellip;&rdquo; is not a story. It is a greeting card. Start with a person doing something.</p>
+
+<h2>The test</h2>
+<p>Write your opening line. Then ask yourself: if I read this sentence in a literary magazine, knowing nothing about the writer, would I read the next sentence? Be honest. If the answer is no, rewrite. If the answer is yes, you have something.</p>
+<p>Then show it to someone else and ask them the same question. What you think works and what actually works are not always the same thing.</p>
+
+<h2>Write ten openings before you write the story</h2>
+<p>Before you write the story, write ten different opening lines. Not variations on the same idea. Ten completely different ways into the material. Different starting points, different voices, different levels of information. Then pick the one that makes you most curious about what comes next. The other nine were the warm-up.</p>
+<p>For more on the craft of compressed fiction, read <a href="/how-to-write-flash-fiction.html">How to Write Flash Fiction</a>, <a href="/how-to-end-a-flash-fiction-story.html">How to End a Flash Fiction Story</a>, and the <a href="/what-is-the-iceberg-theory.html">Iceberg Theory</a>. For tools to help you get started, try the <a href="/flash-fiction-prompts.html">Flash Fiction Prompt Generator</a>.</p>
+
+  <div class="cta-box">
+    <div class="lbl">Tumbleweed Words &middot; Substack Newsletter</div>
+    <p>Gritty, minimalist fiction and poetry &mdash; written on trains, in borrowed rooms, in cities I am passing through. Over 1,200 readers. Free to subscribe.</p>
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
+  </div>
+  <div class="related">
+    <span class="lbl">Keep reading</span>
+    <ul>
+      <li><a href="/how-to-write-flash-fiction.html">How to write flash fiction: a practical guide</a></li>
+      <li><a href="/how-to-end-a-flash-fiction-story.html">How to end a flash fiction story</a></li>
+      <li><a href="/what-is-the-iceberg-theory.html">The Iceberg Theory &mdash; what Hemingway actually meant</a></li>
+      <li><a href="/flash-fiction-prompts.html">Flash Fiction Prompt Generator</a></li>
+    </ul>
+  </div>
+  </div>
+</main>
+<section style="background:var(--bg2,#EDEBE3);border-top:2px solid var(--p,#5533E8);padding:4rem 2rem;text-align:center"><div style="max-width:560px;margin:0 auto"><h2 style="font-family:var(--fd,\'Fraunces\',Georgia,serif);font-size:clamp(1.2rem,2.5vw,1.65rem);font-weight:700;color:var(--ink,#1a1820);letter-spacing:-.02em;margin-bottom:.7rem;line-height:1.2">One piece a week, written from everywhere<br><em style="color:var(--p,#5533E8);font-style:normal">Sent to your inbox</em></h2><p style="font-family:var(--fb,\'Source Serif 4\',Georgia,serif);font-size:.82rem;color:var(--mu,#6B6880);line-height:1.75;margin-bottom:1.4rem;font-weight:300">Internationally published literary fiction and poetry, delivered in bitesize portions to your inbox. Free, every week.</p><form action="https://tumbleweedwords.substack.com/api/v1/free" method="post" target="_blank" style="display:flex;gap:.5rem;max-width:420px;margin:0 auto"><input type="email" name="email" placeholder="Your email address" required autocomplete="email" style="flex:1;background:#fff;border:1.5px solid var(--br,#D4D0C4);color:var(--ink,#1a1820);font-family:var(--fb,\'Source Serif 4\',Georgia,serif);font-size:.78rem;padding:.7rem 1rem;outline:none;transition:border-color .2s"><button type="submit" style="background:var(--p,#5533E8);color:#fff;font-family:var(--fm,ui-monospace,monospace);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.2rem;border:none;cursor:pointer;white-space:nowrap;transition:background .15s">Subscribe free &rarr;</button></form><p style="font-family:var(--fm,ui-monospace,monospace);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa,#9896a8);margin-top:.7rem">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p></div></section>
+<footer class="ft">
+  <span class="ft-c">&copy; 2024 David &middot; Tumbleweed Words</span>
+  <nav class="ft-l">
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="about.html">About</a>
+    <a href="index.html">Writing</a>
+  </nav>
+</footer>
+</div>
+
+<style>#tw-popup-overlay{display:none;position:fixed;inset:0;background:rgba(20,10,40,.55);z-index:9999;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(2px)}#tw-popup-overlay.tw-active{display:flex}#tw-popup{background:#F6F4EE;border-top:4px solid #5533E8;max-width:400px;width:100%;padding:2.5rem 2rem 2rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.2);animation:tw-popIn .3s ease}@keyframes tw-popIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}#tw-popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;color:#9896a8;cursor:pointer;line-height:1}#tw-popup-close:hover{color:#1a1820}.tw-popup__photo{display:block;width:64px;height:64px;border-radius:50%;border:2px solid #5533E8;object-fit:cover;margin:0 auto .6rem}.tw-popup__wordmark{font-family:"Fraunces",Georgia,serif;font-size:.62rem;font-style:italic;color:#5533E8;text-align:center;margin-bottom:.8rem}.tw-popup__headline{font-family:"Fraunces",Georgia,serif;font-size:1.12rem;font-weight:700;color:#1a1820;text-align:center;line-height:1.25;margin-bottom:.5rem}.tw-popup__sub{font-family:"Source Serif 4",Georgia,serif;font-size:.66rem;color:#6B6880;text-align:center;line-height:1.65;margin-bottom:1.3rem;font-style:italic}.tw-popup__input{display:block;width:100%;background:#fff;border:1px solid #D4D0C4;color:#1a1820;font-family:"Source Serif 4",Georgia,serif;font-size:.7rem;padding:10px 14px;margin-bottom:8px;outline:none;transition:border-color .2s}.tw-popup__input:focus{border-color:#5533E8}.tw-popup__input::placeholder{color:#C4C0B0}.tw-popup__btn{display:block;width:100%;background:#5533E8;color:#fff;font-family:ui-monospace,"SF Mono",monospace;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;padding:12px;border:none;cursor:pointer;margin-bottom:.8rem;transition:background .2s}.tw-popup__btn:hover{background:#6644F5}.tw-popup__disclaimer{font-family:ui-monospace,"SF Mono",monospace;font-size:.44rem;color:#9896a8;text-align:center;line-height:1.6;margin-bottom:.6rem}.tw-popup__dismiss{display:block;text-align:center;font-family:ui-monospace,"SF Mono",monospace;font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:#9896a8;cursor:pointer;background:none;border:none;width:100%}.tw-popup__dismiss:hover{color:#5533E8}</style>
+<div id="tw-popup-overlay" role="dialog" aria-modal="true" aria-label="Subscribe"><div id="tw-popup"><button id="tw-popup-close" aria-label="Close">&times;</button><img class="tw-popup__photo" src="david.jpg" alt="David"><p class="tw-popup__wordmark">Tumbleweed Words</p><h2 class="tw-popup__headline">One piece of flash fiction or poetry.<br>Free, every week.</h2><p class="tw-popup__sub">&ldquo;Everyone wears black so hard you don&rsquo;t notice<br>there are differing shades.&rdquo;</p><input class="tw-popup__input" type="email" id="tw-popup-email" placeholder="Your email address" autocomplete="email"><button class="tw-popup__btn" id="tw-popup-submit">Read Now &rarr;</button><p class="tw-popup__disclaimer">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p><button class="tw-popup__dismiss" id="tw-popup-not-now">Not now</button></div></div>
+<script>(function(){var KEY=\'tw_popup_dismissed\',DAYS=14,overlay=document.getElementById(\'tw-popup-overlay\'),close=document.getElementById(\'tw-popup-close\'),notNow=document.getElementById(\'tw-popup-not-now\'),submit=document.getElementById(\'tw-popup-submit\'),email=document.getElementById(\'tw-popup-email\');function dismissed(){var t=localStorage.getItem(KEY);return t&&Date.now()-parseInt(t)<DAYS*86400000}function show(){if(dismissed())return;overlay.classList.add(\'tw-active\');document.body.style.overflow=\'hidden\'}function hide(){overlay.classList.remove(\'tw-active\');document.body.style.overflow=\'\';localStorage.setItem(KEY,Date.now().toString())}var timer=setTimeout(show,8000);document.addEventListener(\'mouseleave\',function(e){if(e.clientY<10){clearTimeout(timer);show()}});close.addEventListener(\'click\',hide);notNow.addEventListener(\'click\',hide);overlay.addEventListener(\'click\',function(e){if(e.target===overlay)hide()});document.addEventListener(\'keydown\',function(e){if(e.key===\'Escape\')hide()});submit.addEventListener(\'click\',function(){var v=email.value.trim();if(!v){email.focus();return;}var f=document.createElement(\'form\');f.action=\'https://tumbleweedwords.substack.com/api/v1/free\';f.method=\'post\';f.target=\'_blank\';var inp=document.createElement(\'input\');inp.type=\'hidden\';inp.name=\'email\';inp.value=v;f.appendChild(inp);document.body.appendChild(f);f.submit();document.body.removeChild(f);hide();});email.addEventListener(\'keydown\',function(e){if(e.key===\'Enter\')submit.click()});}());</script>
+
+<script>(function(){var t=document.getElementById(\'searchToggle\');var w=document.getElementById(\'nsearchWrap\');var i=document.getElementById(\'nsearchInput\');var g=document.getElementById(\'nsearchGo\');if(!t)return;function ds(){var q=i.value.trim();if(q)window.location.href=\'/search.html?q=\'+encodeURIComponent(q);}t.addEventListener(\'click\',function(e){e.stopPropagation();w.classList.toggle(\'open\');t.classList.toggle(\'active\');if(w.classList.contains(\'open\'))i.focus();});g.addEventListener(\'click\',ds);i.addEventListener(\'keydown\',function(e){if(e.key===\'Enter\')ds();});document.addEventListener(\'click\',function(e){if(!e.target.closest(\'#navSearch\')){w.classList.remove(\'open\');t.classList.remove(\'active\');}});document.addEventListener(\'keydown\',function(e){if(e.key===\'Escape\'){w.classList.remove(\'open\');t.classList.remove(\'active\');}});})();</script><style id="sub-bar-css">.sub-bar{position:fixed;bottom:0;left:0;right:0;z-index:990;background:var(--bg,#F6F4EE);border-top:2px solid var(--p,#5533E8);padding:.85rem 2rem;box-shadow:0 -4px 20px rgba(85,51,232,.12);transform:translateY(110%);transition:transform .4s ease}.sub-bar.visible{transform:translateY(0)}.sub-bar-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:1.2rem;flex-wrap:nowrap}.sub-bar-text{font-family:var(--fb,"Source Serif 4",Georgia,serif);font-size:.82rem;color:var(--ink,#1a1820);font-style:italic;flex-shrink:0;white-space:nowrap}.sub-bar-form{display:flex;gap:.4rem;flex:1;min-width:0}.sub-bar-input{flex:1;border:1.5px solid var(--br,#D4D0C4);background:#fff;padding:.48rem .9rem;font-family:var(--fb,"Source Serif 4",Georgia,serif);font-size:.78rem;color:var(--ink,#1a1820);outline:none;min-width:0;transition:border-color .2s}.sub-bar-input:focus{border-color:var(--p,#5533E8)}.sub-bar-btn{background:var(--p,#5533E8);color:#fff;border:none;cursor:pointer;padding:.48rem 1.1rem;font-family:var(--fm,ui-monospace,"SF Mono",monospace);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background .15s;flex-shrink:0}.sub-bar-btn:hover{background:var(--p2,#6644F5)}.sub-bar-close{background:none;border:none;cursor:pointer;color:var(--fa,#9896a8);font-size:1.3rem;padding:.2rem .4rem;line-height:1;flex-shrink:0;transition:color .15s;margin-left:auto}.sub-bar-close:hover{color:var(--ink,#1a1820)}@media(max-width:600px){.sub-bar-text{display:none}}</style><div id="subBar" class="sub-bar" role="complementary" aria-label="Subscribe to newsletter"><div class="sub-bar-inner"><span class="sub-bar-text">One piece a week. Free.</span><form class="sub-bar-form" action="https://tumbleweedwords.substack.com/api/v1/free" method="post" target="_blank"><input type="email" name="email" placeholder="Your email address" required autocomplete="email" class="sub-bar-input"><button type="submit" class="sub-bar-btn">Subscribe free &rarr;</button></form><button class="sub-bar-close" id="subBarClose" aria-label="Close subscribe bar" type="button">&times;</button></div></div><script>(function(){var KEY=\'tw_bar_v1\',DAYS=30;try{var stored=localStorage.getItem(KEY);if(stored&&Date.now()-parseInt(stored)<DAYS*86400000)return;}catch(e){return;}var bar=document.getElementById(\'subBar\');var closeBtn=document.getElementById(\'subBarClose\');if(!bar||!closeBtn)return;function dismiss(){bar.classList.remove(\'visible\');try{localStorage.setItem(KEY,Date.now().toString());}catch(e){}}closeBtn.addEventListener(\'click\',dismiss);bar.querySelector(\'form\').addEventListener(\'submit\',function(){setTimeout(dismiss,500);});var shown=false;window.addEventListener(\'scroll\',function(){if(!shown&&window.scrollY>500){shown=true;bar.classList.add(\'visible\');}},{passive:true});})();</script><div id="tw-consent" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#F6F4EE;border-top:2px solid #5533E8;padding:1rem 2rem;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:\'Source Serif 4\',Georgia,serif;font-size:.82rem;color:#1a1820;box-shadow:0 -4px 24px rgba(85,51,232,.08);display:none"></div>
+<script>
+(function(){
+  var b=document.getElementById(\'tw-consent\');
+  if(!b)return;
+  var consent=document.cookie.split(\';\').find(function(s){return s.trim().startsWith(\'tw_consent=\');});
+  if(!consent){
+    b.innerHTML=\'<p style="margin:0;max-width:600px;line-height:1.6">We use cookies to understand how readers find us. <a href="/about.html" style="color:#5533E8">Learn more</a>.</p><div style="display:flex;gap:.7rem;flex-shrink:0"><button onclick="twConsent(\\\'decline\\\')" style="font-family:ui-monospace,\\\'SF Mono\\\',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1.5px solid #D4D0C4;background:transparent;color:#6B6880;cursor:pointer;border-radius:3px">Decline</button><button onclick="twConsent(\\\'accept\\\')" style="font-family:ui-monospace,\\\'SF Mono\\\',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1.5px solid #5533E8;background:#5533E8;color:#fff;cursor:pointer;border-radius:3px">Accept</button></div>\';
+    b.style.display=\'flex\';
+  }
+})();
+function twConsent(choice){
+  var d=new Date();d.setFullYear(d.getFullYear()+1);
+  document.cookie=\'tw_consent=\'+choice+\';path=/;expires=\'+d.toUTCString()+\';SameSite=Lax\';
+  document.getElementById(\'tw-consent\').style.display=\'none\';
+  if(choice===\'accept\'&&typeof gtag===\'function\'){gtag(\'config\',\'G-8B7DYTLXQC\');}
+}
+</script>
+<script>(function(){var b=document.querySelector(\'.body\');var bl=document.querySelector(\'.byline\');if(!b||!bl)return;var words=b.innerText.trim().split(/\\s+/).length;var mins=Math.max(1,Math.round(words/200));var sp=document.createElement(\'span\');sp.textContent=\' \\u00b7 \'+mins+\' min read\';bl.appendChild(sp);})();</script>
+</body>
+</html>'''
+
+with open('C:/Users/tumbl/projects/tumbleewords/how-to-write-a-short-story-opening.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+
+print('how-to-write-a-short-story-opening.html written successfully.')

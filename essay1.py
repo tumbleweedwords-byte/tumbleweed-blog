@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html = '''<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -12,20 +12,20 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>12 Best Flash Fiction Examples Every Writer Should Read | Tumbleweed Words</title>
-<meta name="description" content="Twelve of the best flash fiction examples from Hemingway to Hempel. What makes each one work, what you can learn from it, and where to read it.">
-<meta name="keywords" content="best flash fiction examples, flash fiction stories, famous flash fiction, short short stories, flash fiction to read">
+<title>How to Write Flash Fiction: A Working Writer&rsquo;s Guide | Tumbleweed Words</title>
+<meta name="description" content="A practical guide to writing flash fiction from a published flash fiction writer. Compression, endings, the first line, and what to leave out.">
+<meta name="keywords" content="how to write flash fiction, flash fiction tips, writing flash fiction, flash fiction techniques, short short stories">
 <meta name="author" content="David &mdash; Tumbleweed Words">
 <meta name="robots" content="max-image-preview:large">
-<link rel="canonical" href="https://tumbleweedwords.com/best-flash-fiction-examples.html">
+<link rel="canonical" href="https://tumbleweedwords.com/how-to-write-flash-fiction.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="12 Best Flash Fiction Examples Every Writer Should Read | Tumbleweed Words">
-<meta property="og:description" content="Twelve of the best flash fiction examples from Hemingway to Hempel. What makes each one work, what you can learn from it, and where to read it.">
-<meta property="og:url" content="https://tumbleweedwords.com/best-flash-fiction-examples.html">
+<meta property="og:title" content="How to Write Flash Fiction: A Working Writer&rsquo;s Guide | Tumbleweed Words">
+<meta property="og:description" content="A practical guide to writing flash fiction from a published flash fiction writer. Compression, endings, the first line, and what to leave out.">
+<meta property="og:url" content="https://tumbleweedwords.com/how-to-write-flash-fiction.html">
 <meta property="og:site_name" content="Tumbleweed Words">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@tumbleweedwords">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Best Flash Fiction Examples: Twelve Stories Every Writer Should Read","description":"Twelve of the best flash fiction examples from Hemingway to Hempel. What makes each one work, what you can learn from it, and where to read it.","author":{"@type":"Person","name":"David Moran","url":"https://tumbleweedwords.com/about.html","sameAs":["https://tumbleweedwords.substack.com"]},"datePublished":"2026-03-27","publisher":{"@type":"Organization","name":"Tumbleweed Words","url":"https://tumbleweedwords.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tumbleweedwords.com/best-flash-fiction-examples.html"},"keywords":"best flash fiction examples, flash fiction stories, famous flash fiction, short short stories, flash fiction to read","image":"https://tumbleweedwords.com/hero-1.jpg","dateModified":"2026-03-27"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Write Flash Fiction: A Practical Guide From a Working Writer","description":"A practical guide to writing flash fiction from a published flash fiction writer. Compression, endings, the first line, and what to leave out.","author":{"@type":"Person","name":"David Moran","url":"https://tumbleweedwords.com/about.html","sameAs":["https://tumbleweedwords.substack.com"]},"datePublished":"2026-03-27","publisher":{"@type":"Organization","name":"Tumbleweed Words","url":"https://tumbleweedwords.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tumbleweedwords.com/how-to-write-flash-fiction.html"},"keywords":"how to write flash fiction, flash fiction tips, writing flash fiction, flash fiction techniques, short short stories","image":"https://tumbleweedwords.com/hero-1.jpg","dateModified":"2026-03-27"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&amp;display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&amp;display=swap"></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -61,7 +61,7 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.9rem);font-weight:700;colo
 .related ul{list-style:none;margin:0;padding:0}
 .related li{border-bottom:1px solid var(--br);padding:.5rem 0;display:flex;gap:.5rem;align-items:baseline}
 .related li:last-child{border-bottom:none;padding-bottom:0}
-.related li::before{content:"\2192";color:var(--p);font-size:.8rem;flex-shrink:0}
+.related li::before{content:"\\2192";color:var(--p);font-size:.8rem;flex-shrink:0}
 .related a{color:var(--txt2);font-size:.9rem;border-bottom:none}.related a:hover{color:var(--p)}
 .ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
 .ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
@@ -95,45 +95,52 @@ h1 em,h2 em{font-style:normal}
 <body>
 <div class="wrap">
 <nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Must Reads</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/discover.html" class="nlink hide-m">Literary Gems</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a></nav>
-<div class="breadcrumb"><a href="/">Home</a><span class="bc-sep">/</span><a href="/craft-theory.html">Craft &amp; Theory</a><span class="bc-sep">/</span>Best Flash Fiction Examples</div>
 <main>
   <span class="tag">Craft &amp; Theory</span>
-  <h1>The Best Flash Fiction Examples: Twelve Stories Every Writer Should Read</h1>
-  <span class="byline">By David Moran &middot; March 2026</span>
-  <p class="standfirst">A reading list of the finest flash fiction ever written, with notes on what each story does and why it matters. Not a ranked list. Twelve pieces that taught me something about the form and will teach you too.</p>
+  <h1>How to Write Flash Fiction: A Practical Guide From a Working Writer</h1>
+  <p class="byline">By David Moran &middot; March 2026</p>
+  <p class="standfirst">A guide to writing flash fiction that actually works. Not theory. Not rules borrowed from a textbook. What I have learned from twenty years of writing compressed fiction on trains, in borrowed rooms, and in cities I was passing through.</p>
   <div class="body">
+<p>Flash fiction is not a short story that has been cut down. It is not a scene from a novel. It is not a prose poem with a plot bolted on. And it is not, despite what the internet will tell you, simply &ldquo;a story under 1,000 words.&rdquo;</p>
 
-<h2>Why a reading list matters</h2>
-<p>You cannot write good flash fiction without reading good flash fiction. That sounds obvious, but most guides to the form focus on technique and skip the reading. Technique without immersion is like learning music theory without ever listening to a song. You might understand the structure, but you will not feel the rhythm.</p>
-<p>What follows is a personal list. These are the stories that shaped how I write compressed fiction. Some are famous. Some are less well known. All of them demonstrate a specific quality of the form that is worth studying. I have organised them not by ranking but by what they teach.</p>
-<p>I have been writing and publishing flash fiction for twenty years. My work has appeared in Adelaide Magazine, Litro, Cleaver Magazine, Poetry Scotland, White Wall Review, and others. I was shortlisted for a Pushcart Prize. Every piece I have written owes something to the stories below.</p>
+<h2>Start with what flash fiction is not</h2>
+<p>Flash fiction is a complete piece of fiction, with characters, tension, and resolution, that achieves its effect through compression rather than expansion. Every sentence is load-bearing. Nothing is decorative. If you can remove a line and the story still stands, the line should not have been there.</p>
+<p>I have been writing flash fiction for twenty years. Published in Adelaide Magazine, Litro, Cleaver Magazine, Poetry Scotland, White Wall Review, and others. One story nominated for a Pushcart Prize.</p>
 
-<h2>Stories that teach compression</h2>
-<p><strong>Ernest Hemingway, &ldquo;A Very Short Story&rdquo;</strong> &mdash; Tells the story of a wartime love affair and its aftermath in roughly 650 words. What makes it work is the flatness. Hemingway does not dramatise the heartbreak. He reports it. The emotional devastation arrives through understatement, through the gap between what is said and what is felt. If you want to understand the <a href="/what-is-the-iceberg-theory.html">iceberg theory</a> in practice, start here.</p>
-<p><strong>Lydia Davis, &ldquo;The Visitor&rdquo;</strong> &mdash; Davis is the modern master of extreme compression. Many of her stories are under 200 words. &ldquo;The Visitor&rdquo; runs to about 300 words and does something extraordinary with time: it begins with a memory, slides into a present-tense reflection, and then turns toward the future in a way that reframes the entire piece. The control is surgical. Every clause is placed with precision. If Hemingway taught compression through omission, Davis teaches it through selection.</p>
-<p><strong>George Saunders, &ldquo;Sticks&rdquo;</strong> &mdash; At roughly 400 words, one of the most anthologised flash fiction stories in the English language. A father decorates a metal pole in the yard for every holiday. That is the plot. The story spans years, covering an entire family relationship in a handful of paragraphs. What Saunders does here is use a single recurring image as a vessel for everything the family cannot say to each other. The compression is not in the sentences. It is in the structure. One image, repeated with variation, carries the weight of a lifetime.</p>
+<h2>The first line does everything</h2>
+<p>In a novel you have chapters to build a world. In flash fiction you have one sentence. If the first line does not create a question in the reader&rsquo;s mind, they will not read the second.</p>
+<p>The question does not need to be dramatic. It needs to be specific. It needs to imply a world that exists beyond the page.</p>
+<p>&ldquo;It was a cold day and she was sad.&rdquo; &mdash; tells us nothing. Compare with:</p>
+<blockquote><p>&ldquo;She wore his coat to the funeral because hers was still at his flat.&rdquo;</p></blockquote>
+<p>That is a world. We know the relationship ended. We know she is grieving. We know all of this from one sentence.</p>
+<p>Your first line should make the reader feel as though they have walked into a room where something has already happened. Start in the middle. The backstory is implied by what the characters do, not by what the narrator explains.</p>
 
-<h2>Stories that teach voice</h2>
-<p><strong>Jamaica Kincaid, &ldquo;Girl&rdquo;</strong> &mdash; This is a single sentence. One long, breathless, unbroken instruction from a mother to a daughter. About 650 words. It contains an entire world: a culture, a power dynamic, a history of gendered expectation, tenderness, control, and love that looks like cruelty. The voice is everything. There is no plot in the conventional sense. There is no setting described. There is only the voice, and the voice creates the world.</p>
-<p><strong>Raymond Carver, &ldquo;Popular Mechanics&rdquo;</strong> &mdash; Carver at his most brutal. A couple separating. An argument over a baby. Under 500 words and contains almost no description, no interior thought, no backstory. It is pure dialogue and action. The voice is the absence of voice: Carver removes everything a writer normally uses to guide the reader&rsquo;s sympathy and leaves only the physical facts. The result is terrifying. What you learn from &ldquo;Popular Mechanics&rdquo; is that restraint is not the same as distance.</p>
-<p><strong>Amy Hempel, &ldquo;In the Cemetery Where Al Jolson Is Buried&rdquo;</strong> &mdash; Longer than most flash fiction, but it does something with voice that shorter pieces rarely achieve. The narrator visits a dying friend in hospital and talks about everything except the dying. The voice is funny, deflective, circling the grief without landing on it. The technique is misdirection as emotional strategy. Hempel teaches you that what a narrator avoids saying is as important as what they say.</p>
+<h2>Write the ending first</h2>
+<p>The best flash fiction starts with the last line. If you know where the story lands, every sentence becomes a step toward that landing. Nothing wanders.</p>
+<p>The ending is not a twist. It is a resonance &mdash; the moment where everything the reader has absorbed suddenly vibrates at a different frequency. See <a href="/how-to-end-a-flash-fiction-story.html">How to End a Flash Fiction Story</a> for a deeper look at resonant endings.</p>
 
-<h2>Stories that teach endings</h2>
-<p><strong>Franz Kafka, &ldquo;Give It Up!&rdquo;</strong> &mdash; A man is walking to the station. He checks his watch and realises he is late. He asks a policeman for directions. The policeman laughs and tells him to give up. About 100 words. The ending does not resolve the situation. It does not explain why the policeman laughs. It simply stops, and the reader is left holding the weight of an unanswerable question. Kafka teaches you that the ending of a flash fiction story does not need to close anything. It needs to open something in the reader&rsquo;s mind.</p>
-<p><strong>Etgar Keret, &ldquo;Asthma Attack&rdquo;</strong> &mdash; Keret is an Israeli writer whose flash fiction is strange, funny, and emotionally precise. About 130 words. A man has an asthma attack and, while gasping for air, has a revelation about his life. The ending arrives in the final line and reframes everything that came before. Keret&rsquo;s endings work because they are earned by the absurdity that precedes them. A masterclass in tonal shift within extreme brevity.</p>
-<p><strong>Virginia Woolf, &ldquo;A Haunted House&rdquo;</strong> &mdash; One of the earliest examples of what we would now call flash fiction. A ghostly couple wanders through a house, searching for something. The ending reveals what the ghosts were seeking, and it is not what you expect. Woolf&rsquo;s prose here is lyrical and rhythmic, closer to poetry than to conventional fiction. The ending works because it transforms a ghost story into a love story in a single sentence.</p>
+<h2>Cut the first paragraph</h2>
+<p>Write the story. Then delete the first paragraph entirely. Nine times out of ten, the story is better without it.</p>
+<p>First paragraphs in early drafts are throat-clearing. The writer is warming up. By the second paragraph the writer has arrived. Everything before was scaffolding.</p>
 
-<h2>Stories that teach structure</h2>
-<p><strong>Joyce Carol Oates, &ldquo;Where Are You Going, Where Have You Been?&rdquo;</strong> &mdash; Sits at the longer end of flash fiction. What matters for this list is its structural innovation: the story builds through an accumulation of domestic detail and then a stranger arrives, and the register shifts from realism to something closer to myth. Oates teaches you that structure in flash fiction can be a two-part machine: establish the ordinary, then fracture it.</p>
-<p><strong>Yasunari Kawabata, &ldquo;The Palm-of-the-Hand Stories&rdquo;</strong> &mdash; Kawabata&rsquo;s collection of over 140 ultra-short stories is the single best anthology of compressed fiction ever assembled. Each story runs between 200 and 1,200 words. What makes the collection essential is its range: realism, surrealism, eroticism, grief, landscape, memory. Kawabata proves that flash fiction is not a genre. It is a length. Any subject, any tone, any emotional register can be compressed into a few hundred words.</p>
+<h2>One character, one situation, one shift</h2>
+<p>Flash fiction does not have room for subplots. The form works best when it focuses on one person in one situation, and then something shifts.</p>
+<p>The shift does not need to be an event. It can be a realisation, a memory surfacing, a detail noticed for the first time. If your flash fiction has more than two named characters, ask whether every one is essential.</p>
 
-<h2>A story from the road</h2>
-<p>My own, <a href="/street-legal.html">train in vain</a> &mdash; I include this not out of vanity but because it is the story that taught me the most about the form. I wrote it on a Berlin U-Bahn in winter, watching a stranger exit my life through closing train doors. The story has no plot in the conventional sense. A man rides a train. He watches people. He remembers. He arrives nowhere. What I learned writing it is that flash fiction does not need an event. It needs a moment of attention so precise that the reader feels they are inside it. The story was shortlisted for a Pushcart Prize and published internationally.</p>
+<h2>Show the iceberg, not the water</h2>
+<p><a href="/what-is-the-iceberg-theory.html">Hemingway&rsquo;s iceberg theory</a> is the foundation of all compressed fiction: the writer knows far more than appears on the page, and that invisible knowledge gives the visible text its weight.</p>
+<p>Know your character&rsquo;s entire history, then put almost none of it on the page. A woman orders two coffees out of habit, then stares at the second cup. You do not need to tell the reader someone has died. The second cup says it.</p>
 
-<h2>Where to go from here</h2>
-<p>Read the stories above. Then read more. The best anthologies to start with are <em>Flash Fiction</em> (edited by James Thomas, Denise Thomas, and Tom Hazuka), <em>Sudden Fiction</em> (edited by Robert Shapard and James Thomas), and <em>Micro Fiction</em> (edited by Jerome Stern). For contemporary flash, SmokeLong Quarterly publishes excellent work online every quarter.</p>
-<p>Then write. Start with 500 words. Cut the first paragraph. Read it aloud. Send it somewhere. For practical guidance on the writing process, read <a href="/how-to-write-flash-fiction.html">How to Write Flash Fiction</a>. For where to submit your work, try the <a href="/literary-magazine-finder.html">Literary Magazine Finder</a> or read <a href="/how-to-get-published-in-literary-magazines.html">How to Get Published in Literary Magazines</a>.</p>
-<p>The stories listed here are not the only great flash fiction ever written. They are starting points. Follow the threads. Read the writers who influenced these writers. Build your own list. The form is vast, and it fits in the palm of your hand.</p>
+<h2>Use concrete details, not abstract language</h2>
+<p>Flash fiction lives in the specific. Not &ldquo;she was sad&rdquo; but &ldquo;she folded his shirts into the suitcase and left the top one unfolded because it still smelled like him.&rdquo;</p>
+<p>This is the principle behind <a href="/show-dont-tell-what-it-actually-means.html">show don&rsquo;t tell</a> &mdash; in flash, not a suggestion. The whole game. Search your drafts for words like &ldquo;beautiful,&rdquo; &ldquo;lonely,&rdquo; &ldquo;painful.&rdquo; Replace each with a physical detail. The story always improves.</p>
+
+<h2>Read it aloud</h2>
+<p>Flash fiction has a rhythm. The only way to hear it is to read aloud. Where you stumble, the sentence is wrong. Where you run out of breath, the sentence is too long. Your ear knows things your eye misses.</p>
+
+<h2>Where to start</h2>
+<p>Read Amy Hempel, Raymond Carver, and Lydia Davis. Then write something under 500 words. Write the last line first. Then write everything that leads to it. Cut the first paragraph. Read it aloud. Cut anything that explains what the reader can already feel. Then write another one.</p>
+<p>For more on the craft, read the <a href="/what-is-the-iceberg-theory.html">Iceberg Theory</a>, <a href="/show-dont-tell-what-it-actually-means.html">Show Don&rsquo;t Tell</a>, and <a href="/how-to-end-a-flash-fiction-story.html">How to End a Flash Fiction Story</a>. To practise, try the <a href="/flash-fiction-prompts.html">Flash Fiction Prompt Generator</a> or <a href="/flash-fiction-workshop.html">Workshop Your Piece</a>.</p>
 
   <div class="cta-box">
     <div class="lbl">Tumbleweed Words &middot; Substack Newsletter</div>
@@ -144,10 +151,10 @@ h1 em,h2 em{font-style:normal}
     <span class="lbl">Keep reading</span>
     <ul>
       <li><a href="/what-is-the-iceberg-theory.html">The Iceberg Theory &mdash; what Hemingway actually meant</a></li>
-      <li><a href="/how-to-write-flash-fiction.html">How to write flash fiction: a practical guide</a></li>
-      <li><a href="/literary-magazine-finder.html">Literary Magazine Finder &mdash; where to submit your work</a></li>
-      <li><a href="/how-to-get-published-in-literary-magazines.html">How to get published in literary magazines</a></li>
-      <li><a href="/street-legal.html">Read: train in vain &mdash; flash fiction from Berlin</a></li>
+      <li><a href="/show-dont-tell-what-it-actually-means.html">Show don&rsquo;t tell &mdash; what it actually means</a></li>
+      <li><a href="/how-to-end-a-flash-fiction-story.html">How to end a flash fiction story</a></li>
+      <li><a href="/flash-fiction-prompts.html">Flash Fiction Prompt Generator</a></li>
+      <li><a href="/flash-fiction-workshop.html">Workshop your piece with AI feedback</a></li>
     </ul>
   </div>
   </div>
@@ -185,6 +192,11 @@ function twConsent(choice){
   if(choice==='accept'&&typeof gtag==='function'){gtag('config','G-8B7DYTLXQC');}
 }
 </script>
-<script>(function(){var b=document.querySelector('.body');var bl=document.querySelector('.byline');if(!b||!bl)return;var words=b.innerText.trim().split(/\s+/).length;var mins=Math.max(1,Math.round(words/200));var sp=document.createElement('span');sp.textContent=' \u00b7 '+mins+' min read';bl.appendChild(sp);})();</script>
+<script>(function(){var b=document.querySelector('.body');var bl=document.querySelector('.byline');if(!b||!bl)return;var words=b.innerText.trim().split(/\\s+/).length;var mins=Math.max(1,Math.round(words/200));var sp=document.createElement('span');sp.textContent=' \\u00b7 '+mins+' min read';bl.appendChild(sp);})();</script>
 </body>
-</html>
+
+</html>'''
+
+with open('how-to-write-flash-fiction.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+print('Written: how-to-write-flash-fiction.html')
