@@ -145,7 +145,9 @@ h1 em,h2 em{font-style:normal}
 .rev-toggle-btn{display:inline-flex;align-items:center;justify-content:center;font-family:ui-monospace,"SF Mono",monospace;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;padding:.68rem 1.5rem;border-radius:3px;border:1.5px solid #5533E8;background:#5533E8;color:#fff;cursor:pointer;transition:all .15s;white-space:nowrap;line-height:1}
 .rev-toggle-btn:hover{background:#6644F5;border-color:#6644F5}
 #revAllWrap{display:none}
+#litAllWrap{display:none}
 #revAllWrap.open{display:block}
+#litAllWrap.open{display:block}
 </style>
 <section class="sec sec-alt" id="latest-reviews">
 <div class="sec-inner">
@@ -188,17 +190,25 @@ h1 em,h2 em{font-style:normal}
 <section class="sec" id="reviews">
 <div class="sec-inner">
 <a class="sec-label" href="#reviews" style="color:inherit;text-decoration:none">Literary Reviews</a>
-<div class="featured">
-<a href="/george-saunders-vigil-review.html" style="color:inherit;text-decoration:none"><img src="GeorgeSaunders_2_c_Chloe_Aftel.png" alt="George Saunders" class="featured-img"></a>
+<div class="rev-featured">
+<a href="/murakami-norwegian-wood-review.html" style="text-decoration:none"><img src="murakami-norwegian-wood.webp" alt="Norwegian Wood by Haruki Murakami" class="rev-featured-img" loading="lazy"></a>
 <div>
-<div class="featured-tag">Review &middot; George Saunders</div>
-<div class="featured-title"><a href="/george-saunders-vigil-review.html" style="color:inherit">George Saunders&rsquo; Vigil &mdash; What It Teaches About Compressed Prose</a></div>
-<p class="featured-excerpt">A close reading of Saunders&rsquo; work as a lesson in compression, empathy and the sentence that does more than it looks like it should.</p>
-<p class="body-p">Saunders is the most precise writer working in English today. Every word earns its place. This essay asks what writers can take from his practice.</p>
-<a href="/george-saunders-vigil-review.html" class="btn btn-p">Read the review &rarr;</a>
+<div class="rev-featured-tag">Literary Review <span class="rev-badge">Classic &middot; Novel</span></div>
+<div class="rev-featured-title"><a href="/murakami-norwegian-wood-review.html" style="color:inherit">Murakami&rsquo;s Norwegian Wood &mdash; The Novel That Belongs to Everyone</a></div>
+<p class="rev-featured-desc">Norwegian Wood is the Murakami novel that people who don&rsquo;t read Murakami have read. A close reading of its plain prose, architecture of memory, and why desire can never fix anything.</p>
+<div style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-top:0">
+<a href="/murakami-norwegian-wood-review.html" class="btn btn-p">Read the review &rarr;</a>
+<button class="btn rev-toggle-btn" id="litToggleBtn" style="background:#fff;border-color:var(--p);color:var(--p)" onclick="(function(){var w=document.getElementById('litAllWrap');var b=document.getElementById('litToggleBtn');var open=w.classList.toggle('open');b.textContent=open?'Hide Reviews ↑':'Browse All Reviews →';})()">Browse All Reviews &rarr;</button>
 </div>
 </div>
 </div>
+
+<div id="litAllWrap" style="display:none">
+<div class="rev-all-grid" style="margin-top:1.5rem">
+<a href="/george-saunders-vigil-review.html" class="rev-card"><img src="GeorgeSaunders_2_c_Chloe_Aftel.png" alt="George Saunders" loading="lazy"><div class="rev-card-body"><span class="rev-card-tag">Literary &middot; Essay</span><div class="rev-card-title">George Saunders &mdash; <em>Vigil: What It Teaches About Compressed Prose</em></div><span class="rev-card-link">Read &rarr;</span></div></a>
+</div>
+</div>
+
 </div>
 </section>
 
