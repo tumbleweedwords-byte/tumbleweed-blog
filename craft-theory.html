@@ -103,6 +103,17 @@ h1 em,h2 em{font-style:normal}
 .ft-l{display:flex;gap:1.4rem}
 .ft-l a{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
 .ft-l a:hover{color:var(--p)}
+
+.essay-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:#fff;border:1.5px solid #D4D0C4;border-top:3px solid #5533E8;padding:1.4rem 1.6rem;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
+.essay-card:hover{transform:translateY(-4px) rotate(1.4deg);box-shadow:0 10px 28px rgba(85,51,232,.16);border-color:#5533E8}
+.essay-card .card-tag{display:inline-block;background:#5533E8;color:#fff;font-family:ui-monospace,"SF Mono",monospace;font-size:.42rem;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .75rem;margin-bottom:.85rem;border-radius:2px;width:fit-content}
+.essay-card .card-title{font-family:"Fraunces",Georgia,serif;font-size:.96rem;font-weight:700;color:#1a1820;line-height:1.3;margin-bottom:.55rem}
+.essay-card .card-desc{font-size:.78rem;color:#3d3a50;line-height:1.7;flex:1}
+.essay-card .card-link{font-family:ui-monospace,"SF Mono",monospace;font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:#5533E8;margin-top:.9rem}
+.essays-header{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;margin-bottom:1rem}
+.essays-header-text{flex:1}
+.essays-header-img{width:96px;height:64px;object-fit:cover;object-position:center top;flex-shrink:0;border-radius:3px;box-shadow:0 3px 12px rgba(26,24,32,.15);transform:rotate(1.5deg);margin-top:.4rem}
+@media(max-width:600px){.essays-header{flex-direction:column}.essays-header-img{width:100%;height:100px;transform:none}}
 </style>
 <meta property="og:image" content="https://tumbleweedwords.com/image_1.webp">
 <meta property="og:image:width" content="1200">
