@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8B7DYTLXQC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if(document.cookie.split(';').some(function(c){return c.trim().startsWith('tw_consent=accept');})){gtag('config','G-8B7DYTLXQC');}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shape Your Words — Poetry Form Tool | Tumbleweed Words</title>
+<meta name="description" content="Paste your words and watch them take shape. An AI poetry tool that reshapes your ideas into a haiku, sonnet, villanelle, limerick, or free verse poem.">
+<meta name="keywords" content="haiku generator, villanelle maker, poetry form tool, sonnet generator, free verse, limerick generator, poetry form converter, AI poetry tool">
+<meta name="author" content="David — Tumbleweed Words">
+<link rel="canonical" href="https://tumbleweedwords.com/shape-your-words.html">
+<meta property="og:title" content="Shape Your Words — Poetry Form Tool | Tumbleweed Words">
+<meta property="og:description" content="Paste your words and watch them take shape. An AI poetry tool that reshapes your ideas into a haiku, sonnet, villanelle, limerick, or free verse poem.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tumbleweedwords.com/hero-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--txt:#1a1820;--txt2:#3d3a50;--mu:#615f75;--fa:#5e5c72;--bg:#F9F8F4;--bg2:#F3F1EB;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+html{font-size:18px;scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--p);text-decoration:none}a:hover{color:var(--p2)}
+.wrap{min-height:100vh;display:flex;flex-direction:column}
+.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em}
+.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2);color:#fff}
+main{flex:1;max-width:760px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
+.tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.9rem;display:block}
+h1{font-family:var(--fd);font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}
+.standfirst{font-size:1rem;color:var(--mu);max-width:52ch;line-height:1.72;margin-bottom:2rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
+.byline{font-family:ui-monospace,"SF Mono",monospace;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:#9896a8;margin:.5rem 0 1.5rem;display:block}
+.how{background:var(--bg2);border-radius:6px;padding:1.3rem 1.5rem;margin-bottom:2rem}
+.how-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.how-item{font-size:.85rem;color:var(--mu);line-height:1.6}
+.how-item strong{color:var(--txt);display:block;margin-bottom:.2rem;font-weight:500}
+.api-box{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.3rem 1.5rem;margin-bottom:1.8rem}
+.api-box-l{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.6rem}
+.api-box p{font-size:.85rem;color:var(--mu);margin-bottom:.8rem;line-height:1.65}
+.api-box a{color:var(--p);border-bottom:1px solid var(--pl2)}
+.api-input{width:100%;padding:.6rem .8rem;font-family:var(--fm);font-size:.8rem;border:1px solid var(--br);border-radius:4px;background:var(--bg);color:var(--txt);margin-bottom:.5rem}
+.api-input:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px rgba(85,51,232,.08)}
+.api-saved{font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--p);display:none}
+textarea{width:100%;min-height:220px;padding:1.1rem;font-family:var(--fb);font-size:.95rem;line-height:1.75;border:1px solid var(--br);border-radius:6px;background:var(--bg);color:var(--txt);resize:vertical;margin-bottom:1.2rem}
+textarea:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px rgba(85,51,232,.08)}
+.form-btns{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin-bottom:1.8rem}
+.form-btn{background:var(--bg);border:1.5px solid var(--br);border-radius:4px;padding:.7rem .5rem;cursor:pointer;transition:all .15s;text-align:center;display:flex;flex-direction:column;gap:.25rem}
+.form-btn:hover{border-color:var(--p);background:var(--pl)}
+.form-btn.active{border-color:var(--p);background:var(--pl);box-shadow:0 0 0 2px rgba(85,51,232,.15)}
+.form-btn-name{font-family:var(--fd);font-size:.82rem;font-weight:600;color:var(--txt)}
+.form-btn.active .form-btn-name{color:var(--p)}
+.form-btn-desc{font-family:var(--fm);font-size:.44rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mu);line-height:1.4}
+.btn-main{background:var(--p);color:#fff;border:none;padding:.65rem 1.5rem;border-radius:3px;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .15s}
+.btn-main:hover{background:var(--p2)}
+.btn-main:disabled{opacity:.45;cursor:not-allowed}
+.err{background:#FEF2F2;border:1px solid #FCA5A5;border-radius:4px;padding:.8rem 1rem;font-size:.85rem;color:#B91C1C;margin-bottom:1.2rem}
+.loading{text-align:center;padding:3rem 0}
+.spin{width:32px;height:32px;border:3px solid var(--pl);border-top-color:var(--p);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto .8rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-t{font-family:var(--fm);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
+.result-wrap{display:none}
+.result-wrap.show{display:block}
+.result-label{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:1rem}
+.poem-out{background:var(--bg);border:1px solid var(--br);border-left:3px solid var(--p);border-radius:0 6px 6px 0;padding:1.8rem 2rem;margin-bottom:1rem;font-family:var(--fd);font-size:1rem;line-height:2;color:var(--txt);white-space:pre-line;letter-spacing:.01em}
+.form-notes{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.form-notes-l{font-family:var(--fm);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fa);margin-bottom:.5rem}
+.form-notes p{font-size:.85rem;color:var(--mu);line-height:1.7}
+.copy-row{display:flex;gap:.75rem;align-items:center;margin-bottom:1.8rem;flex-wrap:wrap}
+.btn-copy{background:transparent;border:1.5px solid var(--p);color:var(--p);padding:.5rem 1.1rem;border-radius:3px;font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .15s}
+.btn-copy:hover{background:var(--pl)}
+.btn-reset{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.45rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.btn-reset:hover{background:var(--bg2)}
+.cta-band{background:var(--bg2);border:1px solid var(--br);border-radius:6px;padding:1.4rem 1.6rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.cta-t{font-size:.88rem;color:var(--mu);line-height:1.6;max-width:44ch}
+.cta-t strong{color:var(--txt);font-weight:500;display:block;margin-bottom:.2rem}
+.cta-btn{background:var(--p);color:#fff;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.cta-btn:hover{background:var(--p2);color:#fff}
+.ft{border-top:1px solid var(--br);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.ft-c{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+@media(max-width:600px){.form-btns{grid-template-columns:repeat(3,1fr)}.how-grid{grid-template-columns:1fr}.poem-out{padding:1.2rem 1.4rem}}
+@media(max-width:380px){.form-btns{grid-template-columns:repeat(2,1fr)}}
+</style>
+<style>
+.nav{position:sticky;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:2px solid #5533E8;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo,.nlogo{font-family:"Fraunces",Georgia,serif;font-size:1.1rem;font-weight:700;color:#1a1820;letter-spacing:-.02em;flex-shrink:0;text-decoration:none;transition:color .15s}
+.nav-logo:hover,.nlogo:hover{color:#5533E8}
+.nlinks{display:flex;gap:2rem;align-items:center;justify-content:center;flex:1}
+.nlink{font-family:"Fraunces",Georgia,serif;font-size:.82rem;font-weight:400;color:#3d3a50;transition:color .15s;white-space:nowrap;text-decoration:none;letter-spacing:-.01em;text-transform:none}
+.nlink:hover{color:#5533E8}
+.ncta{background:#5533E8;color:#fff!important;padding:.44rem 1.2rem;border-radius:3px;font-family:ui-monospace,"SF Mono",monospace;font-size:.56rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0;text-decoration:none;transition:background .15s;white-space:nowrap}
+.ncta:hover{background:#6644F5!important}
+@media(max-width:800px){.hide-m{display:none!important}}
+@media(max-width:480px){.ncta{padding:.38rem .9rem;font-size:.5rem}.nav{padding:0 1rem}}
+</style>
+<style id="nsearch-css">.nsearch{position:relative;display:flex;align-items:center;flex-shrink:0;margin-right:.5rem}.nsearch-btn{background:#fff;border:1px solid #D4D0C4;cursor:pointer;color:#1a1820;padding:.38rem;display:flex;align-items:center;border-radius:3px;transition:color .15s}.nsearch-btn:hover,.nsearch-btn.active{color:#5533E8}.nsearch-wrap{display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1.5px solid #5533E8;border-radius:3px;overflow:hidden;width:230px;z-index:500;box-shadow:0 4px 16px rgba(85,51,232,.15)}.nsearch-wrap.open{display:flex}.nsearch-input{flex:1;border:none;padding:.5rem .85rem;font-family:"Source Serif 4",Georgia,serif;font-size:.8rem;color:#1a1820;outline:none;background:transparent;min-width:0}.nsearch-go{background:#5533E8;border:none;cursor:pointer;padding:.5rem .7rem;color:#fff;display:flex;align-items:center;transition:background .15s;flex-shrink:0}.nsearch-go:hover{background:#6644F5}@media(max-width:600px){.nsearch-wrap.open{width:min(200px,calc(100vw - 2rem));right:0}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Shape Your Words — Poetry Form Tool","description":"Paste your words and watch them take shape. An AI poetry tool that reshapes your ideas into a haiku, sonnet, villanelle, limerick, or free verse poem.","author":{"@type":"Person","name":"David Moran","url":"https://tumbleweedwords.com/about.html","sameAs":["https://tumbleweedwords.substack.com"]},"publisher":{"@type":"Organization","name":"Tumbleweed Words","url":"https://tumbleweedwords.com"},"url":"https://tumbleweedwords.com/shape-your-words.html","datePublished":"2026-03-27","dateModified":"2026-03-27","image":"https://tumbleweedwords.com/hero-1.jpg"}</script>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Must Reads</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/discover.html" class="nlink hide-m">Literary Gems</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a></nav>
+
+<main>
+  <span class="tag">Free Tool &middot; Poetry Form Shaper</span>
+  <h1>Shape your words</h1>
+  <p class="byline">By David Moran &middot; <time datetime="2026-03-27">March 27, 2026</time></p>
+  <p class="standfirst">Paste a rough idea, a few lines, a paragraph of thoughts, scattered words, or an existing draft. Choose a form. The tool reshapes your language into that form &mdash; preserving your images and voice as much as possible.</p>
+
+  <div class="how">
+    <div class="how-l">How it works</div>
+    <div class="how-grid">
+      <div class="how-item"><strong>1. Get your free API key</strong>Visit console.anthropic.com &mdash; free account, takes two minutes. Paste the key below once.</div>
+      <div class="how-item"><strong>2. Paste your words</strong>A rough idea, scattered thoughts, a draft, a line you like. Anything. The tool works with whatever you give it.</div>
+      <div class="how-item"><strong>3. Choose a form</strong>Select one of five poetry forms. The tool reshapes your language into it &mdash; haiku, sonnet, villanelle, limerick or free verse.</div>
+    </div>
+  </div>
+
+  <div class="api-box">
+    <div class="api-box-l">Anthropic API key</div>
+    <p>This tool uses Claude AI to reshape your writing. You need a free API key from <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a> &mdash; the free tier is more than enough. Your key stays in your browser only.</p>
+    <label for="api-key" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Anthropic API key</label>
+    <input type="password" class="api-input" id="api-key" placeholder="sk-ant-..." autocomplete="off">
+    <span class="api-saved" id="key-saved">Key saved in this session &mdash; ready to shape</span>
+  </div>
+
+  <textarea id="txt" placeholder="Paste your words, your ideas, a rough draft, scattered thoughts. The tool will shape them into poetry."></textarea>
+
+  <div class="form-btns" id="formBtns">
+    <button class="form-btn" data-form="haiku" onclick="selectForm(this)">
+      <span class="form-btn-name">Haiku</span>
+      <span class="form-btn-desc">Three lines. Two images. One breath.</span>
+    </button>
+    <button class="form-btn" data-form="sonnet" onclick="selectForm(this)">
+      <span class="form-btn-name">Sonnet</span>
+      <span class="form-btn-desc">14 lines. A volta. A closing couplet.</span>
+    </button>
+    <button class="form-btn" data-form="villanelle" onclick="selectForm(this)">
+      <span class="form-btn-name">Villanelle</span>
+      <span class="form-btn-desc">19 lines. Two refrains. Obsessive form.</span>
+    </button>
+    <button class="form-btn" data-form="limerick" onclick="selectForm(this)">
+      <span class="form-btn-name">Limerick</span>
+      <span class="form-btn-desc">Five lines. A bounce. A punchline.</span>
+    </button>
+    <button class="form-btn" data-form="freeverse" onclick="selectForm(this)">
+      <span class="form-btn-name">Free Verse</span>
+      <span class="form-btn-desc">No rules. Only what matters.</span>
+    </button>
+  </div>
+
+  <div style="margin-bottom:1.8rem">
+    <button class="btn-main" id="btn" onclick="shapePoem()">Shape my words &rarr;</button>
+  </div>
+
+  <div class="err" id="err" style="display:none"></div>
+
+  <div class="loading" id="loading" style="display:none">
+    <div class="spin"></div>
+    <div class="loading-t" id="loading-t">Shaping your words&hellip;</div>
+  </div>
+
+  <div class="result-wrap" id="resultWrap">
+    <div class="result-label" id="resultLabel">Haiku</div>
+    <div class="poem-out" id="poemOut"></div>
+    <div class="form-notes" id="formNotes">
+      <div class="form-notes-l">About this form</div>
+      <p id="formNotesText"></p>
+    </div>
+    <div class="copy-row">
+      <button class="btn-copy" onclick="copyPoem()">Copy poem</button>
+      <button class="btn-reset" onclick="resetTool()">Try another form</button>
+    </div>
+    <div class="cta-band">
+      <div class="cta-t">
+        <strong>Tumbleweed Words &mdash; Substack Newsletter</strong>
+        Flash fiction and prose poetry written on trains. Five years on Substack, over 1,200 readers. Free.
+      </div>
+      <a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<section style="background:var(--bg2,#EDEBE3);border-top:2px solid var(--p,#5533E8);padding:4rem 2rem;text-align:center"><div style="max-width:560px;margin:0 auto"><h2 style="font-family:var(--fd,'Fraunces',Georgia,serif);font-size:clamp(1.2rem,2.5vw,1.65rem);font-weight:700;color:var(--txt,#1a1820);letter-spacing:-.02em;margin-bottom:.7rem;line-height:1.2">One piece a week, written from everywhere<br><em style="color:var(--p,#5533E8);font-style:normal">Sent to your inbox</em></h2><p style="font-family:var(--fb,'Source Serif 4',Georgia,serif);font-size:.82rem;color:var(--mu,#6B6880);line-height:1.75;margin-bottom:1.4rem;font-weight:300">Internationally published literary fiction and poetry, delivered in bitesize portions to your inbox. Free, every week.</p><form action="https://tumbleweedwords.substack.com/api/v1/free" method="post" target="_blank" style="display:flex;gap:.5rem;max-width:420px;margin:0 auto"><input type="email" name="email" placeholder="Your email address" required autocomplete="email" style="flex:1;background:#fff;border:1.5px solid var(--br,#D4D0C4);color:var(--txt,#1a1820);font-family:var(--fb,'Source Serif 4',Georgia,serif);font-size:.78rem;padding:.7rem 1rem;outline:none;transition:border-color .2s"><button type="submit" style="background:var(--p,#5533E8);color:#fff;font-family:var(--fm,ui-monospace,monospace);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.2rem;border:none;cursor:pointer;white-space:nowrap;transition:background .15s">Subscribe free &rarr;</button></form><p style="font-family:var(--fm,ui-monospace,monospace);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa,#9896a8);margin-top:.7rem">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p></div></section>
+
+<footer class="ft">
+  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
+  <nav class="ft-l">
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="/craft-theory.html">Craft &amp; Theory</a>
+    <a href="/discover.html">Literary Gems</a>
+    <a href="/about.html">About</a>
+  </nav>
+</footer>
+</div>
+
+<script>
+const keyEl = document.getElementById('api-key');
+let selectedForm = null;
+
+keyEl.addEventListener('input', function() {
+  document.getElementById('key-saved').style.display = keyEl.value.startsWith('sk-ant-') ? 'inline' : 'none';
+});
+
+function selectForm(btn) {
+  document.querySelectorAll('.form-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  selectedForm = btn.getAttribute('data-form');
+}
+
+const FORM_SYSTEMS = {
+  haiku: 'You are a poet specialising in haiku. Reshape the user\'s input into a haiku: exactly three lines, following the 5-7-5 syllable pattern, with a juxtaposition of two images (kireji effect), seasonal or sensory in nature. Preserve the user\'s original language and imagery as much as possible. Return ONLY the finished haiku, three lines, no title, no explanation, no preamble.',
+  sonnet: 'You are a poet specialising in the Shakespearean sonnet. Reshape the user\'s input into a 14-line sonnet: three quatrains (ABAB CDCD EFEF) and a closing couplet (GG), written in iambic pentameter. Include a volta (turn) before the closing couplet. Preserve the user\'s original language, images and emotional core as much as possible. Return ONLY the finished sonnet, 14 lines, no title, no explanation, no preamble.',
+  villanelle: 'You are a poet specialising in the villanelle. Reshape the user\'s input into a 19-line villanelle: five tercets and one closing quatrain. The first and third lines of the opening tercet become the refrains — draw these directly from the user\'s input where possible. Use ABA rhyme scheme throughout. Preserve the user\'s language and imagery. Return ONLY the finished villanelle, 19 lines, no title, no explanation, no preamble.',
+  limerick: 'You are a poet specialising in the limerick. Reshape the user\'s input into a 5-line limerick with AABBA rhyme scheme and anapaestic rhythm. Keep a light, bouncy or humorous tone. Preserve any specific images or details from the user\'s input. Return ONLY the finished limerick, 5 lines, no title, no explanation, no preamble.',
+  freeverse: 'You are a poet specialising in free verse. Reshape the user\'s input into a free verse poem with intentional line breaks, compression, rhythm, and poetic craft. Strip away prose. Cut ruthlessly. Leave only what matters — the image, the moment, the weight of the thing. Preserve the user\'s original language and imagery as much as possible. Return ONLY the finished poem, no title, no explanation, no preamble.'
+};
+
+const FORM_LABELS = {
+  haiku: 'Haiku',
+  sonnet: 'Sonnet',
+  villanelle: 'Villanelle',
+  limerick: 'Limerick',
+  freeverse: 'Free Verse'
+};
+
+const FORM_NOTES = {
+  haiku: 'The haiku originates in Japan and is the most searched poetry form online. Three lines of 5, 7, and 5 syllables, traditionally built around two juxtaposed images and a seasonal reference (kigo). Bashō, Buson, and Issa established the form; Kerouac and the Beats brought it west.',
+  sonnet: 'The Shakespearean sonnet is 14 lines in iambic pentameter, structured as three quatrains and a closing couplet (ABAB CDCD EFEF GG). The volta — the turn — arrives just before the couplet, shifting the argument or undercutting what came before. Shakespeare wrote 154 of them.',
+  villanelle: 'The villanelle is a 19-line form built around obsessive repetition: two refrains circle back again and again across five tercets before closing in a quatrain. Dylan Thomas\'s "Do Not Go Gentle into That Good Night" is its most famous example. The form suits grief, obsession, and things that won\'t let go.',
+  limerick: 'The limerick is five lines with an AABBA rhyme scheme and a bouncy anapaestic rhythm. It originated in 18th-century England and is the most comic of the traditional forms — the two short BB lines set up a joke, or a turn, or something that shouldn\'t be said. Edward Lear popularised it.',
+  freeverse: 'Free verse carries no formal constraints — no fixed metre, no required rhyme scheme, no set line count. What it demands instead is deliberate craft: every line break is a choice, every cut a decision. Whitman invented it in English; Bishop, O\'Hara and Plath showed what it could hold.'
+};
+
+const LOADING_MSGS = ['Shaping your words\u2026','Listening to the form\u2026','Finding the line breaks\u2026','Working the language\u2026','Almost there\u2026'];
+let mIdx = 0, mTimer;
+
+function showLoad(on) {
+  document.getElementById('loading').style.display = on ? 'block' : 'none';
+  if (on) {
+    mIdx = 0;
+    document.getElementById('loading-t').textContent = LOADING_MSGS[0];
+    mTimer = setInterval(function() {
+      mIdx = Math.min(mIdx + 1, LOADING_MSGS.length - 1);
+      document.getElementById('loading-t').textContent = LOADING_MSGS[mIdx];
+    }, 1800);
+  } else {
+    clearInterval(mTimer);
+  }
+}
+
+function showErr(msg) {
+  const e = document.getElementById('err');
+  e.textContent = msg;
+  e.style.display = 'block';
+}
+
+async function shapePoem() {
+  const text = document.getElementById('txt').value.trim();
+  const key = keyEl.value.trim();
+  document.getElementById('err').style.display = 'none';
+  document.getElementById('resultWrap').classList.remove('show');
+
+  if (!key || !key.startsWith('sk-ant-')) {
+    showErr('Please enter your Anthropic API key above. Get a free key at console.anthropic.com');
+    return;
+  }
+  if (!text || text.split(/\s+/).filter(Boolean).length < 3) {
+    showErr('Please paste at least a few words for the tool to work with.');
+    return;
+  }
+  if (!selectedForm) {
+    showErr('Please choose a poetry form above before shaping.');
+    return;
+  }
+
+  document.getElementById('btn').disabled = true;
+  showLoad(true);
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': key,
+        'anthropic-version': '2023-06-01'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 800,
+        system: FORM_SYSTEMS[selectedForm],
+        messages: [{ role: 'user', content: 'Shape this into the form:\n\n' + text }]
+      })
+    });
+
+    const data = await res.json();
+    showLoad(false);
+    document.getElementById('btn').disabled = false;
+
+    if (data.error) throw new Error(data.error.message);
+
+    const poem = (data.content || []).map(function(b){ return b.text || ''; }).join('').trim();
+    if (!poem) throw new Error('No poem returned. Please try again.');
+
+    document.getElementById('resultLabel').textContent = FORM_LABELS[selectedForm];
+    document.getElementById('poemOut').textContent = poem;
+    document.getElementById('formNotesText').textContent = FORM_NOTES[selectedForm];
+    document.getElementById('resultWrap').classList.add('show');
+    document.getElementById('resultWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  } catch(e) {
+    showLoad(false);
+    document.getElementById('btn').disabled = false;
+    showErr('Something went wrong: ' + (e.message || 'Please check your API key and try again.'));
+  }
+}
+
+function copyPoem() {
+  const poem = document.getElementById('poemOut').textContent;
+  navigator.clipboard.writeText(poem).then(function() {
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = 'Copied!';
+    setTimeout(function(){ btn.textContent = 'Copy poem'; }, 2000);
+  }).catch(function() {
+    const ta = document.createElement('textarea');
+    ta.value = poem;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = 'Copied!';
+    setTimeout(function(){ btn.textContent = 'Copy poem'; }, 2000);
+  });
+}
+
+function resetTool() {
+  document.getElementById('resultWrap').classList.remove('show');
+  document.getElementById('txt').focus();
+}
+
+(function(){
+  var t = document.getElementById('searchToggle');
+  var w = document.getElementById('nsearchWrap');
+  var i = document.getElementById('nsearchInput');
+  var g = document.getElementById('nsearchGo');
+  if (!t) return;
+  function ds(){ var q = i.value.trim(); if (q) window.location.href = '/search.html?q=' + encodeURIComponent(q); }
+  t.addEventListener('click', function(e){ e.stopPropagation(); w.classList.toggle('open'); t.classList.toggle('active'); if (w.classList.contains('open')) i.focus(); });
+  g.addEventListener('click', ds);
+  i.addEventListener('keydown', function(e){ if (e.key === 'Enter') ds(); });
+  document.addEventListener('click', function(e){ if (!e.target.closest('#navSearch')){ w.classList.remove('open'); t.classList.remove('active'); } });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape'){ w.classList.remove('open'); t.classList.remove('active'); } });
+})();
+</script>
+</body>
+</html>
