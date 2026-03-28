@@ -8,6 +8,7 @@
 .wcr-item,
 .wcr-item a,
 .pub-item,
-.pub-item a {
+.pub-item a,
+.rev-featured-desc {
   font-family: 'Special Elite', cursive;
 }
