@@ -748,4 +748,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://tumbleweedwords.com/john-fante-ask-the-dust-review.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
