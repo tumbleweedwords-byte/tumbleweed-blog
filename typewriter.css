@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 .sec-sub,
-.sec-inner > .body-p,
-.page-hero > p {
+.sec-inner .body-p,
+.page-hero > p,
+.standfirst {
   font-family: 'Special Elite', cursive;
 }
