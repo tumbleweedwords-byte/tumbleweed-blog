@@ -3,6 +3,7 @@
 .sec-sub,
 .sec-inner .body-p,
 .page-hero > p,
-.standfirst {
+.standfirst,
+.site-tagline {
   font-family: 'Special Elite', cursive;
 }
