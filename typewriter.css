@@ -4,6 +4,10 @@
 .sec-inner .body-p,
 .page-hero > p,
 .standfirst,
-.site-tagline {
+.site-tagline,
+.wcr-item,
+.wcr-item a,
+.pub-item,
+.pub-item a {
   font-family: 'Special Elite', cursive;
 }
