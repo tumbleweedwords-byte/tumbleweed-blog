@@ -107,6 +107,12 @@ h1 em,h2 em{font-style:normal}
 @media(max-width:800px){.hide-m{display:none!important}}
 @media(max-width:480px){.ncta{padding:.38rem .9rem;font-size:.5rem}.nav{padding:0 1rem}.ft{padding:1rem;flex-wrap:wrap}.proof-inner{gap:1.5rem}.inline-sub{flex-direction:column}.inline-sub__btn{width:100%}.reel-item{flex:0 0 80vw}.hero-slide{padding:1rem 1rem}.site-tagline{white-space:normal}}
 @media(max-width:600px){.hero-logo-bar>div:first-child,.hero-logo-bar>div:last-child{display:none!important}.hero-logo-bar>div{position:static!important;transform:none!important;width:min(280px,70vw)!important;margin:0 auto!important}.hero-logo-bar{justify-content:center!important;padding:1rem!important;min-height:64px!important}}
+/* Hero video background — desktop only */
+.hero-video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-video-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45);z-index:1}
+/* Hide per-slide image backgrounds on desktop (video replaces them). To revert: remove .hero-slide-bg{display:none} and the video/overlay elements in the carousel below. */
+.hero-slide-bg{display:none}
+@media(max-width:768px){.hero-video-bg,.hero-video-overlay{display:none}.hero-slide-bg{display:block}}
 </style>
 <meta property="og:image" content="https://tumbleweedwords.com/hero-1.webp">
 <meta property="og:image:width" content="1200">
@@ -146,6 +152,14 @@ h1 em,h2 em{font-style:normal}
 
 <!-- Carousel — 5 slides -->
 <div class="hero-carousel" id="heroCarousel">
+
+<!-- Original hero images commented out. Uncomment to restore. -->
+<!-- To revert to images on desktop: remove the line `.hero-slide-bg{display:none}` from the CSS above. -->
+<!-- Video background — desktop only. Hidden on mobile (<768px), images shown instead. -->
+<video class="hero-video-bg" autoplay muted loop playsinline>
+  <source src="hero-background.mp4" type="video/mp4">
+</video>
+<div class="hero-video-overlay"></div>
 
 <div class="hero-slide active" data-slide="0">
 <div class="hero-slide-bg" style="background-image:url('hero-1.webp')"></div>
