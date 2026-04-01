@@ -127,6 +127,13 @@ h1 em,h2 em{font-style:normal}
 #reviews .rev-featured-desc{color:#1a1a1a}
 #culture{background:#fff}
 #lists{background:#fff}
+#latest-reviews{position:relative;background-image:url('IMG_20190503_134426_863.jpg');background-size:cover;background-position:center}
+#latest-reviews::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.80);z-index:0}
+#latest-reviews .sec-inner{position:relative;z-index:1}
+#latest-reviews .body-p{color:#1a1a1a}
+#latest-reviews .rev-badge{color:#1a1a1a;border-color:#1a1a1a}
+#latest-reviews .rev-featured-title a{color:#1a1a1a}
+#latest-reviews .rev-featured-desc{color:#1a1a1a}
 </style>
 </head>
 <body>
@@ -186,7 +193,7 @@ h1 em,h2 em{font-style:normal}
 <p class="rev-featured-desc">A poet writing product descriptions for a living. The novel that finally made the artist-versus-day-job question feel new.</p>
 <div style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-top:0">
 <a href="/poppick-the-copywriter-review.html" class="btn btn-p">Read Review &rarr;</a>
-<button class="btn rev-toggle-btn" id="revToggleBtn" style="background:#fff;border-color:var(--p);color:var(--p)" onclick="(function(){var w=document.getElementById('revAllWrap');var b=document.getElementById('revToggleBtn');var open=w.classList.toggle('open');b.textContent=open?'Hide Reviews \u2191':'Browse All Reviews \u2192';})()">Browse All Reviews &rarr;</button>
+<button class="btn rev-toggle-btn" id="revToggleBtn" style="background:#fff;border-color:#1a1a1a;color:#1a1a1a" onclick="(function(){var w=document.getElementById('revAllWrap');var b=document.getElementById('revToggleBtn');var open=w.classList.toggle('open');b.textContent=open?'Hide Reviews \u2191':'Browse All Reviews \u2192';})()">Browse All Reviews &rarr;</button>
 </div>
 </div>
 </div>
