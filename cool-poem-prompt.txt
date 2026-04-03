@@ -1,0 +1,121 @@
+CLAUDE CODE PROMPT — cool-poem.html
+=====================================
+Date: 2026-04-03
+
+
+TASK OVERVIEW
+-------------
+Add a new poem called "cool" to tumbleweedwords.com. Three things: create the poem
+page, add it to the homepage, and make sure the backend is correct.
+
+
+1. CREATE THE POEM PAGE AT cool-poem.html
+-----------------------------------------
+Create a new page at cool-poem.html formatted exactly like the existing poem pages
+on the site (use viral-poetry.html or indiscretion-poem.html as the template for
+layout, fonts, colours, nav, footer, and structure).
+
+The poem text must be laid out exactly as written below. Every line break matters.
+Do not reflow, merge, or reformat the lines. Preserve the spacing between stanzas
+exactly.
+
+Title: cool
+Author: David Moran
+
+---
+
+cool
+
+she had four of us before full maturity.
+we grew like tombstones.
+shouted :: don't go in the bathroom
+cleaning bath
+get ready for school eat your breakfast.
+
+she was doing this—
+all of those things at once.
+asking we calm down get ready and look, forward.
+
+she did all that shit.
+i stole her cigarettes when the time came.
+
+---
+
+Image file: cool-poem-typewriter.webp
+(Source file: "typewriter image.jpeg" — convert to WebP and rename)
+
+Add the typewriter image to the page as a hero or feature image above the poem
+text, styled the same way other poem pages handle their images.
+Alt text: "cool, a poem by David Moran, typed on a typewriter"
+
+Include the standard newsletter CTA and footer that all other pages use.
+Include a "More to Explore" section at the bottom linking to:
+  - /indiscretion-poem.html — mature indiscretions
+  - /viral-poetry.html — viral | poetry
+  - /post-writing-nomadic.html — Writing While Travelling
+
+
+2. ADD TO THE HOMEPAGE "SELECT WORK" SECTION
+---------------------------------------------
+On index.html, find the "Select work" section (subheading: "An eye-opener for your
+attention seeking behaviour"). Add a new card for "cool" as the FIRST card (newest
+first), pushing existing cards along.
+
+Card content:
+  Image:       cool-poem-typewriter.webp
+  Label:       Poetry · New
+  Title:       cool
+  Description: A poem about a mother doing everything at once. Working class, warm,
+               no sentiment.
+  Date:        April 2026
+  Link:        cool-poem.html
+
+Style identically to existing cards (bestof-card class).
+
+
+3. BACKEND AND SEO
+------------------
+On cool-poem.html, add the following:
+
+Title tag:
+  cool | poem by David Moran | Tumbleweed Words
+
+Meta description:
+  A typewriter poem about a mother raising four kids before full maturity. Working
+  class voices, no sentiment, written from memory. By David Moran.
+
+Open Graph tags:
+  og:title       — cool | poem by David Moran
+  og:description — (same as meta description)
+  og:image       — https://tumbleweedwords.com/cool-poem-typewriter.webp
+  og:url         — https://tumbleweedwords.com/cool-poem.html
+  og:type        — article
+
+Schema markup (Article JSON-LD):
+  headline      — cool | poem by David Moran
+  author        — David Moran
+  datePublished — 2026-04-03
+  dateModified  — 2026-04-03
+  image         — https://tumbleweedwords.com/cool-poem-typewriter.webp
+  publisher     — Tumbleweed Words
+  description   — (same as meta description)
+
+Canonical tag:
+  https://tumbleweedwords.com/cool-poem.html
+
+Add cool-poem.html to sitemap.xml.
+
+
+DO NOT CHANGE
+-------------
+- Any other pages except index.html (Select work card) and sitemap.xml
+- Any fonts, colours, design, or layout on existing pages
+- The poem text or line breaks in any way
+
+
+FILES AFFECTED
+--------------
+  CREATED:  cool-poem.html
+  CREATED:  cool-poem-typewriter.webp  (converted from "typewriter image.jpeg")
+  MODIFIED: index.html  (new bestof-card, first position in Select work grid)
+  MODIFIED: sitemap.xml  (new url entry, priority 0.8, lastmod 2026-04-03)
