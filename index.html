@@ -216,16 +216,53 @@ h1 em,h2 em{font-style:normal}
 
 <!-- Tagline moved above carousel -->
 
-<style>.feat-banner{display:flex;align-items:stretch;margin:1.5rem 2rem 0}@media(max-width:768px){.feat-banner{flex-direction:column;margin:1rem 1rem 0}}.feat-banner-img{flex:0 0 25%;min-width:0;overflow:hidden}@media(max-width:768px){.feat-banner-img{flex:none;height:220px}}.feat-banner-img img{width:100%;height:100%;object-fit:cover;display:block}.feat-banner-body{flex:0 0 55%;min-width:0;background:#fff;border-left:3px solid var(--p);padding:2.2rem 2.4rem;display:flex;flex-direction:column;justify-content:center;gap:.7rem}@media(max-width:768px){.feat-banner-body{flex:none;padding:1.4rem 1.2rem;border-left:3px solid var(--p)}}.feat-banner-label{font-family:var(--fm);font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p)}.feat-banner-title{font-family:var(--fd);font-size:clamp(1.1rem,2.2vw,1.5rem);font-weight:700;color:var(--ink);line-height:1.2;letter-spacing:-.01em}.feat-banner-desc{font-family:var(--fb);font-size:.82rem;color:var(--txt2);line-height:1.7}.feat-banner-link{font-family:var(--fm);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--p);text-decoration:none}.feat-banner-link:hover{color:var(--p2)}</style>
-<div class="feat-banner">
-<div class="feat-banner-img"><img src="Interview_2019_Web_Summer_OceanVuong.jpg" alt="Ocean Vuong" loading="lazy"></div>
-<div class="feat-banner-body">
-<span class="feat-banner-label">Featured</span>
-<div class="feat-banner-title">Ocean Vuong: Where to Start and What to Read</div>
-<p class="feat-banner-desc">How to enter the work of one of contemporary literature&rsquo;s most essential voices.</p>
-<a href="ocean-vuong-reading-guide.html" class="feat-banner-link">Read the guide &rarr;</a>
+<style>.fc-wrap{margin:1.5rem 2rem 0}.fc-track{position:relative;height:190px;overflow:hidden}@media(max-width:768px){.fc-track{height:auto;overflow:visible}}.fc-slide{position:absolute;inset:0;display:flex;opacity:0;transition:opacity .6s ease;pointer-events:none}.fc-slide.fc-active{opacity:1;pointer-events:auto}@media(max-width:768px){.fc-slide{position:static;display:none;opacity:1}.fc-slide.fc-active{display:flex;flex-direction:column}}.fc-img{flex:0 0 28%;min-width:0;overflow:hidden}@media(max-width:768px){.fc-img{flex:none;height:120px}}.fc-img img{width:100%;height:100%;object-fit:cover;display:block}.fc-body{flex:1;min-width:0;background:#fff;border-left:3px solid #5533E8;padding:1.4rem 1.8rem;display:flex;flex-direction:column;justify-content:center;gap:.5rem}@media(max-width:768px){.fc-body{padding:1.1rem 1.2rem;border-left:none;border-top:3px solid #5533E8}}.fc-label{font-family:'Courier New',Courier,monospace;font-size:.48rem;letter-spacing:1.5px;text-transform:uppercase;color:#5533E8}.fc-title{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--ink);line-height:1.22;letter-spacing:-.01em}@media(max-width:768px){.fc-title{font-size:1rem}}.fc-desc{font-family:var(--fb);font-size:.8rem;color:var(--txt2);line-height:1.65}@media(max-width:768px){.fc-desc{font-size:.76rem}}.fc-link{font-family:'Courier New',Courier,monospace;font-size:.46rem;letter-spacing:1px;text-transform:uppercase;color:#5533E8;text-decoration:none}.fc-link:hover{color:#6644F5;text-decoration:underline}.fc-dots{display:flex;gap:.5rem;justify-content:center;padding:.6rem 0 0}.fc-dot{width:8px;height:8px;border-radius:50%;background:var(--br2);border:none;cursor:pointer;padding:0;transition:background .2s}.fc-dot.fc-dot-active{background:#5533E8}</style>
+<div class="fc-wrap" id="featCarousel">
+<div class="fc-track">
+<div class="fc-slide fc-active">
+<div class="fc-img"><img src="Interview_2019_Web_Summer_OceanVuong.jpg" alt="Ocean Vuong" loading="lazy"></div>
+<div class="fc-body"><span class="fc-label">Featured Review</span><div class="fc-title">Ocean Vuong: Where to Start and What to Read</div><p class="fc-desc">How to enter the work of one of contemporary literature&rsquo;s most essential voices.</p><a href="ocean-vuong-reading-guide.html" class="fc-link">Read the guide &rarr;</a></div>
+</div>
+<div class="fc-slide">
+<div class="fc-img"><img src="00079681-900x900.jpeg" alt="The Scroll, the Bar, and the Bookstore" loading="lazy"></div>
+<div class="fc-body"><span class="fc-label">Featured Essay</span><div class="fc-title">The Scroll, the Bar, and the Bookstore</div><p class="fc-desc">On seeing the On the Road manuscript, drinking at Vesuvio, and meeting Ferlinghetti at City Lights.</p><a href="kerouac-scroll-city-lights.html" class="fc-link">Read the essay &rarr;</a></div>
+</div>
+<div class="fc-slide">
+<div class="fc-img"><img src="wake-up-call-big-smoke.webp" alt="wake up call in the big smoke" loading="lazy"></div>
+<div class="fc-body"><span class="fc-label">Featured Fiction</span><div class="fc-title">wake up call in the big smoke</div><p class="fc-desc">Gabriel wakes on a mattress in a room he doesn&rsquo;t recognise. His brother is waiting in Whitechapel, London.</p><a href="wake-up-call-in-the-big-smoke.html" class="fc-link">Read the story &rarr;</a></div>
+</div>
+<div class="fc-slide">
+<div class="fc-img"><img src="medium_ba97a3cbff3a4ef63efbfebb757c2db644a38b50.jpg" alt="The Best Flash Fiction Collections" loading="lazy"></div>
+<div class="fc-body"><span class="fc-label">Featured List</span><div class="fc-title">The Best Flash Fiction Collections</div><p class="fc-desc">The essential reading list for anyone serious about the short form.</p><a href="best-flash-fiction-collections.html" class="fc-link">See the list &rarr;</a></div>
+</div>
+<div class="fc-slide">
+<div class="fc-img"><img src="IMG_20150620_165029.jpg" alt="Women Who Changed the Sentence" loading="lazy"></div>
+<div class="fc-body"><span class="fc-label">Featured Essay</span><div class="fc-title">Women Who Changed the Sentence</div><p class="fc-desc">Five writers every reader needs. Shafak, Tokarczuk, Levy, Clarke, O&rsquo;Farrell.</p><a href="women-who-changed-the-sentence.html" class="fc-link">Read the essay &rarr;</a></div>
 </div>
 </div>
+<div class="fc-dots" id="fcDots">
+<button class="fc-dot fc-dot-active" data-fc="0" aria-label="Slide 1"></button>
+<button class="fc-dot" data-fc="1" aria-label="Slide 2"></button>
+<button class="fc-dot" data-fc="2" aria-label="Slide 3"></button>
+<button class="fc-dot" data-fc="3" aria-label="Slide 4"></button>
+<button class="fc-dot" data-fc="4" aria-label="Slide 5"></button>
+</div>
+</div>
+<script>
+(function(){
+var wrap=document.getElementById('featCarousel');
+var slides=wrap.querySelectorAll('.fc-slide');
+var dots=wrap.querySelectorAll('.fc-dot');
+var cur=0,total=slides.length,timer;
+function go(n){slides[cur].classList.remove('fc-active');dots[cur].classList.remove('fc-dot-active');cur=(n+total)%total;slides[cur].classList.add('fc-active');dots[cur].classList.add('fc-dot-active');}
+function start(){timer=setInterval(function(){go(cur+1);},5000);}
+function stop(){clearInterval(timer);}
+dots.forEach(function(d){d.addEventListener('click',function(){stop();go(parseInt(d.dataset.fc));start();});});
+wrap.addEventListener('mouseenter',stop);
+wrap.addEventListener('mouseleave',start);
+start();
+})();
+</script>
 
 <style>.sub-nos-wrap{display:flex;gap:50px;align-items:flex-start;padding:1.4rem 2rem 1rem}@media(max-width:768px){.sub-nos-wrap{flex-direction:column;gap:1.8rem}}</style>
 <div class="sub-nos-wrap">
