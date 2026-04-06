@@ -1,0 +1,120 @@
+# Claude Code prompt: deploy the 2026 Pulitzer Prize article
+
+Run this from the tumbleweedwords.com repo root. The article markdown file should be in the same folder or wherever you've saved it. You'll reference it when Claude Code asks.
+
+---
+
+I want to publish a new zeitgeist piece on tumbleweedwords.com about the 2026 Pulitzer Prize for Fiction. The article is in an attached markdown file called `2026-pulitzer-prize-fiction-contenders.md`. This is a time-sensitive piece, publish asap.
+
+The piece should live under `/essays-and-culture/` or whichever section on the site is used for topical commentary and culture writing. If there is no essays-and-culture subfolder, create the page at the appropriate location matching the existing site convention.
+
+## Step 1: study the existing pattern
+
+Open two or three existing pages under /essays-and-culture/ or similar topical/culture sections on the site. Show me:
+
+- The file path and naming convention
+- The HTML or markdown structure (frontmatter, heading hierarchy, image handling, internal link patterns)
+- How SEO metadata is currently handled (meta tags, Open Graph, Twitter cards)
+- How schema markup is currently injected
+- How the page is linked from the essays-and-culture index page and the homepage
+
+Do not guess. Read the actual files and report back before writing anything new.
+
+## Step 2: create the new page
+
+Create a new page for the article titled **"The 2026 Pulitzer Prize for Fiction: What to Watch For"** at the URL path `/essays-and-culture/2026-pulitzer-prize-fiction-contenders/` (or the equivalent convention used on the site).
+
+The article body is in the attached markdown file. Use the frontmatter at the top for page metadata. The article body is the page content.
+
+Key content rules:
+
+- Keep all Bookshop.org affiliate links exactly as written, format is `https://uk.bookshop.org/a/17219/[ISBN]`. Do not modify the tag or ISBNs. If any ISBN returns a 404 on Bookshop.org UK, stop and flag it to me, do not substitute silently.
+- Keep all external links (Pulitzer Prize website, Washington Post, Lit Hub) exactly as written. These are the backlinks for this piece.
+- Keep all book titles in italics.
+- Keep internal links to `/literary-reviews/` and `/craft-theory.html` working.
+- UK English throughout. No em dashes.
+
+## Step 3: SEO metadata
+
+Add the following to the page head, using whatever templating method the rest of the site uses:
+
+- **Page title**: `2026 Pulitzer Prize for Fiction: Contenders and Predictions | Tumbleweed Words`
+- **Meta description**: `The 2026 Pulitzer Prize for Fiction is announced on 4 May. Five American novels that could win, what the jury is watching for, and why it matters.`
+- **Canonical URL**: `https://tumbleweedwords.com/essays-and-culture/2026-pulitzer-prize-fiction-contenders/`
+- **Open Graph title, description, type (article), and URL** matching the above
+- **Twitter card**: summary_large_image, matching title and description
+
+## Step 4: schema markup
+
+Add an Article schema block to the page head:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The 2026 Pulitzer Prize for Fiction: What to Watch For",
+  "description": "The 2026 Pulitzer Prize for Fiction is announced on 4 May. Five American novels that could win, what the jury is watching for, and why it matters.",
+  "author": {
+    "@type": "Person",
+    "name": "David Moran",
+    "url": "https://tumbleweedwords.com/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tumbleweed Words",
+    "url": "https://tumbleweedwords.com/"
+  },
+  "datePublished": "2026-04-06",
+  "dateModified": "2026-04-06",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tumbleweedwords.com/essays-and-culture/2026-pulitzer-prize-fiction-contenders/"
+  },
+  "inLanguage": "en-GB",
+  "articleSection": "Essays and Culture",
+  "keywords": "Pulitzer Prize, 2026 Pulitzer, Pulitzer Prize for Fiction, American literature, literary prizes, Katie Kitamura, Susan Choi, Karen Russell, Patrick Ryan, Lucas Schaefer"
+}
+```
+
+Also add an ItemList schema block containing the five contending books as Book entities with their authors and Bookshop.org URLs, matching the same pattern used on the Five Memoirs page.
+
+## Step 5: internal linking and indexing
+
+- Add the new article to the /essays-and-culture/ index page so it appears as the newest piece. Match the existing card or list item pattern exactly.
+- Add it to the homepage Latest section.
+- Update sitemap.xml to include the new URL.
+- If the site has an RSS feed, add the new article there too.
+
+## Step 6: affiliate disclosure
+
+Confirm the site's existing Bookshop.org affiliate disclosure is present on this page. If the site uses a footer-wide disclosure, nothing to add. If not, add this line at the bottom of the article:
+
+> This page contains Bookshop.org affiliate links. If you buy through them, Tumbleweed Words earns a small commission at no extra cost to you.
+
+## Step 7: verify before committing
+
+Show me:
+
+1. The diff of all changed and created files
+2. Confirmation that every Bookshop.org link uses the affiliate tag `17219` exactly
+3. Confirmation that all four external backlinks (pulitzer.org, washingtonpost.com, lithub.com x2) are intact
+4. Confirmation that the page uses UK English and contains no em dashes
+5. Confirmation that the five book titles are in italics throughout
+
+Commit with a message like `Add 2026 Pulitzer Prize for Fiction contenders piece`. Push to main.
+
+Then remind me to:
+
+1. Check the live page once GitHub Pages has rebuilt
+2. Post a Substack Note within two hours with a teaser and link
+3. Post on LinkedIn later today with a short intro and link
+4. Set a calendar reminder for 4 May 2026 to update the article with the announced winner and finalists
+
+## Notes
+
+- Do not modify the article body. Use it as written.
+- UK English in commit messages and comments.
+- No em dashes in anything you add.
+- If any Bookshop.org ISBN-based URL returns a 404 when tested, stop and flag it. I will provide alternative Bookshop.org book page URLs.
+- The four external backlinks are load-bearing for this piece's authority and SEO. Do not remove or alter them.
+
