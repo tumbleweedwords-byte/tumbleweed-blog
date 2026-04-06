@@ -157,6 +157,33 @@ hr {
   margin: 2rem 0;
 }
 
+/* ── "Originally published on" sign-off ── */
+.pub-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tw-muted);
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+  margin: 0;
+}
+
+.pub-note a {
+  color: var(--tw-purple);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.pub-note a:hover {
+  color: var(--tw-purple-mid);
+  border-bottom: none;
+}
+
 /* ── Primary CTA button (reusable sitewide) ── */
 .btn-primary {
   display: inline-block;
