@@ -138,6 +138,19 @@
   color: #fff !important;
 }
 
+/* ── Header background — cream matching main content areas (#F6F4EE) ── */
+/* .hero-logo-bar has inline style="background:#fff" so needs !important   */
+/* .nav background is in per-page <style> blocks; hamburger.css loads after */
+.hero-logo-bar {
+  background: #F6F4EE !important;
+}
+
+.nav {
+  background: #F6F4EE !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 /* Desktop: hide hamburger and mobile menu entirely */
 @media (min-width: 801px) {
   .hamburger-btn { display: none !important; }
