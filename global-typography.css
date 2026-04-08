@@ -260,6 +260,18 @@ nav.main-nav {
   border-bottom: 2px solid var(--tw-purple);
 }
 
+/* ── Site header — cream background matching main content areas ── */
+/* Overrides the per-page white backgrounds on the logo bar and sticky nav */
+.hero-logo-bar {
+  background: #F6F4EE !important;
+}
+
+.nav {
+  background: #F6F4EE !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 /*
   ─────────────────────────────────────────
   ALL-WRITING PAGE HEADING — replace existing h1 with:
