@@ -120,8 +120,18 @@ h1 em,h2 em{font-style:normal}
     <button class="filter-btn" data-filter="lyric" onclick="setFilter('lyric',this)">Lyric/poetic</button>
     <button class="filter-btn" data-filter="kafka" onclick="setFilter('kafka',this)">Strange/dark</button>
   </div>
+  <div class="filter-row" style="margin-top:.5rem">
+    <span class="filter-label">Type:</span>
+    <button class="filter-btn active" data-type="any" onclick="setTypeFilter('any',this)">Any</button>
+    <button class="filter-btn" data-type="voice" onclick="setTypeFilter('voice',this)">Voice imitation</button>
+    <button class="filter-btn" data-type="constraint" onclick="setTypeFilter('constraint',this)">Constraint</button>
+    <button class="filter-btn" data-type="object" onclick="setTypeFilter('object',this)">Object</button>
+    <button class="filter-btn" data-type="place" onclick="setTypeFilter('place',this)">Place</button>
+    <button class="filter-btn" data-type="time" onclick="setTypeFilter('time',this)">Time</button>
+  </div>
 
   <div class="prompt-card" id="prompt-card">
+    <div id="p-classic-wrap">
     <div class="prompt-section">
       <span class="ps-label">City &amp; setting</span>
       <span class="ps-value" id="p-city">Click generate to get your first prompt</span>
@@ -140,6 +150,13 @@ h1 em,h2 em{font-style:normal}
     <div class="prompt-section">
       <span class="ps-label">Formal constraint</span>
       <span class="constraint-badge" id="p-constraint">&mdash;</span>
+    </div>
+    </div>
+    <div id="p-simple-wrap" style="display:none">
+      <div class="prompt-section">
+        <span class="ps-label">Your prompt</span>
+        <span class="ps-value" id="p-simple" style="font-size:1rem;line-height:1.7;font-weight:400">—</span>
+      </div>
     </div>
   </div>
 
@@ -324,6 +341,94 @@ const KAFKA = {
   style: "kafka"
 };
 
+const VOICE = {
+  mode:'simple',
+  label:'Voice imitation',
+  prompts:[
+    "Write 250 words in the voice of Raymond Carver. A man in a kitchen, waiting for a phone call that does not come.",
+    "Write 250 words in the voice of Amy Hempel. An object on a table and what it means that nobody has moved it.",
+    "Write 250 words in the voice of Lydia Davis. A fact about something small, repeated until it becomes strange.",
+    "Write 250 words in the voice of Denis Johnson. A man on a bus at night, going nowhere specific.",
+    "Write 250 words in the voice of Lucia Berlin. A woman at work in a place that does not notice her.",
+    "Write 250 words in the voice of Grace Paley. A conversation between two women about a man neither of them should miss.",
+    "Write 250 words in the voice of Charles Bukowski. A Tuesday afternoon. Nothing happens. Write it anyway.",
+    "Write 250 words in the voice of Lorrie Moore. A woman in her thirties realises something she should have known at twenty.",
+    "Write 250 words in the voice of Joy Williams. Something wrong with the natural world, described without alarm.",
+    "Write 250 words in the voice of Mary Robison. Two people in a car. One of them is lying. Do not say which one."
+  ]
+};
+const CONSTRAINT_POOL = {
+  mode:'simple',
+  label:'Constraint',
+  prompts:[
+    "Write a 200-word story with no adjectives.",
+    "Write a 150-word story in a single sentence.",
+    "Write a 300-word story where every paragraph begins with the same word.",
+    "Write a 250-word story with no dialogue but two characters who clearly dislike each other.",
+    "Write a 200-word story told entirely through the objects in a room.",
+    "Write a 350-word story where the narrator never uses the word 'I'.",
+    "Write a 200-word story in reverse chronological order.",
+    "Write a 250-word story using only short declarative sentences. No sentence longer than eight words.",
+    "Write a 300-word story where the protagonist makes one decision and you show only its aftermath.",
+    "Write a 200-word story set entirely in the moment of waiting. Nothing arrives.",
+    "Write a 250-word story with no proper nouns — no character names, no place names.",
+    "Write a 180-word story that begins and ends with the same sentence.",
+    "Write a 300-word story from the point of view of a character who is wrong about everything they think they know.",
+    "Write a 200-word story where each paragraph is shorter than the one before it.",
+    "Write a 250-word story with no similes and no metaphors — only literal, physical language."
+  ]
+};
+const OBJECT_POOL = {
+  mode:'simple',
+  label:'Object',
+  prompts:[
+    "Write a 200-word story that contains a broken kettle.",
+    "Write a 200-word story in which an unpaid bill on a kitchen table becomes the point of everything.",
+    "Write a 200-word story involving a stranger's umbrella left on a train.",
+    "Write a 200-word story that contains a child's drawing pinned to a fridge.",
+    "Write a 200-word story in which a jar of olives is the most important object in the room.",
+    "Write a 200-word story about a missing cat that is not really about a missing cat.",
+    "Write a 200-word story in which a wedding ring on a kitchen counter says everything.",
+    "Write a 200-word story in which a phone rings in an empty room. Do not explain whose it is.",
+    "Write a 200-word story built around a torn photograph.",
+    "Write a 200-word story in which a single shoe by a door raises a question no one in the story answers."
+  ]
+};
+const PLACE_POOL = {
+  mode:'simple',
+  label:'Place',
+  prompts:[
+    "Write a 200-word story set in a launderette at 3am.",
+    "Write a 200-word story set in a bus station in February.",
+    "Write a 200-word story set beside a hotel swimming pool in winter.",
+    "Write a 200-word story set in a kitchen the morning after a party.",
+    "Write a 200-word story set in a hospital corridor.",
+    "Write a 200-word story set in a budget supermarket on Christmas Eve.",
+    "Write a 200-word story set in a small church that nobody is using.",
+    "Write a 200-word story set in a graveyard in the rain.",
+    "Write a 200-word story set in a railway buffet car on a delayed train.",
+    "Write a 200-word story set in a barber's shop on a slow afternoon."
+  ]
+};
+const TIME_POOL = {
+  mode:'simple',
+  label:'Time',
+  prompts:[
+    "Write a 200-word story set in the ten minutes before a phone call.",
+    "Write a 200-word story set in the hour after a funeral.",
+    "Write a 200-word story set on the morning of a leaving day.",
+    "Write a 200-word story set on a Tuesday afternoon in November.",
+    "Write a 200-word story set during the last cigarette of a packet.",
+    "Write a 200-word story set in the moment a kettle boils.",
+    "Write a 200-word story set in the second a door closes.",
+    "Write a 200-word story set in the night before a verdict.",
+    "Write a 200-word story set in the first hour of a train journey.",
+    "Write a 200-word story set in the moment before someone says something they cannot take back."
+  ]
+};
+const TYPE_POOLS = {voice:VOICE,constraint:CONSTRAINT_POOL,object:OBJECT_POOL,place:PLACE_POOL,time:TIME_POOL};
+let currentTypeFilter = 'any';
+
 const POOLS = { all: DATA.all, carver: CARVER, hemingway: HEMINGWAY, lyric: LYRIC, kafka: KAFKA };
 let currentFilter = 'all';
 let genCount = 0;
@@ -333,33 +438,60 @@ function rnd(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
 
 function setFilter(f, btn) {
   currentFilter = f;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  generate();
+}
+
+function setTypeFilter(f, btn) {
+  currentTypeFilter = f;
+  document.querySelectorAll('[data-type]').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   generate();
 }
 
 function generate() {
-  const pool = POOLS[currentFilter] || POOLS.all;
+  let pool;
+  if (currentTypeFilter !== 'any') {
+    pool = TYPE_POOLS[currentTypeFilter];
+  } else {
+    pool = POOLS[currentFilter] || POOLS.all;
+  }
   const card = document.getElementById('prompt-card');
   card.classList.add('loading');
   setTimeout(() => {
-    const city = rnd(pool.cities);
-    const theme = rnd(pool.themes);
-    const opening = rnd(pool.openings);
-    const constraint = rnd(pool.constraints);
-    document.getElementById('p-city').textContent = city;
-    document.getElementById('p-theme').textContent = theme;
-    document.getElementById('p-opening').textContent = '"' + opening + '"';
-    document.getElementById('p-constraint').textContent = constraint;
+    if (pool.mode === 'simple') {
+      document.getElementById('p-classic-wrap').style.display = 'none';
+      document.getElementById('p-simple-wrap').style.display = 'flex';
+      const prompt = pool.prompts[Math.floor(Math.random()*pool.prompts.length)];
+      document.getElementById('p-simple').textContent = prompt;
+      currentPrompt = { prompt };
+    } else {
+      document.getElementById('p-classic-wrap').style.display = '';
+      document.getElementById('p-simple-wrap').style.display = 'none';
+      const city = rnd(pool.cities);
+      const theme = rnd(pool.themes);
+      const opening = rnd(pool.openings);
+      const constraint = rnd(pool.constraints);
+      document.getElementById('p-city').textContent = city;
+      document.getElementById('p-theme').textContent = theme;
+      document.getElementById('p-opening').textContent = '"' + opening + '"';
+      document.getElementById('p-constraint').textContent = constraint;
+      currentPrompt = { city, theme, opening, constraint };
+    }
     genCount++;
     document.getElementById('counter').textContent = genCount + ' prompt' + (genCount!==1?'s':'') + ' generated';
-    currentPrompt = { city, theme, opening, constraint };
     card.classList.remove('loading');
   }, 150);
 }
 
 function copyPrompt() {
-  const text = `Flash fiction prompt from Tumbleweed Words:\n\nSetting: ${currentPrompt.city}\nTheme: ${currentPrompt.theme}\nOpening line: "${currentPrompt.opening}"\nConstraint: ${currentPrompt.constraint}\n\nGet more prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
+  let text;
+  if (currentPrompt.prompt) {
+    text = `Writing prompt from Tumbleweed Words:\n\n${currentPrompt.prompt}\n\nGet more prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
+  } else {
+    text = `Flash fiction prompt from Tumbleweed Words:\n\nSetting: ${currentPrompt.city}\nTheme: ${currentPrompt.theme}\nOpening line: "${currentPrompt.opening}"\nConstraint: ${currentPrompt.constraint}\n\nGet more prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
+  }
   navigator.clipboard.writeText(text).then(() => {
     const btn = event.target;
     const orig = btn.textContent;
@@ -369,7 +501,12 @@ function copyPrompt() {
 }
 
 function sharePrompt() {
-  const text = `Flash fiction prompt from @tumbleweedwords:\n\n📍 ${currentPrompt.city}\n💡 Theme: ${currentPrompt.theme}\n✍️ "${currentPrompt.opening}"\n⚡ Constraint: ${currentPrompt.constraint}\n\nGet free prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
+  let text;
+  if (currentPrompt.prompt) {
+    text = `Writing prompt from @tumbleweedwords:\n\n✍️ ${currentPrompt.prompt}\n\nGet free prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
+  } else {
+    text = `Flash fiction prompt from @tumbleweedwords:\n\n📍 ${currentPrompt.city}\n💡 Theme: ${currentPrompt.theme}\n✍️ "${currentPrompt.opening}"\n⚡ Constraint: ${currentPrompt.constraint}\n\nGet free prompts: https://tumbleweedwords.com/flash-fiction-prompts.html`;
+  }
   window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text), '_blank');
 }
 

@@ -134,9 +134,22 @@ h1 em,h2 em{font-style:normal}
       <button class="fb" data-form="poetry" onclick="filter('form','poetry',this)">Poetry</button>
       <button class="fb" data-form="essay" onclick="filter('form','essay',this)">Essays/CNF</button>
     </div>
+    <div class="filter-group">
+      <span class="fg-label">Country</span>
+      <button class="fb active" data-country="all" onclick="filter('country','all',this)">All</button>
+      <button class="fb" data-country="us" onclick="filter('country','us',this)">US</button>
+      <button class="fb" data-country="uk" onclick="filter('country','uk',this)">UK</button>
+      <button class="fb" data-country="ireland" onclick="filter('country','ireland',this)">Ireland</button>
+      <button class="fb" data-country="international" onclick="filter('country','international',this)">International</button>
+    </div>
+    <div class="filter-group">
+      <span class="fg-label">Window</span>
+      <button class="fb active" data-open="all" onclick="filter('open','all',this)">All</button>
+      <button class="fb" data-open="open" onclick="filter('open','open',this)">Open now</button>
+    </div>
   </div>
 
-  <div class="results-meta" id="results-meta">Showing all 32 magazines</div>
+  <div class="results-meta" id="results-meta">Showing all magazines</div>
 
   <div class="grid" id="grid"></div>
 
@@ -193,13 +206,31 @@ const MAGS = [
   {name:"Kenyon Review",pay:"pro",rt:"slow",form:["short","poetry","essay"],desc:"One of America's most prestigious literary journals. Pays pro rates. Very competitive.",payLabel:"Pro rates",url:"https://kenyonreview.org/submissions/",tags:["Very high prestige","Pro rates","Very competitive"]},
   {name:"Virginia Quarterly Review",pay:"pro",rt:"slow",form:["short","poetry","essay"],desc:"University of Virginia. National Magazine Award winner. Pro rates. Very competitive.",payLabel:"Pro rates",url:"https://www.vqronline.org/about/submissions",tags:["Very high prestige","Pro rates","National award winner"]},
   {name:"Boulevard",pay:"semi",rt:"medium",form:["short","poetry","essay"],desc:"Pays $0.03/word up to $200. Flash fiction welcome. Good mid-tier prestige journal.",payLabel:"Pays $0.03/word",url:"https://boulevardmagazine.org/submit/",tags:["Pays","Flash welcome","Mid-prestige"]},
-  {name:"Necessary Fiction",pay:"none",rt:"fast",form:["flash","short"],desc:"Online literary journal. Flash and short fiction. Thoughtful editing. Fast response.",payLabel:"Prestige (non-paying)",url:"https://necessaryfiction.com/submissions",tags:["Flash & short","Fast response","Online"]}
+  {name:"Necessary Fiction",pay:"none",rt:"fast",form:["flash","short"],desc:"Online literary journal. Flash and short fiction. Thoughtful editing. Fast response.",payLabel:"Prestige (non-paying)",url:"https://necessaryfiction.com/submissions",tags:["Flash & short","Fast response","Online"]},
+  {name:"The Paris Review",pay:"pro",rt:"slow",form:["short","poetry","essay"],desc:"One of the most prestigious literary journals in the world. Pays well. Interview series is legendary. Open year-round.",payLabel:"Pro rates",url:"https://www.theparisreview.org/submissions",tags:["Very high prestige","Pro rates","Legendary interviews"],country:"us",open:true},
+  {name:"Granta",pay:"pro",rt:"slow",form:["short","essay","poetry"],desc:"UK-based flagship literary magazine. Thematic issues. Pays well. Hard to crack but career-defining.",payLabel:"Pro rates",url:"https://granta.com/about/submissions/",tags:["Very high prestige","Pro rates","UK flagship"],country:"uk",open:true},
+  {name:"The White Review",pay:"semi",rt:"slow",form:["short","essay","poetry"],desc:"London-based. Serious literary ambition. Pays for fiction and poetry. Strong visual and critical identity.",payLabel:"Pays",url:"https://www.thewhitereview.org/submissions/",tags:["UK-based","Pays","Critical prestige"],country:"uk",open:true},
+  {name:"The Stinging Fly",pay:"semi",rt:"medium",form:["short","flash","poetry"],desc:"Dublin-based. The most important Irish literary magazine of its generation. Pays. Open reading periods.",payLabel:"Pays",url:"https://stingingfly.org/submissions",tags:["Irish flagship","Pays","Open periods"],country:"ireland",open:true},
+  {name:"Tin House Online",pay:"pro",rt:"slow",form:["flash","short","essay","poetry"],desc:"Top-tier US literary journal. Open reading periods only. Pro rates. Flash via weekly Flash Fidelity column.",payLabel:"Pro rates",url:"https://tinhouse.com/submissions/",tags:["Pro rates","Open periods only","Very high prestige"],country:"us",open:true},
+  {name:"McSweeney's Internet Tendency",pay:"semi",rt:"fast",form:["flash","essay"],desc:"Satirical literary humour. Short, punchy pieces. Fast response. Culturally influential.",payLabel:"Pays",url:"https://www.mcsweeneys.net/submissions",tags:["Satire","Fast response","Pays"],country:"us",open:true},
+  {name:"Joyland Magazine",pay:"none",rt:"medium",form:["short","flash"],desc:"Literary fiction focused. Strong Canadian and international voice. High prestige for emerging writers.",payLabel:"Prestige (non-paying)",url:"https://joylandmagazine.com/submissions/",tags:["Emerging writers","High prestige","Flash & short"],country:"us",open:true},
+  {name:"The Common",pay:"semi",rt:"medium",form:["short","essay","poetry"],desc:"Pays writers. Focus on place and the world. Amherst College journal. Strong literary reputation.",payLabel:"Pays",url:"https://www.thecommononline.org/submit/",tags:["Pays","Place-focused","Academic prestige"],country:"us",open:true},
+  {name:"AGNI",pay:"semi",rt:"slow",form:["short","essay","poetry"],desc:"Boston University. One of the oldest and most respected US literary journals. Pays. High competition.",payLabel:"Pays",url:"https://agnionline.bu.edu/submissions/",tags:["Very high prestige","Pays","Boston University"],country:"us",open:true},
+  {name:"The Iowa Review",pay:"semi",rt:"slow",form:["short","essay","poetry"],desc:"University of Iowa. Iowa Writers' Workshop prestige. Pays. Annual prize. High competition.",payLabel:"Pays",url:"https://iowareview.org/submit",tags:["Iowa prestige","Pays","Annual prize"],country:"us",open:true},
+  {name:"New England Review",pay:"semi",rt:"slow",form:["short","essay","poetry"],desc:"Middlebury College. One of the top US literary journals. Pays. Print and online. High prestige.",payLabel:"Pays",url:"https://www.nereview.com/submissions/",tags:["Very high prestige","Pays","Print journal"],country:"us",open:true},
+  {name:"Ploughshares Solos",pay:"pro",rt:"slow",form:["flash","short"],desc:"Flash and short fiction imprint of Ploughshares. Pro rates. Very high prestige. Worth the slow response.",payLabel:"Pro rates",url:"https://pshares.org/submit",tags:["Pro rates","Very high prestige","Flash welcome"],country:"us",open:true},
+  {name:"CRAFT Literary",pay:"semi",rt:"medium",form:["flash","short","essay"],desc:"Pays for flash ($100) and short stories ($200). Focused on craft. Fast growing prestige. Flash open year-round.",payLabel:"Pays $100–$200",url:"https://www.craftliterary.com/submissions/",tags:["Pays for flash","Craft-focused","Year-round"],country:"us",open:true},
+  {name:"Fractured Lit",pay:"token",rt:"fast",form:["flash"],desc:"Flash fiction under 1,000 words. Token payment. Fast turnaround. Known for formally inventive work.",payLabel:"Token payment",url:"https://www.fracturedlit.com/submit",tags:["Flash only","Fast response","Formally inventive"],country:"us",open:true},
+  {name:"Banshee",pay:"semi",rt:"medium",form:["short","flash","poetry","essay"],desc:"Dublin-based. Irish and international writers. Pays. Strong editorial identity. Biannual.",payLabel:"Pays",url:"https://bansheelit.com/submissions/",tags:["Irish-based","Pays","Biannual"],country:"ireland",open:true},
+  {name:"Wasafiri",pay:"semi",rt:"medium",form:["short","essay","poetry"],desc:"UK-based. Focuses on international and postcolonial writing. Pays. Queen Mary University, London.",payLabel:"Pays",url:"https://www.wasafiri.org/submissions/",tags:["UK-based","International focus","Pays"],country:"uk",open:true},
+  {name:"Black Warrior Review",pay:"semi",rt:"medium",form:["short","flash","poetry","essay"],desc:"University of Alabama. Annual award. Pays. Strong reputation. Publishes established and emerging writers.",payLabel:"Pays",url:"https://bwr.ua.edu/submit/",tags:["Pays","Annual award","University journal"],country:"us",open:true},
+  {name:"Adroit Journal",pay:"none",rt:"medium",form:["short","poetry","essay"],desc:"Prestigious online journal for emerging writers. High quality. Non-paying but strong prestige for early career.",payLabel:"Prestige (non-paying)",url:"https://theadroitjournal.org/submissions/",tags:["Emerging writers","High prestige","Online"],country:"us",open:true},
+  {name:"The Florida Review",pay:"semi",rt:"medium",form:["short","flash","poetry","essay"],desc:"University of Central Florida. Pays. Annual Editors' Prize includes flash fiction category.",payLabel:"Pays",url:"https://floridareview.ucf.edu/submissions/",tags:["Pays","Flash prize","University journal"],country:"us",open:true}
 ];
 
 const PAY_LABELS = {pro:"Pro rates",semi:"Pays",token:"Token pay",none:"Non-paying"};
 const PAY_CLASSES = {pro:"pay-pro",semi:"pay-semi",token:"pay-token",none:"pay-none"};
-let activeFilters = {pay:"all",rt:"medium",form:"all"};
-activeFilters = {pay:"all",rt:"all",form:"all"};
+let activeFilters = {pay:"all",rt:"all",form:"all",country:"all",open:"all"};
 
 const RT_MAP = {fast:60,medium:120,slow:999};
 
@@ -222,6 +253,8 @@ function render() {
       const rtLimits = {fast:[0,60],medium:[61,120],slow:[121,999]};
       const [lo,hi] = rtLimits[activeFilters.rt];
     }
+    if (activeFilters.country !== 'all' && m.country !== activeFilters.country) show = false;
+    if (activeFilters.open === 'open' && !m.open) show = false;
     card.classList.toggle('hidden', !show);
     if (show) visible++;
   });

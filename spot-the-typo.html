@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8B7DYTLXQC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if(document.cookie.split(';').some(function(c){return c.trim().startsWith('tw_consent=accept');})){gtag('config','G-8B7DYTLXQC');}
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spot the Typo: A Literary Editing Game | Tumbleweed Words</title>
+<meta name="description" content="A literary game. Ten pieces of original fiction, each with one hidden typo. Test your editor's eye and score yourself out of ten.">
+<meta name="keywords" content="spot the typo game, literary editing game, proofreading quiz, find the error fiction, editing game, copy editing quiz">
+<meta name="author" content="David — Tumbleweed Words">
+<meta name="robots" content="max-image-preview:large">
+<link rel="canonical" href="https://tumbleweedwords.com/spot-the-typo.html">
+<meta property="og:title" content="Spot the Typo: A Literary Editing Game | Tumbleweed Words">
+<meta property="og:description" content="A literary game. Ten pieces of original fiction, each with one hidden typo. Test your editor's eye and score yourself out of ten.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spot the Typo: A Literary Editing Game | Tumbleweed Words">
+<meta name="twitter:description" content="Ten pieces of original fiction, each with one hidden typo. Test your editor's eye and score yourself out of ten.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&amp;family=Special+Elite&amp;display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&amp;family=Special+Elite&amp;display=swap"></noscript>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#5533E8;--p2:#6644F5;--pl:#EEEDFE;--pl2:#d4d0fc;--txt:#1a1820;--txt2:#3d3a50;--mu:#615f75;--fa:#5e5c72;--bg:#F9F8F4;--bg2:#F3F1EB;--br:#e8e6f5;--fd:"Fraunces",Georgia,serif;--fb:"Source Serif 4",Georgia,serif;--fm:ui-monospace,"SF Mono",monospace}
+html{font-size:18px;scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--p);text-decoration:none}a:hover{color:var(--p2)}
+.wrap{min-height:100vh;display:flex;flex-direction:column}
+.nav{background:var(--bg);border-bottom:2px solid var(--p);padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nlogo{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--p);letter-spacing:-.01em;text-transform:none}
+.ncta{background:var(--p);color:#fff;padding:.35rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+.ncta:hover{background:var(--p2);color:#fff}
+main{flex:1;max-width:720px;margin:0 auto;padding:3rem 2rem 4rem;width:100%}
+.tag{font-family:var(--fm);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.8rem;display:block}
+h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.8rem);font-weight:700;color:var(--txt);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}
+.standfirst{font-size:1rem;color:var(--mu);max-width:52ch;line-height:1.72;margin-bottom:2rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem}
+.ft{border-top:1px solid var(--br);padding:2rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-top:auto}
+.ft-c{font-family:var(--fm);font-size:.70rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+.ft-l{display:flex;gap:1.2rem}.ft-l a{font-family:var(--fm);font-size:.70rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa)}.ft-l a:hover{color:var(--p)}
+/* btn-start */
+.btn-start{background:var(--p);color:#fff;border:none;padding:.7rem 2rem;border-radius:3px;font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .15s}
+.btn-start:hover{background:var(--p2)}
+/* game screens */
+.screen{display:none}.screen.on{display:block}
+/* progress */
+.progress-wrap{margin-bottom:1.5rem}
+.progress-bar{height:4px;background:var(--br);border-radius:2px;overflow:hidden;margin-bottom:.5rem}
+.progress-fill{height:100%;background:var(--p);border-radius:2px;transition:width .4s ease}
+.q-meta{display:flex;justify-content:space-between;align-items:center}
+.q-num{font-family:var(--fm);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p)}
+.q-count{font-family:var(--fm);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fa)}
+/* setting label */
+.snippet-setting{font-family:var(--fm);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.6rem;display:block}
+/* snippet card */
+.snippet-card{background:var(--bg);border:1.5px solid var(--p);border-radius:8px;padding:2rem 2rem 1.6rem;margin-bottom:1.5rem}
+.snippet-text{font-family:var(--fb);font-size:.95rem;color:var(--txt2);line-height:1.82;font-weight:300}
+/* options */
+.opts{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+.opt{padding:.9rem 1.1rem;border:1px solid var(--br);border-radius:6px;font-family:var(--fb);font-size:.9rem;color:var(--mu);cursor:pointer;transition:all .15s;background:var(--bg);text-align:left;line-height:1.6;font-weight:300;display:flex;gap:.7rem;align-items:flex-start}
+.opt:hover:not([disabled]){border-color:var(--p);color:var(--txt);background:var(--pl)}
+.opt[disabled]{cursor:default;pointer-events:none}
+.opt-label{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);flex-shrink:0;margin-top:.18rem;min-width:1.2rem}
+.opt.correct{border-color:#166534;background:#f0fdf4;color:#14532d}
+.opt.correct .opt-label{color:#14532d}
+.opt.wrong{border-color:#9a3412;background:#fff7ed;color:#7c2d12}
+.opt.wrong .opt-label{color:#7c2d12}
+/* explanation */
+.explanation{background:var(--pl);border-left:3px solid var(--p);border-radius:0 6px 6px 0;padding:1rem 1.2rem;margin-bottom:1.5rem;display:none}
+.explanation.on{display:block}
+.explanation-label{font-family:var(--fm);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p);margin-bottom:.4rem}
+.explanation-text{font-family:var(--fb);font-size:.88rem;color:var(--txt2);line-height:1.72}
+/* next button */
+.btn-next{background:var(--p);color:#fff;border:none;padding:.65rem 1.5rem;border-radius:3px;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:none;transition:background .15s}
+.btn-next:hover{background:var(--p2)}
+/* score screen */
+.score-eyebrow{font-family:var(--fm);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p);margin-bottom:.6rem;display:block;border-bottom:1.5px solid var(--p);padding-bottom:.5rem;display:inline-block}
+.score-number{font-family:var(--fd);font-size:clamp(3rem,8vw,5rem);font-weight:900;color:var(--p);line-height:1;margin:.6rem 0 .3rem;letter-spacing:-.03em}
+.score-label{font-family:var(--fd);font-size:clamp(1.3rem,3vw,1.8rem);font-weight:600;color:var(--txt);letter-spacing:-.02em;margin-bottom:1rem;line-height:1.2}
+.score-desc{font-size:.95rem;color:var(--mu);line-height:1.72;margin-bottom:1.5rem;border-bottom:1px solid var(--br);padding-bottom:1.5rem;max-width:48ch}
+.share-row{display:flex;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.share-btn{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.4rem .9rem;border-radius:3px;font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .15s}
+.share-btn:hover{border-color:var(--p);color:var(--p);background:var(--pl)}
+.btn-retry{background:transparent;border:1px solid var(--br);color:var(--mu);padding:.45rem 1rem;border-radius:3px;font-family:var(--fm);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .15s}
+.btn-retry:hover{background:var(--bg2)}
+.cta-band{background:var(--pl);border-left:3px solid var(--p);padding:1.4rem 1.6rem;border-radius:0 6px 6px 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
+.cta-t{font-size:.9rem;color:var(--mu);line-height:1.6;max-width:44ch}
+.cta-t strong{color:var(--txt);font-weight:500;display:block;margin-bottom:.2rem}
+.cta-btn{background:var(--p);color:#fff;padding:.55rem 1.2rem;border-radius:3px;font-family:var(--fm);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.cta-btn:hover{background:var(--p2);color:#fff}
+@media(max-width:560px){.share-row{flex-direction:column}}
+</style>
+<style>
+.nav{position:sticky;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:2px solid #5533E8;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo,.nlogo{font-family:"Fraunces",Georgia,serif;font-size:1.1rem;font-weight:700;color:#1a1820;letter-spacing:-.02em;flex-shrink:0;text-decoration:none;transition:color .15s}
+.nav-logo:hover,.nlogo:hover{color:#5533E8}
+.nlinks{display:flex;gap:2rem;align-items:center;justify-content:center;flex:1}
+.nlink{font-family:'Courier New',Courier,monospace;font-size:18px;font-weight:700;color:#000;transition:color .15s;white-space:nowrap;text-decoration:none;letter-spacing:0.5px;text-transform:none}
+.nlink:hover{color:#5533E8}
+.ncta{background:#5533E8;color:#fff!important;padding:.44rem 1.2rem;border-radius:3px;font-family:ui-monospace,"SF Mono",monospace;font-size:.56rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0;text-decoration:none;transition:background .15s;white-space:nowrap}
+.ncta:hover{background:#6644F5!important}
+h1 em,h2 em{font-style:normal}
+.sec-label{font-size:.75rem!important;display:inline-block!important;border:1.5px solid #5533E8!important;padding:.26rem .9rem!important;padding-bottom:.26rem!important;margin-bottom:2.4rem!important}.sec-eye{border:1.5px solid #5533E8!important;padding:.26rem .85rem!important;display:inline-flex!important;gap:.6rem!important}
+.card-desc,.inf-sub,.pod-desc,.tc-desc{color:#3d3a50!important}
+@media(max-width:800px){.hide-m{display:none!important}}
+@media(max-width:480px){.ncta{padding:.38rem .9rem;font-size:.5rem}.nav{padding:0 1rem}.ft{padding:1rem;flex-wrap:wrap}}
+</style>
+<style>.breadcrumb{font-family:ui-monospace,"SF Mono",monospace;font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:#9896a8;padding:.55rem 2.5rem;background:#F6F4EE;border-bottom:1px solid #D4D0C4;display:flex;align-items:center}.breadcrumb a{color:#6B6880;text-decoration:none}.breadcrumb a:hover{color:#5533E8}.bc-sep{margin:0 .4rem;color:#D4D0C4}</style>
+<meta property="og:image" content="https://tumbleweedwords.com/hero-1.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style id="nsearch-css">.nsearch{position:relative;display:flex;align-items:center;flex-shrink:0;margin-right:.5rem}.nsearch-btn{background:#fff;border:1px solid #D4D0C4;cursor:pointer;color:#1a1820;padding:.38rem;display:flex;align-items:center;border-radius:3px;transition:color .15s}.nsearch-btn:hover,.nsearch-btn.active{color:#5533E8}.nsearch-wrap{display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1.5px solid #5533E8;border-radius:3px;overflow:hidden;width:230px;z-index:500;box-shadow:0 4px 16px rgba(85,51,232,.15)}.nsearch-wrap.open{display:flex}.nsearch-input{flex:1;border:none;padding:.5rem .85rem;font-family:"Source Serif 4",Georgia,serif;font-size:.8rem;color:#1a1820;outline:none;background:transparent;min-width:0}.nsearch-go{background:#5533E8;border:none;cursor:pointer;padding:.5rem .7rem;color:#fff;display:flex;align-items:center;transition:background .15s;flex-shrink:0}.nsearch-go:hover{background:#6644F5}@media(max-width:600px){.nsearch-wrap.open{width:min(200px,calc(100vw - 2rem));right:0}}</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "headline": "Spot the Typo: A Literary Editing Game", "author": {"@type": "Person", "name": "David Moran", "url": "https://tumbleweedwords.com/about.html", "sameAs": ["https://tumbleweedwords.substack.com"]}, "publisher": {"@type": "Organization", "name": "Tumbleweed Words", "url": "https://tumbleweedwords.com"}, "datePublished": "2026-04-11", "dateModified": "2026-04-11", "image": "https://tumbleweedwords.com/hero-1.webp", "url": "https://tumbleweedwords.com/spot-the-typo.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tumbleweedwords.com/spot-the-typo.html"}}</script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*.html"},{"not":{"selector_matches":"a[rel~='nofollow']"}}]},"eagerness":"conservative"}]}
+</script>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/typewriter.css"><noscript><link rel="stylesheet" href="/typewriter.css"></noscript>
+<link rel="stylesheet" href="/hamburger.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3615939042251794"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Must Reads</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><a href="/essays-and-culture.html#tools" class="nlink hide-m">Tools</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Must Reads</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/faq.html">FAQ</a><a href="/essays-and-culture.html#tools">Tools</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
+<div class="breadcrumb"><a href="/">Tumbleweed Words</a><span class="bc-sep">&rsaquo;</span><a href="/essays-and-culture.html#tools">Tools</a><span class="bc-sep">&rsaquo;</span><span>Spot the Typo</span></div>
+<main>
+  <span class="tag">Literary Game &middot; Tumbleweed Words</span>
+  <h1>Spot the <em style="color:var(--p)">Typo</em></h1>
+  <p class="standfirst">Ten short pieces of fiction. Each one contains a single typo or grammatical error. Find it. Score yourself out of ten.</p>
+
+  <!-- Intro screen -->
+  <div class="screen on" id="s-intro">
+    <button class="btn-start" onclick="startGame()">Start the game &rarr;</button>
+  </div>
+
+  <!-- Game screen -->
+  <div class="screen" id="s-game">
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
+      <div class="q-meta"><span class="q-num" id="q-num">Round 1</span><span class="q-count" id="q-count">1 of 10</span></div>
+    </div>
+    <span class="snippet-setting" id="snippet-setting"></span>
+    <div class="snippet-card"><p class="snippet-text" id="snippet-text"></p></div>
+    <div class="opts" id="opts"></div>
+    <div class="explanation" id="explanation">
+      <div class="explanation-label">The error</div>
+      <p class="explanation-text" id="explanation-text"></p>
+    </div>
+    <button class="btn-next" id="btn-next" onclick="nextRound()">Next &rarr;</button>
+  </div>
+
+  <!-- Results screen -->
+  <div class="screen" id="s-result">
+    <span class="score-eyebrow">Your score</span>
+    <div class="score-number" id="r-score"></div>
+    <div class="score-label" id="r-label"></div>
+    <p class="score-desc" id="r-desc"></p>
+    <div class="share-row">
+      <button class="share-btn" onclick="shareTwitter()">Share on X &rarr;</button>
+      <button class="share-btn" onclick="shareWhatsApp()">Share on WhatsApp &rarr;</button>
+      <button class="share-btn" onclick="copyShare()">Copy &amp; share</button>
+    </div>
+    <button class="btn-retry" onclick="restartGame()">Play again</button>
+    <div class="cta-band">
+      <div class="cta-t">
+        <strong>Tumbleweed Words &mdash; Substack Newsletter</strong>
+        Flash fiction written on trains across Europe and South America. Five years on Substack, over 1,200 readers. Free.
+      </div>
+      <a href="https://tumbleweedwords.substack.com" class="cta-btn" target="_blank" rel="noopener">Subscribe free &rarr;</a>
+    </div>
+  </div>
+
+</main>
+<section style="background:var(--bg2,#EDEBE3);border-top:2px solid var(--p,#5533E8);padding:4rem 2rem;text-align:center"><div style="max-width:560px;margin:0 auto"><h2 style="font-family:var(--fd,'Fraunces',Georgia,serif);font-size:clamp(1.2rem,2.5vw,1.65rem);font-weight:700;color:var(--ink,#1a1820);letter-spacing:-.02em;margin-bottom:.7rem;line-height:1.2">Written from anywhere<br><em style="color:var(--p,#5533E8);font-style:normal">Sent to your inbox</em></h2><p style="font-family:var(--fb,'Source Serif 4',Georgia,serif);font-size:.82rem;color:var(--mu,#6B6880);line-height:1.75;margin-bottom:1.4rem;font-weight:300">Internationally published literary fiction and poetry, delivered in bitesize portions to your inbox. Free, every week.</p><form action="https://tumbleweedwords.substack.com/api/v1/free" method="post" target="_blank" style="display:flex;gap:.5rem;max-width:420px;margin:0 auto"><input type="email" name="email" placeholder="Your email address" required autocomplete="email" style="flex:1;background:#fff;border:1.5px solid var(--br,#D4D0C4);color:var(--ink,#1a1820);font-family:var(--fb,'Source Serif 4',Georgia,serif);font-size:.78rem;padding:.7rem 1rem;outline:none;transition:border-color .2s"><button type="submit" style="background:var(--p,#5533E8);color:#fff;font-family:var(--fm,ui-monospace,monospace);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.2rem;border:none;cursor:pointer;white-space:nowrap;transition:background .15s">Subscribe free &rarr;</button></form><p style="font-family:var(--fm,ui-monospace,monospace);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa,#9896a8);margin-top:.7rem">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p></div></section>
+<footer class="ft">
+  <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
+  <nav class="ft-l">
+    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="/all-writing.html">Fiction &amp; Poetry</a>
+    <a href="/podcasts.html">Podcasts</a>
+    <a href="/about.html">About</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/essays-and-culture.html#tools">Tools</a>
+    <a href="/sitemap.xml">Sitemap</a>
+    <a href="https://uk.bookshop.org/shop/tumbleweedwords" target="_blank" rel="noopener">Browse the bookshop</a>
+  </nav>
+  <p style="width:100%;margin:.75rem 0 0;font-family:var(--fm);font-size:.70rem;letter-spacing:.08em;color:var(--fa);text-align:center;">Tumbleweed Words is a Bookshop.org affiliate. Book links on this site earn a small commission that supports the work, at no extra cost to you.</p>
+</footer>
+</div>
+
+<script>
+const LABELS = ['A','B','C','D','E'];
+
+const ROUNDS = [
+  {
+    id: 1,
+    setting: "Berlin Ostbahnhof, 11pm",
+    text: `There were twelve people on the platform and none of them were looking at each other. Marcus had been standing by the yellow line for six minutes, not because the train was late — it wasn't — but because going home meant sitting in the room where she'd left her books. They were still their on the shelves, the paperbacks she'd alphabetised when she first moved in, the hardbacks she'd never let him touch. He checked the departure board. The train to Lichtenberg left in four minutes. He had taken this train every working day for two years and he had never once paid attention to where it ended up. A woman in a red coat walked to the edge of the platform and looked down at the tracks. She wasn't going to jump. She was just looking at the darkness the way you look at it when you need something to look at. Marcus understood that. He checked the board again. Four minutes hadn't changed.`,
+    opts: [
+      { t: "none of them were looking at each other", correct: false },
+      { t: "They were still their on the shelves", correct: true },
+      { t: "the paperbacks she'd alphabetised when she first moved in", correct: false },
+      { t: "He had taken this train every working day for two years", correct: false },
+      { t: "She wasn't going to jump", correct: false }
+    ],
+    explanation: `"Their" should be "there". "Their" is a possessive pronoun; "there" is the adverb of place needed here.`
+  },
+  {
+    id: 2,
+    setting: "A pub in Glasgow, Friday night",
+    text: `The pub was called The Anchor and it smelled like every pub in Glasgow on a Friday — beer and wet jackets and the particular kind of cheap cologne that mens aftershave comes in. Sheila had worked the bar for eleven years and she knew the Friday crowd the way a vet knows animals: by what they do when they're cornered. The big man in the corner — Gary, she thought, or maybe Gerard — had been nursing the same pint for an hour. That was a bad sign. The happy drunks drank quickly. The dangerous ones made it last. She set two glasses under the tap and pulled without looking. Behind her, the television was showing football. Nobody was watching. The really important things in Glasgow on a Friday happened below the television. The conversation you weren't supposed to have. The money changing hands. The decision made before the third drink that the fourth drink would regret.`,
+    opts: [
+      { t: "it smelled like every pub in Glasgow on a Friday", correct: false },
+      { t: "the particular kind of cheap cologne that mens aftershave comes in", correct: true },
+      { t: "she knew the Friday crowd the way a vet knows animals", correct: false },
+      { t: "The happy drunks drank quickly", correct: false },
+      { t: "The conversation you weren't supposed to have", correct: false }
+    ],
+    explanation: `"mens" should be "men's". It is a possessive noun and requires an apostrophe: men's aftershave.`
+  },
+  {
+    id: 3,
+    setting: "A coastal village in Cornwall",
+    text: `The village had one street and one café and one post office and the post office was closed on Wednesdays, which meant that on Wednesdays the only place to go was the café, which meant that on Wednesdays you found out everything you needed to know about everyone. Eleanor had grown up here. She had left at eighteen and come back at thirty-four and the village had not changed except that the people in it were slightly shorter than she remembered, which meant she had grown. Her mother was in the café. Her mother was always in the café on Wednesdays. Eleanor pushes the door open and the bell above it rang with a sound she had been hearing since she was old enough to walk. Her mother looked up. She didn't smile. She had never been a woman who smiled at arrivals. She was a woman who smiled when people left, which Eleanor had always found either honest or cruel, depending on the day.`,
+    opts: [
+      { t: "the post office was closed on Wednesdays", correct: false },
+      { t: "the village had not changed except that the people in it were slightly shorter", correct: false },
+      { t: "Eleanor pushes the door open and the bell above it rang", correct: true },
+      { t: "She had never been a woman who smiled at arrivals", correct: false },
+      { t: "honest or cruel, depending on the day", correct: false }
+    ],
+    explanation: `"pushes" should be "pushed". The entire passage is in the past tense; this present-tense verb breaks the consistency of the narrative.`
+  },
+  {
+    id: 4,
+    setting: "A hotel room in Lisbon",
+    text: `The room was on the fourth floor and the window faced west, which meant that the at the end of the afternoon the light came in at an angle that made everything look significant. Paul had been in Lisbon for three days. He had come because it was cheap and because nobody he knew was here and because sometimes those two reasons are enough. He had not brought a book, which was unusual. He had brought a notebook, which was usual. The notebook was on the table and he had not opened it. There was a woman in the hotel bar whose name he had not asked because he was afraid of what asking would start. He was forty-one years old and he was afraid of things he hadn't been afraid of at twenty. That was either wisdom or damage. He wrote nothing in the notebook. He closed the curtains against the light and lay down on the bed and tried to think of something that was not her face.`,
+    opts: [
+      { t: "the window faced west, which meant that the light came in at an angle", correct: false },
+      { t: "He had come because it was cheap and because nobody he knew was here", correct: false },
+      { t: "the at the end of the afternoon the light came in at an angle", correct: true },
+      { t: "There was a woman in the hotel bar whose name he had not asked", correct: false },
+      { t: "That was either wisdom or damage", correct: false }
+    ],
+    explanation: `"the at the end" contains a repeated word — "the" appears twice in a row. One should be removed.`
+  },
+  {
+    id: 5,
+    setting: "A kitchen in Edinburgh, early morning",
+    text: `The kitchen was at the back of the flat, which meant it didn't get light until ten, which meant that every morning began in a particular kind of grey. Helen made coffee without measuring because she had been making it the same way for twenty years and her hands knew the amounts. The window looked out onto a concrete back court where someone had parked a bicycle for so long it had become part of the architecture. She put kettle on. She did this every morning without registering the action, the way you stop registering the things that hold your life together. Her daughter was asleep in the next room. Her daughter was twenty-two and had come back from London three months ago with two suitcases and a look Helen recognised from the mirror. The coffee was ready before the water boiled, which was a failure she repeated every day and never corrected.`,
+    opts: [
+      { t: "every morning began in a particular kind of grey", correct: false },
+      { t: "her hands knew the amounts", correct: false },
+      { t: "She put kettle on", correct: true },
+      { t: "the things that hold your life together", correct: false },
+      { t: "a look Helen recognised from the mirror", correct: false }
+    ],
+    explanation: `"She put kettle on" is missing the article "the" — it should be "She put the kettle on." The brain fills in the missing word, which is exactly what makes this kind of error hard to catch.`
+  },
+  {
+    id: 6,
+    setting: "A bus in Istanbul",
+    text: `The bus to Kad\u0131k\u00f6y was full. Marta stood in the aisle and held the strap above her and watched Istanbul pass in the window — the old city first, the domes and minarets, then the bridge, then the water, then the sprawl of the Asian side spreading out like something still deciding what shape to take. She had been in Istanbul for six weeks and she had not yet been to Kad\u0131k\u00f6y, which was embarrassing. She had been on the European side the whole time, eating in the same restaurant three nights a week because the owner had stopped charging her for bread. The man standing besides her on the bus was reading a newspaper. The newspaper was in Turkish and she couldn't read it but she could read his face and his face said something she recognised. The bus lurched. She grabbed the strap harder. Outside, a mosque she didn't know the name of slid past the window and was gone.`,
+    opts: [
+      { t: "watched Istanbul pass in the window", correct: false },
+      { t: "spreading out like something still deciding what shape to take", correct: false },
+      { t: "she had not yet been to Kad\u0131k\u00f6y, which was embarrassing", correct: false },
+      { t: "The man standing besides her on the bus was reading a newspaper", correct: true },
+      { t: "a mosque she didn't know the name of slid past the window", correct: false }
+    ],
+    explanation: `"besides" should be "beside". "Beside" means next to; "besides" means in addition to or other than. They are different words.`
+  },
+  {
+    id: 7,
+    setting: "A beach at dawn",
+    text: `The beach was empty at five-thirty in the morning. James had been coming here since his father brought him at age seven and the consistency of it — the same stones, the same smell of diesel and salt, the same line where the grey water met the grey sky — was the closest thing he had to religion. The boats was pulled up above the tideline, hulls scraping against the pebbles whenever the wind came off the water. He sat on the overturned crate he had been sitting on since he was seventeen, when his father had sat on it before him. The seagulls were already out. Seagulls didn't wait for the light. They were the most honest things on the beach, wanting what they wanted without apology. James poured coffee from the flask. It was terrible coffee. He drank it every morning and thought the same thing and drank it anyway, which was how most things in his life worked.`,
+    opts: [
+      { t: "the same smell of diesel and salt", correct: false },
+      { t: "the same line where the grey water met the grey sky", correct: false },
+      { t: "The boats was pulled up above the tideline", correct: true },
+      { t: "They were the most honest things on the beach", correct: false },
+      { t: "which was how most things in his life worked", correct: false }
+    ],
+    explanation: `"The boats was" should be "The boats were". "Boats" is plural and requires the plural verb "were", not the singular "was".`
+  },
+  {
+    id: 8,
+    setting: "A secondhand bookshop",
+    text: `The bookshop was on a side street off the main square and it had been there for thirty years, which in this city meant it had survived everything: the recession, the internet, the developers who had tried twice to buy the building and failed. Anna worked Saturdays. She liked the early part of the day, before the customers came, when she could move through the shelves in the particular silence of a room full of language that wasn't speaking. She was reading a old proof copy of a novel she would never stock — too long, too difficult, not what their customers wanted — but she couldn't put it down. The proof was marked up in pencil, someone's handwriting in the margins, someone who had thought carefully about every sentence. She wondered who they were. She wondered if the writer had ever seen these notes. Outside, the city was waking up.`,
+    opts: [
+      { t: "it had survived everything: the recession, the internet, the developers", correct: false },
+      { t: "the particular silence of a room full of language that wasn't speaking", correct: false },
+      { t: "She was reading a old proof copy of a novel", correct: true },
+      { t: "someone who had thought carefully about every sentence", correct: false },
+      { t: "Outside, the city was waking up", correct: false }
+    ],
+    explanation: `"a old" should be "an old". The article "an" is used before words beginning with a vowel sound. "Old" begins with a vowel sound, so "an" is required.`
+  },
+  {
+    id: 9,
+    setting: "A wedding reception, August",
+    text: `The wedding was in a converted barn outside of town and it was August and it was hot and the kind of happiness in the room was the kind that makes you aware of its opposite. David stood at the back with a glass of warm white wine. He had known the groom since university. He liked the groom. The bride, he had met three times, and she had looked at him the same way each time: with the careful attention of someone who has been told something and is checking whether it's true. The speeches began. The best man spoke for twelve minutes without, saying anything interesting, which was a form of discipline. David's father had given a speech at his own wedding once. The speech had lasted four minutes and his mother had cried, which had confused him for years. He understood it now. Sometimes the speech is just evidence that someone tried.`,
+    opts: [
+      { t: "the kind that makes you aware of its opposite", correct: false },
+      { t: "with the careful attention of someone who has been told something", correct: false },
+      { t: "spoke for twelve minutes without, saying anything interesting", correct: true },
+      { t: "his mother had cried, which had confused him for years", correct: false },
+      { t: "Sometimes the speech is just evidence that someone tried", correct: false }
+    ],
+    explanation: `The comma after "without" is misplaced and changes the meaning. "Without saying anything interesting" is a prepositional phrase that should not be broken by a comma.`
+  },
+  {
+    id: 10,
+    setting: "A hospital waiting room",
+    text: `The waiting room was on the third floor and it had a window that looked out over the car park, which was the kind of view that seemed designed to remind you that ordinary life was going on without you. Claire had been here for two hours. Her mother was somewhere in the building being looked at by someone who would come out eventually and explain what was already being explained, slowly, over months: that the forgetting was not getting better, that alzheimer's disease was a gradient and they were descending it. She had a magazine from 2023 on her lap. She hadn't opened it. The man across from her was asleep in the plastic chair, his head tipped sideways, one hand on his knee. She wondered who he was waiting for. She wondered if it was better to sleep through it or stay awake for everything. Her mother would have had an opinion. Her mother always had opinions. That was the cruelest part.`,
+    opts: [
+      { t: "the kind of view that seemed designed to remind you that ordinary life was going on without you", correct: false },
+      { t: "the forgetting was not getting better", correct: false },
+      { t: "that alzheimer's disease was a gradient and they were descending it", correct: true },
+      { t: "his head tipped sideways, one hand on his knee", correct: false },
+      { t: "That was the cruelest part", correct: false }
+    ],
+    explanation: `"alzheimer's" should be "Alzheimer's" with a capital A. It is a proper noun named after Dr. Alois Alzheimer and must always be capitalised.`
+  }
+];
+
+const SCORE_DATA = [
+  { max: 3, label: "Skim reader", desc: "The errors were there — they just slipped past. That's exactly how typos work: they hide in plain sight, confident you'll fill in the gap. Try again; knowing they're there changes how you read." },
+  { max: 6, label: "Close enough", desc: "A respectable haul. You caught some, missed some — which is the honest experience of most editing. The ones you missed are worth going back to: they're the sneaky kind." },
+  { max: 8, label: "Eye like a sub-editor", desc: "Sharp. You read the way editors read: slightly suspicious of every sentence, alert to the small wrongness that most readers glide over. The ones that got through were the hardest." },
+  { max: 10, label: "You should be in a copy desk in Bloomsbury", desc: "A perfect or near-perfect score. You are the person who notices when something is wrong before you can name why. That instinct is worth protecting. Don't let autocorrect have it." }
+];
+
+let currentRound = 0;
+let score = 0;
+let answered = false;
+
+function getScoreData(s) {
+  if (s <= 3) return SCORE_DATA[0];
+  if (s <= 6) return SCORE_DATA[1];
+  if (s <= 8) return SCORE_DATA[2];
+  return SCORE_DATA[3];
+}
+
+function startGame() {
+  currentRound = 0;
+  score = 0;
+  answered = false;
+  document.getElementById('s-intro').classList.remove('on');
+  document.getElementById('s-game').classList.add('on');
+  renderRound();
+}
+
+function renderRound() {
+  answered = false;
+  const round = ROUNDS[currentRound];
+  const total = ROUNDS.length;
+
+  document.getElementById('prog').style.width = ((currentRound / total) * 100) + '%';
+  document.getElementById('q-num').textContent = 'Round ' + (currentRound + 1);
+  document.getElementById('q-count').textContent = (currentRound + 1) + ' of ' + total;
+  document.getElementById('snippet-setting').textContent = round.setting;
+  document.getElementById('snippet-text').textContent = round.text;
+
+  const btn = document.getElementById('btn-next');
+  btn.style.display = 'none';
+  btn.textContent = currentRound === total - 1 ? 'See my score \u2192' : 'Next \u2192';
+
+  const explanation = document.getElementById('explanation');
+  explanation.classList.remove('on');
+  document.getElementById('explanation-text').textContent = '';
+
+  const optsEl = document.getElementById('opts');
+  optsEl.innerHTML = round.opts.map((o, i) =>
+    `<button class="opt" onclick="pick(${i})">`+
+    `<span class="opt-label">${LABELS[i]}</span>`+
+    `<span>${o.t}</span>`+
+    `</button>`
+  ).join('');
+}
+
+function pick(i) {
+  if (answered) return;
+  answered = true;
+
+  const round = ROUNDS[currentRound];
+  const buttons = document.querySelectorAll('.opt');
+
+  buttons.forEach(function(btn) { btn.setAttribute('disabled', 'disabled'); });
+
+  const chosen = round.opts[i];
+  if (chosen.correct) {
+    score++;
+    buttons[i].classList.add('correct');
+  } else {
+    buttons[i].classList.add('wrong');
+    // reveal correct
+    round.opts.forEach(function(o, idx) {
+      if (o.correct) buttons[idx].classList.add('correct');
+    });
+  }
+
+  const explanation = document.getElementById('explanation');
+  document.getElementById('explanation-text').textContent = round.explanation;
+  explanation.classList.add('on');
+
+  const btn = document.getElementById('btn-next');
+  btn.style.display = 'inline-block';
+}
+
+function nextRound() {
+  currentRound++;
+  if (currentRound >= ROUNDS.length) {
+    showResult();
+    return;
+  }
+  renderRound();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showResult() {
+  document.getElementById('prog').style.width = '100%';
+  document.getElementById('s-game').classList.remove('on');
+  document.getElementById('s-result').classList.add('on');
+
+  const sd = getScoreData(score);
+  document.getElementById('r-score').textContent = score + '/10';
+  document.getElementById('r-label').textContent = sd.label;
+  document.getElementById('r-desc').textContent = sd.desc;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function shareText() {
+  return 'I scored ' + score + '/10 on Spot the Typo at Tumbleweed Words. Can you beat it? https://tumbleweedwords.com/spot-the-typo.html';
+}
+
+function shareTwitter() {
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText()), '_blank');
+}
+
+function shareWhatsApp() {
+  window.open('https://wa.me/?text=' + encodeURIComponent(shareText()), '_blank');
+}
+
+function copyShare() {
+  navigator.clipboard.writeText(shareText()).then(function() {
+    var btn = event.target;
+    var orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = orig; }, 2000);
+  });
+}
+
+function restartGame() {
+  document.getElementById('s-result').classList.remove('on');
+  startGame();
+}
+</script>
+
+<style>#tw-popup-overlay{display:none;position:fixed;inset:0;background:rgba(20,10,40,.55);z-index:9999;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(2px)}#tw-popup-overlay.tw-active{display:flex}#tw-popup{background:#F6F4EE;border-top:4px solid #5533E8;max-width:400px;width:100%;padding:2.5rem 2rem 2rem;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.2);animation:tw-popIn .3s ease}@keyframes tw-popIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}#tw-popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;color:#9896a8;cursor:pointer;line-height:1}#tw-popup-close:hover{color:#1a1820}.tw-popup__photo{display:block;width:64px;height:64px;border-radius:50%;border:2px solid #5533E8;object-fit:cover;margin:0 auto .6rem}.tw-popup__wordmark{font-family:"Fraunces",Georgia,serif;font-size:.62rem;font-style:italic;color:#5533E8;text-align:center;margin-bottom:.8rem}.tw-popup__headline{font-family:"Fraunces",Georgia,serif;font-size:1.12rem;font-weight:700;color:#1a1820;text-align:center;line-height:1.25;margin-bottom:.5rem}.tw-popup__sub{font-family:"Source Serif 4",Georgia,serif;font-size:.66rem;color:#6B6880;text-align:center;line-height:1.65;margin-bottom:1.3rem;font-style:italic}.tw-popup__input{display:block;width:100%;background:#fff;border:1px solid #D4D0C4;color:#1a1820;font-family:"Source Serif 4",Georgia,serif;font-size:.7rem;padding:10px 14px;margin-bottom:8px;outline:none;transition:border-color .2s}.tw-popup__input:focus{border-color:#5533E8}.tw-popup__input::placeholder{color:#C4C0B0}.tw-popup__btn{display:block;width:100%;background:#5533E8;color:#fff;font-family:ui-monospace,"SF Mono",monospace;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;padding:12px;border:none;cursor:pointer;margin-bottom:.8rem;transition:background .2s}.tw-popup__btn:hover{background:#6644F5}.tw-popup__disclaimer{font-family:ui-monospace,"SF Mono",monospace;font-size:.44rem;color:#9896a8;text-align:center;line-height:1.6;margin-bottom:.6rem}.tw-popup__dismiss{display:block;text-align:center;font-family:ui-monospace,"SF Mono",monospace;font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:#9896a8;cursor:pointer;background:none;border:none;width:100%}.tw-popup__dismiss:hover{color:#5533E8}</style>
+<div id="tw-popup-overlay" role="dialog" aria-modal="true" aria-label="Subscribe"><div id="tw-popup"><button id="tw-popup-close" aria-label="Close">&times;</button><img class="tw-popup__photo" src="david.webp" alt="David"><p class="tw-popup__wordmark">Tumbleweed Words</p><h2 class="tw-popup__headline">One piece of flash fiction or poetry.<br>Free, every week.</h2><p class="tw-popup__sub">&ldquo;Everyone wears black so hard you don&rsquo;t notice<br>there are differing shades.&rdquo;</p><input class="tw-popup__input" type="email" id="tw-popup-email" placeholder="Your email address" autocomplete="email"><button class="tw-popup__btn" id="tw-popup-submit">Read Now &rarr;</button><p class="tw-popup__disclaimer">Free &middot; Weekly &middot; No spam &middot; Unsubscribe any time</p><button class="tw-popup__dismiss" id="tw-popup-not-now">Not now</button></div></div>
+<script>(function(){var KEY='tw_popup_dismissed',DAYS=14,overlay=document.getElementById('tw-popup-overlay'),close=document.getElementById('tw-popup-close'),notNow=document.getElementById('tw-popup-not-now'),submit=document.getElementById('tw-popup-submit'),email=document.getElementById('tw-popup-email');function dismissed(){var t=localStorage.getItem(KEY);return t&&Date.now()-parseInt(t)<DAYS*86400000}function show(){if(dismissed())return;overlay.classList.add('tw-active');document.body.style.overflow='hidden'}function hide(){overlay.classList.remove('tw-active');document.body.style.overflow='';localStorage.setItem(KEY,Date.now().toString())}var timer=setTimeout(show,8000);document.addEventListener('mouseleave',function(e){if(e.clientY<10){clearTimeout(timer);show()}});close.addEventListener('click',hide);notNow.addEventListener('click',hide);overlay.addEventListener('click',function(e){if(e.target===overlay)hide()});document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});submit.addEventListener('click',function(){var v=email.value.trim();if(!v){email.focus();return;}var f=document.createElement('form');f.action='https://tumbleweedwords.substack.com/api/v1/free';f.method='post';f.target='_blank';var inp=document.createElement('input');inp.type='hidden';inp.name='email';inp.value=v;f.appendChild(inp);document.body.appendChild(f);f.submit();document.body.removeChild(f);hide();});email.addEventListener('keydown',function(e){if(e.key==='Enter')submit.click()});}());</script>
+
+<script>(function(){var t=document.getElementById('searchToggle');var w=document.getElementById('nsearchWrap');var i=document.getElementById('nsearchInput');var g=document.getElementById('nsearchGo');if(!t)return;function ds(){var q=i.value.trim();if(q)window.location.href='/search.html?q='+encodeURIComponent(q);}t.addEventListener('click',function(e){e.stopPropagation();w.classList.toggle('open');t.classList.toggle('active');if(w.classList.contains('open'))i.focus();});g.addEventListener('click',ds);i.addEventListener('keydown',function(e){if(e.key==='Enter')ds();});document.addEventListener('click',function(e){if(!e.target.closest('#navSearch')){w.classList.remove('open');t.classList.remove('active');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'){w.classList.remove('open');t.classList.remove('active');}});})();</script><style id="sub-bar-css">.sub-bar{position:fixed;bottom:0;left:0;right:0;z-index:990;background:var(--bg,#F6F4EE);border-top:2px solid var(--p,#5533E8);padding:.85rem 2rem;box-shadow:0 -4px 20px rgba(85,51,232,.12);transform:translateY(110%);transition:transform .4s ease}.sub-bar.visible{transform:translateY(0)}.sub-bar-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:1.2rem;flex-wrap:nowrap}.sub-bar-text{font-family:var(--fb,"Source Serif 4",Georgia,serif);font-size:.82rem;color:var(--ink,#1a1820);font-style:italic;flex-shrink:0;white-space:nowrap}.sub-bar-form{display:flex;gap:.4rem;flex:1;min-width:0}.sub-bar-input{flex:1;border:1.5px solid var(--br,#D4D0C4);background:#fff;padding:.48rem .9rem;font-family:var(--fb,"Source Serif 4",Georgia,serif);font-size:.78rem;color:var(--ink,#1a1820);outline:none;min-width:0;transition:border-color .2s}.sub-bar-input:focus{border-color:var(--p,#5533E8)}.sub-bar-btn{background:var(--p,#5533E8);color:#fff;border:none;cursor:pointer;padding:.48rem 1.1rem;font-family:var(--fm,ui-monospace,"SF Mono",monospace);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background .15s;flex-shrink:0}.sub-bar-btn:hover{background:var(--p2,#6644F5)}.sub-bar-close{background:none;border:none;cursor:pointer;color:var(--fa,#9896a8);font-size:1.3rem;padding:.2rem .4rem;line-height:1;flex-shrink:0;transition:color .15s;margin-left:auto}.sub-bar-close:hover{color:var(--ink,#1a1820)}@media(max-width:600px){.sub-bar-text{display:none}}</style><div id="subBar" class="sub-bar" role="complementary" aria-label="Subscribe to newsletter"><div class="sub-bar-inner"><span class="sub-bar-text">One piece a week. Free.</span><form class="sub-bar-form" action="https://tumbleweedwords.substack.com/api/v1/free" method="post" target="_blank"><input type="email" name="email" placeholder="Your email address" required autocomplete="email" class="sub-bar-input"><button type="submit" class="sub-bar-btn">Subscribe free &rarr;</button></form><button class="sub-bar-close" id="subBarClose" aria-label="Close subscribe bar" type="button">&times;</button></div></div><script>(function(){var KEY='tw_bar_v1',DAYS=30;try{var stored=localStorage.getItem(KEY);if(stored&&Date.now()-parseInt(stored)<DAYS*86400000)return;}catch(e){return;}var bar=document.getElementById('subBar');var closeBtn=document.getElementById('subBarClose');if(!bar||!closeBtn)return;function dismiss(){bar.classList.remove('visible');try{localStorage.setItem(KEY,Date.now().toString());}catch(e){}}closeBtn.addEventListener('click',dismiss);bar.querySelector('form').addEventListener('submit',function(){setTimeout(dismiss,500);});var shown=false;window.addEventListener('scroll',function(){if(!shown&&window.scrollY>500){shown=true;bar.classList.add('visible');}},{passive:true});})();</script><div id="tw-consent" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#F6F4EE;border-top:2px solid #5533E8;padding:1rem 2rem;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:'Source Serif 4',Georgia,serif;font-size:.82rem;color:#1a1820;box-shadow:0 -4px 24px rgba(85,51,232,.08);display:none"></div>
+<script>
+(function(){
+  var b=document.getElementById('tw-consent');
+  if(!b)return;
+  var consent=document.cookie.split(';').find(function(s){return s.trim().startsWith('tw_consent=');});
+  if(!consent){
+    b.innerHTML='<p style="margin:0;max-width:600px;line-height:1.6">We use cookies to understand how readers find us. <a href="/about.html" style="color:#5533E8">Learn more</a>.</p><div style="display:flex;gap:.7rem;flex-shrink:0"><button onclick="twConsent(\'decline\')" style="font-family:ui-monospace,\'SF Mono\',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1.5px solid #D4D0C4;background:transparent;color:#6B6880;cursor:pointer;border-radius:3px">Decline</button><button onclick="twConsent(\'accept\')" style="font-family:ui-monospace,\'SF Mono\',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.1rem;border:1.5px solid #5533E8;background:#5533E8;color:#fff;cursor:pointer;border-radius:3px">Accept</button></div>';
+    b.style.display='flex';
+  }
+})();
+function twConsent(choice){
+  var d=new Date();d.setFullYear(d.getFullYear()+1);
+  document.cookie='tw_consent='+choice+';path=/;expires='+d.toUTCString()+';SameSite=Lax';
+  document.getElementById('tw-consent').style.display='none';
+  if(choice==='accept'&&typeof gtag==='function'){gtag('config','G-8B7DYTLXQC');}
+}
+</script>
+<script src="/hamburger.js"></script>
+</body>
+</html>
