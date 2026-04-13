@@ -278,7 +278,7 @@ var slides=wrap.querySelectorAll('.fc-slide');
 var dots=wrap.querySelectorAll('.fc-dot');
 var cur=0,total=slides.length,timer;
 function go(n){slides[cur].classList.remove('fc-active');dots[cur].classList.remove('fc-dot-active');cur=(n+total)%total;slides[cur].classList.add('fc-active');dots[cur].classList.add('fc-dot-active');}
-function start(){timer=setInterval(function(){go(cur+1);},2500);}
+function start(){timer=setInterval(function(){go(cur+1);},5000);}
 function stop(){clearInterval(timer);}
 dots.forEach(function(d){d.addEventListener('click',function(){stop();go(parseInt(d.dataset.fc));start();});});
 wrap.addEventListener('mouseenter',stop);
@@ -326,7 +326,7 @@ start();
 (function(){
   var slides=document.querySelectorAll('.hero-slide'),
       dots=document.querySelectorAll('.hero-dot'),
-      current=0,total=slides.length,interval=2500,timer;
+      current=0,total=slides.length,interval=5000,timer;
   function go(n){
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
