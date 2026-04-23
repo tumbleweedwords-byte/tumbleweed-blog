@@ -1,7 +1,7 @@
 ---
 title: "Why the Best Novels of 2026 Are Under 200 Pages"
 slug: best-short-novels-2026
-description: "The most praised literary fiction of 2026 is short. From Keegan to Fosse, what compression does at novel length and why the 80,000-word contract is finally dead."
+description: "The most praised literary fiction of 2026 is short. From Keegan to Fosse, what the economy of style does to the length of a novel and why the 80,000-word contract is finally dead."
 author: David Moran
 date: 2026-04-23
 language: en-GB
