@@ -296,17 +296,11 @@ start();
 })();
 </script>
 
-<style>.sub-nos-wrap{display:flex;gap:50px;align-items:flex-start;padding:1.4rem 2rem 1rem}@media(max-width:768px){.sub-nos-wrap{flex-direction:column;gap:1.8rem}}</style>
-<div class="sub-nos-wrap">
-<div style="flex:55;min-width:0;text-align:center">
+<div style="padding:1.4rem 2rem 1rem;text-align:center">
 <p class="sec-label" style="margin-bottom:1.1rem">Newsletter</p>
 <form class="inline-sub" style="margin-bottom:.6rem" action="https://tumbleweedwords.substack.com/api/v1/free" method="post" target="_blank"><input class="inline-sub__input" type="email" name="email" placeholder="Your email address" required autocomplete="email"><button class="inline-sub__btn" type="submit">Read free every week &rarr;</button></form>
 <div class="hero-meta" style="margin-top:.4rem"><span>Free</span><span>Weekly</span><span>No ads</span><span>1,200+ readers</span><span>Pushcart shortlisted</span></div>
 <a href="/all-writing.html" style="font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);text-decoration:none;margin-top:.6rem;display:inline-block">All writing &rarr;</a>
-</div>
-<div style="flex:45;min-width:0;padding-top:.4rem">
-<p class="sec-label" style="margin-bottom:1.1rem">The Latest</p><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.8rem"><li><a href="ai-changing-how-writers-write.html" style="font-weight:500;text-decoration:none" class="nos-link">How AI Is Changing the Way Writers Write</a></li><li><a href="best-short-novels-2026.html" style="font-weight:500;text-decoration:none" class="nos-link">Why the Best Novels of 2026 Are Under 200 Pages</a></li><li><a href="deborah-levy-gertrude-stein-review.html" style="font-weight:500;text-decoration:none" class="nos-link">Deborah Levy's My Year in Paris with Gertrude Stein — Review</a></li><li><a href="spot-the-typo.html" style="font-weight:500;text-decoration:none" class="nos-link">Spot the Typo: A Literary Editing Game</a></li><li><a href="2026-womens-prize-for-fiction-shortlist-prediction.html" style="font-weight:500;text-decoration:none" class="nos-link">Predicting the 2026 Women's Prize for Fiction Shortlist: Six to Watch</a></li><li><a href="a-man-with-no-purpose.html" style="font-weight:500;text-decoration:none" class="nos-link">a man with no purpose is a dangerous man</a></li><li><a href="2026-international-booker-prize-shortlist.html" style="font-weight:500;text-decoration:none" class="nos-link">Why the 2026 International Booker Shortlist Marks a Quiet Revolution</a></li></ul><style>.nos-link:hover{text-decoration:underline!important}</style>
-</div>
 </div>
 </section>
 
@@ -328,13 +322,18 @@ start();
 .fl-dot{width:9px;height:9px;border-radius:50%;background:transparent;border:1.5px solid rgba(255,255,255,.65);cursor:pointer;padding:0;transition:background .2s,border-color .2s}
 .fl-dot:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .fl-dot.fl-dot-active{background:#fff;border-color:#fff}
-.fl-latest{display:flex;flex-direction:column;justify-content:center;padding:.5rem 0 .5rem 1.5rem;border-left:2px solid var(--br)}
-@media(max-width:768px){.fl-latest{padding:2rem 0 0;border-left:none;border-top:2px solid var(--br)}}
-.fl-latest-hdr{font-family:var(--fm);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--p);margin-bottom:1.1rem}
+.fl-right-col{display:flex;flex-direction:column;justify-content:flex-start;padding:.5rem 0 .5rem 1.5rem;border-left:2px solid var(--br);gap:0}
+@media(max-width:768px){.fl-right-col{padding:2rem 0 0;border-left:none;border-top:2px solid var(--br)}}
+.fl-nl-h{font-family:var(--fd);font-size:clamp(.95rem,1.7vw,1.2rem);font-weight:700;color:var(--ink);line-height:1.25;letter-spacing:-.01em;margin:.4rem 0 .65rem}
+.fl-nl-body{font-family:var(--fb);font-size:.8rem;color:var(--mu);line-height:1.6;margin-bottom:.75rem}
+.fl-nl-list{list-style:none;padding:0;margin:0 0 1.1rem;display:flex;flex-direction:column;gap:.3rem}
+.fl-nl-list li{font-family:var(--fm);font-size:.47rem;letter-spacing:.07em;color:var(--mu)}
+.fl-nl-list li::before{content:"—";margin-right:.4em;color:var(--p)}
+.fl-latest-sep{padding-top:1.4rem;margin-top:1.4rem;border-top:1px solid var(--br)}
 .fl-latest-list{list-style:none;padding:0;margin:0}
-.fl-latest-list li{padding:.85rem 0;border-bottom:1px solid var(--br)}
+.fl-latest-list li{padding:.7rem 0;border-bottom:1px solid var(--br)}
 .fl-latest-list li:last-child{border-bottom:none;padding-bottom:0}
-.fl-latest-item-title{font-family:var(--fd);font-size:.98rem;font-weight:600;color:var(--ink);line-height:1.3;text-decoration:none;display:block;margin-bottom:.28rem}
+.fl-latest-item-title{font-family:var(--fd);font-size:.92rem;font-weight:600;color:var(--ink);line-height:1.3;text-decoration:none;display:block;margin-bottom:.22rem}
 .fl-latest-item-title:hover{color:var(--p)}
 .fl-latest-byline{font-family:var(--fm);font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
 </style>
@@ -371,14 +370,27 @@ start();
 <button class="fl-dot" data-fl="3" aria-label="Show featured slide 4 of 4" type="button"></button>
 </div>
 </article>
-<div class="fl-latest">
-<h2 class="fl-latest-hdr">The Latest</h2>
+<div class="fl-right-col">
+<div>
+<a class="sec-label" href="#go-deeper">Go deeper</a>
+<h2 class="fl-nl-h">The newsletter is free. Paid readers get <em>full access</em></h2>
+<p class="fl-nl-body">Tumbleweed Words is free to subscribe to. A paid subscription gives you the full archive for less than the price of a coffee.</p>
+<ul class="fl-nl-list">
+<li>Every post. The complete archive.</li>
+<li>Reply to any email. It gets read.</li>
+<li>Get the full archive. Everything written, everywhere it was written.</li>
+</ul>
+<a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Read Now &rarr;</a>
+</div>
+<div class="fl-latest-sep">
+<a class="sec-label" href="/all-writing.html" style="margin-bottom:1rem;display:block">The Latest</a>
 <ul class="fl-latest-list">
 <li><a href="ai-changing-how-writers-write.html" class="fl-latest-item-title">How AI Is Changing the Way Writers Write</a><span class="fl-latest-byline">By David Moran</span></li>
 <li><a href="best-short-novels-2026.html" class="fl-latest-item-title">Why the Best Novels of 2026 Are Under 200 Pages</a><span class="fl-latest-byline">By David Moran</span></li>
 <li><a href="rupi-kaur-poetry-essay.html" class="fl-latest-item-title">Rupi Kaur Sold 11 Million Books and Poetry Suffered</a><span class="fl-latest-byline">By David Moran</span></li>
 <li><a href="deborah-levy-gertrude-stein-review.html" class="fl-latest-item-title">My Year in Paris with Gertrude Stein by Deborah Levy &mdash; Review</a><span class="fl-latest-byline">By David Moran</span></li>
 </ul>
+</div>
 </div>
 </div>
 </section>
@@ -417,14 +429,13 @@ start();
 })();
 </script>
 
+<section class="latest-sec"><div class="latest-inner"><div class="latest-hdr"><h2>Latest from <em style="color:var(--p)">the road</em></h2><a href="https://tumbleweedwords.substack.com/archive">View all &rarr;</a></div><a href="/women-who-want-a-man.html" class="latest-feat"><img src="47c6ab0d-3684-4e61-bf99-06c32d6ab448_4080x3072.webp" alt="women who want a man — poem by David Moran" class="latest-feat-img" loading="lazy"><div class="latest-feat-body"><span class="latest-tag">Poetry &middot; New</span><div class="latest-title">women who want a man</div><p class="latest-excerpt">&ldquo;does your ellipsis kiss have an arrival date?&rdquo;</p><span class="latest-date">April 2026</span><span class="latest-read">Read &rarr;</span></div></a><div class="latest-grid"><a href="/a-man-with-no-purpose.html" class="latest-card"><img src="friend-portrait.jpg" alt="a man with no purpose is a dangerous man — fiction by David Moran" class="latest-card-img" loading="lazy"><div class="latest-card-body"><span class="latest-tag">Fiction &middot; London</span><div class="latest-card-title">a man with no purpose is a dangerous man</div><p class="latest-card-excerpt">&ldquo;Was I ever? Before the drink, yes.&rdquo;</p><span class="latest-date">April 2026</span></div></a><a href="/cool-poem.html" class="latest-card"><img src="cool-poem-typewriter.webp" alt="cool — poem by David Moran" class="latest-card-img" loading="lazy"><div class="latest-card-body"><span class="latest-tag">Poetry</span><div class="latest-card-title">cool</div><p class="latest-card-excerpt">&ldquo;a poem about a mother doing everything at once.&rdquo;</p><span class="latest-date">March 2026</span></div></a></div></div></section>
+
 <div class="pub-bar" id="published-in"><div class="pub-inner"><a class="sec-label" href="/about.html">Published in</a><div class="pub-list"><span class="pub-item"><a href="https://adelaidemagazine.org/easy-to-believe" target="_blank" rel="noopener" style="color:inherit">Adelaide Magazine</a></span><span class="pub-dot">&middot;</span><span class="pub-item"><a href="https://www.litromagazine.com/usa/2023/10/expat-in-paris/" target="_blank" rel="noopener" style="color:inherit">Litro Magazine</a></span><span class="pub-dot">&middot;</span><span class="pub-item"><a href="https://www.cleavermagazine.com/street-song-by-david-moran/" target="_blank" rel="noopener" style="color:inherit">Cleaver Magazine</a></span><span class="pub-dot">&middot;</span><span class="pub-item">The Dundee Anthology</span><span class="pub-dot">&middot;</span><span class="pub-item">Argentina Independent</span><span class="pub-dot">&middot;</span><span class="pub-item">The View From Here</span><span class="pub-dot">&middot;</span><span class="pub-item"><a href="https://whitewallreview.com/mature-indiscretions/" target="_blank" rel="noopener" style="color:inherit">White Wall Review</a></span><span class="pub-dot">&middot;</span><span class="pub-item">Poetry Scotland</span><span class="pub-dot">&middot;</span><span class="pub-item">Pushcart Prize shortlisted</span></div></div></div>
 
 <section class="bestof-sec" id="handpicked"><div class="bestof-inner"><a class="sec-label" href="#handpicked">Handpicked Fiction &amp; Poetry</a><h2>Select <span style="color:var(--p)">work</span></h2><p class="sec-sub">An eye-opener for your attention seeking behaviour.</p><div class="bestof-grid"><a href="/wake-up-call-in-the-big-smoke.html" class="bestof-card" style="color:inherit"><img src="wake-up-call-big-smoke.webp" alt="wake up call in the big smoke — flash fiction by David Moran" class="bestof-img" loading="lazy"><span class="bestof-type">Fiction &middot; London</span><div class="bestof-title">wake up call in the big smoke</div><div class="bestof-desc">Gabriel wakes on a mattress in a room he doesn&rsquo;t recognise. His brother is waiting in Whitechapel, London.</div><span class="bestof-date">April 2026</span><span class="bestof-link">Read &rarr;</span></a><a href="/street-legal.html" class="bestof-card" style="color:inherit"><img src="spiral-staircase.webp" alt="street legal — flash fiction by David Moran" class="bestof-img" loading="lazy"><span class="bestof-type">Fiction &middot; Berlin</span><div class="bestof-title">street legal</div><div class="bestof-desc">Flash fiction from Berlin. A man on a train, a city at night, the carriages full of inviting people he never talks to.</div><span class="bestof-date">March 2024</span><span class="bestof-link">Read &rarr;</span></a><a href="/starving.html" class="bestof-card" style="color:inherit"><img src="f1eb4500-c2ee-484d-b770-2c7a832b9c6c_1024x1024.webp" alt="starving — poem by David Moran" class="bestof-img" loading="lazy"><span class="bestof-type">Poetry &middot; New</span><div class="bestof-title">starving</div><div class="bestof-desc">A poem about being alone. Lovers, twins, poets, stray dogs.</div><span class="bestof-date">April 2026</span><span class="bestof-link">Read &rarr;</span></a></div><div class="bestof-more"><span>More original work</span><a href="/all-writing.html">Fiction &amp; Poetry &rarr;</a><a href="/craft-theory.html">Craft &amp; Theory &rarr;</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter &rarr;</a></div></div></section>
 
 <div class="proof-bar"><div class="proof-inner"><div class="proof-item"><div class="proof-n">1,200+</div><div class="proof-l">Readers</div></div><div class="proof-item"><div class="proof-n">20</div><div class="proof-l">Years on the road</div></div><div class="proof-item"><div class="proof-n">4</div><div class="proof-l">Continents</div></div><div class="proof-item"><div class="proof-n">30</div><div class="proof-l">Countries</div></div></div></div>
-
-
-<section class="paid-sec" id="go-deeper"><div class="paid-inner"><a class="sec-label" href="#go-deeper">Go deeper</a><h2>The newsletter is free. Paid readers get <em>full access</em></h2><p class="body-p">Tumbleweed Words is free to subscribe to. A paid subscription gives you the full archive for less than the price of a coffee.</p><ul class="paid-list"><li>Every post. The complete archive.</li><li>Reply to any email. It gets read.</li><li>Get the full archive. Everything written, everywhere it was written.</li></ul><div class="paid-acts" style="justify-content:center"><a href="https://tumbleweedwords.substack.com" class="btn btn-p" target="_blank" rel="noopener">Read Now &rarr;</a></div></div></section>
 
 
 <section class="photos-sec" id="postcards"><div class="photos-inner"><a class="sec-label" href="/postcards.html">Postcards from nowhere</a><a href="/postcards.html" class="postcard-teaser"><img src="lake-bled.webp" alt="Lake Bled — Slovenia" loading="lazy"><div class="postcard-teaser-overlay"><span class="postcard-teaser-btn">View all postcards &rarr;</span></div></a></div></section>
