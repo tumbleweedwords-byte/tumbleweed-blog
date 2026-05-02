@@ -310,6 +310,113 @@ start();
 </div>
 </section>
 
+<style>
+.fl-sec{background:var(--bg);padding:5rem 2rem;border-bottom:1px solid var(--br)}
+.fl-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:60fr 40fr;gap:2rem;align-items:stretch}
+@media(max-width:768px){.fl-inner{grid-template-columns:1fr}}
+.fl-feat{position:relative;overflow:hidden;min-height:440px;display:block}
+@media(max-width:768px){.fl-feat{min-height:0;aspect-ratio:4/3}}
+.fl-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .9s ease}
+.fl-bg.fl-bg-active{opacity:1}
+.fl-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.12) 100%);z-index:1;pointer-events:none}
+.fl-feat-label{position:absolute;top:1.2rem;left:50%;transform:translateX(-50%);z-index:3;font-family:var(--fm);font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.7);padding:.35rem 1rem;white-space:nowrap;pointer-events:none}
+.fl-link{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding:0 1.8rem 3.8rem;z-index:2;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .6s ease}
+.fl-link.fl-link-active{opacity:1;pointer-events:auto}
+.fl-title{font-family:var(--fd);font-size:clamp(1.15rem,2.4vw,1.85rem);font-weight:700;color:#fff;text-align:center;line-height:1.22;letter-spacing:-.01em;margin-bottom:.55rem;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.fl-quote{font-family:var(--fb);font-size:.84rem;font-style:italic;color:rgba(255,255,255,.85);text-align:center;line-height:1.55;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.fl-dots{position:absolute;bottom:1.1rem;left:0;right:0;display:flex;justify-content:center;gap:.55rem;z-index:4}
+.fl-dot{width:9px;height:9px;border-radius:50%;background:transparent;border:1.5px solid rgba(255,255,255,.65);cursor:pointer;padding:0;transition:background .2s,border-color .2s}
+.fl-dot:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.fl-dot.fl-dot-active{background:#fff;border-color:#fff}
+.fl-latest{display:flex;flex-direction:column;justify-content:center;padding:.5rem 0 .5rem 1.5rem;border-left:2px solid var(--br)}
+@media(max-width:768px){.fl-latest{padding:2rem 0 0;border-left:none;border-top:2px solid var(--br)}}
+.fl-latest-hdr{font-family:var(--fm);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--p);margin-bottom:1.1rem}
+.fl-latest-list{list-style:none;padding:0;margin:0}
+.fl-latest-list li{padding:.85rem 0;border-bottom:1px solid var(--br)}
+.fl-latest-list li:last-child{border-bottom:none;padding-bottom:0}
+.fl-latest-item-title{font-family:var(--fd);font-size:.98rem;font-weight:600;color:var(--ink);line-height:1.3;text-decoration:none;display:block;margin-bottom:.28rem}
+.fl-latest-item-title:hover{color:var(--p)}
+.fl-latest-byline{font-family:var(--fm);font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
+</style>
+
+<section class="fl-sec">
+<div class="fl-inner">
+<article class="fl-feat" id="flFeat">
+<div class="fl-bg fl-bg-active" style="background-image:url('jpegai-home.jpg')" aria-hidden="true"></div>
+<div class="fl-bg" style="background-image:url('Rupi_Kaur_About_Me_2.webp')" aria-hidden="true"></div>
+<div class="fl-bg" style="background-image:url('9780241457801-jacket-large.webp')" aria-hidden="true"></div>
+<div class="fl-bg" style="background-image:url('short%20novels%20image.jpg')" aria-hidden="true"></div>
+<div class="fl-overlay" aria-hidden="true"></div>
+<span class="fl-feat-label" aria-hidden="true">Featured</span>
+<a class="fl-link fl-link-active" href="ai-changing-how-writers-write.html">
+<h2 class="fl-title">How AI Is Changing the Way Writers Write</h2>
+<p class="fl-quote">&ldquo;The bottleneck is no longer technical. It&rsquo;s editorial.&rdquo;</p>
+</a>
+<a class="fl-link" href="rupi-kaur-poetry-essay.html" aria-hidden="true" tabindex="-1">
+<h2 class="fl-title">Rupi Kaur Sold 11 Million Books and Poetry Got Worse</h2>
+<p class="fl-quote">&ldquo;Poetry isn&rsquo;t what sells best. It&rsquo;s what lasts longest.&rdquo;</p>
+</a>
+<a class="fl-link" href="deborah-levy-gertrude-stein-review.html" aria-hidden="true" tabindex="-1">
+<h2 class="fl-title">My Year in Paris with Gertrude Stein by Deborah Levy</h2>
+<p class="fl-quote">&ldquo;Part fiction, part biography, part meditation on what it costs to be modern.&rdquo;</p>
+</a>
+<a class="fl-link" href="best-short-novels-2026.html" aria-hidden="true" tabindex="-1">
+<h2 class="fl-title">Why the Best Novels of 2026 Are Under 200 Pages</h2>
+<p class="fl-quote">&ldquo;Length is no longer an excuse for slack.&rdquo;</p>
+</a>
+<div class="fl-dots" role="group" aria-label="Featured article slides">
+<button class="fl-dot fl-dot-active" data-fl="0" aria-label="Show featured slide 1 of 4" type="button"></button>
+<button class="fl-dot" data-fl="1" aria-label="Show featured slide 2 of 4" type="button"></button>
+<button class="fl-dot" data-fl="2" aria-label="Show featured slide 3 of 4" type="button"></button>
+<button class="fl-dot" data-fl="3" aria-label="Show featured slide 4 of 4" type="button"></button>
+</div>
+</article>
+<div class="fl-latest">
+<h2 class="fl-latest-hdr">The Latest</h2>
+<ul class="fl-latest-list">
+<li><a href="ai-changing-how-writers-write.html" class="fl-latest-item-title">How AI Is Changing the Way Writers Write</a><span class="fl-latest-byline">By David Moran</span></li>
+<li><a href="best-short-novels-2026.html" class="fl-latest-item-title">Why the Best Novels of 2026 Are Under 200 Pages</a><span class="fl-latest-byline">By David Moran</span></li>
+<li><a href="rupi-kaur-poetry-essay.html" class="fl-latest-item-title">Rupi Kaur Sold 11 Million Books and Poetry Got Worse</a><span class="fl-latest-byline">By David Moran</span></li>
+<li><a href="deborah-levy-gertrude-stein-review.html" class="fl-latest-item-title">My Year in Paris with Gertrude Stein by Deborah Levy &mdash; Review</a><span class="fl-latest-byline">By David Moran</span></li>
+</ul>
+</div>
+</div>
+</section>
+<script>
+(function(){
+var feat=document.getElementById('flFeat');
+if(!feat)return;
+var bgs=feat.querySelectorAll('.fl-bg');
+var links=feat.querySelectorAll('.fl-link');
+var dots=feat.querySelectorAll('.fl-dot');
+var cur=0,total=bgs.length,timer,pauseTimer;
+function go(n){
+  bgs[cur].classList.remove('fl-bg-active');
+  links[cur].classList.remove('fl-link-active');
+  links[cur].setAttribute('aria-hidden','true');
+  links[cur].setAttribute('tabindex','-1');
+  dots[cur].classList.remove('fl-dot-active');
+  cur=(n+total)%total;
+  bgs[cur].classList.add('fl-bg-active');
+  links[cur].classList.add('fl-link-active');
+  links[cur].removeAttribute('aria-hidden');
+  links[cur].removeAttribute('tabindex');
+  dots[cur].classList.add('fl-dot-active');
+}
+function start(){timer=setInterval(function(){go(cur+1);},7000);}
+function stop(){clearInterval(timer);}
+dots.forEach(function(d){
+  d.addEventListener('click',function(){
+    stop();go(parseInt(d.dataset.fl));
+    clearTimeout(pauseTimer);pauseTimer=setTimeout(start,30000);
+  });
+});
+feat.addEventListener('mouseenter',stop);
+feat.addEventListener('mouseleave',function(){clearTimeout(pauseTimer);start();});
+start();
+})();
+</script>
+
 <section class="latest-sec"><div class="latest-inner"><div class="latest-hdr"><h2>Latest from <em style="color:var(--p)">the road</em></h2><a href="https://tumbleweedwords.substack.com/archive">View all &rarr;</a></div><a href="/women-who-want-a-man.html" class="latest-feat"><img src="47c6ab0d-3684-4e61-bf99-06c32d6ab448_4080x3072.webp" alt="women who want a man — poem by David Moran" class="latest-feat-img" loading="lazy"><div class="latest-feat-body"><span class="latest-tag">Poetry &middot; New</span><div class="latest-title">women who want a man</div><p class="latest-excerpt">&ldquo;does your ellipsis kiss have an arrival date?&rdquo;</p><span class="latest-date">April 2026</span><span class="latest-read">Read &rarr;</span></div></a><div class="latest-grid"><a href="/a-man-with-no-purpose.html" class="latest-card"><img src="friend-portrait.jpg" alt="a man with no purpose is a dangerous man — fiction by David Moran" class="latest-card-img" loading="lazy"><div class="latest-card-body"><span class="latest-tag">Fiction &middot; London</span><div class="latest-card-title">a man with no purpose is a dangerous man</div><p class="latest-card-excerpt">&ldquo;Was I ever? Before the drink, yes.&rdquo;</p><span class="latest-date">April 2026</span></div></a><a href="/cool-poem.html" class="latest-card"><img src="cool-poem-typewriter.webp" alt="cool — poem by David Moran" class="latest-card-img" loading="lazy"><div class="latest-card-body"><span class="latest-tag">Poetry</span><div class="latest-card-title">cool</div><p class="latest-card-excerpt">&ldquo;a poem about a mother doing everything at once.&rdquo;</p><span class="latest-date">March 2026</span></div></a></div></div></section>
 
 <div class="pub-bar" id="published-in"><div class="pub-inner"><a class="sec-label" href="/about.html">Published in</a><div class="pub-list"><span class="pub-item"><a href="https://adelaidemagazine.org/easy-to-believe" target="_blank" rel="noopener" style="color:inherit">Adelaide Magazine</a></span><span class="pub-dot">&middot;</span><span class="pub-item"><a href="https://www.litromagazine.com/usa/2023/10/expat-in-paris/" target="_blank" rel="noopener" style="color:inherit">Litro Magazine</a></span><span class="pub-dot">&middot;</span><span class="pub-item"><a href="https://www.cleavermagazine.com/street-song-by-david-moran/" target="_blank" rel="noopener" style="color:inherit">Cleaver Magazine</a></span><span class="pub-dot">&middot;</span><span class="pub-item">The Dundee Anthology</span><span class="pub-dot">&middot;</span><span class="pub-item">Argentina Independent</span><span class="pub-dot">&middot;</span><span class="pub-item">The View From Here</span><span class="pub-dot">&middot;</span><span class="pub-item"><a href="https://whitewallreview.com/mature-indiscretions/" target="_blank" rel="noopener" style="color:inherit">White Wall Review</a></span><span class="pub-dot">&middot;</span><span class="pub-item">Poetry Scotland</span><span class="pub-dot">&middot;</span><span class="pub-item">Pushcart Prize shortlisted</span></div></div></div>
