@@ -74,7 +74,7 @@ def build(fname, title, desc, keywords, og_image, tag, h1, standfirst,
 <div class="wrap">
 {NAV}
 <main>
-  <nav class="breadcrumb" aria-label="breadcrumb"><a href="/">Tumbleweed Words</a><span class="bc-sep">&rsaquo;</span><a href="/reads.html">Must Reads</a></nav>
+  <nav class="breadcrumb" aria-label="breadcrumb"><a href="/">Tumbleweed Words</a><span class="bc-sep">&rsaquo;</span><a href="/reads.html">Book Reviews</a></nav>
   <span class="tag">{tag}</span>
   <h1>{h1}</h1>
   <p class="byline">By David Moran &middot; <time datetime="{pub_date}">{pub_date}</time></p>
@@ -133,7 +133,7 @@ build(
         ('Best Books If You Like Carver', '/best-books-if-you-like-carver.html'),
         ('What Is Flash Fiction?', '/what-is-flash-fiction.html'),
         ('George Saunders\u2019 Vigil \u2014 Review', '/george-saunders-vigil-review.html'),
-        ('Must Reads', '/reads.html'),
+        ('Book Reviews', '/reads.html'),
     ],
     '2026-03-24'
 )
@@ -163,7 +163,7 @@ build(
     [
         ('Prose Poetry vs Flash Fiction', '/prose-poetry-vs-flash-fiction.html'),
         ('Influenced by Amy Hempel', '/influenced-by-amy-hempel.html'),
-        ('Must Reads', '/reads.html'),
+        ('Book Reviews', '/reads.html'),
         ('George Saunders\u2019 Vigil \u2014 Review', '/george-saunders-vigil-review.html'),
     ],
     '2026-03-24'
@@ -196,7 +196,7 @@ build(
     [
         ('What Is Flash Fiction?', '/what-is-flash-fiction.html'),
         ('Best Flash Fiction Collections', '/best-flash-fiction-collections.html'),
-        ('Must Reads', '/reads.html'),
+        ('Book Reviews', '/reads.html'),
         ('George Saunders\u2019 Vigil \u2014 Review', '/george-saunders-vigil-review.html'),
     ],
     '2026-03-24'
@@ -228,7 +228,7 @@ build(
     [
         ('Prose Poetry vs Flash Fiction', '/prose-poetry-vs-flash-fiction.html'),
         ('What Is Dirty Realism?', '/what-is-dirty-realism.html'),
-        ('Must Reads', '/reads.html'),
+        ('Book Reviews', '/reads.html'),
         ('George Saunders\u2019 Vigil \u2014 Review', '/george-saunders-vigil-review.html'),
     ],
     '2026-03-24'
@@ -260,7 +260,7 @@ build(
     [
         ('Prose Poetry vs Flash Fiction', '/prose-poetry-vs-flash-fiction.html'),
         ('What Is Flash Fiction?', '/what-is-flash-fiction.html'),
-        ('Must Reads', '/reads.html'),
+        ('Book Reviews', '/reads.html'),
         ('Richie Hofmann\u2019s The Bronze Arms \u2014 Review', '/richie-hofmann-bronze-arms-review.html'),
     ],
     '2026-03-24'
@@ -294,7 +294,7 @@ build(
     [
         ('Best Books If You Like Carver', '/best-books-if-you-like-carver.html'),
         ('What Is Minimalist Fiction?', '/post-minimalist-fiction.html'),
-        ('Must Reads', '/reads.html'),
+        ('Book Reviews', '/reads.html'),
         ('Ocean Vuong\u2019s The Emperor of Gladness \u2014 Review', '/ocean-vuong-emperor-of-gladness-review.html'),
     ],
     '2026-03-24'

@@ -94,7 +94,7 @@ h1 em,h2 em{font-style:normal}
 </head>
 <body>
 <div class="wrap">
-<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Must Reads</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/discover.html" class="nlink hide-m">Literary Gems</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a></nav>
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/discover.html" class="nlink hide-m">Literary Gems</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a></nav>
 <main>
   <span class="tag">Craft &amp; Theory</span>
   <h1>What Is Magical Realism? A Guide for Readers and Writers</h1>
@@ -143,7 +143,7 @@ h1 em,h2 em{font-style:normal}
       <li><a href="/what-is-flash-fiction.html">What is flash fiction? A complete guide</a></li>
       <li><a href="/what-is-dirty-realism.html">What is dirty realism?</a></li>
       <li><a href="/all-writing.html#influences">Influenced By &mdash; the writers who shaped the work</a></li>
-      <li><a href="/reads.html">Must reads &mdash; book reviews and literary essays</a></li>
+      <li><a href="/reads.html">Book Reviews &mdash; book reviews and literary essays</a></li>
     </ul>
   </div>
   </div>

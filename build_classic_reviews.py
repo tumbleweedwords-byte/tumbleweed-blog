@@ -257,7 +257,7 @@ PAGE_TEMPLATE = """\
 <div class="wrap">
 {nav}
 <main>
-  <nav class="breadcrumb" aria-label="breadcrumb"><a href="/">Tumbleweed Words</a><span class="bc-sep">&rsaquo;</span><a href="/reads.html">Must Reads</a></nav>
+  <nav class="breadcrumb" aria-label="breadcrumb"><a href="/">Tumbleweed Words</a><span class="bc-sep">&rsaquo;</span><a href="/reads.html">Book Reviews</a></nav>
   <span class="tag">Book Review <span class="review-badge">{badge}</span></span>
   <h1>{title}</h1>
   <p class="byline">By David Moran &middot; <time datetime="2026-03-25">2026-03-25</time></p>

@@ -442,7 +442,7 @@ rd_faqs_html = [
      ('/best-flash-fiction-stories.html','Best Flash Fiction Stories')),
     ("What are the best literary magazines?",
      "The magazines that consistently publish the best short fiction and poetry: The Sun (pays well, deeply literary), Tin House (reliably excellent), One Story (single-story format, high selectivity), The Missouri Review, The Kenyon Review, and Ploughshares. For flash specifically: SmokeLong Quarterly, Wigleaf, Fractured Lit. For poetry: Poetry Magazine, The Paris Review, and The Rumpus. For international literary fiction: Granta, The Dublin Review, and The Stinging Fly. The New Yorker remains the most widely read literary venue for fiction. For essays and criticism: n+1, The Point, and the Los Angeles Review of Books.",
-     ('/reads.html','Must Reads')),
+     ('/reads.html','Book Reviews')),
     ("What should I read if I like Raymond Carver?",
      "If you respond to Carver\u2019s compression, restraint, and domestic subject matter, read: Amy Hempel (all four collections, start with Reasons to Live), Tobias Wolff (The Night in Question), Mary Robison (Why Did I Ever), Richard Ford (Rock Springs), and Bobbie Ann Mason (Shiloh). For the European equivalent of Carver\u2019s minimalism, read Peter Handke\u2019s short prose. For something darker and stranger, read Denis Johnson (Jesus\u2019 Son) and Barry Hannah (Airships). Gordon Lish edited both Carver and Hempel \u2014 reading the two together reveals how much of the minimalist aesthetic was editorial construction as much as individual voice.",
      ('/best-books-if-you-like-carver.html','Best Books If You Like Carver')),
@@ -482,7 +482,7 @@ build_page(
     rd_schemas,
     [
         ('Best Books If You Like Carver','/best-books-if-you-like-carver.html'),
-        ('Must Reads','/reads.html'),
+        ('Book Reviews','/reads.html'),
         ('Best Flash Fiction Collections','/best-flash-fiction-collections.html'),
         ('Influenced by Amy Hempel','/influenced-by-amy-hempel.html'),
         ('Read \u2014 an expat in paris','/an-expat-in-paris.html'),

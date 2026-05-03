@@ -26,7 +26,7 @@ The website at tumbleweedwords.com is a literary hub covering:
 - About the author: https://tumbleweedwords.com/about.html
 - Fiction & Poetry hub: https://tumbleweedwords.com/all-writing.html
 - Craft & Theory hub: https://tumbleweedwords.com/craft-theory.html
-- Must Reads hub: https://tumbleweedwords.com/reads.html
+- Book Reviews hub: https://tumbleweedwords.com/reads.html
 - Literary Gems hub: https://tumbleweedwords.com/discover.html
 - Newsletter: https://tumbleweedwords.substack.com
 
