@@ -59,9 +59,9 @@ h1 em,h2 em{font-style:normal}
 .pc-card:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 12px 32px rgba(85,51,232,.15)}
 .pc-card img{width:100%;display:block;filter:grayscale(15%);transition:filter .4s}
 .pc-card:hover img{filter:grayscale(0%)}
-.image-pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.image-pair-grid img{width:100%;height:auto;display:block;filter:grayscale(15%)}
-@media(max-width:600px){.image-pair-grid{grid-template-columns:1fr}}
+.image-pair-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.image-pair-grid img{width:100%;height:auto;display:block;filter:grayscale(15%);border:2px solid var(--p);transition:transform .25s,box-shadow .25s,filter .4s}
+.image-pair-grid img:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 12px 32px rgba(85,51,232,.15);filter:grayscale(0%)}
 </style>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -114,7 +114,7 @@ h1 em,h2 em{font-style:normal}
   <figcaption style="font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);margin-top:.75rem">Internationally published fiction and poetry, print and online.</figcaption>
 </figure>
 
-<figure style="margin:2rem auto;max-width:480px;text-align:center">
+<figure style="margin:2rem auto;max-width:360px;text-align:center">
   <div class="image-pair-grid">
     <img src="poetry-scotland-111-a.webp" alt="Poetry Scotland Issue 111, Spring 2026, featuring a poem by David Moran on page 4" loading="lazy">
     <img src="poetry-scotland-111-b.webp" alt="Poetry Scotland and its sister publication Gallus, Spring 2026" loading="lazy">
