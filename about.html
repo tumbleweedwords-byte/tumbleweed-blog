@@ -59,9 +59,8 @@ h1 em,h2 em{font-style:normal}
 .pc-card:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 12px 32px rgba(85,51,232,.15)}
 .pc-card img{width:100%;display:block;filter:grayscale(15%);transition:filter .4s}
 .pc-card:hover img{filter:grayscale(0%)}
-.image-pair-grid{display:grid;grid-template-columns:1fr;gap:14px}
-.image-pair-grid img{width:100%;height:auto;display:block;filter:grayscale(15%);border:2px solid var(--p);transition:transform .25s,box-shadow .25s,filter .4s}
-.image-pair-grid img:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 12px 32px rgba(85,51,232,.15);filter:grayscale(0%)}
+.image-pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.image-pair-grid img{width:100%;height:auto;display:block}
 </style>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -114,12 +113,12 @@ h1 em,h2 em{font-style:normal}
   <figcaption style="font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);margin-top:.75rem">Internationally published fiction and poetry, print and online.</figcaption>
 </figure>
 
-<figure style="margin:2rem auto;max-width:360px;text-align:center">
-  <div class="image-pair-grid">
-    <img src="poetry-scotland-111-a.webp" alt="Poetry Scotland Issue 111, Spring 2026, featuring a poem by David Moran on page 4" loading="lazy">
-    <img src="poetry-scotland-111-b.webp" alt="Poetry Scotland and its sister publication Gallus, Spring 2026" loading="lazy">
+<figure style="margin:2rem auto;max-width:500px;display:flex;align-items:center;gap:14px">
+  <figcaption style="font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);writing-mode:vertical-lr;flex-shrink:0;white-space:nowrap">Poetry Scotland, Issue 111 (Spring 2026)</figcaption>
+  <div class="image-pair-grid" style="flex:1">
+    <a href="/#published-in" class="pc-card" style="margin:0"><img src="poetry-scotland-111-a.webp" alt="Poetry Scotland Issue 111, Spring 2026, featuring a poem by David Moran on page 4" loading="lazy"></a>
+    <a href="/#published-in" class="pc-card" style="margin:0"><img src="poetry-scotland-111-b.webp" alt="Poetry Scotland and its sister publication Gallus, Spring 2026" loading="lazy"></a>
   </div>
-  <figcaption style="font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fa);margin-top:.75rem">Poetry Scotland, Issue 111 (Spring 2026)</figcaption>
 </figure>
 
 <h2>Be in touch, <em>reach out</em></h2>
