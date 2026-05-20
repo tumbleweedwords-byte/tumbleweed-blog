@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tumbleweedwords.com/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -633,7 +633,7 @@
 
   <url>
     <loc>https://tumbleweedwords.com/essays-and-culture.html</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -784,6 +784,12 @@
   <url>
     <loc>https://tumbleweedwords.com/john-of-john-douglas-stuart-review.html</loc>
     <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tumbleweedwords.com/from-stamps-to-submittable-what-published-means-now.html</loc>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
