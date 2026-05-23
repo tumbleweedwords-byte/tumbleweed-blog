@@ -73,13 +73,39 @@ h1 em{color:var(--p);font-style:italic}
 </style>
 <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/typewriter.css"><noscript><link rel="stylesheet" href="/typewriter.css"></noscript>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3615939042251794" crossorigin="anonymous"></script>
+<style id="tools-dropdown-css">
+.ndrop{position:relative;display:inline-flex;align-items:center}
+.ndrop-btn{background:none;border:none;cursor:pointer;font-family:'Courier New',Courier,monospace;font-size:18px;font-weight:700;color:#000;transition:color .15s;white-space:nowrap;letter-spacing:0.5px;padding:0;display:flex;align-items:center;gap:2px;line-height:1}
+.ndrop-btn:hover,.ndrop.open .ndrop-btn{color:#5533E8}
+.ndrop-btn svg{transition:transform .2s}
+.ndrop.open .ndrop-btn svg{transform:rotate(180deg)}
+.ndrop-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid #5533E8;min-width:210px;z-index:300;box-shadow:0 4px 20px rgba(85,51,232,.15)}
+.ndrop.open .ndrop-menu{display:block}
+.ndrop-menu a{display:block;padding:.7rem 1.1rem;font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:700;color:#1a1820;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap;border-bottom:1px solid #D4D0C4}
+.ndrop-menu a:last-child{border-bottom:none}
+.ndrop-menu a:hover{background:#EEEDFE;color:#5533E8}
+.mm-tools-group{border-bottom:1px solid #D4D0C4}
+.mm-tools-toggle{background:none;border:none;width:100%;text-align:left;font-family:'Courier New',Courier,monospace;font-size:16px;font-weight:500;color:#1a1820;padding:0 2rem;min-height:52px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;letter-spacing:0.5px;transition:color .15s}
+.mm-tools-toggle:hover{color:#5533E8}
+.mm-tools-toggle .mm-tools-arrow{font-size:10px;transition:transform .2s}
+.mm-tools-toggle[aria-expanded="true"] .mm-tools-arrow{transform:rotate(90deg)}
+.mm-tools-sub{display:none;background:#F6F4EE}
+.mm-tools-sub.open{display:block}
+.mm-tools-sub a{font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:500;color:#1a1820;text-decoration:none;padding:0 2.5rem;min-height:44px;display:flex;align-items:center;border-bottom:1px solid #D4D0C4;transition:color .15s}
+.mm-tools-sub a:last-child{border-bottom:none}
+.mm-tools-sub a:hover{color:#5533E8}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Tumbleweed Words RSS" href="/feed.xml">
+<link rel="preconnect" href="https://uk.bookshop.org">
+<link rel="preconnect" href="https://tumbleweedwords.substack.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
 <div class="wrap">
 
 <nav class="nav">
 <a href="/" class="nlogo">Tumbleweed Words</a>
-<a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a>
+<a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=2026-pulitzer-prize-fiction-daniel-kraus-angel-down&utm_content=nav" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a>
 </nav>
 
 <main>

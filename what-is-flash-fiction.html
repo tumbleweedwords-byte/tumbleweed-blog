@@ -100,11 +100,37 @@ h1 em,h2 em{font-style:normal}
 <link rel="stylesheet" href="/hamburger.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3615939042251794"
      crossorigin="anonymous"></script>
+<style id="tools-dropdown-css">
+.ndrop{position:relative;display:inline-flex;align-items:center}
+.ndrop-btn{background:none;border:none;cursor:pointer;font-family:'Courier New',Courier,monospace;font-size:18px;font-weight:700;color:#000;transition:color .15s;white-space:nowrap;letter-spacing:0.5px;padding:0;display:flex;align-items:center;gap:2px;line-height:1}
+.ndrop-btn:hover,.ndrop.open .ndrop-btn{color:#5533E8}
+.ndrop-btn svg{transition:transform .2s}
+.ndrop.open .ndrop-btn svg{transform:rotate(180deg)}
+.ndrop-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid #5533E8;min-width:210px;z-index:300;box-shadow:0 4px 20px rgba(85,51,232,.15)}
+.ndrop.open .ndrop-menu{display:block}
+.ndrop-menu a{display:block;padding:.7rem 1.1rem;font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:700;color:#1a1820;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap;border-bottom:1px solid #D4D0C4}
+.ndrop-menu a:last-child{border-bottom:none}
+.ndrop-menu a:hover{background:#EEEDFE;color:#5533E8}
+.mm-tools-group{border-bottom:1px solid #D4D0C4}
+.mm-tools-toggle{background:none;border:none;width:100%;text-align:left;font-family:'Courier New',Courier,monospace;font-size:16px;font-weight:500;color:#1a1820;padding:0 2rem;min-height:52px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;letter-spacing:0.5px;transition:color .15s}
+.mm-tools-toggle:hover{color:#5533E8}
+.mm-tools-toggle .mm-tools-arrow{font-size:10px;transition:transform .2s}
+.mm-tools-toggle[aria-expanded="true"] .mm-tools-arrow{transform:rotate(90deg)}
+.mm-tools-sub{display:none;background:#F6F4EE}
+.mm-tools-sub.open{display:block}
+.mm-tools-sub a{font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:500;color:#1a1820;text-decoration:none;padding:0 2.5rem;min-height:44px;display:flex;align-items:center;border-bottom:1px solid #D4D0C4;transition:color .15s}
+.mm-tools-sub a:last-child{border-bottom:none}
+.mm-tools-sub a:hover{color:#5533E8}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Tumbleweed Words RSS" href="/feed.xml">
+<link rel="preconnect" href="https://uk.bookshop.org">
+<link rel="preconnect" href="https://tumbleweedwords.substack.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
 <div class="wrap">
-<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><a href="/essays-and-culture.html#tools" class="nlink hide-m">Tools</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><a href="/essays-and-culture.html#tools">Tools</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><div class="ndrop hide-m" id="toolsDrop"><button class="ndrop-btn" aria-haspopup="true" aria-expanded="false" id="toolsBtn">Tools<svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="margin-left:2px"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ndrop-menu" id="toolsMenu" role="menu"><a href="/spot-the-typo.html" role="menuitem">Spot the Typo</a><a href="/literary-style-quiz.html" role="menuitem">Who Do You Write Like</a><a href="/flash-fiction-prompts.html" role="menuitem">Prompts Generator</a><a href="/podcasts.html" role="menuitem">Best Literary Podcasts</a></div></div></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=what-is-flash-fiction&utm_content=nav" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><div class="mm-tools-group"><button class="mm-tools-toggle" aria-expanded="false" id="mmToolsBtn">Tools<span class="mm-tools-arrow">&#9658;</span></button><div class="mm-tools-sub" id="mmToolsSub"><a href="/spot-the-typo.html">Spot the Typo</a><a href="/literary-style-quiz.html">Who Do You Write Like</a><a href="/flash-fiction-prompts.html">Prompts Generator</a><a href="/podcasts.html">Best Literary Podcasts</a></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=what-is-flash-fiction&utm_content=mobile-menu" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
 <main>
   <span class="tag">Craft & Form</span>
   <h1>What Is Flash Fiction? <em style="color:var(--p)">A Complete Guide</em></h1>
@@ -114,7 +140,7 @@ h1 em,h2 em{font-style:normal}
 <p>The form goes by many names depending on length. Sudden fiction tends to sit between 500 and 1,500 words. Micro fiction is usually under 300. Nano fiction under 100. Hint fiction is 25 words or fewer. Drabble is exactly 100. The terminology shifts between publications, anthologies, and writing communities, but the underlying principle stays the same: completeness within compression. A flash fiction piece earns its ending. It does not simply stop.</p>
 <p>What makes flash fiction different from other short writing is the requirement for narrative. A prose poem can exist as pure image and sound. A journal entry can meander. Flash fiction must move. Something must change between the first line and the last, even if that change happens entirely inside the reader rather than on the page.</p>
 <h2>Where did flash fiction come from?</h2>
-<p>The term &ldquo;flash fiction&rdquo; was coined in 1992 by James Thomas, Denise Thomas, and Tom Hazuka when they edited the landmark anthology <a href="https://uk.bookshop.org/a/17219/9780393308839" target="_blank" rel="noopener"><em>Flash Fiction: 72 Very Short Stories</em></a>. But the form is far older than the name. Aesop&rsquo;s fables are flash fiction. The parables of the Bible are flash fiction. Zen koans are flash fiction. Writers have been telling complete stories in compressed form for as long as humans have been telling stories at all.</p>
+<p>The term &ldquo;flash fiction&rdquo; was coined in 1992 by James Thomas, Denise Thomas, and Tom Hazuka when they edited the landmark anthology <a href="https://uk.bookshop.org/a/17219/9780393308839?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=what-is-flash-fiction" target="_blank" rel="noopener"><em>Flash Fiction: 72 Very Short Stories</em></a>. But the form is far older than the name. Aesop&rsquo;s fables are flash fiction. The parables of the Bible are flash fiction. Zen koans are flash fiction. Writers have been telling complete stories in compressed form for as long as humans have been telling stories at all.</p>
 <p>In the modern literary tradition, the lineage runs through Anton Chekhov, whose shortest stories operate on implication and restraint. Through <a href="/hemingway-old-man-sea-review.html">Ernest Hemingway</a>, whose <em>In Our Time</em> contains some of the most compressed narrative fiction in the English language. Through Jorge Luis Borges, whose labyrinths fit in a handful of pages. Through Raymond Carver, who stripped the American short story down to its bones. Through Amy Hempel, whose debut collection <em>Reasons to Live</em> proved that a story could be a single paragraph and still break you.</p>
 <p>The form gained serious literary attention in the 1980s with the publication of <em>Sudden Fiction</em> (1986), edited by Robert Shapard and James Thomas, and then <em>Flash Fiction</em> (1992). Since then it has moved from the margins to the mainstream of literary publishing. Journals like SmokeLong Quarterly, founded in 2003, publish nothing but flash fiction. Major anthologies are published regularly by W.W. Norton. Literary prizes now include flash fiction categories. The form is not new and it is not niche. It is one of the oldest ways of telling a story, finally given a name.</p>
 <h2>How long should flash fiction be?</h2>
@@ -136,7 +162,7 @@ h1 em,h2 em{font-style:normal}
 <p>The overlap is real and some of the best compressed writing sits in the grey area between the two. But as a working distinction: if the piece tells a story, it is flash fiction. If the piece creates an experience through language alone, it is prose poetry. For more on where one form ends and the other begins, read <a href="/prose-poetry-vs-flash-fiction.html">Prose Poetry vs. Flash Fiction</a>.</p>
 <h2>Who writes flash fiction?</h2>
 <p>Almost every major literary writer has written flash fiction, whether they called it that or not. Hemingway, Chekhov, Kafka, Virginia Woolf, Jamaica Kincaid, Jorge Luis Borges, Lydia Davis, George Saunders, Raymond Carver, Amy Hempel, Etgar Keret, Yasunari Kawabata, Joyce Carol Oates.</p>
-<p>Lydia Davis is widely considered the modern master of the form. Her stories are sometimes a single sentence long. George Saunders&rsquo; &ldquo;Sticks&rdquo; is one of the most anthologised pieces of flash fiction in the English language at roughly 400 words. Amy Hempel&rsquo;s debut collection redefined what compression could do in American fiction. Kawabata&rsquo;s <a href="https://uk.bookshop.org/a/17219/9780374530495" target="_blank" rel="noopener"><em>Palm-of-the-Hand Stories</em></a> is the single best collection of ultra-short fiction ever assembled, spanning his entire career. For a reading list of the best flash fiction with notes on what each story teaches, read <a href="/best-flash-fiction-examples.html">The Best Flash Fiction Examples</a>.</p>
+<p>Lydia Davis is widely considered the modern master of the form. Her stories are sometimes a single sentence long. George Saunders&rsquo; &ldquo;Sticks&rdquo; is one of the most anthologised pieces of flash fiction in the English language at roughly 400 words. Amy Hempel&rsquo;s debut collection redefined what compression could do in American fiction. Kawabata&rsquo;s <a href="https://uk.bookshop.org/a/17219/9780374530495?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=what-is-flash-fiction" target="_blank" rel="noopener"><em>Palm-of-the-Hand Stories</em></a> is the single best collection of ultra-short fiction ever assembled, spanning his entire career. For a reading list of the best flash fiction with notes on what each story teaches, read <a href="/best-flash-fiction-examples.html">The Best Flash Fiction Examples</a>.</p>
 <h2>What techniques does flash fiction use?</h2>
 <p>Flash fiction relies on a specific set of craft tools that differ from longer fiction:</p>
 <ul>
@@ -159,7 +185,7 @@ h1 em,h2 em{font-style:normal}
 <div class="cta-box">
     <div class="lbl">Tumbleweed Words &middot; Substack Newsletter</div>
     <p>Gritty, minimalist fiction and poetry — written on trains, in borrowed rooms, in cities I am passing through. Over 1,200 readers. Free to subscribe.</p>
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=what-is-flash-fiction&utm_content=mid-content" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
   </div>
   <div class="related">
     <span class="lbl">Keep reading</span>
@@ -187,10 +213,10 @@ h1 em,h2 em{font-style:normal}
 <footer class="ft">
   <span class="ft-c">&copy; 2024 David &middot; Tumbleweed Words</span>
   <nav class="ft-l">
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=what-is-flash-fiction&utm_content=mid-content" target="_blank" rel="noopener">Newsletter</a>
     <a href="/about.html">About</a><a href="/contact.html">Contact</a>
     <a href="/all-writing.html">Writing</a>
-    <a href="https://uk.bookshop.org/shop/tumbleweedwords" target="_blank" rel="noopener">Browse the bookshop</a>
+    <a href="https://uk.bookshop.org/shop/tumbleweedwords?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=footer" target="_blank" rel="noopener">Browse the bookshop</a>
 </nav>
 <p style="width:100%;margin:.75rem 0 0;font-family:var(--fm);font-size:.70rem;letter-spacing:.08em;color:var(--fa);text-align:center;">Tumbleweed Words is a Bookshop.org affiliate. Book links on this site earn a small commission that supports the work, at no extra cost to you.</p>
 </footer>
@@ -220,6 +246,8 @@ function twConsent(choice){
 </script>
 <script>(function(){var b=document.querySelector('.body');var bl=document.querySelector('.byline');if(!b||!bl)return;var words=b.innerText.trim().split(/\s+/).length;var mins=Math.max(1,Math.round(words/200));var sp=document.createElement('span');sp.textContent=' · '+mins+' min read';bl.appendChild(sp);})();</script>
 <script src="/hamburger.js"></script>
+<script id="tools-dropdown-js">(function(){var d=document.getElementById('toolsDrop'),b=document.getElementById('toolsBtn');if(!d||!b)return;b.addEventListener('click',function(e){e.stopPropagation();var open=d.classList.toggle('open');b.setAttribute('aria-expanded',open);});document.addEventListener('click',function(e){if(!e.target.closest('#toolsDrop')){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});d.addEventListener('keydown',function(e){if(e.key==='Escape'){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});}());</script>
+<script id="mm-tools-js">(function(){var b=document.getElementById('mmToolsBtn'),s=document.getElementById('mmToolsSub');if(!b||!s)return;b.addEventListener('click',function(){var open=s.classList.toggle('open');b.setAttribute('aria-expanded',open);});}());</script>
 </body>
 
 </html>

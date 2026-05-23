@@ -117,11 +117,37 @@ h1 em,h2 em{font-style:normal}
 <link rel="stylesheet" href="/hamburger.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3615939042251794"
      crossorigin="anonymous"></script>
+<style id="tools-dropdown-css">
+.ndrop{position:relative;display:inline-flex;align-items:center}
+.ndrop-btn{background:none;border:none;cursor:pointer;font-family:'Courier New',Courier,monospace;font-size:18px;font-weight:700;color:#000;transition:color .15s;white-space:nowrap;letter-spacing:0.5px;padding:0;display:flex;align-items:center;gap:2px;line-height:1}
+.ndrop-btn:hover,.ndrop.open .ndrop-btn{color:#5533E8}
+.ndrop-btn svg{transition:transform .2s}
+.ndrop.open .ndrop-btn svg{transform:rotate(180deg)}
+.ndrop-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid #5533E8;min-width:210px;z-index:300;box-shadow:0 4px 20px rgba(85,51,232,.15)}
+.ndrop.open .ndrop-menu{display:block}
+.ndrop-menu a{display:block;padding:.7rem 1.1rem;font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:700;color:#1a1820;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap;border-bottom:1px solid #D4D0C4}
+.ndrop-menu a:last-child{border-bottom:none}
+.ndrop-menu a:hover{background:#EEEDFE;color:#5533E8}
+.mm-tools-group{border-bottom:1px solid #D4D0C4}
+.mm-tools-toggle{background:none;border:none;width:100%;text-align:left;font-family:'Courier New',Courier,monospace;font-size:16px;font-weight:500;color:#1a1820;padding:0 2rem;min-height:52px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;letter-spacing:0.5px;transition:color .15s}
+.mm-tools-toggle:hover{color:#5533E8}
+.mm-tools-toggle .mm-tools-arrow{font-size:10px;transition:transform .2s}
+.mm-tools-toggle[aria-expanded="true"] .mm-tools-arrow{transform:rotate(90deg)}
+.mm-tools-sub{display:none;background:#F6F4EE}
+.mm-tools-sub.open{display:block}
+.mm-tools-sub a{font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:500;color:#1a1820;text-decoration:none;padding:0 2.5rem;min-height:44px;display:flex;align-items:center;border-bottom:1px solid #D4D0C4;transition:color .15s}
+.mm-tools-sub a:last-child{border-bottom:none}
+.mm-tools-sub a:hover{color:#5533E8}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Tumbleweed Words RSS" href="/feed.xml">
+<link rel="preconnect" href="https://uk.bookshop.org">
+<link rel="preconnect" href="https://tumbleweedwords.substack.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
 <div class="wrap">
-<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><a href="/essays-and-culture.html#tools" class="nlink hide-m">Tools</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><a href="/essays-and-culture.html#tools">Tools</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><div class="ndrop hide-m" id="toolsDrop"><button class="ndrop-btn" aria-haspopup="true" aria-expanded="false" id="toolsBtn">Tools<svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="margin-left:2px"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ndrop-menu" id="toolsMenu" role="menu"><a href="/spot-the-typo.html" role="menuitem">Spot the Typo</a><a href="/literary-style-quiz.html" role="menuitem">Who Do You Write Like</a><a href="/flash-fiction-prompts.html" role="menuitem">Prompts Generator</a><a href="/podcasts.html" role="menuitem">Best Literary Podcasts</a></div></div></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=top-10-poetry-collections-to-read&utm_content=nav" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><div class="mm-tools-group"><button class="mm-tools-toggle" aria-expanded="false" id="mmToolsBtn">Tools<span class="mm-tools-arrow">&#9658;</span></button><div class="mm-tools-sub" id="mmToolsSub"><a href="/spot-the-typo.html">Spot the Typo</a><a href="/literary-style-quiz.html">Who Do You Write Like</a><a href="/flash-fiction-prompts.html">Prompts Generator</a><a href="/podcasts.html">Best Literary Podcasts</a></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=top-10-poetry-collections-to-read&utm_content=mobile-menu" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
 <main>
   <span class="tag">Literary Reviews &middot; Poetry</span>
   <h1>Top 10 Poetry Collections to Read <span style="color:var(--p)">Before You Die</span></h1>
@@ -138,103 +164,103 @@ h1 em,h2 em{font-style:normal}
 
 <h2>1. <em>Leaves of Grass</em> by <span style="color:var(--p)">Walt Whitman</span></h2>
 
-<p>Walt Whitman published <a href="https://uk.bookshop.org/a/17219/9780140421996" target="_blank" rel="noopener"><em>Leaves of Grass</em></a> in 1855 at his own expense. He set the type himself in a print shop in Brooklyn after his job as a journalist had run dry. The first edition contained twelve poems, including &ldquo;Song of Myself&rdquo;, which is one of the founding documents of American literature.</p>
+<p>Walt Whitman published <a href="https://uk.bookshop.org/a/17219/9780140421996?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Leaves of Grass</em></a> in 1855 at his own expense. He set the type himself in a print shop in Brooklyn after his job as a journalist had run dry. The first edition contained twelve poems, including &ldquo;Song of Myself&rdquo;, which is one of the founding documents of American literature.</p>
 
 <p>Whitman invented something with this book. Free verse, the long line, the catalogue as a poetic form, the I that contains multitudes. Every American poet who came after him is either following him or running away from him. Reading <em>Leaves of Grass</em> is reading the moment poetry stopped being a formal exercise and became a way of being alive on a particular day in a particular country.</p>
 
 <p>He revised and expanded the book for the rest of his life. The deathbed edition contains nearly 400 poems. Start with the 1855 version. It is the rawest and the most necessary.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780140421996" target="_blank" rel="noopener">Buy <em>Leaves of Grass</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9780140421996?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Leaves of Grass</em> from Bookshop.org &rarr;</a></p>
 
 <h2>2. <em>The Flowers of Evil</em> by <span style="color:var(--p)">Charles Baudelaire</span></h2>
 
-<p>Charles Baudelaire published <a href="https://uk.bookshop.org/a/17219/9781567927245" target="_blank" rel="noopener"><em>Les Fleurs du mal</em></a> in Paris in 1857. The French government banned six of the poems for offending public morality. He paid the fine. The book changed European poetry forever.</p>
+<p>Charles Baudelaire published <a href="https://uk.bookshop.org/a/17219/9781567927245?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Les Fleurs du mal</em></a> in Paris in 1857. The French government banned six of the poems for offending public morality. He paid the fine. The book changed European poetry forever.</p>
 
 <p><em>The Flowers of Evil</em> is the first great modern book of poems. Baudelaire wrote about prostitutes and street drunks and decomposing horses and the strange beauty of urban filth. He invented the figure of the fl&acirc;neur, the man who walks the city without purpose and sees everything. Eliot, Walter Benjamin, Rimbaud, Verlaine, all of them came out of this book.</p>
 
 <p>Read it in a good translation. The Richard Howard version from 1982 is the standard. Some of the poems are dark in ways the Victorians would have called depraved, and we would now call honest. That is the whole point. Baudelaire said the truth out loud when no one else was willing to.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9781567927245" target="_blank" rel="noopener">Buy <em>The Flowers of Evil</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9781567927245?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>The Flowers of Evil</em> from Bookshop.org &rarr;</a></p>
 
 <h2>3. <em>Twenty Love Poems and a Song of Despair</em> by <span style="color:var(--p)">Pablo Neruda</span></h2>
 
-<p>Pablo Neruda was nineteen years old when he wrote <a href="https://uk.bookshop.org/a/17219/9781784878207" target="_blank" rel="noopener"><em>Twenty Love Poems and a Song of Despair</em></a>. He published it in Santiago, Chile, in 1924. It made him famous overnight. He spent the rest of his life trying to write poems as good as the ones in this book and rarely succeeded.</p>
+<p>Pablo Neruda was nineteen years old when he wrote <a href="https://uk.bookshop.org/a/17219/9781784878207?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Twenty Love Poems and a Song of Despair</em></a>. He published it in Santiago, Chile, in 1924. It made him famous overnight. He spent the rest of his life trying to write poems as good as the ones in this book and rarely succeeded.</p>
 
 <p>The poems are about two women, both real, both grieved over, both rendered with the kind of precision that only a teenager in love can manage. The most famous lines, &ldquo;Tonight I can write the saddest lines&rdquo; and &ldquo;I want to do with you what spring does with the cherry trees&rdquo;, are the most quoted love poems in any language for a reason.</p>
 
 <p>Neruda went on to win the Nobel Prize in 1971. He served as Chile&rsquo;s ambassador to France, then died days after Pinochet&rsquo;s coup in 1973. None of his later books matter as much as this small first one.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9781784878207" target="_blank" rel="noopener">Buy <em>Twenty Love Poems and a Song of Despair</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9781784878207?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Twenty Love Poems and a Song of Despair</em> from Bookshop.org &rarr;</a></p>
 
 <h2>4. <em>Poet in New York</em> by <span style="color:var(--p)">Federico Garc&iacute;a Lorca</span></h2>
 
 <p>Federico Garc&iacute;a Lorca arrived in New York in June 1929 and stayed for nine months. He spoke no English. He lived in a dorm at Columbia University. He walked Harlem at night, sat in Wall Street offices during the crash, and watched the city eat itself alive in the early days of the Depression.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780141185828" target="_blank" rel="noopener"><em>Poet in New York</em></a> is the book he wrote about it. It was published posthumously in 1940, four years after Franco&rsquo;s fascists shot him in a ditch outside Granada. The poems are surrealist, hallucinatory, full of Black Christs and dead children and mechanical bulls. Nothing else in his work prepares you for them. Nothing else in twentieth-century poetry sounds quite like them.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9780141185828?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Poet in New York</em></a> is the book he wrote about it. It was published posthumously in 1940, four years after Franco&rsquo;s fascists shot him in a ditch outside Granada. The poems are surrealist, hallucinatory, full of Black Christs and dead children and mechanical bulls. Nothing else in his work prepares you for them. Nothing else in twentieth-century poetry sounds quite like them.</p>
 
 <p>Read the bilingual edition with the Spanish facing the English. Even if you cannot read Spanish, you will see what the poems are doing on the page. They look like nothing anyone had written before, and like nothing anyone has written since.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780141185828" target="_blank" rel="noopener">Buy <em>Poet in New York</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9780141185828?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Poet in New York</em> from Bookshop.org &rarr;</a></p>
 
 <h2>5. <em>Lunch Poems</em> by <span style="color:var(--p)">Frank O&rsquo;Hara</span></h2>
 
-<p>Frank O&rsquo;Hara wrote most of the poems in <a href="https://uk.bookshop.org/a/17219/9780872860353" target="_blank" rel="noopener"><em>Lunch Poems</em></a> on his lunch break at the Museum of Modern Art in New York, where he worked as a curator. City Lights published the book in 1964 in San Francisco, in their Pocket Poets series, with a cover by Jasper Johns.</p>
+<p>Frank O&rsquo;Hara wrote most of the poems in <a href="https://uk.bookshop.org/a/17219/9780872860353?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Lunch Poems</em></a> on his lunch break at the Museum of Modern Art in New York, where he worked as a curator. City Lights published the book in 1964 in San Francisco, in their Pocket Poets series, with a cover by Jasper Johns.</p>
 
 <p>The poems are short, conversational, immediate. They mention real people and real bars and real streets. They mention what O&rsquo;Hara had for lunch and who he ran into and what film he saw the night before. They also break your heart, quietly, in the last two lines.</p>
 
 <p>O&rsquo;Hara died at forty in a freak accident on Fire Island in 1966, hit by a beach buggy on the sand. <em>Lunch Poems</em> is the book he is remembered for. It is also the best argument anyone has ever made for poetry as a way of paying attention to the day you happen to be living through.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780872860353" target="_blank" rel="noopener">Buy <em>Lunch Poems</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9780872860353?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Lunch Poems</em> from Bookshop.org &rarr;</a></p>
 
 <h2>6. <em>Ariel</em> by <span style="color:var(--p)">Sylvia Plath</span></h2>
 
-<p>Sylvia Plath put the manuscript of <a href="https://uk.bookshop.org/a/17219/9780571236091" target="_blank" rel="noopener"><em>Ariel</em></a> together in the autumn of 1962, in a cottage in Devon, after her marriage to Ted Hughes had collapsed. She killed herself in February 1963 in a flat in London. The book was published two years later by Faber in an edition Hughes had reorganised. It changed what people thought poetry could do.</p>
+<p>Sylvia Plath put the manuscript of <a href="https://uk.bookshop.org/a/17219/9780571236091?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Ariel</em></a> together in the autumn of 1962, in a cottage in Devon, after her marriage to Ted Hughes had collapsed. She killed herself in February 1963 in a flat in London. The book was published two years later by Faber in an edition Hughes had reorganised. It changed what people thought poetry could do.</p>
 
 <p>The <em>Ariel</em> poems are the most famous body of work in twentieth-century English-language poetry. &ldquo;Daddy&rdquo;, &ldquo;Lady Lazarus&rdquo;, &ldquo;Tulips&rdquo;, &ldquo;Ariel&rdquo;, &ldquo;The Arrival of the Bee Box&rdquo;. They are the sound of a woman writing at the absolute limit of her own intelligence and her own pain, with nothing held back and nothing decorative left in.</p>
 
 <p>The 2004 restored edition, edited by Plath&rsquo;s daughter Frieda Hughes, gives you the manuscript in the order Plath intended. Read that one. It is the book she actually wrote, without anyone else&rsquo;s hand on it.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780571236091" target="_blank" rel="noopener">Buy <em>Ariel</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9780571236091?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Ariel</em> from Bookshop.org &rarr;</a></p>
 
 <h2>7. <em>Death of a Naturalist</em> by <span style="color:var(--p)">Seamus Heaney</span></h2>
 
-<p>Seamus Heaney published <a href="https://uk.bookshop.org/a/17219/9780571230839" target="_blank" rel="noopener"><em>Death of a Naturalist</em></a> in 1966, when he was twenty-seven and working as a teacher in Belfast. The book is about growing up on a farm in County Derry in the 1940s and 1950s. It is also the book that announced the most important English-language poet of the second half of the twentieth century.</p>
+<p>Seamus Heaney published <a href="https://uk.bookshop.org/a/17219/9780571230839?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Death of a Naturalist</em></a> in 1966, when he was twenty-seven and working as a teacher in Belfast. The book is about growing up on a farm in County Derry in the 1940s and 1950s. It is also the book that announced the most important English-language poet of the second half of the twentieth century.</p>
 
 <p>The poems are full of mud and frogs and blackberries and water diviners and his father digging potatoes in the field. The most famous one is &ldquo;Digging&rdquo;, which is a poem about a writer trying to work out whether his pen can ever do what his father&rsquo;s spade did. It can. Heaney does.</p>
 
 <p>He went on to win the Nobel Prize in 1995. He wrote eleven more books, all of them good. None of them are quite as raw as this first one. Read <em>Death of a Naturalist</em> for the sound of a poet finding his voice for the first time, before he knew how famous he was going to be.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780571230839" target="_blank" rel="noopener">Buy <em>Death of a Naturalist</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9780571230839?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Death of a Naturalist</em> from Bookshop.org &rarr;</a></p>
 
 <h2>8. <em>Love Is a Dog from Hell</em> by <span style="color:var(--p)">Charles Bukowski</span></h2>
 
-<p>Charles Bukowski wrote <a href="https://uk.bookshop.org/a/17219/9780876853627" target="_blank" rel="noopener"><em>Love Is a Dog from Hell</em></a> in his fifties, after a lifetime of bad jobs, bad apartments, and worse relationships. Black Sparrow Press published it in 1977 in Santa Rosa, California. It is the best book of poems ever written by an American who never went to college.</p>
+<p>Charles Bukowski wrote <a href="https://uk.bookshop.org/a/17219/9780876853627?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Love Is a Dog from Hell</em></a> in his fifties, after a lifetime of bad jobs, bad apartments, and worse relationships. Black Sparrow Press published it in 1977 in Santa Rosa, California. It is the best book of poems ever written by an American who never went to college.</p>
 
 <p>The poems are about women, drinking, racetracks, post office shifts, and the slow business of getting older without getting any better. They are also funny in ways other serious poets never let themselves be funny. Bukowski&rsquo;s voice is direct, unliterary, completely unafraid of sounding stupid. It almost never sounds stupid. It usually sounds like the truth.</p>
 
 <p>Read this one if you have ever wondered whether poetry has to be difficult to be real. It does not. Bukowski proves it on every page.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780876853627" target="_blank" rel="noopener">Buy <em>Love Is a Dog from Hell</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9780876853627?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Love Is a Dog from Hell</em> from Bookshop.org &rarr;</a></p>
 
 <h2>9. <em>The Wild Iris</em> by <span style="color:var(--p)">Louise Gl&uuml;ck</span></h2>
 
-<p>Louise Gl&uuml;ck published <a href="https://uk.bookshop.org/a/17219/9781857542233" target="_blank" rel="noopener"><em>The Wild Iris</em></a> in 1992. It won the Pulitzer Prize for Poetry in 1993. She won the Nobel Prize in Literature in 2020 and died in 2023, having spent forty years writing the most precise English of any American poet of her generation.</p>
+<p>Louise Gl&uuml;ck published <a href="https://uk.bookshop.org/a/17219/9781857542233?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>The Wild Iris</em></a> in 1992. It won the Pulitzer Prize for Poetry in 1993. She won the Nobel Prize in Literature in 2020 and died in 2023, having spent forty years writing the most precise English of any American poet of her generation.</p>
 
 <p><em>The Wild Iris</em> is a book about a garden. It is also a book about God, about grief, about a marriage ending, about the relationship between language and the things language fails to name. The poems are spoken by flowers, by a gardener, and by something that might be God or might be the gardener&rsquo;s own mind. The voices argue. The poems are very short and very quiet, and they cut deeper than almost anything else written in English in the last fifty years.</p>
 
 <p>Start with &ldquo;Snowdrops&rdquo;. If it does not stop you, nothing in poetry will.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9781857542233" target="_blank" rel="noopener">Buy <em>The Wild Iris</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9781857542233?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>The Wild Iris</em> from Bookshop.org &rarr;</a></p>
 
 <h2>10. <em>Autobiography of Red</em> by <span style="color:var(--p)">Anne Carson</span></h2>
 
-<p>Anne Carson published <a href="https://uk.bookshop.org/a/17219/9780224059732" target="_blank" rel="noopener"><em>Autobiography of Red</em></a> in 1998. It is a verse novel about a winged red monster named Geryon who survives an abusive childhood, falls in love with Herakles, takes photographs, and travels to South America. It is also a translation of, and conversation with, the fragments of an ancient Greek poet called Stesichoros, who wrote a poem about Geryon two and a half thousand years ago that survives only in scraps.</p>
+<p>Anne Carson published <a href="https://uk.bookshop.org/a/17219/9780224059732?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener"><em>Autobiography of Red</em></a> in 1998. It is a verse novel about a winged red monster named Geryon who survives an abusive childhood, falls in love with Herakles, takes photographs, and travels to South America. It is also a translation of, and conversation with, the fragments of an ancient Greek poet called Stesichoros, who wrote a poem about Geryon two and a half thousand years ago that survives only in scraps.</p>
 
 <p>If that sounds difficult, it is not. Carson is one of the most readable poets alive. The book moves like a novel. The sentences are spare and surprising. The love story is one of the saddest in modern poetry, and the photographs and the Stesichoros fragments give the whole thing a kind of weight no other poetry book has quite achieved.</p>
 
 <p>Carson is a classics professor at McGill University in Montreal. She has written more than twenty books. This is the one to start with. After this, read <em>Nox</em>, then <em>Glass, Irony and God</em>.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9780224059732" target="_blank" rel="noopener">Buy <em>Autobiography of Red</em> from Bookshop.org &rarr;</a></p>
+<p><a href="https://uk.bookshop.org/a/17219/9780224059732?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=top-10-poetry-collections-to-read" target="_blank" rel="noopener">Buy <em>Autobiography of Red</em> from Bookshop.org &rarr;</a></p>
 
 <h2>Where to start</h2>
 
@@ -289,7 +315,7 @@ h1 em,h2 em{font-style:normal}
 <div class="cta-box">
     <div class="lbl">Tumbleweed Words &middot; Newsletter</div>
     <p>Flash fiction and poetry in the tradition of what you just read. Written on the road. Over 1,200 readers. Free.</p>
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=top-10-poetry-collections-to-read&utm_content=mid-content" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
   </div>
   <div class="related"><span class="lbl">Keep reading</span><ul><li><a href="/five-memoirs-to-read-before-you-die.html">Five Memoirs to Read Before You Die</a></li><li><a href="/best-flash-fiction-collections.html">The Best Flash Fiction Collections</a></li><li><a href="/craft-theory.html">Craft &amp; Theory</a></li><li><a href="/reads.html">More Literary Reviews</a></li></ul></div>
 </main>
@@ -304,10 +330,10 @@ h1 em,h2 em{font-style:normal}
 <footer class="ft">
   <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
   <nav class="ft-l">
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=top-10-poetry-collections-to-read&utm_content=mid-content" target="_blank" rel="noopener">Newsletter</a>
     <a href="about.html">About</a><a href="/contact.html">Contact</a>
     <a href="/">Writing</a>
-    <a href="https://uk.bookshop.org/shop/tumbleweedwords" target="_blank" rel="noopener">Browse the bookshop</a>
+    <a href="https://uk.bookshop.org/shop/tumbleweedwords?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=footer" target="_blank" rel="noopener">Browse the bookshop</a>
   </nav>
   <p style="width:100%;margin:.75rem 0 0;font-family:var(--fm);font-size:.70rem;letter-spacing:.08em;color:var(--fa);text-align:center;">Tumbleweed Words is a Bookshop.org affiliate. Book links on this site earn a small commission that supports the work, at no extra cost to you.</p>
 </footer>
@@ -321,5 +347,7 @@ h1 em,h2 em{font-style:normal}
 <script>(function(){var bar=document.getElementById('subBar');var close=document.getElementById('subBarClose');if(!bar)return;function show(){bar.classList.add('visible')}window.addEventListener('scroll',function(){if(window.scrollY>400)show()},{once:true});if(close)close.addEventListener('click',function(){bar.classList.remove('visible');bar.style.display='none';});}());</script>
 <script>(function(){var b=document.querySelector('.body');var bl=document.querySelector('.byline');if(!b||!bl)return;var words=b.innerText.trim().split(/\s+/).length;var mins=Math.max(1,Math.round(words/200));var sp=document.createElement('span');sp.textContent=' \xb7 '+mins+' min read';bl.appendChild(sp);})();</script>
 <script src="/hamburger.js"></script>
+<script id="tools-dropdown-js">(function(){var d=document.getElementById('toolsDrop'),b=document.getElementById('toolsBtn');if(!d||!b)return;b.addEventListener('click',function(e){e.stopPropagation();var open=d.classList.toggle('open');b.setAttribute('aria-expanded',open);});document.addEventListener('click',function(e){if(!e.target.closest('#toolsDrop')){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});d.addEventListener('keydown',function(e){if(e.key==='Escape'){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});}());</script>
+<script id="mm-tools-js">(function(){var b=document.getElementById('mmToolsBtn'),s=document.getElementById('mmToolsSub');if(!b||!s)return;b.addEventListener('click',function(){var open=s.classList.toggle('open');b.setAttribute('aria-expanded',open);});}());</script>
 </body>
 </html>

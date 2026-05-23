@@ -86,11 +86,37 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.9rem);font-weight:700;colo
 <link rel="stylesheet" href="/hamburger.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3615939042251794"
      crossorigin="anonymous"></script>
+<style id="tools-dropdown-css">
+.ndrop{position:relative;display:inline-flex;align-items:center}
+.ndrop-btn{background:none;border:none;cursor:pointer;font-family:'Courier New',Courier,monospace;font-size:18px;font-weight:700;color:#000;transition:color .15s;white-space:nowrap;letter-spacing:0.5px;padding:0;display:flex;align-items:center;gap:2px;line-height:1}
+.ndrop-btn:hover,.ndrop.open .ndrop-btn{color:#5533E8}
+.ndrop-btn svg{transition:transform .2s}
+.ndrop.open .ndrop-btn svg{transform:rotate(180deg)}
+.ndrop-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid #5533E8;min-width:210px;z-index:300;box-shadow:0 4px 20px rgba(85,51,232,.15)}
+.ndrop.open .ndrop-menu{display:block}
+.ndrop-menu a{display:block;padding:.7rem 1.1rem;font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:700;color:#1a1820;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap;border-bottom:1px solid #D4D0C4}
+.ndrop-menu a:last-child{border-bottom:none}
+.ndrop-menu a:hover{background:#EEEDFE;color:#5533E8}
+.mm-tools-group{border-bottom:1px solid #D4D0C4}
+.mm-tools-toggle{background:none;border:none;width:100%;text-align:left;font-family:'Courier New',Courier,monospace;font-size:16px;font-weight:500;color:#1a1820;padding:0 2rem;min-height:52px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;letter-spacing:0.5px;transition:color .15s}
+.mm-tools-toggle:hover{color:#5533E8}
+.mm-tools-toggle .mm-tools-arrow{font-size:10px;transition:transform .2s}
+.mm-tools-toggle[aria-expanded="true"] .mm-tools-arrow{transform:rotate(90deg)}
+.mm-tools-sub{display:none;background:#F6F4EE}
+.mm-tools-sub.open{display:block}
+.mm-tools-sub a{font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:500;color:#1a1820;text-decoration:none;padding:0 2.5rem;min-height:44px;display:flex;align-items:center;border-bottom:1px solid #D4D0C4;transition:color .15s}
+.mm-tools-sub a:last-child{border-bottom:none}
+.mm-tools-sub a:hover{color:#5533E8}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Tumbleweed Words RSS" href="/feed.xml">
+<link rel="preconnect" href="https://uk.bookshop.org">
+<link rel="preconnect" href="https://tumbleweedwords.substack.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
 <div class="wrap">
-<nav class="nav"><a href="/" class="nlogo">Tumbleweed Words</a><div class="nlinks"><a href="/craft-theory.html" class="nlink">Craft &amp; Theory</a><a href="/all-writing.html" class="nlink">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink">Book Reviews</a><a href="/essays-and-culture.html" class="nlink">Essays &amp; Culture</a><a href="/about.html" class="nlink">About</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><a href="/essays-and-culture.html#tools">Tools</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
+<nav class="nav"><a href="/" class="nlogo">Tumbleweed Words</a><div class="nlinks"><a href="/craft-theory.html" class="nlink">Craft &amp; Theory</a><a href="/all-writing.html" class="nlink">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink">Book Reviews</a><a href="/essays-and-culture.html" class="nlink">Essays &amp; Culture</a><a href="/about.html" class="nlink">About</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-flash-fiction-stories&utm_content=nav" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><div class="mm-tools-group"><button class="mm-tools-toggle" aria-expanded="false" id="mmToolsBtn">Tools<span class="mm-tools-arrow">&#9658;</span></button><div class="mm-tools-sub" id="mmToolsSub"><a href="/spot-the-typo.html">Spot the Typo</a><a href="/literary-style-quiz.html">Who Do You Write Like</a><a href="/flash-fiction-prompts.html">Prompts Generator</a><a href="/podcasts.html">Best Literary Podcasts</a></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-flash-fiction-stories&utm_content=mobile-menu" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
 <main>
   <span class="tag">Reading List &middot; Flash Fiction</span>
   <h1>The Best Flash Fiction Stories — <span style="color:var(--p)">Essential Reading</span></h1>
@@ -111,7 +137,7 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.9rem);font-weight:700;colo
 <p>Two women. One is dying in a California hospital. The other — the narrator — has come to visit after putting it off for too long. The story circles around the thing neither of them will say, telling jokes instead, swapping facts, talking about everything except what is actually happening. The ending lands like something falling.</p>
 <div class="analysis"><p><strong>What makes it work:</strong> the evasion <em>is</em> the story. Hempel understands that grief doesn&rsquo;t arrive as a statement. It arrives as deflection, as a fact about chimpanzees, as a story about something else entirely. What is not said in this piece is more present than anything that is. Required reading for anyone writing compressed fiction.</p></div>
 
-<h2><span>Lydia Davis &middot; Flash &amp; Micro Fiction</span>Short pieces from <a href="https://uk.bookshop.org/a/17219/9780241968086" target="_blank" rel="noopener"><em>Can&rsquo;t and Won&rsquo;t</em></a></h2>
+<h2><span>Lydia Davis &middot; Flash &amp; Micro Fiction</span>Short pieces from <a href="https://uk.bookshop.org/a/17219/9780241968086?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=best-flash-fiction-stories" target="_blank" rel="noopener"><em>Can&rsquo;t and Won&rsquo;t</em></a></h2>
 <p>Davis works at the outer limits of what prose can be. Some of her flash pieces run to a single paragraph. Some to three sentences. Her story &ldquo;The Sentence and the Young Man&rdquo; is four lines long. Every one earns its length precisely. Her work asks — and answers — the question of what minimum a story needs to be a story.</p>
 <div class="analysis"><p><strong>What makes it work:</strong> Davis is more useful than most craft guides. Reading her is a lesson in permission. You don&rsquo;t need everything you think you need. The story doesn&rsquo;t need a plot. It needs one true thing and a form that holds it.</p></div>
 
@@ -125,7 +151,7 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.9rem);font-weight:700;colo
 <div class="cta-box">
     <div class="lbl">Tumbleweed Words &middot; Newsletter</div>
     <p>Flash fiction written from the road — on trains, in borrowed rooms, in cities I am passing through. Published in <em>Litro</em>, <em>Cleaver Magazine</em>, <em>Adelaide Magazine</em>. Pushcart shortlisted. Free.</p>
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-flash-fiction-stories&utm_content=mid-content" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
   </div>
   <div class="related">
     <span class="lbl">Keep reading</span>
@@ -152,10 +178,10 @@ h1{font-family:var(--fd);font-size:clamp(2rem,4.5vw,2.9rem);font-weight:700;colo
 <footer class="ft">
   <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
   <nav class="ft-l">
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-flash-fiction-stories&utm_content=mid-content" target="_blank" rel="noopener">Newsletter</a>
     <a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><a href="/essays-and-culture.html#tools">Tools</a>
     <a href="/reads.html">Book Reviews</a>
-    <a href="https://uk.bookshop.org/shop/tumbleweedwords" target="_blank" rel="noopener">Browse the bookshop</a>
+    <a href="https://uk.bookshop.org/shop/tumbleweedwords?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=footer" target="_blank" rel="noopener">Browse the bookshop</a>
 </nav>
 <p style="width:100%;margin:.75rem 0 0;font-family:var(--fm);font-size:.70rem;letter-spacing:.08em;color:var(--fa);text-align:center;">Tumbleweed Words is a Bookshop.org affiliate. Book links on this site earn a small commission that supports the work, at no extra cost to you.</p>
 </footer>

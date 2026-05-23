@@ -103,11 +103,37 @@ h1 em,h2 em{font-style:normal}
 <link rel="stylesheet" href="/hamburger.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3615939042251794"
      crossorigin="anonymous"></script>
+<style id="tools-dropdown-css">
+.ndrop{position:relative;display:inline-flex;align-items:center}
+.ndrop-btn{background:none;border:none;cursor:pointer;font-family:'Courier New',Courier,monospace;font-size:18px;font-weight:700;color:#000;transition:color .15s;white-space:nowrap;letter-spacing:0.5px;padding:0;display:flex;align-items:center;gap:2px;line-height:1}
+.ndrop-btn:hover,.ndrop.open .ndrop-btn{color:#5533E8}
+.ndrop-btn svg{transition:transform .2s}
+.ndrop.open .ndrop-btn svg{transform:rotate(180deg)}
+.ndrop-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid #5533E8;min-width:210px;z-index:300;box-shadow:0 4px 20px rgba(85,51,232,.15)}
+.ndrop.open .ndrop-menu{display:block}
+.ndrop-menu a{display:block;padding:.7rem 1.1rem;font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:700;color:#1a1820;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap;border-bottom:1px solid #D4D0C4}
+.ndrop-menu a:last-child{border-bottom:none}
+.ndrop-menu a:hover{background:#EEEDFE;color:#5533E8}
+.mm-tools-group{border-bottom:1px solid #D4D0C4}
+.mm-tools-toggle{background:none;border:none;width:100%;text-align:left;font-family:'Courier New',Courier,monospace;font-size:16px;font-weight:500;color:#1a1820;padding:0 2rem;min-height:52px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;letter-spacing:0.5px;transition:color .15s}
+.mm-tools-toggle:hover{color:#5533E8}
+.mm-tools-toggle .mm-tools-arrow{font-size:10px;transition:transform .2s}
+.mm-tools-toggle[aria-expanded="true"] .mm-tools-arrow{transform:rotate(90deg)}
+.mm-tools-sub{display:none;background:#F6F4EE}
+.mm-tools-sub.open{display:block}
+.mm-tools-sub a{font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:500;color:#1a1820;text-decoration:none;padding:0 2.5rem;min-height:44px;display:flex;align-items:center;border-bottom:1px solid #D4D0C4;transition:color .15s}
+.mm-tools-sub a:last-child{border-bottom:none}
+.mm-tools-sub a:hover{color:#5533E8}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Tumbleweed Words RSS" href="/feed.xml">
+<link rel="preconnect" href="https://uk.bookshop.org">
+<link rel="preconnect" href="https://tumbleweedwords.substack.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
 <div class="wrap">
-<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><a href="/essays-and-culture.html#tools" class="nlink hide-m">Tools</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><a href="/essays-and-culture.html#tools">Tools</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><div class="ndrop hide-m" id="toolsDrop"><button class="ndrop-btn" aria-haspopup="true" aria-expanded="false" id="toolsBtn">Tools<svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="margin-left:2px"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ndrop-menu" id="toolsMenu" role="menu"><a href="/spot-the-typo.html" role="menuitem">Spot the Typo</a><a href="/literary-style-quiz.html" role="menuitem">Who Do You Write Like</a><a href="/flash-fiction-prompts.html" role="menuitem">Prompts Generator</a><a href="/podcasts.html" role="menuitem">Best Literary Podcasts</a></div></div></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=ocean-vuong-reading-guide&utm_content=nav" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><div class="mm-tools-group"><button class="mm-tools-toggle" aria-expanded="false" id="mmToolsBtn">Tools<span class="mm-tools-arrow">&#9658;</span></button><div class="mm-tools-sub" id="mmToolsSub"><a href="/spot-the-typo.html">Spot the Typo</a><a href="/literary-style-quiz.html">Who Do You Write Like</a><a href="/flash-fiction-prompts.html">Prompts Generator</a><a href="/podcasts.html">Best Literary Podcasts</a></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=ocean-vuong-reading-guide&utm_content=mobile-menu" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
 
 <main>
   <span class="tag">Reading Guide &middot; Poetry &amp; Fiction</span>
@@ -141,17 +167,17 @@ h1 em,h2 em{font-style:normal}
 
 <p>The prose reads like poetry because Vuong is a poet. Sentences break in unexpected places. Images recur and transform. A tobacco field in Connecticut becomes a rice field in Vietnam. The body is always present. The novel does not separate the life of the mind from the life of the flesh. This is the literary tradition of <a href="/what-is-autofiction.html">autofiction</a> at its most refined — autobiography handled with enough craft that it becomes universal.</p>
 
-<p>It was a <em>New York Times</em> bestseller, longlisted for the National Book Award, and has been translated into nearly forty languages. It is the book most people know him for. It is also, in many ways, a companion piece to <a href="https://uk.bookshop.org/a/17219/9781911214519" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>. The poems plant seeds. The novel lets them grow.</p>
+<p>It was a <em>New York Times</em> bestseller, longlisted for the National Book Award, and has been translated into nearly forty languages. It is the book most people know him for. It is also, in many ways, a companion piece to <a href="https://uk.bookshop.org/a/17219/9781911214519?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>. The poems plant seeds. The novel lets them grow.</p>
 
 <h2>Time Is a Mother (2022)</h2>
 
-<p>Vuong&rsquo;s mother died of breast cancer three months before <a href="https://uk.bookshop.org/a/17219/9781529110685" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a> was published. She never read it.</p>
+<p>Vuong&rsquo;s mother died of breast cancer three months before <a href="https://uk.bookshop.org/a/17219/9781529110685?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a> was published. She never read it.</p>
 
-<p><a href="https://uk.bookshop.org/a/17219/9781787333703" target="_blank" rel="noopener"><em>Time Is a Mother</em></a> is the poetry collection he wrote in her absence. It is a book about grief, but it does not behave the way grief books usually behave. It is funny, restless, angry, tender, and sometimes deliberately silly. Vuong has said he wanted to write poems that were &ldquo;reckless&rdquo; in their range. Some are about loss. Some are about sex. Some are about being a queer Asian man in America. One is a list of things that are not worth dying for.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9781787333703?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Time Is a Mother</em></a> is the poetry collection he wrote in her absence. It is a book about grief, but it does not behave the way grief books usually behave. It is funny, restless, angry, tender, and sometimes deliberately silly. Vuong has said he wanted to write poems that were &ldquo;reckless&rdquo; in their range. Some are about loss. Some are about sex. Some are about being a queer Asian man in America. One is a list of things that are not worth dying for.</p>
 
-<p>The collection divided critics. Some felt it lacked the focus of <a href="https://uk.bookshop.org/a/17219/9781911214519" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>. Others argued that the lack of focus was the point. Grief does not arrive in neat stanzas. It arrives while you are buying milk, watching television, trying to remember how to be a person. <a href="https://uk.bookshop.org/a/17219/9781787333703" target="_blank" rel="noopener"><em>Time Is a Mother</em></a> captures that disorder honestly.</p>
+<p>The collection divided critics. Some felt it lacked the focus of <a href="https://uk.bookshop.org/a/17219/9781911214519?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>. Others argued that the lack of focus was the point. Grief does not arrive in neat stanzas. It arrives while you are buying milk, watching television, trying to remember how to be a person. <a href="https://uk.bookshop.org/a/17219/9781787333703?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Time Is a Mother</em></a> captures that disorder honestly.</p>
 
-<p>Read it after <a href="https://uk.bookshop.org/a/17219/9781529110685" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>. The novel ends with the mother alive. This collection begins with her gone. Together they form a single, unfinished conversation.</p>
+<p>Read it after <a href="https://uk.bookshop.org/a/17219/9781529110685?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>. The novel ends with the mother alive. This collection begins with her gone. Together they form a single, unfinished conversation.</p>
 
 <h2>The Emperor of Gladness (2025)</h2>
 
@@ -159,17 +185,17 @@ h1 em,h2 em{font-style:normal}
 
 <p>The story follows Hai, a nineteen-year-old Vietnamese American college dropout standing on a bridge in Connecticut, ready to jump. An eighty-two-year-old Lithuanian woman named Grazina, who has dementia, stops him. Not with wisdom. She asks him to carry her groceries. He becomes her caretaker. Over the course of a year, they build a bond that changes both their lives.</p>
 
-<p>The novel is bigger and more sprawling than <a href="https://uk.bookshop.org/a/17219/9781529110685" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>. It includes Hai&rsquo;s work in a fast-food restaurant, the lives of his co-workers, and the quiet rhythms of a town that manufacturing left behind. Vuong has said he wanted to write about people for whom the American dream means keeping the same job for thirty years. He wanted to honour ordinary lives without making them into symbols.</p>
+<p>The novel is bigger and more sprawling than <a href="https://uk.bookshop.org/a/17219/9781529110685?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>. It includes Hai&rsquo;s work in a fast-food restaurant, the lives of his co-workers, and the quiet rhythms of a town that manufacturing left behind. Vuong has said he wanted to write about people for whom the American dream means keeping the same job for thirty years. He wanted to honour ordinary lives without making them into symbols.</p>
 
 <p>The prose is still unmistakably Vuong. The sentences still land like poems. But the scope is wider, the humour is warmer, and the emotional range is broader. It is dedicated to the real Grazina, a woman Vuong cared for in his own life.</p>
 
 <h2>Where to Start</h2>
 
-<p>If you like poetry, start with <a href="https://uk.bookshop.org/a/17219/9781911214519" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>.</p>
+<p>If you like poetry, start with <a href="https://uk.bookshop.org/a/17219/9781911214519?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>.</p>
 
-<p>If you prefer novels, start with <a href="https://uk.bookshop.org/a/17219/9781529110685" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>.</p>
+<p>If you prefer novels, start with <a href="https://uk.bookshop.org/a/17219/9781529110685?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>.</p>
 
-<p>If you want to understand what Vuong is doing, read them in publication order: <a href="https://uk.bookshop.org/a/17219/9781911214519" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>, <a href="https://uk.bookshop.org/a/17219/9781529110685" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>, <a href="https://uk.bookshop.org/a/17219/9781787333703" target="_blank" rel="noopener"><em>Time Is a Mother</em></a>, <a href="https://uk.bookshop.org/a/17219/9781787335400" target="_blank" rel="noopener"><em>The Emperor of Gladness</em></a>. The four books form a single project. War, family, grief, and the attempt to build a life from the wreckage. Each book responds to the one before it.</p>
+<p>If you want to understand what Vuong is doing, read them in publication order: <a href="https://uk.bookshop.org/a/17219/9781911214519?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Night Sky with Exit Wounds</em></a>, <a href="https://uk.bookshop.org/a/17219/9781529110685?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>On Earth We&rsquo;re Briefly Gorgeous</em></a>, <a href="https://uk.bookshop.org/a/17219/9781787333703?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Time Is a Mother</em></a>, <a href="https://uk.bookshop.org/a/17219/9781787335400?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>The Emperor of Gladness</em></a>. The four books form a single project. War, family, grief, and the attempt to build a life from the wreckage. Each book responds to the one before it.</p>
 
 <h2>What His Work Teaches About Writing</h2>
 
@@ -188,12 +214,12 @@ h1 em,h2 em{font-style:normal}
 
 <ul>
 <li><a href="/an-expat-in-paris.html">James Baldwin, <em>Giovanni&rsquo;s Room</em></a></li>
-<li>Claudia Rankine, <a href="https://uk.bookshop.org/a/17219/9780141981772" target="_blank" rel="noopener"><em>Citizen</em></a></li>
-<li>Ben Lerner, <a href="https://uk.bookshop.org/a/17219/9781847086914" target="_blank" rel="noopener"><em>Leaving the Atocha Station</em></a></li>
-<li>Maggie Nelson, <a href="https://uk.bookshop.org/a/17219/9780993414916" target="_blank" rel="noopener"><em>The Argonauts</em></a></li>
-<li>Terrance Hayes, <a href="https://uk.bookshop.org/a/17219/9780143133186" target="_blank" rel="noopener"><em>American Sonnets for My Past and Future Assassin</em></a></li>
-<li>Warsan Shire, <a href="https://uk.bookshop.org/a/17219/9781784743703" target="_blank" rel="noopener"><em>Bless the Daughter Raised by a Voice in Her Head</em></a></li>
-<li>Douglas Stuart, <a href="https://uk.bookshop.org/a/17219/9781529019278" target="_blank" rel="noopener"><em>Shuggie Bain</em></a></li>
+<li>Claudia Rankine, <a href="https://uk.bookshop.org/a/17219/9780141981772?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Citizen</em></a></li>
+<li>Ben Lerner, <a href="https://uk.bookshop.org/a/17219/9781847086914?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Leaving the Atocha Station</em></a></li>
+<li>Maggie Nelson, <a href="https://uk.bookshop.org/a/17219/9780993414916?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>The Argonauts</em></a></li>
+<li>Terrance Hayes, <a href="https://uk.bookshop.org/a/17219/9780143133186?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>American Sonnets for My Past and Future Assassin</em></a></li>
+<li>Warsan Shire, <a href="https://uk.bookshop.org/a/17219/9781784743703?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Bless the Daughter Raised by a Voice in Her Head</em></a></li>
+<li>Douglas Stuart, <a href="https://uk.bookshop.org/a/17219/9781529019278?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=ocean-vuong-reading-guide" target="_blank" rel="noopener"><em>Shuggie Bain</em></a></li>
 </ul>
 
 <p>Each one shares something with Vuong&rsquo;s project: the lyrical sentence, the queer body, the working-class life, the refusal to separate beauty from pain.</p>
@@ -205,7 +231,7 @@ h1 em,h2 em{font-style:normal}
 <div class="cta-box">
     <div class="lbl">Tumbleweed Words &middot; Newsletter</div>
     <p>Flash fiction and poetry in the tradition of what you just read. Written on the road. Free, every week.</p>
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=ocean-vuong-reading-guide&utm_content=mid-content" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
   </div>
 
   <div class="related"><span class="lbl">Read next</span><ul>
@@ -231,11 +257,11 @@ h1 em,h2 em{font-style:normal}
 <footer class="ft">
   <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
   <nav class="ft-l">
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=ocean-vuong-reading-guide&utm_content=mid-content" target="_blank" rel="noopener">Newsletter</a>
     <a href="/about.html">About</a><a href="/contact.html">Contact</a>
     <a href="/reads.html">Book Reviews</a>
     <a href="/all-writing.html">Fiction &amp; Poetry</a>
-    <a href="https://uk.bookshop.org/shop/tumbleweedwords" target="_blank" rel="noopener">Browse the bookshop</a>
+    <a href="https://uk.bookshop.org/shop/tumbleweedwords?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=footer" target="_blank" rel="noopener">Browse the bookshop</a>
 </nav>
 <p style="width:100%;margin:.75rem 0 0;font-family:var(--fm);font-size:.70rem;letter-spacing:.08em;color:var(--fa);text-align:center;">Tumbleweed Words is a Bookshop.org affiliate. Book links on this site earn a small commission that supports the work, at no extra cost to you.</p>
 </footer>
@@ -249,5 +275,7 @@ h1 em,h2 em{font-style:normal}
 <div id="subBar" class="sub-bar" role="complementary" aria-label="Subscribe to newsletter"><div class="sub-bar-inner"><span class="sub-bar-text">One piece a week. Free.</span><form class="sub-bar-form" action="https://tumbleweedwords.substack.com/api/v1/free" method="post" target="_blank"><input type="email" name="email" placeholder="Your email address" required autocomplete="email" class="sub-bar-input"><button type="submit" class="sub-bar-btn">Subscribe free &rarr;</button></form><button class="sub-bar-close" id="subBarClose" aria-label="Close subscribe bar" type="button">&times;</button></div></div>
 <script>(function(){var b=document.querySelector('.body');var bl=document.querySelector('.byline');if(!b||!bl)return;var words=b.innerText.trim().split(/\s+/).length;var mins=Math.max(1,Math.round(words/200));var sp=document.createElement('span');sp.textContent=' · '+mins+' min read';bl.appendChild(sp);})();</script>
 <script src="/hamburger.js"></script>
+<script id="tools-dropdown-js">(function(){var d=document.getElementById('toolsDrop'),b=document.getElementById('toolsBtn');if(!d||!b)return;b.addEventListener('click',function(e){e.stopPropagation();var open=d.classList.toggle('open');b.setAttribute('aria-expanded',open);});document.addEventListener('click',function(e){if(!e.target.closest('#toolsDrop')){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});d.addEventListener('keydown',function(e){if(e.key==='Escape'){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});}());</script>
+<script id="mm-tools-js">(function(){var b=document.getElementById('mmToolsBtn'),s=document.getElementById('mmToolsSub');if(!b||!s)return;b.addEventListener('click',function(){var open=s.classList.toggle('open');b.setAttribute('aria-expanded',open);});}());</script>
 </body>
 </html>

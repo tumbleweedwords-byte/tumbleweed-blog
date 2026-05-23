@@ -102,11 +102,37 @@ h1 em,h2 em{font-style:normal}
 <link rel="stylesheet" href="/hamburger.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3615939042251794"
      crossorigin="anonymous"></script>
+<style id="tools-dropdown-css">
+.ndrop{position:relative;display:inline-flex;align-items:center}
+.ndrop-btn{background:none;border:none;cursor:pointer;font-family:'Courier New',Courier,monospace;font-size:18px;font-weight:700;color:#000;transition:color .15s;white-space:nowrap;letter-spacing:0.5px;padding:0;display:flex;align-items:center;gap:2px;line-height:1}
+.ndrop-btn:hover,.ndrop.open .ndrop-btn{color:#5533E8}
+.ndrop-btn svg{transition:transform .2s}
+.ndrop.open .ndrop-btn svg{transform:rotate(180deg)}
+.ndrop-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid #5533E8;min-width:210px;z-index:300;box-shadow:0 4px 20px rgba(85,51,232,.15)}
+.ndrop.open .ndrop-menu{display:block}
+.ndrop-menu a{display:block;padding:.7rem 1.1rem;font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:700;color:#1a1820;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap;border-bottom:1px solid #D4D0C4}
+.ndrop-menu a:last-child{border-bottom:none}
+.ndrop-menu a:hover{background:#EEEDFE;color:#5533E8}
+.mm-tools-group{border-bottom:1px solid #D4D0C4}
+.mm-tools-toggle{background:none;border:none;width:100%;text-align:left;font-family:'Courier New',Courier,monospace;font-size:16px;font-weight:500;color:#1a1820;padding:0 2rem;min-height:52px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;letter-spacing:0.5px;transition:color .15s}
+.mm-tools-toggle:hover{color:#5533E8}
+.mm-tools-toggle .mm-tools-arrow{font-size:10px;transition:transform .2s}
+.mm-tools-toggle[aria-expanded="true"] .mm-tools-arrow{transform:rotate(90deg)}
+.mm-tools-sub{display:none;background:#F6F4EE}
+.mm-tools-sub.open{display:block}
+.mm-tools-sub a{font-family:'Courier New',Courier,monospace;font-size:14px;font-weight:500;color:#1a1820;text-decoration:none;padding:0 2.5rem;min-height:44px;display:flex;align-items:center;border-bottom:1px solid #D4D0C4;transition:color .15s}
+.mm-tools-sub a:last-child{border-bottom:none}
+.mm-tools-sub a:hover{color:#5533E8}
+</style>
+<link rel="alternate" type="application/rss+xml" title="Tumbleweed Words RSS" href="/feed.xml">
+<link rel="preconnect" href="https://uk.bookshop.org">
+<link rel="preconnect" href="https://tumbleweedwords.substack.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 </head>
 <body>
 <div class="wrap">
-<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><a href="/essays-and-culture.html#tools" class="nlink hide-m">Tools</a></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><a href="/essays-and-culture.html#tools">Tools</a><a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
+<nav class="nav"><a href="/" class="nav-logo">Tumbleweed Words</a><div class="nlinks"><a href="/all-writing.html" class="nlink hide-m">Fiction &amp; Poetry</a><a href="/reads.html" class="nlink hide-m">Book Reviews</a><a href="/craft-theory.html" class="nlink hide-m">Craft &amp; Theory</a><a href="/essays-and-culture.html" class="nlink hide-m">Essays &amp; Culture</a><a href="/about.html" class="nlink hide-m">About</a><a href="/faq.html" class="nlink hide-m">FAQ</a><div class="ndrop hide-m" id="toolsDrop"><button class="ndrop-btn" aria-haspopup="true" aria-expanded="false" id="toolsBtn">Tools<svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="margin-left:2px"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="ndrop-menu" id="toolsMenu" role="menu"><a href="/spot-the-typo.html" role="menuitem">Spot the Typo</a><a href="/literary-style-quiz.html" role="menuitem">Who Do You Write Like</a><a href="/flash-fiction-prompts.html" role="menuitem">Prompts Generator</a><a href="/podcasts.html" role="menuitem">Best Literary Podcasts</a></div></div></div><div id="navSearch" class="nsearch"><button id="searchToggle" class="nsearch-btn" aria-label="Search" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button><div id="nsearchWrap" class="nsearch-wrap"><input type="search" id="nsearchInput" class="nsearch-input" placeholder="Search&#8230;" autocomplete="off"><button type="button" id="nsearchGo" class="nsearch-go"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-books-if-you-like-carver&utm_content=nav" class="ncta" target="_blank" rel="noopener">Newsletter &rarr;</a><button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"><span class="hb"></span><span class="hb"></span><span class="hb"></span></button></nav>
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div class="mobile-nav-links"><a href="/all-writing.html">Fiction &amp; Poetry</a><a href="/reads.html">Book Reviews</a><a href="/craft-theory.html">Craft &amp; Theory</a><a href="/essays-and-culture.html">Essays &amp; Culture</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/faq.html">FAQ</a><div class="mm-tools-group"><button class="mm-tools-toggle" aria-expanded="false" id="mmToolsBtn">Tools<span class="mm-tools-arrow">&#9658;</span></button><div class="mm-tools-sub" id="mmToolsSub"><a href="/spot-the-typo.html">Spot the Typo</a><a href="/literary-style-quiz.html">Who Do You Write Like</a><a href="/flash-fiction-prompts.html">Prompts Generator</a><a href="/podcasts.html">Best Literary Podcasts</a></div></div><a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-books-if-you-like-carver&utm_content=mobile-menu" target="_blank" rel="noopener" class="mm-cta">Newsletter &rarr;</a><a href="https://buymeacoffee.com/tumbleweedwords" target="_blank" rel="noopener" class="mm-cta">Support</a></div></div>
 <main>
   <span class="tag">Reading & Recommendations</span>
   <h1>Best Books If You Like Raymond Carver — <span style="color:var(--p)">12 Recommendations</span></h1>
@@ -119,17 +145,17 @@ h1 em,h2 em{font-style:normal}
 <h2>The essential collections</h2>
 <p><strong>Amy Hempel — Reasons to Live</strong>. If Carver is the father of American literary minimalism, Hempel is its most gifted inheritor. Her sentences are even more compressed than his, her endings more detonating. Every story in this collection repays rereading. Start with <em>In the Cemetery Where Al Jolson Is Buried</em> — one of the best short stories in English.</p>
 <p><strong>Tobias Wolff — In the Garden of the North American Martyrs</strong>. Wolff is underread relative to Carver and Hempel. His stories have Carver's restraint but a darker moral intelligence — he is interested in complicity and cowardice in ways Carver rarely was.</p>
-<p><a href="https://uk.bookshop.org/a/17219/9780747585251" target="_blank" rel="noopener"><strong>Richard Ford — Rock Springs</strong></a>. Ford's Montana stories — gas station attendants, petty criminals, men in transit — are dirty realism at its most geographically specific. The title story is devastating.</p>
-<p><a href="https://uk.bookshop.org/a/17219/9780349010618" target="_blank" rel="noopener"><strong>Grace Paley — The Collected Stories</strong></a>. Paley is the political conscience of the movement. Her stories are shorter, funnier, and more formally experimental than Carver's, but they share the commitment to working-class urban women's voices rendered with complete seriousness.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9780747585251?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=best-books-if-you-like-carver" target="_blank" rel="noopener"><strong>Richard Ford — Rock Springs</strong></a>. Ford's Montana stories — gas station attendants, petty criminals, men in transit — are dirty realism at its most geographically specific. The title story is devastating.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9780349010618?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=best-books-if-you-like-carver" target="_blank" rel="noopener"><strong>Grace Paley — The Collected Stories</strong></a>. Paley is the political conscience of the movement. Her stories are shorter, funnier, and more formally experimental than Carver's, but they share the commitment to working-class urban women's voices rendered with complete seriousness.</p>
 
 <h2>For readers who want to go deeper</h2>
-<p><a href="https://uk.bookshop.org/a/17219/9781847086709" target="_blank" rel="noopener"><strong>Denis Johnson — Jesus' Son</strong></a>. Twelve stories, interconnected, about a narrator in the American midwest during the 1970s. More hallucinatory than Carver but in the same tradition of flat affect and extreme compression. The story <em>Emergency</em> is as good as anything in American short fiction.</p>
-<p><a href="https://uk.bookshop.org/a/17219/9780340494837" target="_blank" rel="noopener"><strong>Mary Gaitskill — Bad Behavior</strong></a>. Gaitskill took the emotional precision of dirty realism and applied it to female sexuality and power in New York. Formally immaculate and morally unsettling.</p>
-<p><a href="https://uk.bookshop.org/a/17219/9781408837368" target="_blank" rel="noopener"><strong>George Saunders — Tenth of December</strong></a>. Saunders is dirty realism's most inventive heir. His subject matter is working-class America; his form is aggressively strange. Tenth of December is the best of his short fiction collections and among the best story collections of the last twenty years.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9781847086709?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=best-books-if-you-like-carver" target="_blank" rel="noopener"><strong>Denis Johnson — Jesus' Son</strong></a>. Twelve stories, interconnected, about a narrator in the American midwest during the 1970s. More hallucinatory than Carver but in the same tradition of flat affect and extreme compression. The story <em>Emergency</em> is as good as anything in American short fiction.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9780340494837?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=best-books-if-you-like-carver" target="_blank" rel="noopener"><strong>Mary Gaitskill — Bad Behavior</strong></a>. Gaitskill took the emotional precision of dirty realism and applied it to female sexuality and power in New York. Formally immaculate and morally unsettling.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9781408837368?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=best-books-if-you-like-carver" target="_blank" rel="noopener"><strong>George Saunders — Tenth of December</strong></a>. Saunders is dirty realism's most inventive heir. His subject matter is working-class America; his form is aggressively strange. Tenth of December is the best of his short fiction collections and among the best story collections of the last twenty years.</p>
 
 <h2>If you want the tradition, not just the writers</h2>
 <p><strong>Granta 8: Dirty Realism (1983)</strong>. The original anthology that named the movement. Contains Carver, Ford, Wolff, Phillips, and others. Still available secondhand. Essential context.</p>
-<p><a href="https://uk.bookshop.org/a/17219/9781984877802" target="_blank" rel="noopener"><strong>The Penguin Book of the Modern American Short Story</strong></a> edited by John Freeman. The most comprehensive recent anthology of the tradition, from its origins through its contemporary descendants.</p>
+<p><a href="https://uk.bookshop.org/a/17219/9781984877802?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=best-books-if-you-like-carver" target="_blank" rel="noopener"><strong>The Penguin Book of the Modern American Short Story</strong></a> edited by John Freeman. The most comprehensive recent anthology of the tradition, from its origins through its contemporary descendants.</p>
 
 <blockquote><p>The Carver tradition is not about imitation. It is about learning that restraint is not absence — that what you do not say can carry more weight than what you do.</p></blockquote>
 
@@ -139,7 +165,7 @@ h1 em,h2 em{font-style:normal}
 <div class="cta-box">
     <div class="lbl">Tumbleweed Words &middot; Substack Newsletter</div>
     <p>Gritty, minimalist fiction and poetry — written from trains, borrowed rooms, and cities I am passing through. Over 1,200 readers. Free to subscribe.</p>
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-books-if-you-like-carver&utm_content=mid-content" target="_blank" rel="noopener">Read and subscribe &rarr;</a>
   </div>
   <div class="related">
     <span class="lbl">Keep reading</span>
@@ -164,10 +190,10 @@ h1 em,h2 em{font-style:normal}
 <footer class="ft">
   <span class="ft-c">&copy; 2026 David &middot; Tumbleweed Words</span>
   <nav class="ft-l">
-    <a href="https://tumbleweedwords.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    <a href="https://tumbleweedwords.substack.com?utm_source=tumbleweedwords-com&utm_medium=referral&utm_campaign=best-books-if-you-like-carver&utm_content=mid-content" target="_blank" rel="noopener">Newsletter</a>
     <a href="about.html">About</a><a href="/contact.html">Contact</a>
     <a href="/">Writing</a>
-    <a href="https://uk.bookshop.org/shop/tumbleweedwords" target="_blank" rel="noopener">Browse the bookshop</a>
+    <a href="https://uk.bookshop.org/shop/tumbleweedwords?utm_source=tumbleweedwords&utm_medium=affiliate&utm_campaign=footer" target="_blank" rel="noopener">Browse the bookshop</a>
 </nav>
 <p style="width:100%;margin:.75rem 0 0;font-family:var(--fm);font-size:.70rem;letter-spacing:.08em;color:var(--fa);text-align:center;">Tumbleweed Words is a Bookshop.org affiliate. Book links on this site earn a small commission that supports the work, at no extra cost to you.</p>
 </footer>
@@ -197,6 +223,8 @@ function twConsent(choice){
 </script>
 <script>(function(){var b=document.querySelector('.body');var bl=document.querySelector('.byline');if(!b||!bl)return;var words=b.innerText.trim().split(/\s+/).length;var mins=Math.max(1,Math.round(words/200));var sp=document.createElement('span');sp.textContent=' · '+mins+' min read';bl.appendChild(sp);})();</script>
 <script src="/hamburger.js"></script>
+<script id="tools-dropdown-js">(function(){var d=document.getElementById('toolsDrop'),b=document.getElementById('toolsBtn');if(!d||!b)return;b.addEventListener('click',function(e){e.stopPropagation();var open=d.classList.toggle('open');b.setAttribute('aria-expanded',open);});document.addEventListener('click',function(e){if(!e.target.closest('#toolsDrop')){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});d.addEventListener('keydown',function(e){if(e.key==='Escape'){d.classList.remove('open');b.setAttribute('aria-expanded','false');}});}());</script>
+<script id="mm-tools-js">(function(){var b=document.getElementById('mmToolsBtn'),s=document.getElementById('mmToolsSub');if(!b||!s)return;b.addEventListener('click',function(){var open=s.classList.toggle('open');b.setAttribute('aria-expanded',open);});}());</script>
 </body>
 
 </html>
