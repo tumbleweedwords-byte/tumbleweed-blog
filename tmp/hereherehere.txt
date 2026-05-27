@@ -1,0 +1,44 @@
+Here's the prompt. Matches your existing card style, slots in without breaking composition, lets Claude Code find the image you add.
+Prompt:
+I want to add a new featured block to the homepage (index.html) promoting my interactive game Spot the Typo at spot-the-typo.html. The game is one of the most shareable pieces of content on the site and it's currently buried as a plain text link in the Latest section. I want it to have its own visual block further down the page, not in the hero, on-brand, no disruption to the existing composition.
+Do all of this in one pass.
+Step 1: Find the image
+I have added an image to the repo for this block. Find the recently-added image file anywhere in the repo (likely in the root or in an images/ folder). It will be a .jpg, .jpeg, .webp, or .png. It is related to the Spot the Typo game — possibly a screenshot of the game, a typewriter, a magnifying glass over text, a notebook page with a marked error, or similar.
+Before doing anything else, list the image file you found and confirm it with me by reporting the filename and path. If you find more than one candidate, list all of them and ask which to use.
+Step 2: Study the existing card and feature block patterns on index.html
+Read the homepage and identify the existing featured content blocks that currently sit below the hero and between the Latest section and the footer. Likely candidates include:
+The Ocean Vuong reading guide block
+The cool poem block
+The an honest pursuit essay block
+The an expat in paris essay block
+The I Am the Only Man I Know Who Still Reads Novels essay block
+The 2026 Pulitzer Prize for Fiction block
+These blocks all follow the same visual pattern: a block-sized image, an eyebrow label (e.g. "Essay · Culture", "Literary Prizes · 2026"), a title, a short descriptive paragraph, and a "Read the piece →" or similar CTA link.
+The new Spot the Typo block must match this pattern exactly. Same image dimensions. Same eyebrow styling. Same title typography. Same descriptive paragraph length. Same CTA link style. Do NOT invent a new style. Do NOT use a different card size or shape. Do NOT add badges, borders, background colours, or animations that don't appear on the other featured blocks.
+Step 3: Build the Spot the Typo block
+Insert a new featured block using the exact structure and classes of the existing featured blocks. The block content:
+Image: the file you found in Step 1. Use the same dimensions and image styling as the other featured blocks. Add alt text: "Spot the Typo — a literary editing game by Tumbleweed Words".
+Eyebrow: "Interactive · Game"
+Title: "Spot the Typo"
+Short descriptive paragraph: "A literary editing game. Ten short pieces of original fiction, each with a single hidden typo. Find them and score yourself out of ten."
+CTA link: "Play the game →" linking to spot-the-typo.html
+Step 4: Position the block
+Insert the new block somewhere in the middle of the homepage, not in the hero and not in the footer. Specifically:
+Place it after the Pulitzer Prize block (the "2026 Pulitzer Prize for Fiction: The Ones to Watch" block).
+Place it before the Newsletter / Latest / "Read free every week" Substack CTA section.
+If the block order on the homepage makes that placement feel awkward, use your judgement but tell me where you placed it and why. The goal is that a reader scrolling down the page encounters the game naturally between the prize coverage and the Substack CTA, not jammed against either one.
+Do NOT add it to the hero carousel of rotating quotes at the top. Do NOT add it to the Latest section list (leave the existing Latest entry for the game in place — we want both the featured block and the Latest list entry). Do NOT add it to the footer.
+Step 5: Do not change any other part of the homepage
+Leave the hero, the navigation, the Latest section, the Select Work section, the stats block (1,200+ readers, 20 years on the road etc.), the postcards section, the writer bio blocks, and the footer exactly as they are. This is an additive change only. One new block, slotted into the existing composition, matching existing design.
+Step 6: Verify no duplication
+Before committing, check that the game is not already appearing as a featured block elsewhere on the homepage. It should only appear as the Latest list entry (which already exists) and the new featured block (which you are adding). Remove any other placement if one exists.
+Step 7: Commit
+Commit message: Add Spot the Typo featured block to homepage
+In the commit body, list the files changed and note the placement (between Pulitzer block and Substack CTA).
+Before you make any changes, report back:
+The exact filename and path of the image file you found
+The existing featured block you're using as the visual template, with its file path and line range
+Confirm you can see the Pulitzer block on the homepage and the Substack CTA section
+The exact placement where you plan to insert the new block (describe it by what sits above and below)
+Then make the edits and confirm the commit.
+Also, make sure the image doesn’t have the gemini logo on it. Clean image. In repo 
